@@ -1,36 +1,71 @@
-![Welcome to Okan's workspace — Matrix animation](./matrix-banner.gif)
+<p align="center">
+  <img src="./matrix-banner.gif" width="100%" alt="Welcome to Okan’s workspace — Matrix animation" />
+</p>
 
+<p align="center">
+  <a href="https://github.com/OKAN-SOFTWARE?tab=repositories"><img src="./assets/button-projects.gif" width="250" height="66" alt="My projects" /></a>
+  <a href="https://github.com/pulls?q=is%3Apr+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE"><img src="./assets/button-contributions.gif" width="250" height="66" alt="Upstream contributions" /></a>
+  <a href="https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/actions/workflows/profile-activity.yml"><img src="./assets/button-sync.gif" width="250" height="66" alt="Activity sync" /></a>
+</p>
 
-**I build tools for those “there has to be an easier way” moments.**
+I’m **Okan Tiktas**. I build tools for those **“there has to be an easier way”** moments—and contribute fixes to the tools other developers depend on.
 
-I’m Okan Tiktas, and here’s what I’ve been working on:
+My open-source work usually starts with a bug I can reproduce. I trace it, make a focused change, add a regression test, and work through review. My forks are the workbench; the pull requests below show what I’ve sent upstream.
 
-🔐 **[VeilDrop](https://github.com/OKAN-SOFTWARE/veildrop)** — Helps redact sensitive information from logs and text before sharing, with encrypted handoffs.
+## Open Source Field Notes
 
-🚀 **[LaunchNotes](https://github.com/OKAN-SOFTWARE/LaunchNotes)** — Turns commit messages into readable release notes. Because “fixed stuff” deserves a better launch announcement.
+<!-- ACTIVITY:START -->
+![Public upstream activity: 32 PRs opened, 16 merged, 15 currently open, 22 upstream repositories](./assets/activity.svg)
 
-📄 **[Doc2FAQ](https://github.com/OKAN-SOFTWARE/Doc2FAQ)** — Turns documents into editable FAQ drafts, with local processing and export options.
+**Sep 28–Oct 27, 2026** · **Last synced: Oct 27, 2026 at 17:02 UTC**
 
-I’m building, learning, and contributing fixes to open source along the way. Try a project, challenge an assumption, or open an issue—your feedback helps shape what comes next.
+**32 opened · 16 merged · 15 open now · 22 upstream repositories**
 
-My favorite review would be: “This saved me time.”
+### Latest upstream work
 
-If something earns that reaction, leave it a ⭐ so the next developer can find it too.
+| State | Contribution | Repository |
+| :--- | :--- | :--- |
+| ⚙️ Draft | [fix(artifact-record): prevent output from replacing source evidence · #178](https://github.com/lostlight530/auto-doc-engine/pull/178) | [lostlight530/auto-doc-engine](https://github.com/lostlight530/auto-doc-engine) |
+| 🟢 Open | [fix(core): make generator output ordering deterministic · #1193](https://github.com/nodejs/doc-kit/pull/1193) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
+| 🟢 Open | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
+| 🟣 Merged | [feat(frontend): add ledger call and WhatsApp links · #468](https://github.com/nikhilb2/simple_invoicing/pull/468) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
+| 🟣 Merged | [fix(frontend): share clipboard fallback across copy actions · #467](https://github.com/nikhilb2/simple_invoicing/pull/467) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
+| 🟣 Merged | [feat: add copy invoice number button to preview · #466](https://github.com/nikhilb2/simple_invoicing/pull/466) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
 
-### 🛠 Technologies
+[Explore all upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+sort%3Aupdated-desc)
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-663399?style=flat&logo=css&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-512BD4?style=flat)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat&logo=springboot&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
-![WordPress](https://img.shields.io/badge/WordPress-21759B?style=flat&logo=wordpress&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
+<sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
+<!-- ACTIVITY:END -->
 
-### 🌱 Currently Learning
+## Built from an everyday problem
 
-AWS cloud optimization, AI token efficiency, and serverless development.
+| Project | The moment it helps |
+| :--- | :--- |
+| **[VeilDrop](https://github.com/OKAN-SOFTWARE/veildrop)** | “I need to share this log without sharing its secrets.” Local text redaction and encrypted handoffs. |
+| **[LaunchNotes](https://github.com/OKAN-SOFTWARE/LaunchNotes)** | “These commits need a better story than ‘fixed stuff.’” Turn commit messages into readable release notes. |
+| **[Doc2FAQ](https://github.com/OKAN-SOFTWARE/Doc2FAQ)** | “The answers are in this document somewhere.” Turn documents into editable FAQ drafts, with local processing and exports. |
+
+## What’s on my workbench
+
+<img src="./assets/workbench.gif" width="100%" alt="Technology workbench with a circling red scanner border. Languages: Python, Java, JavaScript, TypeScript, C#, Go, HTML, CSS, SQL. Frameworks: Spring Boot, Node.js, Express, React, Three.js. Data and tools: SQLite, Redis, JSON Schema, REST APIs, Git, GitHub Actions, Docker. Testing and libraries: pytest, JUnit, Vitest, Boto3, PDFBox, Apache POI. Exploring AWS Lambda, SQS, SNS, EventBridge, Bedrock, DynamoDB, cloud optimization, serverless development, and AI token efficiency." />
+
+<details>
+<summary>Explore the stack</summary>
+
+| Area | Technologies |
+| :--- | :--- |
+| **Languages** | Python · Java · JavaScript · TypeScript · C# · Go · HTML · CSS · SQL |
+| **Frameworks** | Spring Boot · Node.js · Express · React · Three.js |
+| **Data & tools** | SQLite · Redis · JSON Schema · REST APIs · Git · GitHub Actions · Docker |
+| **Testing & libraries** | pytest · JUnit · Vitest · Boto3 · PDFBox · Apache POI |
+| **AWS exploration** | Lambda · SQS · SNS · EventBridge · Bedrock · DynamoDB |
+| **Learning path** | Cloud optimization · Serverless development · AI token efficiency |
+
+Tools used across personal projects and contribution work; AWS topics include ongoing learning.
+
+</details>
+
+---
+
+**My favorite review: “This saved me time.”**  
+Try a project, report a rough edge, or challenge an assumption. That’s how the next useful version starts.
