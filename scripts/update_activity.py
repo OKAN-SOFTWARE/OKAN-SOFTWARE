@@ -258,7 +258,7 @@ def markdown_section(data, user):
         repo = REPO_URL.fullmatch(item["repository_url"])
         name = "/".join(repo.groups())
         merged = item["pull_request"].get("merged_at")
-        state = "🟣 Merged" if merged else ("⚪ Closed" if item["state"] == "closed" else ("⚙️ Draft" if item.get("draft") else "🟢 Open"))
+        state = '![](./assets/pr-merged.svg) Merged' if merged else ("⚪ Closed" if item["state"] == "closed" else ("⚙️ Draft" if item.get("draft") else "🟢 Open"))
         title = markdown_text(item["title"])
         rows.append(f'| {state} | [{title} · #{item["number"]}]({item["html_url"]}) | [{name}](https://github.com/{name}) |')
     if not data["recent"]:
@@ -358,3 +358,4 @@ if __name__ == "__main__":
     except (ValueError, KeyError, TypeError, OSError, RuntimeError) as error:
         print(f"Activity refresh failed: {error}", file=sys.stderr)
         sys.exit(1)
+

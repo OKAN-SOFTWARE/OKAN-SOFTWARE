@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" role="img" aria-labelledby="title">
+  <title id="title">Merged pull request</title>
+  <g fill="none" stroke="#a371f7" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="4" cy="3" r="1.8"/>
+    <circle cx="4" cy="13" r="1.8"/>
+    <circle cx="12" cy="3" r="1.8"/>
+    <path d="M4 4.8v6.4M12 4.8V6c0 3-4 3-8 3"/>
+  </g>
+</svg>
+
