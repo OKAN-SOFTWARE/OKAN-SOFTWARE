@@ -27,14 +27,14 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | :--- | :--- | :--- |
 | 🟢 Open | [fix(server): exit with an error when PORT is invalid · #797](https://github.com/jannskiee/floe/pull/797) | [jannskiee/floe](https://github.com/jannskiee/floe) |
 | 🟢 Open | [fix(dynamodb): resolve service manager mypy errors · #9](https://github.com/manojkken/testcontainers-aws/pull/9) | [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) |
-| 🟣 Merged | [fix(artifact-record): prevent output from replacing source evidence · #178](https://github.com/lostlight530/auto-doc-engine/pull/178) | [lostlight530/auto-doc-engine](https://github.com/lostlight530/auto-doc-engine) |
+| ![](./assets/pr-merged.svg) Merged | [fix(artifact-record): prevent output from replacing source evidence · #178](https://github.com/lostlight530/auto-doc-engine/pull/178) | [lostlight530/auto-doc-engine](https://github.com/lostlight530/auto-doc-engine) |
 | 🟢 Open | [fix(core): make generator output ordering deterministic · #1193](https://github.com/nodejs/doc-kit/pull/1193) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 | 🟢 Open | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
-| 🟣 Merged | [feat(frontend): add ledger call and WhatsApp links · #468](https://github.com/nikhilb2/simple_invoicing/pull/468) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
-| 🟣 Merged | [fix(frontend): share clipboard fallback across copy actions · #467](https://github.com/nikhilb2/simple_invoicing/pull/467) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
-| 🟣 Merged | [feat: add copy invoice number button to preview · #466](https://github.com/nikhilb2/simple_invoicing/pull/466) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
-| 🟣 Merged | [chore(config): log MCP warnings and preserve startup banner · #459](https://github.com/nikhilb2/simple_invoicing/pull/459) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
-| 🟣 Merged | [test(gst): add regression coverage for GST tax helpers · #458](https://github.com/nikhilb2/simple_invoicing/pull/458) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
+| ![](./assets/pr-merged.svg) Merged | [feat(frontend): add ledger call and WhatsApp links · #468](https://github.com/nikhilb2/simple_invoicing/pull/468) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
+| ![](./assets/pr-merged.svg) Merged | [fix(frontend): share clipboard fallback across copy actions · #467](https://github.com/nikhilb2/simple_invoicing/pull/467) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
+| ![](./assets/pr-merged.svg) Merged | [feat: add copy invoice number button to preview · #466](https://github.com/nikhilb2/simple_invoicing/pull/466) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
+| ![](./assets/pr-merged.svg) Merged | [chore(config): log MCP warnings and preserve startup banner · #459](https://github.com/nikhilb2/simple_invoicing/pull/459) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
+| ![](./assets/pr-merged.svg) Merged | [test(gst): add regression coverage for GST tax helpers · #458](https://github.com/nikhilb2/simple_invoicing/pull/458) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
 
 [Explore all upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+sort%3Aupdated-desc)
 
@@ -75,3 +75,4 @@ Tools used across personal projects and contribution work; AWS topics include on
 
 **My favorite review: “This saved me time.”**  
 Try a project, report a rough edge, or challenge an assumption. That’s how the next useful version starts.
+

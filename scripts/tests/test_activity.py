@@ -223,7 +223,7 @@ class ActivityTests(unittest.TestCase):
             "🟢 Open",
             "⚙️ Draft",
             "⚪ Closed",
-            "🟣 Merged",
+            '![](./assets/pr-merged.svg) Merged',
         )
 
         for state in expected_states:
@@ -568,3 +568,4 @@ class ActivityTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
