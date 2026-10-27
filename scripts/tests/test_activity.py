@@ -130,7 +130,60 @@ class ActivityTests(unittest.TestCase):
                         activity.END + activity.START):
             with self.assertRaises(ValueError):
                 activity.replace_section(invalid, "new")
+                
+        def test_unchanged_activity_skips_snapshot_update(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "assets").mkdir()
 
+            readme = root / "README.md"
+            svg = root / "assets" / "activity.svg"
+
+            readme.write_text(
+                f"{activity.START}\nold\n{activity.END}\n",
+                encoding="utf-8",
+            )
+
+            data = bundle()
+            first = datetime(2026, 10, 27, 14, tzinfo=timezone.utc)
+            second = datetime(2026, 10, 27, 15, tzinfo=timezone.utc)
+
+            # First refresh creates the snapshot.
+            activity.write_outputs(
+                data, "OKAN-SOFTWARE", TODAY, root, synced_at=first
+            )
+
+            original_readme = readme.read_text(encoding="utf-8")
+            original_svg = svg.read_text(encoding="utf-8")
+
+            self.assertIn("ACTIVITY:SNAPSHOT:", original_readme)
+
+            # Another refresh with identical activity changes nothing.
+            activity.write_outputs(
+                data, "OKAN-SOFTWARE", TODAY, root, synced_at=second
+            )
+
+            self.assertEqual(
+                original_readme, readme.read_text(encoding="utf-8")
+            )
+            self.assertEqual(
+                original_svg, svg.read_text(encoding="utf-8")
+            )
+
+            # A visible PR change must trigger an update.
+            data["recent"]["items"][0]["title"] = "Updated bug fix"
+
+            activity.write_outputs(
+                data, "OKAN-SOFTWARE", TODAY, root, synced_at=second
+            )
+
+            self.assertNotEqual(
+                original_readme, readme.read_text(encoding="utf-8")
+            )
+            self.assertIn(
+                "Updated bug fix", readme.read_text(encoding="utf-8")
+            )
+            
     def test_failed_data_keeps_both_outputs_unchanged(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
