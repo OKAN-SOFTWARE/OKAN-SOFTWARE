@@ -17,7 +17,7 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 <!-- ACTIVITY:START -->
 ![Public upstream activity: 32 PRs opened, 17 merged, 14 currently open, 22 upstream repositories](./assets/activity.svg)
 
-**Sep 28–Oct 27, 2026** · **Last synced: Oct 27, 2026 at 2:08 PM EDT**
+**Sep 28–Oct 27, 2026** · **Last synced: Oct 27, 2026 at 2:10 PM EDT**
 
 **32 opened · 17 merged · 14 open now · 22 upstream repositories**
 
@@ -31,6 +31,10 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | 🟣 Merged | [feat(frontend): add ledger call and WhatsApp links · #468](https://github.com/nikhilb2/simple_invoicing/pull/468) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
 | 🟣 Merged | [fix(frontend): share clipboard fallback across copy actions · #467](https://github.com/nikhilb2/simple_invoicing/pull/467) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
 | 🟣 Merged | [feat: add copy invoice number button to preview · #466](https://github.com/nikhilb2/simple_invoicing/pull/466) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
+| 🟣 Merged | [chore(config): log MCP warnings and preserve startup banner · #459](https://github.com/nikhilb2/simple_invoicing/pull/459) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
+| 🟣 Merged | [test(gst): add regression coverage for GST tax helpers · #458](https://github.com/nikhilb2/simple_invoicing/pull/458) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
+| ⚙️ Draft | [fix: validate checkpoint SubType constraints · #851](https://github.com/aws/aws-durable-execution-sdk-python/pull/851) | [aws/aws-durable-execution-sdk-python](https://github.com/aws/aws-durable-execution-sdk-python) |
+| 🟢 Open | [docs: use portable sql fields in canonical examples · #640](https://github.com/apache/ossie/pull/640) | [apache/ossie](https://github.com/apache/ossie) |
 
 [Explore all upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+sort%3Aupdated-desc)
 
