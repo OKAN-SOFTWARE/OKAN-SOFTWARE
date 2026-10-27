@@ -170,8 +170,8 @@ def summarize(bundle, user, today, synced_at=None):
 
 
 def svg_dashboard(data):
-    today = data["today"]    
-    synced_at = format_sync_time(data["synced_at"])
+    today = data["today"]   
+    synced_at = format_sync_time(data["synced_at"], compact=True)
     parts = [
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">',
         '<title id="title">Okan’s public upstream pull-request activity</title>',
@@ -240,7 +240,7 @@ def markdown_text(value):
 
 def markdown_section(data, user):
     first, today = data["days"][0], data["today"]
-    synced_at = data["synced_at"].astimezone(timezone.utc).strftime("%b %d, %Y at %H:%M UTC")
+    synced_at = format_sync_time(data["synced_at"])
     summary = f'{data["opened_count"]} PRs opened, {data["merged_count"]} merged, {data["open_count"]} currently open, {data["repos_count"]} upstream repositories'
     rows = [
         f'![Public upstream activity: {summary}](./assets/activity.svg)',
