@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="./assets/workspace.svg" width="100%" alt="Okan Tiktas — Small fixes. Clear tests. Useful software." />
+  <img src="./matrix-banner.gif" width="100%" alt="Welcome to Okan’s workspace — Matrix animation" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/OKAN-SOFTWARE?tab=repositories">My projects</a> ·
-  <a href="https://github.com/pulls?q=is%3Apr+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE">Upstream contributions</a> ·
-  <a href="https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/actions/workflows/profile-activity.yml">Daily refresh</a>
+  <a href="https://github.com/OKAN-SOFTWARE?tab=repositories"><img src="./assets/button-projects.gif" width="250" height="66" alt="My projects" /></a>
+  <a href="https://github.com/pulls?q=is%3Apr+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE"><img src="./assets/button-contributions.gif" width="250" height="66" alt="Upstream contributions" /></a>
+  <a href="https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/actions/workflows/profile-activity.yml"><img src="./assets/button-sync.gif" width="250" height="66" alt="Activity sync" /></a>
 </p>
 
 I’m **Okan Tiktas**. I build tools for those **“there has to be an easier way”** moments—and contribute fixes to the tools other developers depend on.
@@ -17,7 +17,7 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 <!-- ACTIVITY:START -->
 ![Public upstream activity: 32 PRs opened, 16 merged, 15 currently open, 22 upstream repositories](./assets/activity.svg)
 
-**Sep 28–Oct 27, 2026** · Public pull requests to other owners’ repositories. Updated daily; dates use New York time.
+**Sep 28–Oct 27, 2026** · **Last synced: Oct 27, 2026 at 17:02 UTC**
 
 **32 opened · 16 merged · 15 open now · 22 upstream repositories**
 
@@ -47,14 +47,21 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 
 ## What’s on my workbench
 
-**Languages** — Python · Java · JavaScript · C# · HTML · CSS  
-**Building with** — Spring Boot · SQLite · Git · WordPress  
-**Learning next** — AWS cloud optimization · serverless development · AI token efficiency
+<img src="./assets/workbench.gif" width="100%" alt="Technology workbench with a circling red scanner border. Languages: Python, Java, JavaScript, TypeScript, C#, Go, HTML, CSS, SQL. Frameworks: Spring Boot, Node.js, Express, React, Three.js. Data and tools: SQLite, Redis, JSON Schema, REST APIs, Git, GitHub Actions, Docker. Testing and libraries: pytest, JUnit, Vitest, Boto3, PDFBox, Apache POI. Exploring AWS Lambda, SQS, SNS, EventBridge, Bedrock, DynamoDB, cloud optimization, serverless development, and AI token efficiency." />
 
 <details>
-<summary>A little more atmosphere</summary>
+<summary>Explore the stack</summary>
 
-![Welcome to Okan’s workspace — Matrix animation](./matrix-banner.gif)
+| Area | Technologies |
+| :--- | :--- |
+| **Languages** | Python · Java · JavaScript · TypeScript · C# · Go · HTML · CSS · SQL |
+| **Frameworks** | Spring Boot · Node.js · Express · React · Three.js |
+| **Data & tools** | SQLite · Redis · JSON Schema · REST APIs · Git · GitHub Actions · Docker |
+| **Testing & libraries** | pytest · JUnit · Vitest · Boto3 · PDFBox · Apache POI |
+| **AWS exploration** | Lambda · SQS · SNS · EventBridge · Bedrock · DynamoDB |
+| **Learning path** | Cloud optimization · Serverless development · AI token efficiency |
+
+Tools used across personal projects and contribution work; AWS topics include ongoing learning.
 
 </details>
 

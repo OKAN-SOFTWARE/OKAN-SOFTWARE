@@ -1,4 +1,4 @@
-from datetime import date
+from datetime import date, datetime, timezone
 import importlib.util
 import json
 from pathlib import Path
@@ -108,6 +108,18 @@ class ActivityTests(unittest.TestCase):
         self.assertIn("&lt;img", text)
         self.assertIn(r"\|", text)
         self.assertIn(r"\[click\]", text)
+
+    def test_sync_timestamp_changes_in_markdown_and_dashboard(self):
+        snapshots = [datetime(2026, 10, 27, hour, 42, tzinfo=timezone.utc) for hour in (10, 11)]
+        for moment in snapshots:
+            data = activity.summarize(bundle(), "OKAN-SOFTWARE", TODAY, moment)
+            text = activity.markdown_section(data, "OKAN-SOFTWARE")
+            svg = activity.svg_dashboard(data)
+            self.assertIn(f"Last synced: Oct 27, 2026 at {moment.hour}:42 UTC", text)
+            self.assertIn(f"SYNCED · Oct 27 · {moment.hour}:42 UTC", svg)
+            self.assertNotIn("dates use New York", text)
+            self.assertNotIn("Updated daily", text)
+            self.assertNotIn("NEW YORK DATES", svg)
 
     def test_only_marker_contents_change_and_reruns_are_stable(self):
         original = f"intro\n{activity.START}\nold\n{activity.END}\nprojects\n"

@@ -112,7 +112,7 @@ def validate_item(item, user):
     return f"{owner}/{repo}"
 
 
-def summarize(bundle, user, today):
+def summarize(bundle, user, today, synced_at=None):
     days = [today - timedelta(days=offset) for offset in reversed(range(30))]
     opened, merged = Counter(), Counter()
     upstreams = set()
@@ -155,11 +155,13 @@ def summarize(bundle, user, today):
         "opened_count": sum(opened.values()), "merged_count": sum(merged.values()),
         "open_count": bundle["open"]["total_count"], "repos_count": len(upstreams),
         "recent": recent, "today": today,
+        "synced_at": synced_at or datetime.combine(today, time.min, timezone.utc),
     }
 
 
 def svg_dashboard(data):
     today = data["today"]
+    synced_at = data["synced_at"].astimezone(timezone.utc).strftime("%b %d · %H:%M UTC")
     parts = [
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">',
         '<title id="title">Okan’s public upstream pull-request activity</title>',
@@ -168,7 +170,7 @@ def svg_dashboard(data):
         '<g font-family="sans-serif">',
         '<circle cx="39" cy="36" r="4" fill="#64d8cd"/>',
         '<text x="55" y="41" font-family="monospace" font-size="13" letter-spacing="2" fill="#e9f1f8">OPEN SOURCE / FIELD NOTES</text>',
-        f'<text x="1159" y="41" text-anchor="end" font-family="monospace" font-size="12" fill="#9db4c7">SNAPSHOT · {today.isoformat()}</text>',
+        f'<text x="1159" y="41" text-anchor="end" font-family="monospace" font-size="12" fill="#9db4c7">SYNCED · {synced_at}</text>',
     ]
     stats = [
         ("PRs opened", data["opened_count"], "last 30 days", "#64d8cd"),
@@ -212,7 +214,7 @@ def svg_dashboard(data):
     parts.extend([
         '<path d="M28 414H1172" stroke="#304556"/>',
         f'<text x="40" y="440" font-family="monospace" font-size="12" fill="#bdcfdd">TODAY / {data["opened"][today]} opened · {data["merged"][today]} merged</text>',
-        '<text x="1160" y="440" text-anchor="end" font-family="monospace" font-size="11" fill="#91aabe">PUBLIC PRs · NEW YORK DATES · REFRESHED DAILY</text>',
+        '<text x="1160" y="440" text-anchor="end" font-family="monospace" font-size="11" fill="#91aabe">PUBLIC UPSTREAM ACTIVITY</text>',
         '</g></svg>\n',
     ])
     return "\n".join(parts)
@@ -228,11 +230,12 @@ def markdown_text(value):
 
 def markdown_section(data, user):
     first, today = data["days"][0], data["today"]
+    synced_at = data["synced_at"].astimezone(timezone.utc).strftime("%b %d, %Y at %H:%M UTC")
     summary = f'{data["opened_count"]} PRs opened, {data["merged_count"]} merged, {data["open_count"]} currently open, {data["repos_count"]} upstream repositories'
     rows = [
         f'![Public upstream activity: {summary}](./assets/activity.svg)',
         "",
-        f'**{first.strftime("%b %d")}–{today.strftime("%b %d, %Y")}** · Public pull requests to other owners’ repositories. Updated daily; dates use New York time.',
+        f'**{first.strftime("%b %d")}–{today.strftime("%b %d, %Y")}** · **Last synced: {synced_at}**',
         "",
         f'**{data["opened_count"]} opened · {data["merged_count"]} merged · {data["open_count"]} open now · {data["repos_count"]} upstream repositories**',
         "",
@@ -266,8 +269,8 @@ def replace_section(readme, section):
     return before + START + "\n" + section + "\n" + END + after
 
 
-def write_outputs(bundle, user, today, root=ROOT):
-    data = summarize(bundle, user, today)
+def write_outputs(bundle, user, today, root=ROOT, synced_at=None):
+    data = summarize(bundle, user, today, synced_at)
     readme = root / "README.md"
     original = readme.read_text(encoding="utf-8")
     # Validate and render everything before touching the current snapshot.
@@ -282,6 +285,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--fixture", type=Path)
     parser.add_argument("--today", type=date.fromisoformat)
+    parser.add_argument("--synced-at", help="Snapshot time in timezone-aware ISO 8601 format")
     args = parser.parse_args()
     user = os.environ.get("PROFILE_USER", "OKAN-SOFTWARE")
     today = args.today or datetime.now(TZ).date()
@@ -296,7 +300,8 @@ def main():
             key: api_search(query, token, all_pages=key in ("opened", "merged"))
             for key, query in search_queries.items()
         }
-    data = write_outputs(bundle, user, today)
+    synced_at = timestamp(args.synced_at) if args.synced_at else datetime.now(timezone.utc)
+    data = write_outputs(bundle, user, today, synced_at=synced_at)
     print(f'Activity updated: {data["opened_count"]} opened, {data["merged_count"]} merged; public upstream PRs only.')
 
 

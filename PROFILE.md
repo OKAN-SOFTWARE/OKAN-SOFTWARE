@@ -11,6 +11,7 @@ installation, or personal access token.
 - Currently open upstream PRs, including drafts (an all-time count, not a 30-day count).
 - Distinct repositories with an opening or merge during the same 30-day window.
 - Six most recently updated upstream PRs, with explicit merged, open, draft, or closed states.
+- A real “Last synced” timestamp from the successful refresh, shown in UTC.
 
 The chart counts PR openings and merges separately. It is **not** a commit count,
 a count of working days, GitHub’s contribution calendar, or a count of forks.
@@ -53,12 +54,19 @@ python scripts/update_activity.py
 
 `PROFILE_USER` defaults to `OKAN-SOFTWARE`. `--fixture FILE` accepts a saved bundle
 of the four search responses (`opened`, `merged`, `open`, and `recent`) for offline
-validation. `--today YYYY-MM-DD` fixes the local calendar date when testing.
+validation. `--today YYYY-MM-DD` fixes the local calendar date when testing;
+`--synced-at` sets an explicit timezone-aware timestamp for reproducible runs.
 Do not commit raw API bundles; the generated section and SVG are the public outputs.
 
 Keep the single `ACTIVITY:START` / `ACTIVITY:END` marker pair in `README.md`.
 Everything outside those markers stays under manual control. `matrix-banner.gif`
-is retained in the optional atmosphere section.
+appears at the very top. Navigation links wrap animated GIF buttons, and the
+workbench uses pill badges with a continuously circling red scanner border.
+These animations are repository-owned GIFs; the README needs no custom CSS or JavaScript.
+
+To regenerate the four decorative assets locally, install Pillow and run
+`python scripts/render_profile_assets.py`. Pillow is only needed when rebuilding
+the decorative GIFs, not for the scheduled activity updater or its tests.
 
 ## References
 
