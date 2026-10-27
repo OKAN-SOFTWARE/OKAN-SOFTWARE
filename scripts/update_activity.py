@@ -280,6 +280,52 @@ def replace_section(readme, section):
 
 
 def write_outputs(bundle, user, today, root=ROOT, synced_at=None):
+    import hashlib
+
+    data = summarize(bundle, user, today, synced_at)
+
+    readme = root / "README.md"
+    svg_path = root / "assets" / "activity.svg"
+
+    original = readme.read_text(encoding="utf-8")
+
+    # Create a fingerprint of the displayed information,
+    # excluding the changing synchronization timestamp.
+    fixed_data = {
+        **data,
+        "synced_at": datetime(2000, 1, 1, tzinfo=timezone.utc),
+    }
+
+    content = (
+        markdown_section(fixed_data, user)
+        + "\n"
+        + svg_dashboard(fixed_data)
+    )
+
+    fingerprint = hashlib.sha256(
+        content.encode("utf-8")
+    ).hexdigest()
+
+    marker = f"<!-- ACTIVITY:SNAPSHOT:{fingerprint} -->"
+
+    # Nothing visible changed: preserve the existing files.
+    if marker in original and svg_path.is_file():
+        print("No activity changes detected. Skipping update.")
+        return data
+
+    # Generate both outputs before writing either file.
+    updated = replace_section(
+        original,
+        markdown_section(data, user) + "\n\n" + marker,
+    )
+
+    svg = svg_dashboard(data)
+
+    readme.write_text(updated, encoding="utf-8")
+    svg_path.write_text(svg, encoding="utf-8")
+
+    print("Activity changes detected. Snapshot updated.")
+    return data
     data = summarize(bundle, user, today, synced_at)
     readme = root / "README.md"
     original = readme.read_text(encoding="utf-8")
