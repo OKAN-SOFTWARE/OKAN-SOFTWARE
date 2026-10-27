@@ -1,5 +1,7 @@
 <p align="center">
+  <a name="phoenix-artwork">
   <img src="./assets/phoenix-workbench.png" width="100%" alt="Okan Tiktas’s workspace: a golden phoenix and ember trail framing a green Matrix banner and glowing badges for languages, frameworks, data tools, and AWS exploration." />
+  </a>
 </p>
 
 <p align="center">
