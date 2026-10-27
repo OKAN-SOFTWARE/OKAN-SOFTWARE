@@ -325,16 +325,7 @@ def write_outputs(bundle, user, today, root=ROOT, synced_at=None):
     svg_path.write_text(svg, encoding="utf-8")
 
     print("Activity changes detected. Snapshot updated.")
-    return data
-    data = summarize(bundle, user, today, synced_at)
-    readme = root / "README.md"
-    original = readme.read_text(encoding="utf-8")
-    # Validate and render everything before touching the current snapshot.
-    updated = replace_section(original, markdown_section(data, user))
-    svg = svg_dashboard(data)
-    readme.write_text(updated, encoding="utf-8")
-    (root / "assets" / "activity.svg").write_text(svg, encoding="utf-8")
-    return data
+    return data   
 
 
 def main():
