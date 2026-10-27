@@ -1,4 +1,4 @@
-![Welcome to Okan's workspace — Matrix animation](./matrix-banner.gif)   (https://github.com/OKAN-SOFTWARE)
+![Welcome to Okan's workspace — Matrix animation](./matrix-banner.gif)
 
 
 **I build tools for those “there has to be an easier way” moments.**
