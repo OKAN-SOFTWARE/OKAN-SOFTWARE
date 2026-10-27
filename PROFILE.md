@@ -61,8 +61,9 @@ Do not commit raw API bundles; the generated section and SVG are the public outp
 Keep the single `ACTIVITY:START` / `ACTIVITY:END` marker pair in `README.md`.
 Everything outside those markers stays under manual control. The approved phoenix
 and workbench illustration (`assets/phoenix-workbench.png`) appears at the top.
-It is static artwork; the illustrated buttons inside it are decorative. The real
-navigation links immediately below wrap animated GIF buttons. Contribution data
+It is static artwork without illustrated navigation buttons. The image sits inside
+a named anchor with no destination, so it is not an image-viewer or navigation link.
+The real navigation links immediately below wrap animated GIF buttons. Contribution data
 remains in the generated section, and stack details remain available as text.
 The README needs no custom CSS or JavaScript.
 
