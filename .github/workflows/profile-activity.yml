@@ -2,7 +2,8 @@ name: Refresh profile activity
 
 on:
   schedule:
-    - cron: '17 13 * * *'
+  - cron: '17 */4 * * *'
+    timezone: 'America/New_York'
   workflow_dispatch:
   push:
     branches: [main]
