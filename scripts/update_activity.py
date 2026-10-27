@@ -159,7 +159,7 @@ def summarize(bundle, user, today, synced_at=None):
             upstreams.add(repo)
     if any(item["state"] != "open" for item in validated["open"]):
         raise ValueError("Closed PR in open search results")
-    recent = sorted(validated["recent"], key=lambda item: timestamp(item["updated_at"]), reverse=True)[:6]
+    recent = sorted(validated["recent"], key=lambda item: timestamp(item["updated_at"]), reverse=True)[:10]
     return {
         "days": days, "opened": opened, "merged": merged,
         "opened_count": sum(opened.values()), "merged_count": sum(merged.values()),
