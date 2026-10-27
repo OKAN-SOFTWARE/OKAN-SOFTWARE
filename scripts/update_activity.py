@@ -180,7 +180,7 @@ def svg_dashboard(data):
         '<g font-family="sans-serif">',
         '<circle cx="39" cy="36" r="4" fill="#64d8cd"/>',
         '<text x="55" y="41" font-family="monospace" font-size="13" letter-spacing="2" fill="#e9f1f8">OPEN SOURCE / FIELD NOTES</text>',
-        f'<text x="1159" y="41" text-anchor="end" font-family="monospace" font-size="12" fill="#9db4c7">SYNCED · {synced_at}</text>',
+        f'<text x="1159" y="41" text-anchor="end" font-family="monospace" font-size="12" fill="#9db4c7">UPDATED · {synced_at}</text>',
     ]
     stats = [
         ("PRs opened", data["opened_count"], "last 30 days", "#64d8cd"),
@@ -245,7 +245,7 @@ def markdown_section(data, user):
     rows = [
         f'![Public upstream activity: {summary}](./assets/activity.svg)',
         "",
-        f'**{first.strftime("%b %d")}–{today.strftime("%b %d, %Y")}** · **Last synced: {synced_at}**',
+        f'**{first.strftime("%b %d")}–{today.strftime("%b %d, %Y")}** · **Last profile update: {synced_at}**',
         "",
         f'**{data["opened_count"]} opened · {data["merged_count"]} merged · {data["open_count"]} open now · {data["repos_count"]} upstream repositories**',
         "",
