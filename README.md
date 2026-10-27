@@ -1,4 +1,7 @@
-I build tools for those “there has to be an easier way” moments.
+![Welcome to Okan's workspace — Matrix animation](./matrix-banner.gif)
+
+
+**I build tools for those “there has to be an easier way” moments.**
 
 I’m Okan Tiktas, and here’s what I’ve been working on:
 
