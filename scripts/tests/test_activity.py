@@ -308,12 +308,12 @@ class ActivityTests(unittest.TestCase):
             svg = activity.svg_dashboard(data)
 
             self.assertIn(
-                f"Last synced: {activity.format_sync_time(moment)}",
+                f"Last profile update: {activity.format_sync_time(moment)}",
                 text,
             )
 
             self.assertIn(
-                f"SYNCED · {activity.format_sync_time(moment, compact=True)}",
+                f"UPDATED · {activity.format_sync_time(moment, compact=True)}",
                 svg,
             )
 
