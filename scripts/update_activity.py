@@ -20,6 +20,16 @@ ROOT = Path(__file__).resolve().parents[1]
 START = "<!-- ACTIVITY:START -->"
 END = "<!-- ACTIVITY:END -->"
 TZ = ZoneInfo("America/New_York")
+def format_sync_time(value, *, compact=False):
+    local = value.astimezone(TZ)
+
+    hour = local.hour % 12 or 12
+    clock = f"{hour}:{local:%M %p %Z}"
+
+    if compact:
+        return f"{local:%b %d} · {clock}"
+
+    return f"{local:%b %d, %Y} at {clock}"
 KEYS = ("opened", "merged", "open", "recent")
 REPO_URL = re.compile(r"https://api\.github\.com/repos/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)")
 
@@ -160,8 +170,8 @@ def summarize(bundle, user, today, synced_at=None):
 
 
 def svg_dashboard(data):
-    today = data["today"]
-    synced_at = data["synced_at"].astimezone(timezone.utc).strftime("%b %d · %H:%M UTC")
+    today = data["today"]    
+    synced_at = format_sync_time(data["synced_at"])
     parts = [
         '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">',
         '<title id="title">Okan’s public upstream pull-request activity</title>',
