@@ -59,10 +59,12 @@ validation. `--today YYYY-MM-DD` fixes the local calendar date when testing;
 Do not commit raw API bundles; the generated section and SVG are the public outputs.
 
 Keep the single `ACTIVITY:START` / `ACTIVITY:END` marker pair in `README.md`.
-Everything outside those markers stays under manual control. `matrix-banner.gif`
-appears at the very top. Navigation links wrap animated GIF buttons, and the
-workbench uses pill badges with a continuously circling red scanner border.
-These animations are repository-owned GIFs; the README needs no custom CSS or JavaScript.
+Everything outside those markers stays under manual control. The approved phoenix
+and workbench illustration (`assets/phoenix-workbench.png`) appears at the top.
+It is static artwork; the illustrated buttons inside it are decorative. The real
+navigation links immediately below wrap animated GIF buttons. Contribution data
+remains in the generated section, and stack details remain available as text.
+The README needs no custom CSS or JavaScript.
 
 To regenerate the four decorative assets locally, install Pillow and run
 `python scripts/render_profile_assets.py`. Pillow is only needed when rebuilding

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./matrix-banner.gif" width="100%" alt="Welcome to Okan’s workspace — Matrix animation" />
+  <img src="./assets/phoenix-workbench.png" width="100%" alt="Okan Tiktas’s workspace: a golden phoenix and ember trail framing a green Matrix banner and glowing badges for languages, frameworks, data tools, and AWS exploration." />
 </p>
 
 <p align="center">
@@ -53,14 +53,12 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 
 ## What’s on my workbench
 
-<img src="./assets/workbench.gif" width="100%" alt="Technology workbench with a circling red scanner border. Languages: Python, Java, JavaScript, TypeScript, C#, Go, HTML, CSS, SQL. Frameworks: Spring Boot, Node.js, Express, React, Three.js. Data and tools: SQLite, Redis, JSON Schema, REST APIs, Git, GitHub Actions, Docker. Testing and libraries: pytest, JUnit, Vitest, Boto3, PDFBox, Apache POI. Exploring AWS Lambda, SQS, SNS, EventBridge, Bedrock, DynamoDB, cloud optimization, serverless development, and AI token efficiency." />
-
 <details>
 <summary>Explore the stack</summary>
 
 | Area | Technologies |
 | :--- | :--- |
-| **Languages** | Python · Java · JavaScript · TypeScript · C# · Go · HTML · CSS · SQL |
+| **Languages** | Python · Java · JavaScript · C# · HTML · CSS · SQL |
 | **Frameworks** | Spring Boot · Node.js · Express · React · Three.js |
 | **Data & tools** | SQLite · Redis · JSON Schema · REST APIs · Git · GitHub Actions · Docker |
 | **Testing & libraries** | pytest · JUnit · Vitest · Boto3 · PDFBox · Apache POI |
