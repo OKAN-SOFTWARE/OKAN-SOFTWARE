@@ -17,7 +17,7 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 <!-- ACTIVITY:START -->
 ![Public upstream activity: 33 PRs opened, 17 merged, 15 currently open, 23 upstream repositories](./assets/activity.svg)
 
-**Sep 28–Oct 27, 2026** · **Last profile update: Oct 27, 2026 at 4:45 PM EDT**
+**Sep 28–Oct 27, 2026** · **Last profile update: Oct 27, 2026 at 7:06 PM EDT**
 
 **33 opened · 17 merged · 15 open now · 23 upstream repositories**
 
@@ -25,8 +25,8 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
-| 🟢 Open | [fix(server): exit with an error when PORT is invalid · #797](https://github.com/jannskiee/floe/pull/797) | [jannskiee/floe](https://github.com/jannskiee/floe) |
 | 🟢 Open | [fix(dynamodb): resolve service manager mypy errors · #9](https://github.com/manojkken/testcontainers-aws/pull/9) | [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) |
+| 🟢 Open | [fix(server): exit with an error when PORT is invalid · #797](https://github.com/jannskiee/floe/pull/797) | [jannskiee/floe](https://github.com/jannskiee/floe) |
 | ![](./assets/pr-merged.svg) Merged | [fix(artifact-record): prevent output from replacing source evidence · #178](https://github.com/lostlight530/auto-doc-engine/pull/178) | [lostlight530/auto-doc-engine](https://github.com/lostlight530/auto-doc-engine) |
 | 🟢 Open | [fix(core): make generator output ordering deterministic · #1193](https://github.com/nodejs/doc-kit/pull/1193) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 | 🟢 Open | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
@@ -40,7 +40,7 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 
 <sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:7fa12a0bbc29a8d66b100924b9108f09e60a10ad178edf1ab9c6942f763fafab -->
+<!-- ACTIVITY:SNAPSHOT:0a2b4096973635e1928aca04a0a76e6f1481536ea1a8ad633aa17d4d3cd035d5 -->
 <!-- ACTIVITY:END -->
 
 ## Built from an everyday problem
