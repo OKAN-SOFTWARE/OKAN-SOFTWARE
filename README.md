@@ -15,17 +15,17 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-![Public upstream activity: 32 PRs opened, 16 merged, 15 currently open, 22 upstream repositories](./assets/activity.svg)
+![Public upstream activity: 32 PRs opened, 17 merged, 14 currently open, 22 upstream repositories](./assets/activity.svg)
 
-**Sep 28–Oct 27, 2026** · **Last synced: Oct 27, 2026 at 17:20 UTC**
+**Sep 28–Oct 27, 2026** · **Last synced: Oct 27, 2026 at 2:08 PM EDT**
 
-**32 opened · 16 merged · 15 open now · 22 upstream repositories**
+**32 opened · 17 merged · 14 open now · 22 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
-| ⚙️ Draft | [fix(artifact-record): prevent output from replacing source evidence · #178](https://github.com/lostlight530/auto-doc-engine/pull/178) | [lostlight530/auto-doc-engine](https://github.com/lostlight530/auto-doc-engine) |
+| 🟣 Merged | [fix(artifact-record): prevent output from replacing source evidence · #178](https://github.com/lostlight530/auto-doc-engine/pull/178) | [lostlight530/auto-doc-engine](https://github.com/lostlight530/auto-doc-engine) |
 | 🟢 Open | [fix(core): make generator output ordering deterministic · #1193](https://github.com/nodejs/doc-kit/pull/1193) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 | 🟢 Open | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
 | 🟣 Merged | [feat(frontend): add ledger call and WhatsApp links · #468](https://github.com/nikhilb2/simple_invoicing/pull/468) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
