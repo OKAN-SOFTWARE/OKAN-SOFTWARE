@@ -1,0 +1,67 @@
+# Profile activity
+
+This profile uses repository-owned SVGs and a small Python script to keep its
+open-source section current. It needs no external stats-card service, package
+installation, or personal access token.
+
+## What updates
+
+- Public pull requests authored by the profile owner in **other owners’ repositories**.
+- PRs opened and PRs merged over the last 30 calendar days in `America/New_York`.
+- Currently open upstream PRs, including drafts (an all-time count, not a 30-day count).
+- Distinct repositories with an opening or merge during the same 30-day window.
+- Six most recently updated upstream PRs, with explicit merged, open, draft, or closed states.
+
+The chart counts PR openings and merges separately. It is **not** a commit count,
+a count of working days, GitHub’s contribution calendar, or a count of forks.
+An old PR merged this month contributes to merges even if it was opened earlier.
+Fork creation and automated profile-refresh commits do not increase these counts.
+Private repositories, PR bodies, and unpublished work are not included.
+Search results can lag recent GitHub activity.
+
+## Automation
+
+Merge the profile PR into `main`. The merge triggers the first refresh.
+After that, **Refresh profile activity** runs daily at 13:17 UTC (09:17 in New York
+during daylight saving time; 08:17 during standard time). GitHub may delay a
+scheduled run. To refresh sooner, use **Actions → Refresh profile activity → Run workflow**.
+
+The workflow uses the repository’s built-in `GITHUB_TOKEN`. Only the refresh job
+gets `contents: write`; pull-request runs execute the tests with read permission.
+No token is written to the README or SVG. The updater validates all its data and
+renders both outputs before writing either file. API errors or incomplete search
+results fail the run instead of publishing zeroes. A push rejected by branch
+protection fails visibly; no force push or rule bypass is attempted.
+
+Scheduled workflows in public repositories can be disabled after 60 days without
+repository activity. Re-enable the workflow from Actions if GitHub disables it.
+
+## Local use
+
+Requires Python 3.11+ (the workflow uses Python 3.12).
+
+```bash
+python -m unittest discover -s scripts/tests -v
+```
+
+To fetch a fresh snapshot, set `GH_TOKEN` to a GitHub token in your environment,
+then run:
+
+```bash
+python scripts/update_activity.py
+```
+
+`PROFILE_USER` defaults to `OKAN-SOFTWARE`. `--fixture FILE` accepts a saved bundle
+of the four search responses (`opened`, `merged`, `open`, and `recent`) for offline
+validation. `--today YYYY-MM-DD` fixes the local calendar date when testing.
+Do not commit raw API bundles; the generated section and SVG are the public outputs.
+
+Keep the single `ACTIVITY:START` / `ACTIVITY:END` marker pair in `README.md`.
+Everything outside those markers stays under manual control. `matrix-banner.gif`
+is retained in the optional atmosphere section.
+
+## References
+
+- [GitHub issue and PR search](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests)
+- [GITHUB_TOKEN](https://docs.github.com/en/actions/concepts/security/github_token)
+- [Scheduled workflow events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)

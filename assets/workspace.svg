@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 370" role="img" aria-labelledby="title desc">
+  <title id="title">Okan Tiktas — software engineer and open-source contributor</title>
+  <desc id="desc">Small fixes. Clear tests. Useful software. A midnight-blue workbench with a cyan and amber code motif.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#263747" stroke-width="0.6" /></pattern>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#152b38"/><stop offset="1" stop-color="#0c141e"/></linearGradient>
+  </defs>
+  <rect width="1200" height="370" rx="18" fill="#0c141e" />
+  <rect x="1" y="1" width="1198" height="368" rx="17" fill="url(#glow)" stroke="#304556" />
+  <rect x="732" y="1" width="467" height="368" rx="17" fill="url(#grid)" />
+  <path d="M280 32H925" stroke="#304556" />
+  <circle cx="43" cy="32" r="4" fill="#f1bb68" />
+  <text x="63" y="37" font-family="monospace" font-size="13" letter-spacing="2" fill="#b7c7d5">OKAN / SOFTWARE</text>
+  <text x="1147" y="37" text-anchor="end" font-family="monospace" font-size="11" letter-spacing="2" fill="#81a4b6">PERSONAL WORKSPACE / 01</text>
+  <text x="48" y="107" font-family="monospace" font-size="13" letter-spacing="3" fill="#64d8cd">SOFTWARE ENGINEER · OPEN SOURCE CONTRIBUTOR</text>
+  <text x="44" y="174" font-family="sans-serif" font-weight="700" font-size="58" letter-spacing="-2" fill="#f1f6fa">Small fixes.</text>
+  <text x="44" y="239" font-family="sans-serif" font-weight="700" font-size="58" letter-spacing="-2" fill="#f1f6fa">Clear tests.</text>
+  <text x="44" y="304" font-family="sans-serif" font-weight="700" font-size="58" letter-spacing="-2" fill="#f1bb68">Useful software.</text>
+  <g transform="translate(826 100)">
+    <rect width="312" height="205" rx="12" fill="#0c141e" stroke="#385367"/>
+    <path d="M0 35H312" stroke="#385367"/>
+    <circle cx="19" cy="18" r="4" fill="#f1bb68"/><circle cx="34" cy="18" r="4" fill="#64d8cd"/><circle cx="49" cy="18" r="4" fill="#557185"/>
+    <text x="291" y="22" text-anchor="end" font-family="monospace" font-size="11" fill="#8ca7bb">~/workbench</text>
+    <text x="21" y="76" font-family="monospace" font-size="15" fill="#8ca7bb">$ reproduce --then-fix</text>
+    <path d="M48 103L28 120L48 137M81 103L101 120L81 137M72 98L57 143" fill="none" stroke="#64d8cd" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="122" y="116" font-family="monospace" font-size="12" fill="#f1f6fa">focused patch</text>
+    <text x="122" y="137" font-family="monospace" font-size="12" fill="#8ca7bb">regression covered</text>
+    <rect x="20" y="165" width="271" height="23" rx="5" fill="#172c30"/>
+    <text x="31" y="181" font-family="monospace" font-size="12" fill="#64d8cd">→ make the next run better</text>
+  </g>
+  <text x="48" y="346" font-family="monospace" font-size="11" letter-spacing="1.5" fill="#8ca7bb">OKAN TIKTAS</text>
+  <text x="1147" y="346" text-anchor="end" font-family="monospace" font-size="11" letter-spacing="1.5" fill="#8ca7bb">CURIOUS BY DEFAULT. PRACTICAL BY DESIGN.</text>
+</svg>

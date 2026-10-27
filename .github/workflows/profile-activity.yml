@@ -1,0 +1,67 @@
+name: Refresh profile activity
+
+on:
+  schedule:
+    - cron: '17 13 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/profile-activity.yml'
+      - 'README.md'
+  pull_request:
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/profile-activity.yml'
+      - 'README.md'
+      - 'assets/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: profile-activity-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Check activity aggregation and generated output
+        run: python -m unittest discover -s scripts/tests -v
+
+  refresh:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Refresh public upstream activity
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROFILE_USER: ${{ github.repository_owner }}
+        run: python scripts/update_activity.py
+      - name: Commit changed snapshot
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md assets/activity.svg
+          if git diff --cached --quiet; then
+            echo 'Activity snapshot already current.'
+            exit 0
+          fi
+          git commit -m 'docs(profile): refresh public upstream activity'
+          git push origin HEAD:main
