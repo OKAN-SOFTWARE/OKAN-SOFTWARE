@@ -27,32 +27,32 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-![Public upstream activity: 38 PRs opened, 19 merged, 18 currently open, 27 upstream repositories](./assets/activity.svg)
+![Public upstream activity: 42 PRs opened, 20 merged, 21 currently open, 31 upstream repositories](./assets/activity.svg)
 
-**Sep 29–Oct 28, 2026** · **Last profile update: Oct 28, 2026 at 12:59 PM EDT**
+**Sep 29–Oct 28, 2026** · **Last profile update: Oct 28, 2026 at 4:52 PM EDT**
 
-**38 opened · 19 merged · 18 open now · 27 upstream repositories**
+**42 opened · 20 merged · 21 open now · 31 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| ⚙️ Draft | [\[FancyZones\] Allow horizontal mouse wheel to switch zone layouts · #51692](https://github.com/microsoft/PowerToys/pull/51692) | [microsoft/PowerToys](https://github.com/microsoft/PowerToys) |
+| 🟢 Open | [fix(msix): defer PowerShell updates while in use · #28275](https://github.com/PowerShell/PowerShell/pull/28275) | [PowerShell/PowerShell](https://github.com/PowerShell/PowerShell) |
+| 🟢 Open | [docs(site): add Python installation command to homepage · #487](https://github.com/microsoft/TypeChat/pull/487) | [microsoft/TypeChat](https://github.com/microsoft/TypeChat) |
 | 🟢 Open | [Clarify supported random seed types in dataset helpers (NumPy-compatible random seeds for dataset helpers) · #520](https://github.com/mne-tools/mne-connectivity/pull/520) | [mne-tools/mne-connectivity](https://github.com/mne-tools/mne-connectivity) |
+| ⚙️ Draft | [feat(linux): enable AppImage delta updates (#9659) · #11226](https://github.com/super-productivity/super-productivity/pull/11226) | [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) |
+| 🟢 Open | [fix: validate checkpoint SubType constraints · #851](https://github.com/aws/aws-durable-execution-sdk-python/pull/851) | [aws/aws-durable-execution-sdk-python](https://github.com/aws/aws-durable-execution-sdk-python) |
+| ![](./assets/pr-merged.svg) Merged | [fix(dynamodb): resolve service manager mypy errors · #9](https://github.com/manojkken/testcontainers-aws/pull/9) | [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) |
 | ![](./assets/pr-merged.svg) Merged | [fix(server): exit with an error when PORT is invalid · #797](https://github.com/jannskiee/floe/pull/797) | [jannskiee/floe](https://github.com/jannskiee/floe) |
 | 🟢 Open | [fix(prompt-engine): prevent duplicate nested architectural decisions · #203](https://github.com/PicadoLabs/build-with-ai/pull/203) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [fix(rules): prevent duplicate deployment platform in exports · #202](https://github.com/PicadoLabs/build-with-ai/pull/202) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
-| 🟢 Open | [test: isolate profile validation tests from user language settings · #28](https://github.com/ftery0/ai-profile-switch/pull/28) | [ftery0/ai-profile-switch](https://github.com/ftery0/ai-profile-switch) |
-| ![](./assets/pr-merged.svg) Merged | [fix: protect tabs with unsaved form changes · #21](https://github.com/theluckystrike/tab-suspender-chrome-extension/pull/21) | [theluckystrike/tab-suspender-chrome-extension](https://github.com/theluckystrike/tab-suspender-chrome-extension) |
-| 🟢 Open | [fix(cli): handle output write failures consistently · #4](https://github.com/veerjain-1/agent-guard-eval/pull/4) | [veerjain-1/agent-guard-eval](https://github.com/veerjain-1/agent-guard-eval) |
-| 🟢 Open | [fix(dynamodb): resolve service manager mypy errors · #9](https://github.com/manojkken/testcontainers-aws/pull/9) | [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) |
-| ![](./assets/pr-merged.svg) Merged | [fix(artifact-record): prevent output from replacing source evidence · #178](https://github.com/lostlight530/auto-doc-engine/pull/178) | [lostlight530/auto-doc-engine](https://github.com/lostlight530/auto-doc-engine) |
-| 🟢 Open | [fix(core): make generator output ordering deterministic · #1193](https://github.com/nodejs/doc-kit/pull/1193) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 
 [Explore all upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+sort%3Aupdated-desc)
 
 <sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:354408c8d6bb988afd8b1110e24d1c0f5689f39907d74e15863b862d818ce424 -->
+<!-- ACTIVITY:SNAPSHOT:daa6aec466224a06a41ef776a019150ccc7c9f020965754fb833090234319f4f -->
 <!-- ACTIVITY:END -->
 
 ## Built from an everyday problem
