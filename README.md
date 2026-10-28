@@ -17,16 +17,18 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-![Public upstream activity: 33 PRs opened, 17 merged, 15 currently open, 23 upstream repositories](./assets/activity.svg)
+![Public upstream activity: 35 PRs opened, 17 merged, 17 currently open, 25 upstream repositories](./assets/activity.svg)
 
-**Sep 28–Oct 27, 2026** · **Last profile update: Oct 27, 2026 at 7:06 PM EDT**
+**Sep 28–Oct 27, 2026** · **Last profile update: Oct 27, 2026 at 9:08 PM EDT**
 
-**33 opened · 17 merged · 15 open now · 23 upstream repositories**
+**35 opened · 17 merged · 17 open now · 25 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [Clarify supported random seed types in dataset helpers (NumPy-compatible random seeds for dataset helpers) · #520](https://github.com/mne-tools/mne-connectivity/pull/520) | [mne-tools/mne-connectivity](https://github.com/mne-tools/mne-connectivity) |
+| 🟢 Open | [fix(cli): handle output write failures consistently · #4](https://github.com/veerjain-1/agent-guard-eval/pull/4) | [veerjain-1/agent-guard-eval](https://github.com/veerjain-1/agent-guard-eval) |
 | 🟢 Open | [fix(dynamodb): resolve service manager mypy errors · #9](https://github.com/manojkken/testcontainers-aws/pull/9) | [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) |
 | 🟢 Open | [fix(server): exit with an error when PORT is invalid · #797](https://github.com/jannskiee/floe/pull/797) | [jannskiee/floe](https://github.com/jannskiee/floe) |
 | ![](./assets/pr-merged.svg) Merged | [fix(artifact-record): prevent output from replacing source evidence · #178](https://github.com/lostlight530/auto-doc-engine/pull/178) | [lostlight530/auto-doc-engine](https://github.com/lostlight530/auto-doc-engine) |
@@ -35,14 +37,12 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | ![](./assets/pr-merged.svg) Merged | [feat(frontend): add ledger call and WhatsApp links · #468](https://github.com/nikhilb2/simple_invoicing/pull/468) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
 | ![](./assets/pr-merged.svg) Merged | [fix(frontend): share clipboard fallback across copy actions · #467](https://github.com/nikhilb2/simple_invoicing/pull/467) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
 | ![](./assets/pr-merged.svg) Merged | [feat: add copy invoice number button to preview · #466](https://github.com/nikhilb2/simple_invoicing/pull/466) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
-| ![](./assets/pr-merged.svg) Merged | [chore(config): log MCP warnings and preserve startup banner · #459](https://github.com/nikhilb2/simple_invoicing/pull/459) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
-| ![](./assets/pr-merged.svg) Merged | [test(gst): add regression coverage for GST tax helpers · #458](https://github.com/nikhilb2/simple_invoicing/pull/458) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
 
 [Explore all upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+sort%3Aupdated-desc)
 
 <sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:0a2b4096973635e1928aca04a0a76e6f1481536ea1a8ad633aa17d4d3cd035d5 -->
+<!-- ACTIVITY:SNAPSHOT:ff7e0c7d0ce9496e835515d1d584d45873b8d703092e929d24cbc4d89a55e47c -->
 <!-- ACTIVITY:END -->
 
 ## Built from an everyday problem
