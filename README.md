@@ -10,6 +10,16 @@
   <a href="https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/actions/workflows/profile-activity.yml"><img src="./assets/button-sync.gif" width="250" height="66" alt="Activity sync" /></a>
 </p>
 
+<!-- PROFILE-BADGES:START -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-151B33?style=for-the-badge&logo=openjdk&logoColor=00D4FF" alt="Java" />
+  <img src="https://img.shields.io/badge/Python-151B33?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" />
+  <img src="https://img.shields.io/badge/AWS-151B33?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900" alt="AWS" />
+  <img src="https://img.shields.io/badge/REST_APIs-151B33?style=for-the-badge&logo=swagger&logoColor=00D4FF" alt="REST APIs" />
+  <img src="https://img.shields.io/badge/Open_Source-151B33?style=for-the-badge&logo=github&logoColor=9B7BFF" alt="Open Source Contributor" />
+</p>
+<!-- PROFILE-BADGES:END -->
+
 I’m **Okan Tiktas**. I build tools for those **“there has to be an easier way”** moments—and contribute fixes to the tools other developers depend on.
 
 My open-source work usually starts with a bug I can reproduce. I trace it, make a focused change, add a regression test, and work through review. My forks are the workbench; the pull requests below show what I’ve sent upstream.
