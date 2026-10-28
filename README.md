@@ -17,16 +17,17 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-![Public upstream activity: 35 PRs opened, 17 merged, 17 currently open, 25 upstream repositories](./assets/activity.svg)
+![Public upstream activity: 35 PRs opened, 18 merged, 16 currently open, 25 upstream repositories](./assets/activity.svg)
 
-**Sep 28–Oct 27, 2026** · **Last profile update: Oct 27, 2026 at 9:08 PM EDT**
+**Sep 29–Oct 28, 2026** · **Last profile update: Oct 28, 2026 at 12:54 AM EDT**
 
-**35 opened · 17 merged · 17 open now · 25 upstream repositories**
+**35 opened · 18 merged · 16 open now · 25 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| ![](./assets/pr-merged.svg) Merged | [fix: protect tabs with unsaved form changes · #21](https://github.com/theluckystrike/tab-suspender-chrome-extension/pull/21) | [theluckystrike/tab-suspender-chrome-extension](https://github.com/theluckystrike/tab-suspender-chrome-extension) |
 | 🟢 Open | [Clarify supported random seed types in dataset helpers (NumPy-compatible random seeds for dataset helpers) · #520](https://github.com/mne-tools/mne-connectivity/pull/520) | [mne-tools/mne-connectivity](https://github.com/mne-tools/mne-connectivity) |
 | 🟢 Open | [fix(cli): handle output write failures consistently · #4](https://github.com/veerjain-1/agent-guard-eval/pull/4) | [veerjain-1/agent-guard-eval](https://github.com/veerjain-1/agent-guard-eval) |
 | 🟢 Open | [fix(dynamodb): resolve service manager mypy errors · #9](https://github.com/manojkken/testcontainers-aws/pull/9) | [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) |
@@ -36,13 +37,12 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | 🟢 Open | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
 | ![](./assets/pr-merged.svg) Merged | [feat(frontend): add ledger call and WhatsApp links · #468](https://github.com/nikhilb2/simple_invoicing/pull/468) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
 | ![](./assets/pr-merged.svg) Merged | [fix(frontend): share clipboard fallback across copy actions · #467](https://github.com/nikhilb2/simple_invoicing/pull/467) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
-| ![](./assets/pr-merged.svg) Merged | [feat: add copy invoice number button to preview · #466](https://github.com/nikhilb2/simple_invoicing/pull/466) | [nikhilb2/simple_invoicing](https://github.com/nikhilb2/simple_invoicing) |
 
 [Explore all upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+sort%3Aupdated-desc)
 
 <sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:ff7e0c7d0ce9496e835515d1d584d45873b8d703092e929d24cbc4d89a55e47c -->
+<!-- ACTIVITY:SNAPSHOT:6f1269ae72e6bea88332f6af360be31011f77f294abfb316d9b189073bbcc037 -->
 <!-- ACTIVITY:END -->
 
 ## Built from an everyday problem
