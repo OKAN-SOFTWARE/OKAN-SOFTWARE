@@ -12,11 +12,11 @@
 
 <!-- PROFILE-BADGES:START -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Java-151B33?style=for-the-badge&logo=openjdk&logoColor=00D4FF" alt="Java" />
-  <img src="https://img.shields.io/badge/Python-151B33?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" />
-  <img src="https://img.shields.io/badge/AWS-151B33?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900" alt="AWS" />
-  <img src="https://img.shields.io/badge/REST_APIs-151B33?style=for-the-badge&logo=swagger&logoColor=00D4FF" alt="REST APIs" />
-  <img src="https://img.shields.io/badge/Open_Source-151B33?style=for-the-badge&logo=github&logoColor=9B7BFF" alt="Open Source Contributor" />
+  <picture><img src="https://img.shields.io/badge/Java-151B33?style=for-the-badge&logo=openjdk&logoColor=00D4FF" alt="Java" /></picture>
+  <picture><img src="https://img.shields.io/badge/Python-151B33?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" /></picture>
+  <picture><img src="https://img.shields.io/badge/AWS-151B33?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900" alt="AWS" /></picture>
+  <picture><img src="https://img.shields.io/badge/REST_APIs-151B33?style=for-the-badge&logo=swagger&logoColor=00D4FF" alt="REST APIs" /></picture>
+  <picture><img src="https://img.shields.io/badge/Open_Source-151B33?style=for-the-badge&logo=github&logoColor=9B7BFF" alt="Open Source Contributor" /></picture>
 </p>
 <!-- PROFILE-BADGES:END -->
 
