@@ -27,16 +27,17 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-![Public upstream activity: 37 PRs opened, 18 merged, 18 currently open, 27 upstream repositories](./assets/activity.svg)
+![Public upstream activity: 38 PRs opened, 18 merged, 19 currently open, 27 upstream repositories](./assets/activity.svg)
 
-**Sep 29–Oct 28, 2026** · **Last profile update: Oct 28, 2026 at 4:59 AM EDT**
+**Sep 29–Oct 28, 2026** · **Last profile update: Oct 28, 2026 at 9:00 AM EDT**
 
-**37 opened · 18 merged · 18 open now · 27 upstream repositories**
+**38 opened · 18 merged · 19 open now · 27 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix(prompt-engine): prevent duplicate nested architectural decisions · #203](https://github.com/PicadoLabs/build-with-ai/pull/203) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [fix(rules): prevent duplicate deployment platform in exports · #202](https://github.com/PicadoLabs/build-with-ai/pull/202) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [test: isolate profile validation tests from user language settings · #28](https://github.com/ftery0/ai-profile-switch/pull/28) | [ftery0/ai-profile-switch](https://github.com/ftery0/ai-profile-switch) |
 | ![](./assets/pr-merged.svg) Merged | [fix: protect tabs with unsaved form changes · #21](https://github.com/theluckystrike/tab-suspender-chrome-extension/pull/21) | [theluckystrike/tab-suspender-chrome-extension](https://github.com/theluckystrike/tab-suspender-chrome-extension) |
@@ -46,13 +47,12 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | 🟢 Open | [fix(server): exit with an error when PORT is invalid · #797](https://github.com/jannskiee/floe/pull/797) | [jannskiee/floe](https://github.com/jannskiee/floe) |
 | ![](./assets/pr-merged.svg) Merged | [fix(artifact-record): prevent output from replacing source evidence · #178](https://github.com/lostlight530/auto-doc-engine/pull/178) | [lostlight530/auto-doc-engine](https://github.com/lostlight530/auto-doc-engine) |
 | 🟢 Open | [fix(core): make generator output ordering deterministic · #1193](https://github.com/nodejs/doc-kit/pull/1193) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
-| 🟢 Open | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
 
 [Explore all upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+sort%3Aupdated-desc)
 
 <sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:dd816cd4792442a23b31b47094337f3d6799f5fb245687b2984157e8cfa9fd99 -->
+<!-- ACTIVITY:SNAPSHOT:3b998c8acbc0f9d895bf32ec6f8a14b6f40e40be8120c887f591eafe93dadca0 -->
 <!-- ACTIVITY:END -->
 
 ## Built from an everyday problem
