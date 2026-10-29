@@ -1,26 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
 <title id="title">Okan’s public upstream pull-request activity</title>
-<desc id="desc">Last 30 days: 42 PRs opened and 20 merged in 31 repositories. 21 PRs currently open. Cyan bars show openings, amber bars show merges. Not a commit or fork count.</desc>
+<desc id="desc">Last 30 days: 48 PRs opened and 21 merged in 34 repositories. 25 PRs currently open. Cyan bars show openings, amber bars show merges. Not a commit or fork count.</desc>
 <rect x="1" y="1" width="1198" height="458" rx="16" fill="#0c141e" stroke="#304556"/>
 <g font-family="sans-serif">
 <circle cx="39" cy="36" r="4" fill="#64d8cd"/>
 <text x="55" y="41" font-family="monospace" font-size="13" letter-spacing="2" fill="#e9f1f8">OPEN SOURCE / FIELD NOTES</text>
-<text x="1159" y="41" text-anchor="end" font-family="monospace" font-size="12" fill="#9db4c7">UPDATED · Oct 28 · 4:52 PM EDT</text>
+<text x="1159" y="41" text-anchor="end" font-family="monospace" font-size="12" fill="#9db4c7">UPDATED · Oct 28 · 9:06 PM EDT</text>
 <rect x="28" y="66" width="271" height="118" rx="10" fill="#13212e"/>
 <text x="45" y="93" font-size="14" fill="#bdcfdd">PRs opened</text>
-<text x="45" y="143" font-size="42" font-weight="700" fill="#64d8cd">42</text>
+<text x="45" y="143" font-size="42" font-weight="700" fill="#64d8cd">48</text>
 <text x="45" y="167" font-family="monospace" font-size="11" fill="#91aabe">last 30 days</text>
 <rect x="319" y="66" width="271" height="118" rx="10" fill="#13212e"/>
 <text x="336" y="93" font-size="14" fill="#bdcfdd">PRs merged</text>
-<text x="336" y="143" font-size="42" font-weight="700" fill="#f1bb68">20</text>
+<text x="336" y="143" font-size="42" font-weight="700" fill="#f1bb68">21</text>
 <text x="336" y="167" font-family="monospace" font-size="11" fill="#91aabe">last 30 days</text>
 <rect x="610" y="66" width="271" height="118" rx="10" fill="#13212e"/>
 <text x="627" y="93" font-size="14" fill="#bdcfdd">Open upstream PRs</text>
-<text x="627" y="143" font-size="42" font-weight="700" fill="#e9f1f8">21</text>
+<text x="627" y="143" font-size="42" font-weight="700" fill="#e9f1f8">25</text>
 <text x="627" y="167" font-family="monospace" font-size="11" fill="#91aabe">current · includes drafts</text>
 <rect x="901" y="66" width="271" height="118" rx="10" fill="#13212e"/>
 <text x="918" y="93" font-size="14" fill="#bdcfdd">Upstream repositories</text>
-<text x="918" y="143" font-size="42" font-weight="700" fill="#e9f1f8">31</text>
+<text x="918" y="143" font-size="42" font-weight="700" fill="#e9f1f8">34</text>
 <text x="918" y="167" font-family="monospace" font-size="11" fill="#91aabe">with an opening or merge</text>
 <text x="40" y="224" font-size="15" font-weight="600" fill="#e9f1f8">A month of upstream work</text>
 <rect x="873" y="214" width="10" height="10" rx="2" fill="#64d8cd"/>
@@ -124,12 +124,12 @@
 <rect x="1086.4" y="256.0" width="24" height="47.9" fill="#f1bb68"/>
 </g>
 <rect x="1123.7" y="256" width="24" height="118" rx="3" fill="#13212e"/>
-<g><title>2026-10-28: 7 opened, 2 merged</title>
-<rect x="1123.7" y="348.2" width="24" height="25.8" fill="#64d8cd"/>
-<rect x="1123.7" y="340.8" width="24" height="7.4" fill="#f1bb68"/>
+<g><title>2026-10-28: 13 opened, 3 merged</title>
+<rect x="1123.7" y="326.1" width="24" height="47.9" fill="#64d8cd"/>
+<rect x="1123.7" y="315.0" width="24" height="11.1" fill="#f1bb68"/>
 </g>
 <text x="1147.7" y="395" text-anchor="end" font-family="monospace" font-size="11" fill="#91aabe">Oct 28</text>
 <path d="M28 414H1172" stroke="#304556"/>
-<text x="40" y="440" font-family="monospace" font-size="12" fill="#bdcfdd">TODAY / 7 opened · 2 merged</text>
+<text x="40" y="440" font-family="monospace" font-size="12" fill="#bdcfdd">TODAY / 13 opened · 3 merged</text>
 <text x="1160" y="440" text-anchor="end" font-family="monospace" font-size="11" fill="#91aabe">PUBLIC UPSTREAM ACTIVITY</text>
 </g></svg>
