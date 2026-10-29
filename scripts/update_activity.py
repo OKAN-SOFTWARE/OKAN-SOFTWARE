@@ -239,13 +239,12 @@ def markdown_text(value):
 
 
 def markdown_section(data, user):
-    first, today = data["days"][0], data["today"]
     synced_at = format_sync_time(data["synced_at"])
     summary = f'{data["opened_count"]} PRs opened, {data["merged_count"]} merged, {data["open_count"]} currently open, {data["repos_count"]} upstream repositories'
     rows = [
         f'![Public upstream activity: {summary}](./assets/activity.svg)',
         "",
-        f'**{first.strftime("%b %d")}–{today.strftime("%b %d, %Y")}** · **Last profile update: {synced_at}**',
+        f'**Last profile update: {synced_at}**',
         "",
         f'**{data["opened_count"]} opened · {data["merged_count"]} merged · {data["open_count"]} open now · {data["repos_count"]} upstream repositories**',
         "",
