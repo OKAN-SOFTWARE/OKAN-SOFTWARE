@@ -10,8 +10,8 @@ installation, or personal access token.
 - PRs opened and PRs merged over the last 30 calendar days in `America/New_York`.
 - Currently open upstream PRs, including drafts (an all-time count, not a 30-day count).
 - Distinct repositories with an opening or merge during the same 30-day window.
-- Six most recently updated upstream PRs, with explicit merged, open, draft, or closed states.
-- A real “Last synced” timestamp from the successful refresh, shown in UTC.
+- Ten most recently updated upstream PRs, with explicit merged, open, draft, or closed states.
+- A “Last profile update” timestamp from the latest successful refresh, shown in New York time. Both the README and chart update this time even when the PR counts and table are unchanged.
 
 The chart counts PR openings and merges separately. It is **not** a commit count,
 a count of working days, GitHub’s contribution calendar, or a count of forks.
@@ -23,8 +23,8 @@ Search results can lag recent GitHub activity.
 ## Automation
 
 Merge the profile PR into `main`. The merge triggers the first refresh.
-After that, **Refresh profile activity** runs daily at 13:17 UTC (09:17 in New York
-during daylight saving time; 08:17 during standard time). GitHub may delay a
+After that, **Refresh profile activity** runs every four hours at minute 17 in
+`America/New_York` (00:17, 04:17, 08:17, 12:17, 16:17, and 20:17). GitHub may delay a
 scheduled run. To refresh sooner, use **Actions → Refresh profile activity → Run workflow**.
 
 The workflow uses the repository’s built-in `GITHUB_TOKEN`. Only the refresh job

@@ -308,11 +308,6 @@ def write_outputs(bundle, user, today, root=ROOT, synced_at=None):
 
     marker = f"<!-- ACTIVITY:SNAPSHOT:{fingerprint} -->"
 
-    # Nothing visible changed: preserve the existing files.
-    if marker in original and svg_path.is_file():
-        print("No activity changes detected. Skipping update.")
-        return data
-
     # Generate both outputs before writing either file.
     updated = replace_section(
         original,
@@ -321,10 +316,16 @@ def write_outputs(bundle, user, today, root=ROOT, synced_at=None):
 
     svg = svg_dashboard(data)
 
+    # The synchronization time is visible data, even when PR activity is unchanged.
+    # Skip writes only when both complete outputs already match this refresh.
+    if updated == original and svg_path.is_file() and svg_path.read_text(encoding="utf-8") == svg:
+        print("Profile snapshot already current.")
+        return data
+
     readme.write_text(updated, encoding="utf-8")
     svg_path.write_text(svg, encoding="utf-8")
 
-    print("Activity changes detected. Snapshot updated.")
+    print("Profile snapshot refreshed, including the synchronization time.")
     return data   
 
 
