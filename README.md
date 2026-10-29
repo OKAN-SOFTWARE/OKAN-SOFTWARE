@@ -29,7 +29,7 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 <!-- ACTIVITY:START -->
 ![Public upstream activity: 50 PRs opened, 26 merged, 22 currently open, 35 upstream repositories](./assets/activity.svg)
 
-**Last profile update: Oct 29, 2026 at 3:26 PM EDT**
+**Last profile update: Oct 29, 2026 at 3:29 PM EDT**
 
 **50 opened · 26 merged · 22 open now · 35 upstream repositories**
 
@@ -52,7 +52,7 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 
 <sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:9e9a1e9ba220e4159f06b44d41d759486969445a316300db69a17615a3162e47 -->
+<!-- ACTIVITY:SNAPSHOT:2e9c88c46449691b6e9e588b4596bb90c3fce872b5d06befaf6a39803605fe41 -->
 <!-- ACTIVITY:END -->
 
 ## Built from an everyday problem
