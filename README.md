@@ -27,16 +27,18 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-![Public upstream activity: 48 PRs opened, 23 merged, 23 currently open, 34 upstream repositories](./assets/activity.svg)
+![Public upstream activity: 48 PRs opened, 24 merged, 22 currently open, 34 upstream repositories](./assets/activity.svg)
 
-**Sep 30–Oct 29, 2026** · **Last profile update: Oct 29, 2026 at 12:56 AM EDT**
+**Sep 30–Oct 29, 2026** · **Last profile update: Oct 29, 2026 at 5:01 AM EDT**
 
-**48 opened · 23 merged · 23 open now · 34 upstream repositories**
+**48 opened · 24 merged · 22 open now · 34 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| ![](./assets/pr-merged.svg) Merged | [fix(rules): prevent duplicate deployment platform in exports · #202](https://github.com/PicadoLabs/build-with-ai/pull/202) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
+| 🟢 Open | [fix(prompt-engine): prevent duplicate nested architectural decisions · #203](https://github.com/PicadoLabs/build-with-ai/pull/203) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [fix(data): harden CSV health checks · #2388](https://github.com/microsoft/qlib/pull/2388) | [microsoft/qlib](https://github.com/microsoft/qlib) |
 | ![](./assets/pr-merged.svg) Merged | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
 | ![](./assets/pr-merged.svg) Merged | [test: isolate profile validation tests from user language settings · #28](https://github.com/ftery0/ai-profile-switch/pull/28) | [ftery0/ai-profile-switch](https://github.com/ftery0/ai-profile-switch) |
@@ -45,14 +47,12 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | 🟢 Open | [fix(cli): handle output write failures consistently · #4](https://github.com/veerjain-1/agent-guard-eval/pull/4) | [veerjain-1/agent-guard-eval](https://github.com/veerjain-1/agent-guard-eval) |
 | 🟢 Open | [Fix invalid table column header alignment value · #13358](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13358) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
 | 🟢 Open | [Fix incorrect containment operator examples · #13359](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13359) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
-| ⚪ Closed | [fix: validate checkpoint SubType constraints · #851](https://github.com/aws/aws-durable-execution-sdk-python/pull/851) | [aws/aws-durable-execution-sdk-python](https://github.com/aws/aws-durable-execution-sdk-python) |
-| 🟢 Open | [Document deferred MSIX updates while PowerShell is running · #13357](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13357) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
 
 [Explore all upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+sort%3Aupdated-desc)
 
 <sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:03b0b20d139f276e4ef71ba8d08bdc156aefa06d230f6faecb662777fc4a02c2 -->
+<!-- ACTIVITY:SNAPSHOT:3b4838fc4a038064093b4d19feaf0cff65bd1d19369bc234b60c0517a2f7c181 -->
 <!-- ACTIVITY:END -->
 
 ## Built from an everyday problem
