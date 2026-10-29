@@ -27,32 +27,32 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-![Public upstream activity: 50 PRs opened, 27 merged, 21 currently open, 35 upstream repositories](./assets/activity.svg)
+![Public upstream activity: 53 PRs opened, 27 merged, 24 currently open, 37 upstream repositories](./assets/activity.svg)
 
-**Last profile update: Oct 29, 2026 at 4:53 PM EDT**
+**Last profile update: Oct 29, 2026 at 6:37 PM EDT**
 
-**50 opened · 27 merged · 21 open now · 35 upstream repositories**
+**53 opened · 27 merged · 24 open now · 37 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| ![](./assets/pr-merged.svg) Merged | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
+| 🟢 Open | [fix(watch): refresh remote status after terminal git push · #1044](https://github.com/JetBrains/thinkrail/pull/1044) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
+| 🟢 Open | [fix(core): skip default validation when context is unresolved · #39560](https://github.com/aws/aws-cdk/pull/39560) | [aws/aws-cdk](https://github.com/aws/aws-cdk) |
+| 🟢 Open | [fix(templates): reject Windows reserved device names · #1042](https://github.com/JetBrains/thinkrail/pull/1042) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
 | ![](./assets/pr-merged.svg) Merged | [fix(kinesis): resolve mypy errors with boto3 stub types · #11](https://github.com/manojkken/testcontainers-aws/pull/11) | [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) |
 | 🟢 Open | [Fix --verifytypes inference for attributes assigned from annotated function calls · #11945](https://github.com/microsoft/pyright/pull/11945) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 | ![](./assets/pr-merged.svg) Merged | [Clarify supported random seed types in dataset helpers (NumPy-compatible random seeds for dataset helpers) · #520](https://github.com/mne-tools/mne-connectivity/pull/520) | [mne-tools/mne-connectivity](https://github.com/mne-tools/mne-connectivity) |
 | ![](./assets/pr-merged.svg) Merged | [fix(core): make generator output ordering deterministic · #1193](https://github.com/nodejs/doc-kit/pull/1193) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 | 🟢 Open | [fix(chat): persist session state edits on save · #556](https://github.com/google/adk-web/pull/556) | [google/adk-web](https://github.com/google/adk-web) |
 | ![](./assets/pr-merged.svg) Merged | [fix(rules): prevent duplicate deployment platform in exports · #202](https://github.com/PicadoLabs/build-with-ai/pull/202) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
-| 🟢 Open | [fix(prompt-engine): prevent duplicate nested architectural decisions · #203](https://github.com/PicadoLabs/build-with-ai/pull/203) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
-| 🟢 Open | [fix(data): harden CSV health checks · #2388](https://github.com/microsoft/qlib/pull/2388) | [microsoft/qlib](https://github.com/microsoft/qlib) |
-| ![](./assets/pr-merged.svg) Merged | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
-| ![](./assets/pr-merged.svg) Merged | [test: isolate profile validation tests from user language settings · #28](https://github.com/ftery0/ai-profile-switch/pull/28) | [ftery0/ai-profile-switch](https://github.com/ftery0/ai-profile-switch) |
 
 [Explore all upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+sort%3Aupdated-desc)
 
 <sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:b2bf70dd593e181f6a591414aeb6be4bd9ae2a2e5ed168f19310920b1187aac9 -->
+<!-- ACTIVITY:SNAPSHOT:a9ef65b17743c53029371b363b854e61d980f54c81ad067aab9adf3b8e35b0a9 -->
 <!-- ACTIVITY:END -->
 
 ## Built from an everyday problem
