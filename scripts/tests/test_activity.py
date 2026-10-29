@@ -363,7 +363,7 @@ class ActivityTests(unittest.TestCase):
                     "new",
                 )
 
-    def test_unchanged_activity_skips_snapshot_update(self):
+    def test_unchanged_activity_refreshes_timestamp_in_both_outputs(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             (root / "assets").mkdir()
@@ -416,7 +416,7 @@ class ActivityTests(unittest.TestCase):
                 original_readme,
             )
 
-            # Identical activity must not change either file.
+            # A successful refresh must advance the time even when PRs are unchanged.
             activity.write_outputs(
                 data,
                 "OKAN-SOFTWARE",
@@ -425,15 +425,48 @@ class ActivityTests(unittest.TestCase):
                 synced_at=second,
             )
 
-            self.assertEqual(
+            updated_readme = readme.read_text(encoding="utf-8")
+            updated_svg = svg.read_text(encoding="utf-8")
+
+            self.assertNotEqual(
                 original_readme,
-                readme.read_text(encoding="utf-8"),
+                updated_readme,
             )
 
-            self.assertEqual(
+            self.assertNotEqual(
                 original_svg,
-                svg.read_text(encoding="utf-8"),
+                updated_svg,
             )
+
+            self.assertIn(
+                f"Last profile update: {activity.format_sync_time(second)}",
+                updated_readme,
+            )
+            self.assertIn(
+                f"UPDATED · {activity.format_sync_time(second, compact=True)}",
+                updated_svg,
+            )
+            self.assertEqual(
+                original_readme.replace(
+                    activity.format_sync_time(first),
+                    activity.format_sync_time(second),
+                ),
+                updated_readme,
+            )
+            self.assertEqual(
+                original_svg.replace(
+                    activity.format_sync_time(first, compact=True),
+                    activity.format_sync_time(second, compact=True),
+                ),
+                updated_svg,
+            )
+
+            # An identical timestamp and data remain deterministic.
+            activity.write_outputs(
+                data, "OKAN-SOFTWARE", TODAY, root, synced_at=second,
+            )
+            self.assertEqual(updated_readme, readme.read_text(encoding="utf-8"))
+            self.assertEqual(updated_svg, svg.read_text(encoding="utf-8"))
 
             # A visible PR change must update the snapshot.
             data["recent"]["items"][0]["title"] = (
