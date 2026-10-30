@@ -27,16 +27,18 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-![Public upstream activity: 55 PRs opened, 27 merged, 26 currently open, 39 upstream repositories](./assets/activity.svg)
+![Public upstream activity: 56 PRs opened, 27 merged, 27 currently open, 40 upstream repositories](./assets/activity.svg)
 
-**Last profile update: Oct 30, 2026 at 5:01 AM EDT**
+**Last profile update: Oct 30, 2026 at 9:05 AM EDT**
 
-**55 opened · 27 merged · 26 open now · 39 upstream repositories**
+**56 opened · 27 merged · 27 open now · 40 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix(client): support accountId in assignable project searches · #2449](https://github.com/pycontribs/jira/pull/2449) | [pycontribs/jira](https://github.com/pycontribs/jira) |
+| 🟢 Open | [test: isolate Django cache settings between xdist worker groups · #852](https://github.com/jazzband/django-redis/pull/852) | [jazzband/django-redis](https://github.com/jazzband/django-redis) |
 | 🟢 Open | [fix: avoid stale dependency comparisons during snapshot retries · #1179](https://github.com/actions/dependency-review-action/pull/1179) | [actions/dependency-review-action](https://github.com/actions/dependency-review-action) |
 | 🟢 Open | [fix: improve diagnostics for missing Linux libraries · #1656](https://github.com/actions/setup-node/pull/1656) | [actions/setup-node](https://github.com/actions/setup-node) |
 | 🟢 Open | [fix(watch): refresh remote status after terminal git push · #1044](https://github.com/JetBrains/thinkrail/pull/1044) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
@@ -45,14 +47,12 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | 🟢 Open | [fix(templates): reject Windows reserved device names · #1042](https://github.com/JetBrains/thinkrail/pull/1042) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
 | ![](./assets/pr-merged.svg) Merged | [fix(kinesis): resolve mypy errors with boto3 stub types · #11](https://github.com/manojkken/testcontainers-aws/pull/11) | [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) |
 | 🟢 Open | [Fix --verifytypes inference for attributes assigned from annotated function calls · #11945](https://github.com/microsoft/pyright/pull/11945) | [microsoft/pyright](https://github.com/microsoft/pyright) |
-| ![](./assets/pr-merged.svg) Merged | [Clarify supported random seed types in dataset helpers (NumPy-compatible random seeds for dataset helpers) · #520](https://github.com/mne-tools/mne-connectivity/pull/520) | [mne-tools/mne-connectivity](https://github.com/mne-tools/mne-connectivity) |
-| ![](./assets/pr-merged.svg) Merged | [fix(core): make generator output ordering deterministic · #1193](https://github.com/nodejs/doc-kit/pull/1193) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 
 [Explore all upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+sort%3Aupdated-desc)
 
 <sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:83b661892ffae5de08a1d2c655c36eada7b2858bf8ff6e6b7e7271a88d58b86c -->
+<!-- ACTIVITY:SNAPSHOT:ba4e9744c53074a6e8843dd8ecf9d7fca22454a1ba7d1fb5c6651f873f298992 -->
 <!-- ACTIVITY:END -->
 
 ## Built from an everyday problem
