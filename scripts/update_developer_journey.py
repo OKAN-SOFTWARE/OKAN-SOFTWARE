@@ -289,9 +289,12 @@ def archive_updates(existing, summary):
 
 
 TOPIC_RULES = [
-    ("JavaScript & frontend", r"\b(?:javascript|typescript|react|html|css|vite|vitest|angular|nodejs|node\.js)\b"),
+    ("React", r"\breact\b"),
+    ("Node.js / Express", r"\b(?:nodejs|node\.js|express)\b"),
+    ("Spring Boot", r"\bspring(?:[- ]boot)?\b"),
+    ("JavaScript / TypeScript", r"\b(?:javascript|typescript|html|css|vite|vitest|angular)\b"),
     ("Python", r"\b(?:python|pytest|django|mypy|ruff|boto3)\b"),
-    ("Java", r"\b(?:java|maven|spring)\b"),
+    ("Java", r"\b(?:java|maven)\b"),
     ("Data & SQL", r"\b(?:sql|postgres|redis|mongodb|dynamodb|csv)\b"),
     ("Cloud & DevOps", r"\b(?:aws|lambda|cloudformation|docker|workflow|github.actions|ci)\b"),
     ("Testing & reliability", r"\b(?:test|tests|regression|lint|validation|diagnostic)\b"),
@@ -437,10 +440,10 @@ def weekly_markdown(summary, commits, prs):
         for item in highlights:
             repo = item["repository_url"].split("/repos/", 1)[-1]
             title = safe_title(item["title"])
-            if item in opened:
-                action = "I opened"
-            elif item in merged:
+            if item in merged:
                 action = "My PR was merged:"
+            elif item in opened:
+                action = "I opened"
             else:
                 action = "My PR remained active:"
             rows.append(
