@@ -29,7 +29,7 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 <!-- ACTIVITY:START -->
 ![Public upstream activity: 58 PRs opened, 27 merged, 28 currently open, 41 upstream repositories](./assets/activity.svg)
 
-**Last profile update: Oct 30, 2026 at 6:23 PM EDT**
+**Last profile update: Oct 30, 2026 at 6:34 PM EDT**
 
 **58 opened · 27 merged · 28 open now · 41 upstream repositories**
 
@@ -43,16 +43,16 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | 🟢 Open | [fix: avoid stale dependency comparisons during snapshot retries · #1179](https://github.com/actions/dependency-review-action/pull/1179) | [actions/dependency-review-action](https://github.com/actions/dependency-review-action) |
 | 🟢 Open | [fix: improve diagnostics for missing Linux libraries · #1656](https://github.com/actions/setup-node/pull/1656) | [actions/setup-node](https://github.com/actions/setup-node) |
 | 🟢 Open | [fix(watch): refresh remote status after terminal git push · #1044](https://github.com/JetBrains/thinkrail/pull/1044) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
+| ![](./assets/pr-merged.svg) Merged | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
 | 🟢 Open | [fix(core): skip default validation when context is unresolved · #39560](https://github.com/aws/aws-cdk/pull/39560) | [aws/aws-cdk](https://github.com/aws/aws-cdk) |
 | 🟢 Open | [fix(templates): reject Windows reserved device names · #1042](https://github.com/JetBrains/thinkrail/pull/1042) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
-| 🟢 Open | [Fix --verifytypes inference for attributes assigned from annotated function calls · #11945](https://github.com/microsoft/pyright/pull/11945) | [microsoft/pyright](https://github.com/microsoft/pyright) |
-| 🟢 Open | [fix(chat): persist session state edits on save · #556](https://github.com/google/adk-web/pull/556) | [google/adk-web](https://github.com/google/adk-web) |
+| ![](./assets/pr-merged.svg) Merged | [fix(kinesis): resolve mypy errors with boto3 stub types · #11](https://github.com/manojkken/testcontainers-aws/pull/11) | [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) |
 
-[Explore all open upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc)
+[Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:83746316ca7d20bafc69891244af13290a6c964926cc11c7fa631ac116003a5b -->
+<!-- ACTIVITY:SNAPSHOT:6d8c4beb53e2ff79749f022d4fc96bcff95ef8d231f9b019c3843af04fe1bbdd -->
 <!-- ACTIVITY:END -->
 
 ## Built from an everyday problem
