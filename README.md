@@ -49,8 +49,6 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 
 ### 🧬 Code DNA · Public GitHub History
 
-**I Mostly Code in JavaScript**
-
 **80 authored commits · 9 public original repositories**
 
 #### 🕒 When I Commit
@@ -62,9 +60,9 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | 🌃 Evening | 5 | 6.2% | █░░░░░░░░░░░░░░░ |
 | 🌙 Night | 0 | 0.0% | ░░░░░░░░░░░░░░░░ |
 
-#### 💬 Programming Languages
+#### 💬 I Mostly Code in JavaScript
 
-| Language | LOC | Source bytes | Activity |
+| Language | Line of Codes | Source bytes | Activity |
 | :--- | ---: | ---: | :--- |
 | JavaScript | 273,411 | 16,944,094 | ████████████████ |
 | Java | 1,603 | 81,259 | ░░░░░░░░░░░░░░░░ |
@@ -86,9 +84,7 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 
 ### 🔥 Today's Coding Adventure · Friday, October 30, 2026
 
-| Authored commits | Repositories touched | PR activities | Issues opened |
-| ---: | ---: | ---: | ---: |
-| **0** | **4** | **8** | **0** |
+Our daily development journey is here — a timeline of today's public coding and contribution activity.
 
 #### ⚡ Today's Public Activity Trail
 
@@ -105,37 +101,11 @@ No language information for today's active original repositories.
 
 **Achievements:** 🚀 Upstream Pathfinder · 🧭 Multi-Repo Adventurer
 
-<sub>Statistics and bars are selectable text. LOC means nonblank lines in recognized source files on the default branches of current public original repositories; comments are included, while common generated/dependency directories and minified files are excluded. Source bytes come from GitHub's language API, so LOC and bytes have different inclusion rules. Commit timing does not measure hours spent coding or cover all upstream history. Recent event data can lag. Development Stack is a curated skills list.</sub>
+<sub>Statistics and bars are selectable text. Line of Codes counts nonblank lines in recognized source files on the default branches of current public original repositories; comments are included, while common generated/dependency directories and minified files are excluded. Source bytes come from GitHub's language API, so LOC and bytes have different inclusion rules. Commit timing does not measure hours spent coding or cover all upstream history. Recent event data can lag. Development Stack is a curated skills list.</sub>
 <!-- JOURNEY:END -->
 
-## Built from an everyday problem
-
-| Project | The moment it helps |
-| :--- | :--- |
-| **[VeilDrop](https://github.com/OKAN-SOFTWARE/veildrop)** | “I need to share this log without sharing its secrets.” Local text redaction and encrypted handoffs. |
-| **[LaunchNotes](https://github.com/OKAN-SOFTWARE/LaunchNotes)** | “These commits need a better story than ‘fixed stuff.’” Turn commit messages into readable release notes. |
-| **[Doc2FAQ](https://github.com/OKAN-SOFTWARE/Doc2FAQ)** | “The answers are in this document somewhere.” Turn documents into editable FAQ drafts, with local processing and exports. |
-
-## Extra tools & interests
-
-<details>
-<summary>Explore the stack</summary>
-
-| Area | Technologies |
-| :--- | :--- |
-| **Languages** | Python · Java · JavaScript · C# · HTML · CSS · SQL |
-| **Frameworks** | Spring Boot · Node.js · Express · React · Three.js |
-| **Data & tools** | SQLite · Redis · JSON Schema · REST APIs · Git · GitHub Actions · Docker |
-| **Testing & libraries** | pytest · JUnit · Vitest · Boto3 · PDFBox · Apache POI |
-| **AWS exploration** | Lambda · SQS · SNS · EventBridge · Bedrock · DynamoDB |
-| **Learning path** | Cloud optimization · Serverless development · AI token efficiency |
-
-Tools used across personal projects and contribution work; AWS topics include ongoing learning.
-
-</details>
-
 <!-- WEEKLY:START -->
-## 📖 My Weekly Journey
+### 📅 Weekly Coding Adventure
 
 **Oct 26–Nov 01, 2026 · Eastern Time**
 
@@ -163,3 +133,27 @@ This week, I recorded **38 attributed commits** across **25 public repositories*
 
 <sub>This journal is rebuilt from attributed commits on current public original-repository default branches and public PR titles/dates. Technology topics are keyword matches in titles, repository names, and commit messages, not verified framework usage or an expertise rating. PR updates by other people are not described as personal actions. The current week runs Monday–Sunday in Eastern Time and refreshes with the profile workflow.</sub>
 <!-- WEEKLY:END -->
+
+## Built from an everyday problem
+
+| Project | The moment it helps |
+| :--- | :--- |
+| **[VeilDrop](https://github.com/OKAN-SOFTWARE/veildrop)** | “I need to share this log without sharing its secrets.” Local text redaction and encrypted handoffs. |
+| **[LaunchNotes](https://github.com/OKAN-SOFTWARE/LaunchNotes)** | “These commits need a better story than ‘fixed stuff.’” Turn commit messages into readable release notes. |
+| **[Doc2FAQ](https://github.com/OKAN-SOFTWARE/Doc2FAQ)** | “The answers are in this document somewhere.” Turn documents into editable FAQ drafts, with local processing and exports. |
+
+## Extra tools & interests
+
+### Explore the stack
+
+| Area | Technologies |
+| :--- | :--- |
+| **Languages** | Python · Java · JavaScript · C# · HTML · CSS · SQL |
+| **Frameworks** | Spring Boot · Node.js · Express · React · Three.js |
+| **Data & tools** | SQLite · Redis · JSON Schema · REST APIs · Git · GitHub Actions · Docker |
+| **Testing & libraries** | pytest · JUnit · Vitest · Boto3 · PDFBox · Apache POI |
+| **AWS exploration** | Lambda · SQS · SNS · EventBridge · Bedrock · DynamoDB |
+| **Learning path** | Cloud optimization · Serverless development · AI token efficiency |
+
+Tools used across personal projects and contribution work; AWS topics include ongoing learning.
+
