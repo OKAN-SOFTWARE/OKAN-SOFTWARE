@@ -401,7 +401,7 @@ def weekly_markdown(summary, commits, prs):
         active_repos.update(summary["by_day"].get(day, {}).get("repos", set()))
     topics = weekly_topics(prs, commits, monday)
     rows = [
-        "## 📖 My Weekly Journey",
+        "### 📅 Weekly Coding Adventure",
         "",
         f"**{monday:%b %d}–{sunday:%b %d, %Y} · Eastern Time**",
         "",
@@ -519,8 +519,6 @@ def markdown(summary, archive):
         "",
         "### 🧬 Code DNA · Public GitHub History",
         "",
-        f"**I Mostly Code in {dominant}**",
-        "",
         f"**{total:,} authored commits · {summary['repos']} public original repositories**",
         "",
         "#### 🕒 When I Commit",
@@ -533,9 +531,9 @@ def markdown(summary, archive):
         rows.append(f"| {name} | {count:,} | {share:.1f}% | {bar(count, total)} |")
     rows.extend([
         "",
-        "#### 💬 Programming Languages",
+        f"#### 💬 I Mostly Code in {dominant}",
         "",
-        "| Language | LOC | Source bytes | Activity |",
+        "| Language | Line of Codes | Source bytes | Activity |",
         "| :--- | ---: | ---: | :--- |",
     ])
     for name, count in summary["languages"].most_common(8):
@@ -558,9 +556,7 @@ def markdown(summary, archive):
         "",
         f"### 🔥 Today's Coding Adventure · {today:%A, %B %d, %Y}",
         "",
-        "| Authored commits | Repositories touched | PR activities | Issues opened |",
-        "| ---: | ---: | ---: | ---: |",
-        f"| **{current['commits']}** | **{len(current['repos'])}** | **{current['prs']}** | **{current['issues']}** |",
+        "Our daily development journey is here — a timeline of today's public coding and contribution activity.",
         "",
         "#### ⚡ Today's Public Activity Trail",
         "",
@@ -591,7 +587,7 @@ def markdown(summary, archive):
         "",
         "**Achievements:** " + (" · ".join(badges) if badges else "Awaiting today's first unlock"),
         "",
-        "<sub>Statistics and bars are selectable text. LOC means nonblank lines in recognized source files on the default branches of current public original repositories; comments are included, while common generated/dependency directories and minified files are excluded. Source bytes come from GitHub's language API, so LOC and bytes have different inclusion rules. Commit timing does not measure hours spent coding or cover all upstream history. Recent event data can lag. Development Stack is a curated skills list.</sub>",
+        "<sub>Statistics and bars are selectable text. Line of Codes counts nonblank lines in recognized source files on the default branches of current public original repositories; comments are included, while common generated/dependency directories and minified files are excluded. Source bytes come from GitHub's language API, so LOC and bytes have different inclusion rules. Commit timing does not measure hours spent coding or cover all upstream history. Recent event data can lag. Development Stack is a curated skills list.</sub>",
     ])
     return "\n".join(rows)
 
