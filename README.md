@@ -29,7 +29,7 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 <!-- ACTIVITY:START -->
 ![Public upstream activity: 58 PRs opened, 27 merged, 28 currently open, 41 upstream repositories](./assets/activity.svg)
 
-**Last profile update: Oct 30, 2026 at 4:51 PM EDT**
+**Last profile update: Oct 30, 2026 at 6:23 PM EDT**
 
 **58 opened · 27 merged · 28 open now · 41 upstream repositories**
 
@@ -38,21 +38,21 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
 | 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
-| ⚪ Closed | [fix(vitest): resolve dependencies from project root · #11805](https://github.com/vitest-dev/vitest/pull/11805) | [vitest-dev/vitest](https://github.com/vitest-dev/vitest) |
 | 🟢 Open | [fix(client): support accountId in assignable project searches · #2449](https://github.com/pycontribs/jira/pull/2449) | [pycontribs/jira](https://github.com/pycontribs/jira) |
 | 🟢 Open | [test: isolate Django cache settings between xdist worker groups · #852](https://github.com/jazzband/django-redis/pull/852) | [jazzband/django-redis](https://github.com/jazzband/django-redis) |
 | 🟢 Open | [fix: avoid stale dependency comparisons during snapshot retries · #1179](https://github.com/actions/dependency-review-action/pull/1179) | [actions/dependency-review-action](https://github.com/actions/dependency-review-action) |
 | 🟢 Open | [fix: improve diagnostics for missing Linux libraries · #1656](https://github.com/actions/setup-node/pull/1656) | [actions/setup-node](https://github.com/actions/setup-node) |
 | 🟢 Open | [fix(watch): refresh remote status after terminal git push · #1044](https://github.com/JetBrains/thinkrail/pull/1044) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
-| ![](./assets/pr-merged.svg) Merged | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
 | 🟢 Open | [fix(core): skip default validation when context is unresolved · #39560](https://github.com/aws/aws-cdk/pull/39560) | [aws/aws-cdk](https://github.com/aws/aws-cdk) |
 | 🟢 Open | [fix(templates): reject Windows reserved device names · #1042](https://github.com/JetBrains/thinkrail/pull/1042) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
+| 🟢 Open | [Fix --verifytypes inference for attributes assigned from annotated function calls · #11945](https://github.com/microsoft/pyright/pull/11945) | [microsoft/pyright](https://github.com/microsoft/pyright) |
+| 🟢 Open | [fix(chat): persist session state edits on save · #556](https://github.com/google/adk-web/pull/556) | [google/adk-web](https://github.com/google/adk-web) |
 
-[Explore all upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+sort%3Aupdated-desc)
+[Explore all open upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc)
 
 <sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:30685bda43c9d3ecaa0c92497a344ba89e3a842ceb4972d8934923bc2ceeb93a -->
+<!-- ACTIVITY:SNAPSHOT:83746316ca7d20bafc69891244af13290a6c964926cc11c7fa631ac116003a5b -->
 <!-- ACTIVITY:END -->
 
 ## Built from an everyday problem
