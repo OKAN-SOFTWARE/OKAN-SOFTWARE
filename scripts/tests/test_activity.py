@@ -114,6 +114,8 @@ class ActivityTests(unittest.TestCase):
             self.assertIn("is:public", query)
             self.assertIn("-user:OKAN-SOFTWARE", query)
 
+        self.assertIn("is:open", queries["recent"])
+
     def test_owner_private_author_and_link_are_rejected(self):
         cases = [
             {
@@ -173,7 +175,7 @@ class ActivityTests(unittest.TestCase):
                         TODAY,
                     )
 
-    def test_empty_activity_and_distinct_states_render(self):
+    def test_empty_activity_and_only_open_states_render(self):
         empty = {
             key: payload([])
             for key in activity.KEYS
@@ -219,15 +221,27 @@ class ActivityTests(unittest.TestCase):
             "OKAN-SOFTWARE",
         )
 
-        expected_states = (
-            "🟢 Open",
-            "⚙️ Draft",
-            "⚪ Closed",
-            '![](./assets/pr-merged.svg) Merged',
-        )
-
-        for state in expected_states:
+        for state in ("🟢 Open", "⚙️ Draft"):
             self.assertIn(state, rendered)
+
+        for excluded in ("⚪ Closed", "Merged", "/pull/3", "/pull/4"):
+            self.assertNotIn(excluded, rendered)
+
+        self.assertIn("Explore all open upstream contributions", rendered)
+        self.assertIn("is%3Aopen", rendered)
+
+    def test_recent_api_results_containing_only_closed_prs_render_empty(self):
+        value = bundle()
+        value["recent"] = payload([
+            pr(3, state="closed"),
+            pr(4, state="closed", pull_request={
+                "merged_at": "2026-10-27T12:00:00Z"
+            }),
+        ])
+        data = activity.summarize(value, "OKAN-SOFTWARE", TODAY)
+        self.assertEqual([], data["recent"])
+        rendered = activity.markdown_section(data, "OKAN-SOFTWARE")
+        self.assertIn("No public upstream pull requests yet", rendered)
 
     def test_latest_upstream_work_shows_ten_prs(self):
         value = bundle()
