@@ -27,16 +27,18 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-![Public upstream activity: 53 PRs opened, 27 merged, 24 currently open, 37 upstream repositories](./assets/activity.svg)
+![Public upstream activity: 55 PRs opened, 27 merged, 26 currently open, 39 upstream repositories](./assets/activity.svg)
 
-**Last profile update: Oct 29, 2026 at 9:09 PM EDT**
+**Last profile update: Oct 30, 2026 at 12:56 AM EDT**
 
-**53 opened · 27 merged · 24 open now · 37 upstream repositories**
+**55 opened · 27 merged · 26 open now · 39 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix: avoid stale dependency comparisons during snapshot retries · #1179](https://github.com/actions/dependency-review-action/pull/1179) | [actions/dependency-review-action](https://github.com/actions/dependency-review-action) |
+| 🟢 Open | [fix: improve diagnostics for missing Linux libraries · #1656](https://github.com/actions/setup-node/pull/1656) | [actions/setup-node](https://github.com/actions/setup-node) |
 | 🟢 Open | [fix(watch): refresh remote status after terminal git push · #1044](https://github.com/JetBrains/thinkrail/pull/1044) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
 | ![](./assets/pr-merged.svg) Merged | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
 | 🟢 Open | [fix(core): skip default validation when context is unresolved · #39560](https://github.com/aws/aws-cdk/pull/39560) | [aws/aws-cdk](https://github.com/aws/aws-cdk) |
@@ -45,14 +47,12 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | 🟢 Open | [Fix --verifytypes inference for attributes assigned from annotated function calls · #11945](https://github.com/microsoft/pyright/pull/11945) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 | ![](./assets/pr-merged.svg) Merged | [Clarify supported random seed types in dataset helpers (NumPy-compatible random seeds for dataset helpers) · #520](https://github.com/mne-tools/mne-connectivity/pull/520) | [mne-tools/mne-connectivity](https://github.com/mne-tools/mne-connectivity) |
 | ![](./assets/pr-merged.svg) Merged | [fix(core): make generator output ordering deterministic · #1193](https://github.com/nodejs/doc-kit/pull/1193) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
-| 🟢 Open | [fix(chat): persist session state edits on save · #556](https://github.com/google/adk-web/pull/556) | [google/adk-web](https://github.com/google/adk-web) |
-| ![](./assets/pr-merged.svg) Merged | [fix(rules): prevent duplicate deployment platform in exports · #202](https://github.com/PicadoLabs/build-with-ai/pull/202) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 
 [Explore all upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+sort%3Aupdated-desc)
 
 <sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:6446342e8fe57ed22aebe9d7a8f744250799b94318f94fc239ad0fa510abcfc7 -->
+<!-- ACTIVITY:SNAPSHOT:83b661892ffae5de08a1d2c655c36eada7b2858bf8ff6e6b7e7271a88d58b86c -->
 <!-- ACTIVITY:END -->
 
 ## Built from an everyday problem

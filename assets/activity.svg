@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" role="img" aria-labelledby="title desc">
 <title id="title">Okan’s public upstream pull-request activity</title>
-<desc id="desc">Last 30 days: 53 PRs opened and 27 merged in 37 repositories. 24 PRs currently open. Cyan bars show openings, amber bars show merges. Not a commit or fork count.</desc>
+<desc id="desc">Last 30 days: 55 PRs opened and 27 merged in 39 repositories. 26 PRs currently open. Cyan bars show openings, amber bars show merges. Not a commit or fork count.</desc>
 <rect x="1" y="1" width="1198" height="458" rx="16" fill="#0c141e" stroke="#304556"/>
 <g font-family="sans-serif">
 <circle cx="39" cy="36" r="4" fill="#64d8cd"/>
 <text x="55" y="41" font-family="monospace" font-size="13" letter-spacing="2" fill="#e9f1f8">OPEN SOURCE / FIELD NOTES</text>
-<text x="1159" y="41" text-anchor="end" font-family="monospace" font-size="12" fill="#9db4c7">UPDATED · Oct 29 · 9:09 PM EDT</text>
+<text x="1159" y="41" text-anchor="end" font-family="monospace" font-size="12" fill="#9db4c7">UPDATED · Oct 30 · 12:56 AM EDT</text>
 <rect x="28" y="66" width="271" height="118" rx="10" fill="#13212e"/>
 <text x="45" y="93" font-size="14" fill="#bdcfdd">PRs opened</text>
-<text x="45" y="143" font-size="42" font-weight="700" fill="#64d8cd">53</text>
+<text x="45" y="143" font-size="42" font-weight="700" fill="#64d8cd">55</text>
 <text x="45" y="167" font-family="monospace" font-size="11" fill="#91aabe">last 30 days</text>
 <rect x="319" y="66" width="271" height="118" rx="10" fill="#13212e"/>
 <text x="336" y="93" font-size="14" fill="#bdcfdd">PRs merged</text>
@@ -16,11 +16,11 @@
 <text x="336" y="167" font-family="monospace" font-size="11" fill="#91aabe">last 30 days</text>
 <rect x="610" y="66" width="271" height="118" rx="10" fill="#13212e"/>
 <text x="627" y="93" font-size="14" fill="#bdcfdd">Open upstream PRs</text>
-<text x="627" y="143" font-size="42" font-weight="700" fill="#e9f1f8">24</text>
+<text x="627" y="143" font-size="42" font-weight="700" fill="#e9f1f8">26</text>
 <text x="627" y="167" font-family="monospace" font-size="11" fill="#91aabe">current · includes drafts</text>
 <rect x="901" y="66" width="271" height="118" rx="10" fill="#13212e"/>
 <text x="918" y="93" font-size="14" fill="#bdcfdd">Upstream repositories</text>
-<text x="918" y="143" font-size="42" font-weight="700" fill="#e9f1f8">37</text>
+<text x="918" y="143" font-size="42" font-weight="700" fill="#e9f1f8">39</text>
 <text x="918" y="167" font-family="monospace" font-size="11" fill="#91aabe">with an opening or merge</text>
 <text x="40" y="224" font-size="15" font-weight="600" fill="#e9f1f8">A month of upstream work</text>
 <rect x="873" y="214" width="10" height="10" rx="2" fill="#64d8cd"/>
@@ -28,110 +28,110 @@
 <rect x="984" y="214" width="10" height="10" rx="2" fill="#f1bb68"/>
 <text x="1002" y="224" font-size="12" fill="#bdcfdd">Merged</text>
 <rect x="42.0" y="256" width="24" height="118" rx="3" fill="#13212e"/>
-<g><title>2026-09-30: 0 opened, 0 merged</title>
-</g>
-<text x="42.0" y="395" text-anchor="start" font-family="monospace" font-size="11" fill="#91aabe">Sep 30</text>
-<rect x="79.3" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-01: 0 opened, 0 merged</title>
 </g>
-<rect x="116.6" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<text x="42.0" y="395" text-anchor="start" font-family="monospace" font-size="11" fill="#91aabe">Oct 01</text>
+<rect x="79.3" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-02: 0 opened, 0 merged</title>
 </g>
-<rect x="153.9" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="116.6" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-03: 0 opened, 0 merged</title>
 </g>
-<rect x="191.2" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="153.9" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-04: 0 opened, 0 merged</title>
 </g>
-<rect x="228.5" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="191.2" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-05: 0 opened, 0 merged</title>
 </g>
-<rect x="265.8" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="228.5" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-06: 0 opened, 0 merged</title>
 </g>
-<rect x="303.1" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="265.8" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-07: 0 opened, 0 merged</title>
 </g>
-<text x="303.1" y="395" text-anchor="start" font-family="monospace" font-size="11" fill="#91aabe">Oct 07</text>
-<rect x="340.4" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="303.1" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-08: 0 opened, 0 merged</title>
 </g>
-<rect x="377.7" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<text x="303.1" y="395" text-anchor="start" font-family="monospace" font-size="11" fill="#91aabe">Oct 08</text>
+<rect x="340.4" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-09: 0 opened, 0 merged</title>
 </g>
-<rect x="415.0" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="377.7" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-10: 0 opened, 0 merged</title>
 </g>
-<rect x="452.3" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="415.0" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-11: 0 opened, 0 merged</title>
 </g>
-<rect x="489.6" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="452.3" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-12: 0 opened, 0 merged</title>
 </g>
-<rect x="526.9" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="489.6" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-13: 0 opened, 0 merged</title>
 </g>
-<rect x="564.2" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="526.9" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-14: 0 opened, 0 merged</title>
 </g>
-<text x="564.2" y="395" text-anchor="start" font-family="monospace" font-size="11" fill="#91aabe">Oct 14</text>
-<rect x="601.5" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="564.2" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-15: 0 opened, 0 merged</title>
 </g>
-<rect x="638.8" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<text x="564.2" y="395" text-anchor="start" font-family="monospace" font-size="11" fill="#91aabe">Oct 15</text>
+<rect x="601.5" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-16: 0 opened, 0 merged</title>
 </g>
-<rect x="676.1" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="638.8" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-17: 0 opened, 0 merged</title>
 </g>
-<rect x="713.4" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="676.1" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-18: 0 opened, 0 merged</title>
 </g>
-<rect x="750.7" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="713.4" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-19: 0 opened, 0 merged</title>
 </g>
-<rect x="788.0" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="750.7" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-20: 0 opened, 0 merged</title>
 </g>
-<rect x="825.3" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="788.0" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-21: 0 opened, 0 merged</title>
 </g>
-<text x="825.3" y="395" text-anchor="start" font-family="monospace" font-size="11" fill="#91aabe">Oct 21</text>
-<rect x="862.6" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="825.3" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-22: 0 opened, 0 merged</title>
 </g>
-<rect x="899.9" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<text x="825.3" y="395" text-anchor="start" font-family="monospace" font-size="11" fill="#91aabe">Oct 22</text>
+<rect x="862.6" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-23: 0 opened, 0 merged</title>
 </g>
-<rect x="937.2" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="899.9" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-24: 0 opened, 0 merged</title>
 </g>
-<rect x="974.5" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<rect x="937.2" y="256" width="24" height="118" rx="3" fill="#13212e"/>
 <g><title>2026-10-25: 3 opened, 0 merged</title>
-<rect x="974.5" y="362.9" width="24" height="11.1" fill="#64d8cd"/>
+<rect x="937.2" y="362.9" width="24" height="11.1" fill="#64d8cd"/>
+</g>
+<rect x="974.5" y="256" width="24" height="118" rx="3" fill="#13212e"/>
+<g><title>2026-10-26: 13 opened, 5 merged</title>
+<rect x="974.5" y="326.1" width="24" height="47.9" fill="#64d8cd"/>
+<rect x="974.5" y="307.6" width="24" height="18.4" fill="#f1bb68"/>
 </g>
 <rect x="1011.8" y="256" width="24" height="118" rx="3" fill="#13212e"/>
-<g><title>2026-10-26: 13 opened, 5 merged</title>
-<rect x="1011.8" y="326.1" width="24" height="47.9" fill="#64d8cd"/>
-<rect x="1011.8" y="307.6" width="24" height="18.4" fill="#f1bb68"/>
+<g><title>2026-10-27: 19 opened, 13 merged</title>
+<rect x="1011.8" y="303.9" width="24" height="70.1" fill="#64d8cd"/>
+<rect x="1011.8" y="256.0" width="24" height="47.9" fill="#f1bb68"/>
 </g>
 <rect x="1049.1" y="256" width="24" height="118" rx="3" fill="#13212e"/>
-<g><title>2026-10-27: 19 opened, 13 merged</title>
-<rect x="1049.1" y="303.9" width="24" height="70.1" fill="#64d8cd"/>
-<rect x="1049.1" y="256.0" width="24" height="47.9" fill="#f1bb68"/>
+<g><title>2026-10-28: 13 opened, 5 merged</title>
+<rect x="1049.1" y="326.1" width="24" height="47.9" fill="#64d8cd"/>
+<rect x="1049.1" y="307.6" width="24" height="18.4" fill="#f1bb68"/>
 </g>
 <rect x="1086.4" y="256" width="24" height="118" rx="3" fill="#13212e"/>
-<g><title>2026-10-28: 13 opened, 5 merged</title>
-<rect x="1086.4" y="326.1" width="24" height="47.9" fill="#64d8cd"/>
-<rect x="1086.4" y="307.6" width="24" height="18.4" fill="#f1bb68"/>
+<g><title>2026-10-29: 7 opened, 4 merged</title>
+<rect x="1086.4" y="348.2" width="24" height="25.8" fill="#64d8cd"/>
+<rect x="1086.4" y="333.4" width="24" height="14.8" fill="#f1bb68"/>
 </g>
 <rect x="1123.7" y="256" width="24" height="118" rx="3" fill="#13212e"/>
-<g><title>2026-10-29: 5 opened, 4 merged</title>
-<rect x="1123.7" y="355.6" width="24" height="18.4" fill="#64d8cd"/>
-<rect x="1123.7" y="340.8" width="24" height="14.8" fill="#f1bb68"/>
+<g><title>2026-10-30: 0 opened, 0 merged</title>
 </g>
-<text x="1147.7" y="395" text-anchor="end" font-family="monospace" font-size="11" fill="#91aabe">Oct 29</text>
+<text x="1147.7" y="395" text-anchor="end" font-family="monospace" font-size="11" fill="#91aabe">Oct 30</text>
 <path d="M28 414H1172" stroke="#304556"/>
-<text x="40" y="440" font-family="monospace" font-size="12" fill="#bdcfdd">TODAY / 5 opened · 4 merged</text>
+<text x="40" y="440" font-family="monospace" font-size="12" fill="#bdcfdd">TODAY / 0 opened · 0 merged</text>
 <text x="1160" y="440" text-anchor="end" font-family="monospace" font-size="11" fill="#91aabe">PUBLIC UPSTREAM ACTIVITY</text>
 </g></svg>
