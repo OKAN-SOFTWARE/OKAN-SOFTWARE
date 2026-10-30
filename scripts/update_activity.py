@@ -52,7 +52,7 @@ def queries(user, today):
         "opened": f"{scope} created:>={since_text}",
         "merged": f"{scope} is:merged merged:>={since_text}",
         "open": f"{scope} is:open",
-        "recent": f"{scope} is:open sort:updated-desc",
+        "recent": f"{scope} sort:updated-desc",
     }
 
 
@@ -160,7 +160,10 @@ def summarize(bundle, user, today, synced_at=None):
     if any(item["state"] != "open" for item in validated["open"]):
         raise ValueError("Closed PR in open search results")
     recent = sorted(
-        (item for item in validated["recent"] if item["state"] == "open"),
+        (
+            item for item in validated["recent"]
+            if item["state"] == "open" or item["pull_request"].get("merged_at")
+        ),
         key=lambda item: timestamp(item["updated_at"]),
         reverse=True,
     )[:10]
@@ -260,14 +263,20 @@ def markdown_section(data, user):
     for item in data["recent"]:
         repo = REPO_URL.fullmatch(item["repository_url"])
         name = "/".join(repo.groups())
-        state = "⚙️ Draft" if item.get("draft") else "🟢 Open"
+        merged = item["pull_request"].get("merged_at")
+        state = '![](./assets/pr-merged.svg) Merged' if merged else ("⚙️ Draft" if item.get("draft") else "🟢 Open")
         title = markdown_text(item["title"])
         rows.append(f'| {state} | [{title} · #{item["number"]}]({item["html_url"]}) | [{name}](https://github.com/{name}) |')
     if not data["recent"]:
         rows.append("| — | No public upstream pull requests yet. | — |")
-    query = urlencode({"q": f"is:pr is:public author:{user} -user:{user} is:open sort:updated-desc"})
+    scope = f"is:pr is:public author:{user} -user:{user}"
+    open_query = urlencode({"q": f"{scope} is:open sort:updated-desc"})
+    merged_query = urlencode({"q": f"{scope} is:merged sort:updated-desc"})
     rows.extend([
-        "", f'[Explore all open upstream contributions →](https://github.com/pulls?{query})', "",
+        "", (
+            f'[Explore open upstream PRs →](https://github.com/pulls?{open_query})'
+            f' · [Merged upstream PRs →](https://github.com/pulls?{merged_query})'
+        ), "",
         "<sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>",
     ])
     return "\n".join(rows)
