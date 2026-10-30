@@ -247,24 +247,35 @@ def markdown_text(value):
 
 def markdown_section(data, user):
     synced_at = format_sync_time(data["synced_at"])
-    summary = f'{data["opened_count"]} PRs opened, {data["merged_count"]} merged, {data["open_count"]} currently open, {data["repos_count"]} upstream repositories'
     rows = [
-        f'![Public upstream activity: {summary}](./assets/activity.svg)',
+        "**Public upstream pull-request activity · last 30 days**",
         "",
         f'**Last profile update: {synced_at}**',
         "",
         f'**{data["opened_count"]} opened · {data["merged_count"]} merged · {data["open_count"]} open now · {data["repos_count"]} upstream repositories**',
         "",
+        "<details>",
+        "<summary>View the daily upstream history (text chart)</summary>",
+        "",
+        "| Date (Eastern) | Opened PRs | Merged PRs |",
+        "| :--- | ---: | ---: |",
+    ]
+    for day in data["days"]:
+        rows.append(f'| {day:%b %d} | {data["opened"][day]} | {data["merged"][day]} |')
+    rows.extend([
+        "",
+        "</details>",
+        "",
         "### Latest upstream work",
         "",
         "| State | Contribution | Repository |",
         "| :--- | :--- | :--- |",
-    ]
+    ])
     for item in data["recent"]:
         repo = REPO_URL.fullmatch(item["repository_url"])
         name = "/".join(repo.groups())
         merged = item["pull_request"].get("merged_at")
-        state = '![](./assets/pr-merged.svg) Merged' if merged else ("⚙️ Draft" if item.get("draft") else "🟢 Open")
+        state = "🟣 Merged" if merged else ("⚙️ Draft" if item.get("draft") else "🟢 Open")
         title = markdown_text(item["title"])
         rows.append(f'| {state} | [{title} · #{item["number"]}]({item["html_url"]}) | [{name}](https://github.com/{name}) |')
     if not data["recent"]:
@@ -277,7 +288,7 @@ def markdown_section(data, user):
             f'[Explore open upstream PRs →](https://github.com/pulls?{open_query})'
             f' · [Merged upstream PRs →](https://github.com/pulls?{merged_query})'
         ), "",
-        "<sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>",
+        "<sub>The text chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>",
     ])
     return "\n".join(rows)
 
@@ -294,50 +305,22 @@ def write_outputs(bundle, user, today, root=ROOT, synced_at=None):
     import hashlib
 
     data = summarize(bundle, user, today, synced_at)
-
     readme = root / "README.md"
-    svg_path = root / "assets" / "activity.svg"
-
     original = readme.read_text(encoding="utf-8")
-
-    # Create a fingerprint of the displayed information,
-    # excluding the changing synchronization timestamp.
-    fixed_data = {
-        **data,
-        "synced_at": datetime(2000, 1, 1, tzinfo=timezone.utc),
-    }
-
-    content = (
-        markdown_section(fixed_data, user)
-        + "\n"
-        + svg_dashboard(fixed_data)
-    )
-
+    fixed = {**data, "synced_at": datetime(2000, 1, 1, tzinfo=timezone.utc)}
     fingerprint = hashlib.sha256(
-        content.encode("utf-8")
+        markdown_section(fixed, user).encode("utf-8")
     ).hexdigest()
-
     marker = f"<!-- ACTIVITY:SNAPSHOT:{fingerprint} -->"
-
-    # Generate both outputs before writing either file.
     updated = replace_section(
-        original,
-        markdown_section(data, user) + "\n\n" + marker,
+        original, markdown_section(data, user) + "\n\n" + marker
     )
-
-    svg = svg_dashboard(data)
-
-    # The synchronization time is visible data, even when PR activity is unchanged.
-    # Skip writes only when both complete outputs already match this refresh.
-    if updated == original and svg_path.is_file() and svg_path.read_text(encoding="utf-8") == svg:
-        print("Profile snapshot already current.")
+    if updated == original:
+        print("Public activity snapshot already current.")
         return data
-
     readme.write_text(updated, encoding="utf-8")
-    svg_path.write_text(svg, encoding="utf-8")
-
-    print("Profile snapshot refreshed, including the synchronization time.")
-    return data   
+    print("Public activity text snapshot refreshed.")
+    return data
 
 
 def main():
