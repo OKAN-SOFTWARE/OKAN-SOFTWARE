@@ -18,7 +18,7 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-**Last profile update: Oct 30, 2026 at 7:12 PM EDT**
+**Last profile update: Oct 30, 2026 at 7:28 PM EDT**
 
 **58 opened · 27 merged · 28 open now · 41 upstream repositories**
 
@@ -39,13 +39,13 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
-<sub>The text chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
+<sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:622dd161935a9b9b1c1503329eb59c20bacdb62ead272ec5426758773c4c7bcb -->
+<!-- ACTIVITY:SNAPSHOT:b78a13700b6fd402bb622a6ee4b980c5d06addedb36a86546d0d0c5927edacf9 -->
 <!-- ACTIVITY:END -->
 
 <!-- JOURNEY:START -->
-**Developer stats refreshed:** Oct 30, 2026 at 07:12 PM EDT
+**Developer stats refreshed:** Oct 30, 2026 at 07:28 PM EDT
 
 ### 🧬 Code DNA · Public GitHub History
 
@@ -66,13 +66,13 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 
 | Language | LOC | Source bytes | Activity |
 | :--- | ---: | ---: | :--- |
-| JavaScript | — | 16,944,094 | ████████████████ |
-| Java | — | 81,259 | ░░░░░░░░░░░░░░░░ |
-| Python | — | 68,902 | ░░░░░░░░░░░░░░░░ |
-| HTML | — | 51,076 | ░░░░░░░░░░░░░░░░ |
-| TypeScript | — | 12,729 | ░░░░░░░░░░░░░░░░ |
-| Rust | — | 2,148 | ░░░░░░░░░░░░░░░░ |
-| Dockerfile | — | 351 | ░░░░░░░░░░░░░░░░ |
+| JavaScript | 273,411 | 16,944,094 | ████████████████ |
+| Java | 1,603 | 81,259 | ░░░░░░░░░░░░░░░░ |
+| Python | 1,377 | 68,902 | ░░░░░░░░░░░░░░░░ |
+| HTML | 731 | 51,076 | ░░░░░░░░░░░░░░░░ |
+| TypeScript | 1,128 | 12,729 | ░░░░░░░░░░░░░░░░ |
+| Rust | 44 | 2,148 | ░░░░░░░░░░░░░░░░ |
+| Dockerfile | 9 | 351 | ░░░░░░░░░░░░░░░░ |
 
 ### 🧩 My Development Stack
 
@@ -88,16 +88,16 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 
 | Authored commits | Repositories touched | PR activities | Issues opened |
 | ---: | ---: | ---: | ---: |
-| **0** | **4** | **6** | **0** |
+| **0** | **4** | **7** | **0** |
 
 #### ⚡ Today's Public Activity Trail
 
+- **07:27 PM** · Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE)
 - **07:11 PM** · Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE)
 - **06:33 PM** · Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE)
 - **06:22 PM** · Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE)
 - **11:12 AM** · Opened PR in [vitest-dev/vitest](https://github.com/vitest-dev/vitest)
 - **09:08 AM** · Opened PR in [nodejs/doc-kit](https://github.com/nodejs/doc-kit)
-- **08:45 AM** · Opened PR in [pycontribs/jira](https://github.com/pycontribs/jira)
 
 #### 💻 Languages of Repositories Active Today
 
@@ -105,7 +105,7 @@ No language information for today's active original repositories.
 
 **Achievements:** 🚀 Upstream Pathfinder · 🧭 Multi-Repo Adventurer
 
-<sub>All numbers, percentages, and bars above are selectable text, not images. Commit totals and timing cover commits attributed to this GitHub account on default branches of its current public original repositories; they do not measure hours spent coding or include all upstream commits. LOC will be calculated automatically at the next refresh from public repository source files. Source bytes are GitHub-reported, not coding time or skill level. Recent public activity is limited by GitHub's event feed and may lag. Development Stack is a curated skills list. </sub>
+<sub>Statistics and bars are selectable text. LOC means nonblank lines in recognized source files on the default branches of current public original repositories; comments are included, while common generated/dependency directories and minified files are excluded. Source bytes come from GitHub's language API, so LOC and bytes have different inclusion rules. Commit timing does not measure hours spent coding or cover all upstream history. Recent event data can lag. Development Stack is a curated skills list.</sub>
 <!-- JOURNEY:END -->
 
 ## Built from an everyday problem
