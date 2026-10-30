@@ -10,7 +10,7 @@ installation, or personal access token.
 - PRs opened and PRs merged over the last 30 calendar days in `America/New_York`.
 - Currently open upstream PRs, including drafts (an all-time count, not a 30-day count).
 - Distinct repositories with an opening or merge during the same 30-day window.
-- Ten most recently updated **open** upstream PRs (including drafts). Closed and merged PRs are excluded from the latest-work table, but merges remain in the historical chart and counts.
+- Ten most recently updated upstream PRs that are **open, draft, or merged**. Closed PRs that were not merged are excluded from the latest-work table. Historical chart and counts remain unchanged.
 - A “Last profile update” timestamp from the latest successful refresh, shown in New York time. Both the README and chart update this time even when the PR counts and table are unchanged.
 
 The chart counts PR openings and merges separately. It is **not** a commit count,
