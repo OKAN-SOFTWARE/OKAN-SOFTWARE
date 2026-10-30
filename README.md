@@ -134,3 +134,6 @@ Tools used across personal projects and contribution work; AWS topics include on
 
 </details>
 
+<!-- WEEKLY:START -->
+_Your weekly development notes will appear after the next automatic refresh._
+<!-- WEEKLY:END -->

@@ -163,5 +163,106 @@ class JourneyTests(unittest.TestCase):
             self.assertFalse((root / "data" / "chronicles.json").exists())
 
 
+    def test_weekly_pr_search_keeps_open_and_merged_only(self):
+        def pr(number, state, merged_at=None):
+            return {
+                "number": number,
+                "title": f"fix: sample {number}",
+                "state": state,
+                "user": {"login": "OKAN-SOFTWARE"},
+                "repository_url": "https://api.github.com/repos/upstream/project",
+                "html_url": f"https://github.com/upstream/project/pull/{number}",
+                "created_at": "2026-10-30T12:00:00Z",
+                "updated_at": "2026-10-30T20:00:00Z",
+                "pull_request": {"merged_at": merged_at},
+            }
+
+        def fake_search(path, token):
+            self.assertIn("author%3AOKAN-SOFTWARE", path)
+            self.assertIn("updated%3A%3E%3D2026-10-26", path)
+            return {
+                "total_count": 3,
+                "incomplete_results": False,
+                "items": [
+                    pr(1, "open"),
+                    pr(2, "closed", "2026-10-30T18:00:00Z"),
+                    pr(3, "closed"),
+                ],
+            }
+
+        with patch.object(journey, "api_get", side_effect=fake_search):
+            results = journey.fetch_weekly_prs(
+                "OKAN-SOFTWARE", "token", NOW.date()
+            )
+        self.assertEqual([1, 2], [item["number"] for item in results])
+
+    def test_weekly_journal_uses_real_titles_and_daily_actions(self):
+        def pr(number, title, repo, created_at, merged_at=None):
+            return {
+                "number": number, "title": title,
+                "state": "closed" if merged_at else "open",
+                "created_at": created_at,
+                "updated_at": "2026-10-30T21:00:00Z",
+                "repository_url": f"https://api.github.com/repos/{repo}",
+                "html_url": f"https://github.com/{repo}/pull/{number}",
+                "pull_request": {"merged_at": merged_at},
+            }
+
+        prs = [
+            pr(20, "fix(react): persist state changes", "upstream/frontend",
+               "2026-10-30T14:00:00Z"),
+            pr(21, "test(ci): improve workflow checks", "upstream/devops",
+               "2026-10-29T14:00:00Z", "2026-10-30T18:00:00Z"),
+        ]
+        data = journey.summarize("OKAN-SOFTWARE", *sample(), NOW)
+        text = journey.weekly_markdown(data, sample()[2], prs)
+        for phrase in (
+            "My Weekly Journey", "This Week's Work", "Day-by-day",
+            "Oct 26–Nov 01, 2026", "React", "Cloud & DevOps",
+            "persist state changes", "workflow checks", "opened 1 PR",
+            "merged 1 PR", "09:15",
+        ):
+            if phrase == "09:15":
+                continue
+            self.assertIn(phrase, text)
+        self.assertNotIn("![", text)
+        self.assertNotIn("proficiency rating", text.split("### This Week's Work")[0])
+
+    def test_weekly_journal_empty_week_is_honest(self):
+        data = journey.summarize(
+            "OKAN-SOFTWARE", [], Counter(), [], [], NOW
+        )
+        output = journey.weekly_markdown(data, [], [])
+        self.assertIn("0 attributed commits", output)
+        self.assertIn("No qualifying public pull requests", output)
+        self.assertIn("No matching public work recorded", output)
+
+    def test_weekly_markers_and_integrated_generation(self):
+        original = (
+            f"intro\n{journey.START}\nold\n{journey.END}\n"
+            f"middle\n{journey.WEEKLY_START}\nold\n{journey.WEEKLY_END}\nfooter"
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            readme = root / "README.md"
+            readme.write_text(original, encoding="utf-8")
+            with (
+                patch.object(journey, "fetch_public_data", return_value=sample()),
+                patch.object(journey, "count_source_lines", return_value=Counter({"Python": 5})),
+                patch.object(journey, "fetch_weekly_prs", return_value=[]),
+            ):
+                journey.run("OKAN-SOFTWARE", "token", root, NOW)
+            content = readme.read_text(encoding="utf-8")
+            self.assertIn("Code DNA", content)
+            self.assertIn("My Weekly Journey", content)
+            self.assertIn("intro", content)
+            self.assertIn("middle", content)
+            self.assertIn("footer", content)
+            self.assertNotIn("Your weekly development notes", content)
+        with self.assertRaises(ValueError):
+            journey.replace_weekly("missing markers", "new")
+
+
+
 if __name__ == "__main__":
     unittest.main()
