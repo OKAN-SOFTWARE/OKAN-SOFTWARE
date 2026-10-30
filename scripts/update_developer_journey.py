@@ -4,6 +4,7 @@
 from collections import Counter, defaultdict
 from datetime import datetime, timedelta, timezone
 import json
+import html
 import os
 from pathlib import Path
 import re
@@ -11,12 +12,13 @@ import sys
 import subprocess
 import tempfile
 from urllib.error import HTTPError, URLError
-from urllib.parse import quote
+from urllib.parse import quote, urlencode
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 START, END = "<!-- JOURNEY:START -->", "<!-- JOURNEY:END -->"
+WEEKLY_START, WEEKLY_END = "<!-- WEEKLY:START -->", "<!-- WEEKLY:END -->"
 TZ = ZoneInfo("America/New_York")
 SAFE_REPO = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
 STACK = [
@@ -285,6 +287,224 @@ def archive_updates(existing, summary):
     }
 
 
+
+TOPIC_RULES = [
+    ("JavaScript & frontend", r"\b(?:javascript|typescript|react|html|css|vite|vitest|angular|nodejs|node\.js)\b"),
+    ("Python", r"\b(?:python|pytest|django|mypy|ruff|boto3)\b"),
+    ("Java", r"\b(?:java|maven|spring)\b"),
+    ("Data & SQL", r"\b(?:sql|postgres|redis|mongodb|dynamodb|csv)\b"),
+    ("Cloud & DevOps", r"\b(?:aws|lambda|cloudformation|docker|workflow|github.actions|ci)\b"),
+    ("Testing & reliability", r"\b(?:test|tests|regression|lint|validation|diagnostic)\b"),
+]
+
+
+def safe_title(value):
+    """Escape GitHub-supplied titles before inserting them into README Markdown."""
+    value = " ".join(str(value).split())[:120]
+    value = html.escape(value, quote=False)
+    return re.sub(r"([\\*_\[\]()|])", r"\\\1", value).replace(chr(96), "\\" + chr(96))
+
+
+def fetch_weekly_prs(user, token, today):
+    """Find the author's public PRs active since the start of the Eastern week."""
+    monday = today - timedelta(days=today.weekday())
+    scope = f"is:pr is:public author:{user} updated:>={monday.isoformat()} sort:updated-desc"
+    results, total, seen = [], None, set()
+    for page in range(1, 11):
+        url = "/search/issues?" + urlencode({
+            "q": scope, "per_page": 100, "page": page
+        })
+        payload = api_get(url, token)
+        if (
+            not isinstance(payload, dict)
+            or payload.get("incomplete_results") is not False
+            or type(payload.get("total_count")) is not int
+        ):
+            raise ValueError("Incomplete weekly GitHub PR search")
+        if total is None:
+            total = payload["total_count"]
+            if total > 1000:
+                raise ValueError("Weekly PR search exceeds 1,000 results")
+        elif total != payload["total_count"]:
+            raise ValueError("Weekly PR search changed during pagination")
+        for item in payload.get("items", []):
+            match = re.fullmatch(
+                r"https://api.github.com/repos/([A-Za-z0-9_.-]+)/([A-Za-z0-9_.-]+)",
+                item.get("repository_url", ""),
+            )
+            if not match or (item.get("user") or {}).get("login", "").lower() != user.lower():
+                raise ValueError("Unexpected weekly PR result")
+            repo = "/".join(match.groups())
+            number = item.get("number")
+            if type(number) is not int or number < 1:
+                raise ValueError("Invalid weekly PR number")
+            url = f"https://github.com/{repo}/pull/{number}"
+            if item.get("html_url") != url or "pull_request" not in item:
+                raise ValueError("Unexpected weekly PR link")
+            if url in seen:
+                raise ValueError("Duplicate weekly PR")
+            seen.add(url)
+            parse_time(item["created_at"])
+            parse_time(item["updated_at"])
+            merged_at = (item.get("pull_request") or {}).get("merged_at")
+            if merged_at:
+                parse_time(merged_at)
+            # Closed and unmerged PRs are excluded by profile preference.
+            if item.get("state") == "open" or merged_at:
+                results.append(item)
+        if len(seen) >= total:
+            return sorted(results, key=lambda p: parse_time(p["updated_at"]), reverse=True)
+        if not payload.get("items"):
+            break
+    raise ValueError("Weekly PR search did not return all results")
+
+
+def weekly_topics(prs, commits, monday):
+    samples = []
+    for item in prs:
+        samples.append(item.get("title", "") + " " + item.get("repository_url", ""))
+    for item in commits:
+        raw = ((item.get("commit") or {}).get("committer") or {}).get("date")
+        if raw and parse_time(raw).date() >= monday:
+            samples.append(((item.get("commit") or {}).get("message") or "").split("\n")[0])
+    counts = Counter()
+    for item in samples:
+        for label, expression in TOPIC_RULES:
+            if re.search(expression, item, re.IGNORECASE):
+                counts[label] += 1
+    return [label for label, _ in counts.most_common(4)]
+
+
+def weekly_markdown(summary, commits, prs):
+    today = summary["today"]
+    monday = today - timedelta(days=today.weekday())
+    sunday = monday + timedelta(days=6)
+    # These counters represent observed public actions, not a skill assessment.
+    opened = [p for p in prs if monday <= parse_time(p["created_at"]).date() <= today]
+    merged = [
+        p for p in prs
+        if (p.get("pull_request") or {}).get("merged_at")
+        and monday <= parse_time(p["pull_request"]["merged_at"]).date() <= today
+    ]
+    week_days = [
+        (monday + timedelta(days=offset)).isoformat()
+        for offset in range((today - monday).days + 1)
+    ]
+    weekly_commits = sum(
+        summary["by_day"].get(day, {}).get("commits", 0) for day in week_days
+    )
+    active_repos = set()
+    for day in week_days:
+        active_repos.update(summary["by_day"].get(day, {}).get("repos", set()))
+    topics = weekly_topics(prs, commits, monday)
+    rows = [
+        "## 📖 My Weekly Journey",
+        "",
+        f"**{monday:%b %d}–{sunday:%b %d, %Y} · Eastern Time**",
+        "",
+        (
+            f"This week, I recorded **{weekly_commits} attributed commits** across "
+            f"**{len(active_repos)} public repositories**. "
+            f"I opened **{len(opened)} pull requests** and merged **{len(merged)}**."
+        ),
+        "",
+    ]
+    if topics:
+        rows.extend([
+            "**Topics appearing in my public work:** " + " · ".join(topics),
+            "",
+        ])
+    candidates = opened + merged + prs
+    # Prefer actions from this week, then other still-active authored PRs.
+    # Keep upstream projects prominent ahead of profile maintenance.
+    candidates.sort(key=lambda p: (
+        p.get("repository_url", "").lower()
+        == "https://api.github.com/repos/okan-software/okan-software",
+        p not in opened and p not in merged,
+        -(parse_time(p["updated_at"]).timestamp()),
+    ))
+    highlights, highlighted_repos = [], set()
+    for item in candidates:
+        repo = item["repository_url"].split("/repos/", 1)[-1]
+        if repo in highlighted_repos:
+            continue
+        highlighted_repos.add(repo)
+        highlights.append(item)
+        if len(highlights) >= 4:
+            break
+    rows.extend(["### This Week's Work", ""])
+    if highlights:
+        for item in highlights:
+            repo = item["repository_url"].split("/repos/", 1)[-1]
+            title = safe_title(item["title"])
+            if item in opened:
+                action = "I opened"
+            elif item in merged:
+                action = "My PR was merged:"
+            else:
+                action = "My PR remained active:"
+            rows.append(
+                f"- **{repo}:** {action} [{title}]({item['html_url']})."
+            )
+    else:
+        rows.append("No qualifying public pull requests are recorded for this week yet.")
+    rows.extend([
+        "",
+        "<details>",
+        "<summary>📅 Day-by-day development notes</summary>",
+        "",
+    ])
+    for day in reversed(week_days):
+        current = datetime.fromisoformat(day).date()
+        data = summary["by_day"].get(day, {})
+        count = data.get("commits", 0)
+        pr_started = [p for p in opened if parse_time(p["created_at"]).date() == current]
+        pr_merged = [
+            p for p in merged
+            if parse_time(p["pull_request"]["merged_at"]).date() == current
+        ]
+        snippets = []
+        if count:
+            snippets.append(f"{count} authored commit{'s' if count != 1 else ''}")
+        if pr_started:
+            snippets.append(f"opened {len(pr_started)} PR{'s' if len(pr_started) != 1 else ''}")
+        if pr_merged:
+            snippets.append(f"merged {len(pr_merged)} PR{'s' if len(pr_merged) != 1 else ''}")
+        detail_pr = (pr_merged or pr_started)
+        if detail_pr:
+            first = detail_pr[0]
+            snippets.append(f"including [{safe_title(first['title'])}]({first['html_url']})")
+        if not detail_pr:
+            messages = []
+            for commit in commits:
+                raw = ((commit.get("commit") or {}).get("committer") or {}).get("date")
+                message = ((commit.get("commit") or {}).get("message") or "").split("\n")[0]
+                if raw and parse_time(raw).date() == current and message:
+                    messages.append(message)
+            if messages:
+                snippets.append("commit note: " + safe_title(messages[0]))
+        rows.append(
+            f"- **{current:%a, %b %d}:** " +
+            ("; ".join(snippets) if snippets else "No matching public work recorded.")
+        )
+    rows.extend([
+        "",
+        "</details>",
+        "",
+        "<sub>This journal is rebuilt from attributed commits on current public original-repository default branches and public PR titles/dates. Technology topics are keyword matches in titles, repository names, and commit messages, not verified framework usage or an expertise rating. PR updates by other people are not described as personal actions. The current week runs Monday–Sunday in Eastern Time and refreshes with the profile workflow.</sub>",
+    ])
+    return "\n".join(rows)
+
+
+def replace_weekly(readme, generated):
+    if readme.count(WEEKLY_START) != 1 or readme.count(WEEKLY_END) != 1:
+        raise ValueError("README must contain one weekly marker pair")
+    before, rest = readme.split(WEEKLY_START, 1)
+    _, after = rest.split(WEEKLY_END, 1)
+    return before + WEEKLY_START + "\n" + generated + "\n" + WEEKLY_END + after
+
+
+
 def markdown(summary, archive):
     today, now = summary["today"], summary["now"]
     total = summary["total_commits"]
@@ -393,7 +613,11 @@ def run(user, token, root=ROOT, now=None):
     existing = json.loads(history_path.read_text(encoding="utf-8")) if history_path.is_file() else {}
     archive = archive_updates(existing, summary)
     summary["locs"] = count_source_lines(repos)
-    updated = replace_section(original, markdown(summary, archive))
+    weekly_prs = fetch_weekly_prs(user, token, summary["today"])
+    updated = replace_weekly(
+        replace_section(original, markdown(summary, archive)),
+        weekly_markdown(summary, commits, weekly_prs),
+    )
     archive_text = json.dumps(archive, ensure_ascii=False, indent=2) + "\n"
     history_path.parent.mkdir(parents=True, exist_ok=True)
     # Validate all remote data and the complete outputs before writing either file.
