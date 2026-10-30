@@ -248,29 +248,15 @@ def markdown_text(value):
 def markdown_section(data, user):
     synced_at = format_sync_time(data["synced_at"])
     rows = [
-        "**Public upstream pull-request activity · last 30 days**",
-        "",
         f'**Last profile update: {synced_at}**',
         "",
         f'**{data["opened_count"]} opened · {data["merged_count"]} merged · {data["open_count"]} open now · {data["repos_count"]} upstream repositories**',
-        "",
-        "<details>",
-        "<summary>View the daily upstream history (text chart)</summary>",
-        "",
-        "| Date (Eastern) | Opened PRs | Merged PRs |",
-        "| :--- | ---: | ---: |",
-    ]
-    for day in data["days"]:
-        rows.append(f'| {day:%b %d} | {data["opened"][day]} | {data["merged"][day]} |')
-    rows.extend([
-        "",
-        "</details>",
         "",
         "### Latest upstream work",
         "",
         "| State | Contribution | Repository |",
         "| :--- | :--- | :--- |",
-    ])
+    ]
     for item in data["recent"]:
         repo = REPO_URL.fullmatch(item["repository_url"])
         name = "/".join(repo.groups())
@@ -288,7 +274,7 @@ def markdown_section(data, user):
             f'[Explore open upstream PRs →](https://github.com/pulls?{open_query})'
             f' · [Merged upstream PRs →](https://github.com/pulls?{merged_query})'
         ), "",
-        "<sub>The text chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>",
+        "<sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>",
     ])
     return "\n".join(rows)
 
