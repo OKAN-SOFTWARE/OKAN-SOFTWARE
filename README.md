@@ -55,6 +55,12 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 <!-- ACTIVITY:SNAPSHOT:6d8c4beb53e2ff79749f022d4fc96bcff95ef8d231f9b019c3843af04fe1bbdd -->
 <!-- ACTIVITY:END -->
 
+## Phoenix Developer Journey
+
+<!-- JOURNEY:START -->
+_Developer statistics will appear after the next successful automatic refresh._
+<!-- JOURNEY:END -->
+
 ## Built from an everyday problem
 
 | Project | The moment it helps |
@@ -63,7 +69,7 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | **[LaunchNotes](https://github.com/OKAN-SOFTWARE/LaunchNotes)** | “These commits need a better story than ‘fixed stuff.’” Turn commit messages into readable release notes. |
 | **[Doc2FAQ](https://github.com/OKAN-SOFTWARE/Doc2FAQ)** | “The answers are in this document somewhere.” Turn documents into editable FAQ drafts, with local processing and exports. |
 
-## What’s on my workbench
+## Extra tools & interests
 
 <details>
 <summary>Explore the stack</summary>
