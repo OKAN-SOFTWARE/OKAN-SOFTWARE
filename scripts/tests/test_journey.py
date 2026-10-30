@@ -63,22 +63,48 @@ class JourneyTests(unittest.TestCase):
         self.assertTrue(data["early_commit"])
         self.assertEqual({"Python": 1}, dict(data["active_languages"]))
 
-    def test_markdown_is_text_only_and_has_all_requested_sections(self):
+    def test_markdown_is_text_only_and_has_requested_sections(self):
         data = journey.summarize("OKAN-SOFTWARE", *sample(), NOW)
+        data["locs"] = Counter({"Python": 120, "JavaScript": 45})
         archive = journey.archive_updates({}, data)
         rendered = journey.markdown(data, archive)
         for phrase in (
             "Code DNA", "When I Commit", "Programming Languages",
             "My Development Stack", "Today's Coding Adventure",
-            "Phoenix Chronicles", "Upstream Pathfinder",
-            "2026-10-30", "80.0%",
+            "October 30, 2026", "| Language | LOC | Source bytes | Activity |",
+            "| Python | 120 | 800 |", "Upstream Pathfinder",
         ):
             self.assertIn(phrase, rendered)
+        for excluded in (
+            "Most Productive Commit Day", "The Phoenix Chronicles",
+            "Explore recent daily adventures", "| Language | Source bytes | Share",
+        ):
+            self.assertNotIn(excluded, rendered)
         self.assertNotIn("![", rendered)
         self.assertNotIn("<img", rendered)
         self.assertIn("█", rendered)
         self.assertIn("░", rendered)
-        self.assertIn("<details>", rendered)
+
+    def test_loc_counts_nonblank_source_and_excludes_generated_dirs(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            (root / "src").mkdir()
+            (root / "dist").mkdir()
+            (root / "src" / "app.js").write_text(
+                "const a = 1;\n\n// a comment\nconst b = 2;\n", encoding="utf-8"
+            )
+            (root / "src" / "types.ts").write_text(
+                "type A = string;\n\n", encoding="utf-8"
+            )
+            (root / "dist" / "bundle.js").write_text(
+                "generated\n", encoding="utf-8"
+            )
+            (root / "src" / "bundle.min.js").write_text(
+                "minified\n", encoding="utf-8"
+            )
+            result = journey.lines_in_checkout(root)
+            self.assertEqual(3, result["JavaScript"])
+            self.assertEqual(1, result["TypeScript"])
 
     def test_archive_keeps_previous_days_and_caps_to_a_year(self):
         data = journey.summarize("OKAN-SOFTWARE", *sample(), NOW)

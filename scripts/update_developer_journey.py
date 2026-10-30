@@ -8,6 +8,8 @@ import os
 from pathlib import Path
 import re
 import sys
+import subprocess
+import tempfile
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
@@ -24,6 +26,77 @@ STACK = [
     ("OS & DevOps", "Windows · Ubuntu/WSL · GitHub Actions · Docker"),
     ("Cloud", "AWS Lambda · SQS · SNS · EventBridge · EC2"),
 ]
+
+
+SOURCE_EXTENSIONS = {
+    ".js": "JavaScript", ".jsx": "JavaScript", ".mjs": "JavaScript",
+    ".cjs": "JavaScript", ".ts": "TypeScript", ".tsx": "TypeScript",
+    ".py": "Python", ".java": "Java", ".cs": "C#", ".rs": "Rust",
+    ".html": "HTML", ".htm": "HTML", ".css": "CSS", ".scss": "SCSS",
+    ".go": "Go", ".rb": "Ruby", ".php": "PHP", ".sh": "Shell",
+    ".sql": "SQL", ".kt": "Kotlin", ".kts": "Kotlin", ".c": "C",
+    ".cc": "C++", ".cpp": "C++", ".h": "C", ".hpp": "C++",
+    ".swift": "Swift", ".xml": "XML", ".vue": "Vue",
+}
+SKIP_DIRECTORIES = {
+    ".git", "node_modules", ".next", ".turbo", ".cache", ".venv",
+    "venv", "dist", "build", "target", "vendor", "coverage",
+    "__pycache__", "out",
+}
+
+
+def lines_in_checkout(root):
+    """Count nonblank lines in recognized tracked source files, including comments."""
+    results = Counter()
+    for directory, subdirs, filenames in os.walk(root, followlinks=False):
+        subdirs[:] = [
+            name for name in subdirs
+            if name not in SKIP_DIRECTORIES
+            and not (Path(directory) / name).is_symlink()
+        ]
+        for filename in filenames:
+            path = Path(directory) / filename
+            if path.is_symlink() or ".min." in filename.lower():
+                continue
+            language = (
+                "Dockerfile" if filename.lower() == "dockerfile"
+                else SOURCE_EXTENSIONS.get(path.suffix.lower())
+            )
+            if not language:
+                continue
+            with path.open("rb") as stream:
+                if b"\x00" in stream.read(4096):
+                    continue
+                stream.seek(0)
+                results[language] += sum(bool(line.strip()) for line in stream)
+    return results
+
+
+def count_source_lines(repos):
+    """Shallow-clone public original default branches without running repo code."""
+    lines = Counter()
+    with tempfile.TemporaryDirectory(prefix="okan-github-loc-") as temporary:
+        for index, repo in enumerate(repos):
+            full = repo.get("full_name", "")
+            if not SAFE_REPO.fullmatch(full) or repo.get("fork") or repo.get("private"):
+                raise ValueError("Only public original repositories can be counted")
+            checkout = Path(temporary) / f"repo-{index}"
+            environment = dict(os.environ, GIT_TERMINAL_PROMPT="0", GIT_LFS_SKIP_SMUDGE="1")
+            try:
+                process = subprocess.run(
+                    [
+                        "git", "-c", "core.hooksPath=/dev/null",
+                        "clone", "--quiet", "--depth=1", "--single-branch", "--",
+                        f"https://github.com/{full}.git", str(checkout),
+                    ],
+                    env=environment, capture_output=True, timeout=60, check=False,
+                )
+            except (OSError, subprocess.TimeoutExpired) as error:
+                raise RuntimeError("Public source checkout failed") from error
+            if process.returncode != 0:
+                raise RuntimeError("Public source checkout failed")
+            lines.update(lines_in_checkout(checkout))
+    return lines
 
 
 def parse_time(value):
@@ -237,28 +310,17 @@ def markdown(summary, archive):
         rows.append(f"| {name} | {count:,} | {share:.1f}% | {bar(count, total)} |")
     rows.extend([
         "",
-        "#### 📅 Most Productive Commit Day",
-        "",
-        "| Day | Commits | Share |",
-        "| :--- | ---: | ---: |",
-    ])
-    for index, name in enumerate(("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")):
-        count = summary["weekdays"][index]
-        share = count / total * 100 if total else 0
-        rows.append(f"| {name} | {count:,} | {share:.1f}% |")
-    rows.extend([
-        "",
         "#### 💬 Programming Languages",
         "",
-        "| Language | Source bytes | Share | Activity |",
+        "| Language | LOC | Source bytes | Activity |",
         "| :--- | ---: | ---: | :--- |",
     ])
     for name, count in summary["languages"].most_common(8):
         safe = re.sub(r"([\\|*_\[\]])", r"\\\1", name)
-        share = count / total_bytes * 100 if total_bytes else 0
-        rows.append(f"| {safe} | {count:,} | {share:.1f}% | {bar(count, total_bytes)} |")
+        loc = f'{summary["locs"][name]:,}' if name in summary.get("locs", {}) else "—"
+        rows.append(f"| {safe} | {loc} | {count:,} | {bar(count, total_bytes)} |")
     if not summary["languages"]:
-        rows.append("| — | 0 | — | No language data available |")
+        rows.append("| — | — | 0 | No language data available |")
     rows.extend([
         "",
         "### 🧩 My Development Stack",
@@ -306,24 +368,7 @@ def markdown(summary, archive):
         "",
         "**Achievements:** " + (" · ".join(badges) if badges else "Awaiting today's first unlock"),
         "",
-        "### 📖 The Phoenix Chronicles",
-        "",
-        "<details>",
-        "<summary>Explore recent daily adventures (text history)</summary>",
-        "",
-        "| Date (Eastern) | Commits | Repos | PR activity | Issues |",
-        "| :--- | ---: | ---: | ---: | ---: |",
-    ])
-    for day in sorted(archive, reverse=True)[:14]:
-        item = archive[day]
-        rows.append(
-            f"| {day} | {item['commits']} | {item['repos']} | {item['pr_events']} | {item['issues']} |"
-        )
-    rows.extend([
-        "",
-        "</details>",
-        "",
-        "<sub>All numbers, percentages, and bars above are selectable text, not images. Commit totals and timing cover commits attributed to this GitHub account on default branches of its current public original repositories; they do not measure hours spent coding or include all upstream commits. Language shares represent GitHub-reported source bytes, not coding time or skill level. Recent public activity is limited by GitHub's event feed and may lag. Development Stack is a curated skills list. The daily chronicle archive retains up to 365 days of snapshots.</sub>",
+        "<sub>Statistics and bars are selectable text. LOC means nonblank lines in recognized source files on the default branches of current public original repositories; comments are included, while common generated/dependency directories and minified files are excluded. Source bytes come from GitHub's language API, so LOC and bytes have different inclusion rules. Commit timing does not measure hours spent coding or cover all upstream history. Recent event data can lag. Development Stack is a curated skills list.</sub>",
     ])
     return "\n".join(rows)
 
@@ -347,6 +392,7 @@ def run(user, token, root=ROOT, now=None):
     original = readme.read_text(encoding="utf-8")
     existing = json.loads(history_path.read_text(encoding="utf-8")) if history_path.is_file() else {}
     archive = archive_updates(existing, summary)
+    summary["locs"] = count_source_lines(repos)
     updated = replace_section(original, markdown(summary, archive))
     archive_text = json.dumps(archive, ensure_ascii=False, indent=2) + "\n"
     history_path.parent.mkdir(parents=True, exist_ok=True)

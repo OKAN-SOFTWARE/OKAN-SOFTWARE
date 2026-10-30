@@ -10,15 +10,6 @@
   <a href="https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/actions/workflows/profile-activity.yml"><img src="./assets/button-sync.gif" width="250" height="66" alt="Activity sync" /></a>
 </p>
 
-<!-- PROFILE-BADGES:START -->
-<p align="center">
-  <picture><img src="https://img.shields.io/badge/Java-151B33?style=for-the-badge&logo=openjdk&logoColor=00D4FF" alt="Java" /></picture>
-  <picture><img src="https://img.shields.io/badge/Python-151B33?style=for-the-badge&logo=python&logoColor=FFD43B" alt="Python" /></picture>
-  <picture><img src="https://img.shields.io/badge/AWS-151B33?style=for-the-badge&logo=amazonwebservices&logoColor=FF9900" alt="AWS" /></picture>
-  <picture><img src="https://img.shields.io/badge/REST_APIs-151B33?style=for-the-badge&logo=swagger&logoColor=00D4FF" alt="REST APIs" /></picture>
-  <picture><img src="https://img.shields.io/badge/Open_Source-151B33?style=for-the-badge&logo=github&logoColor=9B7BFF" alt="Open Source Contributor" /></picture>
-</p>
-<!-- PROFILE-BADGES:END -->
 
 I’m **Okan Tiktas**. I build tools for those **“there has to be an easier way”** moments—and contribute fixes to the tools other developers depend on.
 
@@ -27,49 +18,9 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-**Public upstream pull-request activity · last 30 days**
-
 **Last profile update: Oct 30, 2026 at 7:12 PM EDT**
 
 **58 opened · 27 merged · 28 open now · 41 upstream repositories**
-
-<details>
-<summary>View the daily upstream history (text chart)</summary>
-
-| Date (Eastern) | Opened PRs | Merged PRs |
-| :--- | ---: | ---: |
-| Oct 01 | 0 | 0 |
-| Oct 02 | 0 | 0 |
-| Oct 03 | 0 | 0 |
-| Oct 04 | 0 | 0 |
-| Oct 05 | 0 | 0 |
-| Oct 06 | 0 | 0 |
-| Oct 07 | 0 | 0 |
-| Oct 08 | 0 | 0 |
-| Oct 09 | 0 | 0 |
-| Oct 10 | 0 | 0 |
-| Oct 11 | 0 | 0 |
-| Oct 12 | 0 | 0 |
-| Oct 13 | 0 | 0 |
-| Oct 14 | 0 | 0 |
-| Oct 15 | 0 | 0 |
-| Oct 16 | 0 | 0 |
-| Oct 17 | 0 | 0 |
-| Oct 18 | 0 | 0 |
-| Oct 19 | 0 | 0 |
-| Oct 20 | 0 | 0 |
-| Oct 21 | 0 | 0 |
-| Oct 22 | 0 | 0 |
-| Oct 23 | 0 | 0 |
-| Oct 24 | 0 | 0 |
-| Oct 25 | 3 | 0 |
-| Oct 26 | 13 | 5 |
-| Oct 27 | 19 | 13 |
-| Oct 28 | 13 | 5 |
-| Oct 29 | 7 | 4 |
-| Oct 30 | 3 | 0 |
-
-</details>
 
 ### Latest upstream work
 
@@ -93,8 +44,6 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 <!-- ACTIVITY:SNAPSHOT:622dd161935a9b9b1c1503329eb59c20bacdb62ead272ec5426758773c4c7bcb -->
 <!-- ACTIVITY:END -->
 
-## Phoenix Developer Journey
-
 <!-- JOURNEY:START -->
 **Developer stats refreshed:** Oct 30, 2026 at 07:12 PM EDT
 
@@ -113,29 +62,17 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | 🌃 Evening | 5 | 6.2% | █░░░░░░░░░░░░░░░ |
 | 🌙 Night | 0 | 0.0% | ░░░░░░░░░░░░░░░░ |
 
-#### 📅 Most Productive Commit Day
-
-| Day | Commits | Share |
-| :--- | ---: | ---: |
-| Monday | 33 | 41.2% |
-| Tuesday | 0 | 0.0% |
-| Wednesday | 0 | 0.0% |
-| Thursday | 5 | 6.2% |
-| Friday | 0 | 0.0% |
-| Saturday | 40 | 50.0% |
-| Sunday | 2 | 2.5% |
-
 #### 💬 Programming Languages
 
-| Language | Source bytes | Share | Activity |
+| Language | LOC | Source bytes | Activity |
 | :--- | ---: | ---: | :--- |
-| JavaScript | 16,944,094 | 98.7% | ████████████████ |
-| Java | 81,259 | 0.5% | ░░░░░░░░░░░░░░░░ |
-| Python | 68,902 | 0.4% | ░░░░░░░░░░░░░░░░ |
-| HTML | 51,076 | 0.3% | ░░░░░░░░░░░░░░░░ |
-| TypeScript | 12,729 | 0.1% | ░░░░░░░░░░░░░░░░ |
-| Rust | 2,148 | 0.0% | ░░░░░░░░░░░░░░░░ |
-| Dockerfile | 351 | 0.0% | ░░░░░░░░░░░░░░░░ |
+| JavaScript | — | 16,944,094 | ████████████████ |
+| Java | — | 81,259 | ░░░░░░░░░░░░░░░░ |
+| Python | — | 68,902 | ░░░░░░░░░░░░░░░░ |
+| HTML | — | 51,076 | ░░░░░░░░░░░░░░░░ |
+| TypeScript | — | 12,729 | ░░░░░░░░░░░░░░░░ |
+| Rust | — | 2,148 | ░░░░░░░░░░░░░░░░ |
+| Dockerfile | — | 351 | ░░░░░░░░░░░░░░░░ |
 
 ### 🧩 My Development Stack
 
@@ -168,31 +105,7 @@ No language information for today's active original repositories.
 
 **Achievements:** 🚀 Upstream Pathfinder · 🧭 Multi-Repo Adventurer
 
-### 📖 The Phoenix Chronicles
-
-<details>
-<summary>Explore recent daily adventures (text history)</summary>
-
-| Date (Eastern) | Commits | Repos | PR activity | Issues |
-| :--- | ---: | ---: | ---: | ---: |
-| 2026-10-30 | 0 | 4 | 6 | 0 |
-| 2026-10-29 | 5 | 9 | 11 | 0 |
-| 2026-10-28 | 0 | 11 | 0 | 0 |
-| 2026-10-27 | 0 | 2 | 0 | 0 |
-| 2026-10-26 | 33 | 3 | 0 | 0 |
-| 2026-10-25 | 2 | 1 | 0 | 0 |
-| 2026-10-24 | 40 | 7 | 0 | 0 |
-| 2026-10-23 | 0 | 0 | 0 | 0 |
-| 2026-10-22 | 0 | 0 | 0 | 0 |
-| 2026-10-21 | 0 | 0 | 0 | 0 |
-| 2026-10-20 | 0 | 0 | 0 | 0 |
-| 2026-10-19 | 0 | 0 | 0 | 0 |
-| 2026-10-18 | 0 | 0 | 0 | 0 |
-| 2026-10-17 | 0 | 0 | 0 | 0 |
-
-</details>
-
-<sub>All numbers, percentages, and bars above are selectable text, not images. Commit totals and timing cover commits attributed to this GitHub account on default branches of its current public original repositories; they do not measure hours spent coding or include all upstream commits. Language shares represent GitHub-reported source bytes, not coding time or skill level. Recent public activity is limited by GitHub's event feed and may lag. Development Stack is a curated skills list. The daily chronicle archive retains up to 365 days of snapshots.</sub>
+<sub>All numbers, percentages, and bars above are selectable text, not images. Commit totals and timing cover commits attributed to this GitHub account on default branches of its current public original repositories; they do not measure hours spent coding or include all upstream commits. LOC will be calculated automatically at the next refresh from public repository source files. Source bytes are GitHub-reported, not coding time or skill level. Recent public activity is limited by GitHub's event feed and may lag. Development Stack is a curated skills list. </sub>
 <!-- JOURNEY:END -->
 
 ## Built from an everyday problem
@@ -220,9 +133,4 @@ No language information for today's active original repositories.
 Tools used across personal projects and contribution work; AWS topics include ongoing learning.
 
 </details>
-
----
-
-**My favorite review: “This saved me time.”**  
-Try a project, report a rough edge, or challenge an assumption. That’s how the next useful version starts.
 
