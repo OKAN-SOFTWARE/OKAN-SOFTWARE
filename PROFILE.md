@@ -15,6 +15,7 @@ package installation, or personal access token is needed.
 - A “Last profile update” timestamp from the latest successful refresh, shown in New York time.
 - Text-based Code DNA: authored commit timing on default branches of current public original repositories, plus GitHub-reported language bytes and counted source lines (LOC).
 - A curated, categorized Development Stack, daily public activity, and achievements. No weekday chart or visible Phoenix Chronicles section.
+- A first-person **My Weekly Journey** journal below Extra tools & interests, with weekly PR highlights, keyword-matched focus areas, and collapsible day-by-day notes from public activity.
 
 The text table counts PR openings and merges separately. It is **not** a commit count,
 a count of working days, GitHub’s contribution calendar, or a count of forks.
@@ -63,7 +64,7 @@ validation. `--today YYYY-MM-DD` fixes the local calendar date when testing;
 Do not commit raw API bundles. Generated Markdown and the public `data/chronicles.json` snapshots are the outputs.
 
 Keep the single `ACTIVITY:START` / `ACTIVITY:END` marker pair in `README.md`.
-The journey updater has its own `JOURNEY:START` / `JOURNEY:END` markers.
+The journey updater has its own `JOURNEY:START` / `JOURNEY:END` markers and a separate `WEEKLY:START` / `WEEKLY:END` pair for the weekly journal.
 Everything outside both marker pairs stays under manual control. The approved phoenix
 and workbench illustration (`assets/phoenix-workbench.png`) appears at the top.
 It is static artwork without illustrated navigation buttons. The image sits inside
@@ -86,6 +87,12 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
 - Language shares use the bytes returned by GitHub's repository languages endpoint.
   Frameworks, OS names, and cloud tools in Development Stack are curated descriptions,
   not automatically inferred expertise scores.
+- The weekly journal uses GitHub issue-search results for this account's authored,
+  public PRs updated since Monday in America/New_York, plus commit messages already
+  collected for current original repositories. Only open or merged PRs appear.
+  Weekly technology keywords are simple title/message matches, not evidence of
+  proficiency or confirmed framework usage. A PR updated by a maintainer is
+  described as active, not as a personal update.
 - Daily PR and issue events use GitHub's most recent public event feed (maximum 300
   recent events). Some events may appear late or fall outside the feed window.
 - The history archive remains in `data/chronicles.json` (up to 365 days), but no
