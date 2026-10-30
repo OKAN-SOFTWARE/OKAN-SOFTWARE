@@ -14,8 +14,8 @@ package installation, or personal access token is needed.
 - Ten most recently updated upstream PRs that are **open, draft, or merged**. Closed PRs that were not merged are excluded from the latest-work table. Historical chart and counts remain unchanged.
 - A “Last profile update” timestamp from the latest successful refresh, shown in New York time.
 - Text-based Code DNA: authored commit timing on default branches of current public original repositories, plus GitHub-reported language bytes and counted source lines (displayed as Line of Codes).
-- A curated, categorized Development Stack, daily public activity, and achievements. No weekday chart or visible Phoenix Chronicles section.
-- A first-person **Weekly Coding Adventure** immediately below Today's Coding Adventure, with Monday–Sunday PR highlights, keyword-matched focus areas, and collapsible day-by-day notes from public activity.
+- A curated, categorized Development Stack, daily public activity, and achievements. The daily activity trail shows only the latest event from each repository (up to six repositories).
+- Primary programming languages of repositories active today, including upstream repositories; up to 40 most recently active repositories are checked. No separate weekly journal is displayed.
 
 The text table counts PR openings and merges separately. It is **not** a commit count,
 a count of working days, GitHub’s contribution calendar, or a count of forks.
@@ -64,8 +64,8 @@ validation. `--today YYYY-MM-DD` fixes the local calendar date when testing;
 Do not commit raw API bundles. Generated Markdown and the public `data/chronicles.json` snapshots are the outputs.
 
 Keep the single `ACTIVITY:START` / `ACTIVITY:END` marker pair in `README.md`.
-The journey updater has its own `JOURNEY:START` / `JOURNEY:END` markers and a separate `WEEKLY:START` / `WEEKLY:END` pair for the weekly journal.
-Everything outside both marker pairs stays under manual control. The approved phoenix
+The journey updater uses a `JOURNEY:START` / `JOURNEY:END` marker pair; the former weekly journal markers were removed.
+Everything outside the activity and journey marker pairs stays under manual control. The approved phoenix
 and workbench illustration (`assets/phoenix-workbench.png`) appears at the top.
 It is static artwork without illustrated navigation buttons. The image sits inside
 a named anchor with no destination, so it is not an image-viewer or navigation link.
@@ -87,21 +87,20 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
 - Language shares use the bytes returned by GitHub's repository languages endpoint.
   Frameworks, OS names, and cloud tools in Development Stack are curated descriptions,
   not automatically inferred expertise scores.
-- The weekly journal uses GitHub issue-search results for this account's authored,
-  public PRs updated since Monday in America/New_York, plus commit messages already
-  collected for current original repositories. Only open or merged PRs appear.
-  Weekly technology keywords are simple title/message matches, not evidence of
-  proficiency or confirmed framework usage. A PR updated by a maintainer is
-  described as active, not as a personal update.
 - Daily PR and issue events use GitHub's most recent public event feed (maximum 300
   recent events). Some events may appear late or fall outside the feed window.
+  The activity trail displays at most one latest event per repository.
+- Daily active-language counts use the repository's primary language in GitHub metadata,
+  covering public upstream repositories as well as original repositories. This does
+  not necessarily identify the language edited in a particular PR. At most 40 recently
+  active repositories are inspected per refresh; deleted or inaccessible ones are skipped.
 - The history archive remains in `data/chronicles.json` (up to 365 days), but no
   longer appears in the README. The refresh runs every four hours.
 - LOC is a real count of nonblank lines in recognized source extensions from a
   shallow checkout of each public original repository. Comments count; generated,
   dependency, and minified files are excluded. LOC differs from GitHub source bytes
   because the two metrics use different inclusion rules.
-- API errors fail the job, preserving the previous committed snapshot.
+- API errors other than missing/removed active repositories fail the job, preserving the previous committed snapshot.
 
 ## References
 
