@@ -27,16 +27,18 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-![Public upstream activity: 56 PRs opened, 27 merged, 27 currently open, 40 upstream repositories](./assets/activity.svg)
+![Public upstream activity: 58 PRs opened, 27 merged, 28 currently open, 41 upstream repositories](./assets/activity.svg)
 
-**Last profile update: Oct 30, 2026 at 9:05 AM EDT**
+**Last profile update: Oct 30, 2026 at 12:55 PM EDT**
 
-**56 opened · 27 merged · 27 open now · 40 upstream repositories**
+**58 opened · 27 merged · 28 open now · 41 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
+| ⚪ Closed | [fix(vitest): resolve dependencies from project root · #11805](https://github.com/vitest-dev/vitest/pull/11805) | [vitest-dev/vitest](https://github.com/vitest-dev/vitest) |
 | 🟢 Open | [fix(client): support accountId in assignable project searches · #2449](https://github.com/pycontribs/jira/pull/2449) | [pycontribs/jira](https://github.com/pycontribs/jira) |
 | 🟢 Open | [test: isolate Django cache settings between xdist worker groups · #852](https://github.com/jazzband/django-redis/pull/852) | [jazzband/django-redis](https://github.com/jazzband/django-redis) |
 | 🟢 Open | [fix: avoid stale dependency comparisons during snapshot retries · #1179](https://github.com/actions/dependency-review-action/pull/1179) | [actions/dependency-review-action](https://github.com/actions/dependency-review-action) |
@@ -45,14 +47,12 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | ![](./assets/pr-merged.svg) Merged | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
 | 🟢 Open | [fix(core): skip default validation when context is unresolved · #39560](https://github.com/aws/aws-cdk/pull/39560) | [aws/aws-cdk](https://github.com/aws/aws-cdk) |
 | 🟢 Open | [fix(templates): reject Windows reserved device names · #1042](https://github.com/JetBrains/thinkrail/pull/1042) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
-| ![](./assets/pr-merged.svg) Merged | [fix(kinesis): resolve mypy errors with boto3 stub types · #11](https://github.com/manojkken/testcontainers-aws/pull/11) | [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) |
-| 🟢 Open | [Fix --verifytypes inference for attributes assigned from annotated function calls · #11945](https://github.com/microsoft/pyright/pull/11945) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 
 [Explore all upstream contributions →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+sort%3Aupdated-desc)
 
 <sub>The chart records PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:ba4e9744c53074a6e8843dd8ecf9d7fca22454a1ba7d1fb5c6651f873f298992 -->
+<!-- ACTIVITY:SNAPSHOT:30685bda43c9d3ecaa0c92497a344ba89e3a842ceb4972d8934923bc2ceeb93a -->
 <!-- ACTIVITY:END -->
 
 ## Built from an everyday problem
