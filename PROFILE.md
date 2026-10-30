@@ -13,9 +13,9 @@ package installation, or personal access token is needed.
 - Distinct repositories with an opening or merge during the same 30-day window.
 - Ten most recently updated upstream PRs that are **open, draft, or merged**. Closed PRs that were not merged are excluded from the latest-work table. Historical chart and counts remain unchanged.
 - A “Last profile update” timestamp from the latest successful refresh, shown in New York time.
-- Text-based Code DNA: authored commit timing on default branches of current public original repositories, plus GitHub-reported language bytes and counted source lines (LOC).
+- Text-based Code DNA: authored commit timing on default branches of current public original repositories, plus GitHub-reported language bytes and counted source lines (displayed as Line of Codes).
 - A curated, categorized Development Stack, daily public activity, and achievements. No weekday chart or visible Phoenix Chronicles section.
-- A first-person **My Weekly Journey** journal below Extra tools & interests, with weekly PR highlights, keyword-matched focus areas, and collapsible day-by-day notes from public activity.
+- A first-person **Weekly Coding Adventure** immediately below Today's Coding Adventure, with Monday–Sunday PR highlights, keyword-matched focus areas, and collapsible day-by-day notes from public activity.
 
 The text table counts PR openings and merges separately. It is **not** a commit count,
 a count of working days, GitHub’s contribution calendar, or a count of forks.
@@ -108,3 +108,5 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
 - [GitHub issue and PR search](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests)
 - [GITHUB_TOKEN](https://docs.github.com/en/actions/concepts/security/github_token)
 - [Scheduled workflow events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
+
+The Extra tools & interests stack table is always expanded. The daily section contains a narrative and activity trail without a four-column totals table; the top-language heading is generated dynamically above the language table.

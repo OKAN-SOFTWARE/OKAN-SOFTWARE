@@ -69,14 +69,15 @@ class JourneyTests(unittest.TestCase):
         archive = journey.archive_updates({}, data)
         rendered = journey.markdown(data, archive)
         for phrase in (
-            "Code DNA", "When I Commit", "Programming Languages",
+            "Code DNA", "When I Commit", "I Mostly Code in Python",
             "My Development Stack", "Today's Coding Adventure",
-            "October 30, 2026", "| Language | LOC | Source bytes | Activity |",
+            "October 30, 2026", "| Language | Line of Codes | Source bytes | Activity |",
             "| Python | 120 | 800 |", "Upstream Pathfinder",
         ):
             self.assertIn(phrase, rendered)
         for excluded in (
             "Most Productive Commit Day", "The Phoenix Chronicles",
+            "Programming Languages", "Authored commits | Repositories touched",
             "Explore recent daily adventures", "| Language | Source bytes | Share",
         ):
             self.assertNotIn(excluded, rendered)
@@ -217,7 +218,7 @@ class JourneyTests(unittest.TestCase):
         data = journey.summarize("OKAN-SOFTWARE", *sample(), NOW)
         text = journey.weekly_markdown(data, sample()[2], prs)
         for phrase in (
-            "My Weekly Journey", "This Week's Work", "Day-by-day",
+            "Weekly Coding Adventure", "This Week's Work", "Day-by-day",
             "Oct 26–Nov 01, 2026", "React", "Cloud & DevOps",
             "persist state changes", "workflow checks", "opened 1 PR",
             "merged 1 PR", "09:15",
@@ -254,13 +255,26 @@ class JourneyTests(unittest.TestCase):
                 journey.run("OKAN-SOFTWARE", "token", root, NOW)
             content = readme.read_text(encoding="utf-8")
             self.assertIn("Code DNA", content)
-            self.assertIn("My Weekly Journey", content)
+            self.assertIn("Weekly Coding Adventure", content)
             self.assertIn("intro", content)
             self.assertIn("middle", content)
             self.assertIn("footer", content)
             self.assertNotIn("Your weekly development notes", content)
         with self.assertRaises(ValueError):
             journey.replace_weekly("missing markers", "new")
+
+
+
+    def test_readme_places_weekly_below_daily_and_exposes_stack(self):
+        readme = (SCRIPT.parents[1] / "README.md").read_text(encoding="utf-8")
+        today = readme.index("Today's Coding Adventure")
+        week = readme.index("<!-- WEEKLY:START -->")
+        projects = readme.index("## Built from an everyday problem")
+        self.assertLess(today, week)
+        self.assertLess(week, projects)
+        stack = readme[readme.index("## Extra tools & interests"):]
+        self.assertIn("### Explore the stack", stack)
+        self.assertNotIn("<summary>Explore the stack</summary>", stack)
 
 
 
