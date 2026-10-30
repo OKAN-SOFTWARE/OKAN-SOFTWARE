@@ -1,8 +1,9 @@
 # Profile activity
 
-This profile uses repository-owned SVGs and a small Python script to keep its
-open-source section current. It needs no external stats-card service, package
-installation, or personal access token.
+This profile uses text-based Markdown statistics and two Python standard-library scripts
+to keep its public GitHub sections current. Decorative artwork remains separate;
+statistics are real text, not static SVG cards. No external stats-card service,
+package installation, or personal access token is needed.
 
 ## What updates
 
@@ -11,9 +12,11 @@ installation, or personal access token.
 - Currently open upstream PRs, including drafts (an all-time count, not a 30-day count).
 - Distinct repositories with an opening or merge during the same 30-day window.
 - Ten most recently updated upstream PRs that are **open, draft, or merged**. Closed PRs that were not merged are excluded from the latest-work table. Historical chart and counts remain unchanged.
-- A “Last profile update” timestamp from the latest successful refresh, shown in New York time. Both the README and chart update this time even when the PR counts and table are unchanged.
+- A “Last profile update” timestamp from the latest successful refresh, shown in New York time.
+- Text-based Code DNA: authored commit timing and weekday rhythm from default branches of current public original repositories, plus GitHub-reported language bytes.
+- A curated, categorized Development Stack; daily public activity, achievements, and a 365-day JSON-backed Phoenix Chronicles archive.
 
-The chart counts PR openings and merges separately. It is **not** a commit count,
+The text table counts PR openings and merges separately. It is **not** a commit count,
 a count of working days, GitHub’s contribution calendar, or a count of forks.
 An old PR merged this month contributes to merges even if it was opened earlier.
 Fork creation and automated profile-refresh commits do not increase these counts.
@@ -30,7 +33,7 @@ scheduled run. To refresh sooner, use **Actions → Refresh profile activity →
 The workflow uses the repository’s built-in `GITHUB_TOKEN`. Only the refresh job
 gets `contents: write`; pull-request runs execute the tests with read permission.
 No token is written to the README or SVG. The updater validates all its data and
-renders both outputs before writing either file. API errors or incomplete search
+renders the generated output before writing the README. The journey updater separately validates API data before updating the README and chronicle JSON. API errors or incomplete search
 results fail the run instead of publishing zeroes. A push rejected by branch
 protection fails visibly; no force push or rule bypass is attempted.
 
@@ -50,26 +53,44 @@ then run:
 
 ```bash
 python scripts/update_activity.py
+python scripts/update_developer_journey.py
 ```
 
 `PROFILE_USER` defaults to `OKAN-SOFTWARE`. `--fixture FILE` accepts a saved bundle
 of the four search responses (`opened`, `merged`, `open`, and `recent`) for offline
 validation. `--today YYYY-MM-DD` fixes the local calendar date when testing;
 `--synced-at` sets an explicit timezone-aware timestamp for reproducible runs.
-Do not commit raw API bundles; the generated section and SVG are the public outputs.
+Do not commit raw API bundles. Generated Markdown and the public `data/chronicles.json` snapshots are the outputs.
 
 Keep the single `ACTIVITY:START` / `ACTIVITY:END` marker pair in `README.md`.
-Everything outside those markers stays under manual control. The approved phoenix
+The journey updater has its own `JOURNEY:START` / `JOURNEY:END` markers.
+Everything outside both marker pairs stays under manual control. The approved phoenix
 and workbench illustration (`assets/phoenix-workbench.png`) appears at the top.
 It is static artwork without illustrated navigation buttons. The image sits inside
 a named anchor with no destination, so it is not an image-viewer or navigation link.
 The real navigation links immediately below wrap animated GIF buttons. Contribution data
 remains in the generated section, and stack details remain available as text.
-The README needs no custom CSS or JavaScript.
+The README needs no custom CSS or JavaScript. All statistics are selectable text;
+only decorative Phoenix artwork and navigation buttons are images.
 
 To regenerate the four decorative assets locally, install Pillow and run
 `python scripts/render_profile_assets.py`. Pillow is only needed when rebuilding
 the decorative GIFs, not for the scheduled activity updater or its tests.
+
+## Data scope and accuracy
+
+- The Code DNA commit count includes attributed commits reachable from the default branches
+  of current, public, non-fork repositories owned by OKAN-SOFTWARE. It does not include
+  all upstream or private history. Times are commit timestamps in America/New_York,
+  not time spent coding.
+- Language shares use the bytes returned by GitHub's repository languages endpoint.
+  Frameworks, OS names, and cloud tools in Development Stack are curated descriptions,
+  not automatically inferred expertise scores.
+- Daily PR and issue events use GitHub's most recent public event feed (maximum 300
+  recent events). Some events may appear late or fall outside the feed window.
+- The README shows the latest 14 daily entries, while `data/chronicles.json`
+  retains up to 365 days of daily snapshots. The refresh runs every four hours.
+- API errors fail the job, preserving the previous committed snapshot.
 
 ## References
 
