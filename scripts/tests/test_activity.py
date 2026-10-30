@@ -114,7 +114,7 @@ class ActivityTests(unittest.TestCase):
             self.assertIn("is:public", query)
             self.assertIn("-user:OKAN-SOFTWARE", query)
 
-        self.assertIn("is:open", queries["recent"])
+        self.assertNotIn("is:open", queries["recent"])
 
     def test_owner_private_author_and_link_are_rejected(self):
         cases = [
@@ -175,7 +175,7 @@ class ActivityTests(unittest.TestCase):
                         TODAY,
                     )
 
-    def test_empty_activity_and_only_open_states_render(self):
+    def test_empty_activity_and_open_or_merged_states_render(self):
         empty = {
             key: payload([])
             for key in activity.KEYS
@@ -221,27 +221,39 @@ class ActivityTests(unittest.TestCase):
             "OKAN-SOFTWARE",
         )
 
-        for state in ("🟢 Open", "⚙️ Draft"):
+        for state in ("🟢 Open", "⚙️ Draft", "Merged"):
             self.assertIn(state, rendered)
 
-        for excluded in ("⚪ Closed", "Merged", "/pull/3", "/pull/4"):
+        for excluded in ("⚪ Closed", "/pull/3"):
             self.assertNotIn(excluded, rendered)
 
-        self.assertIn("Explore all open upstream contributions", rendered)
+        self.assertIn("/pull/4", rendered)
+        self.assertIn("Explore open upstream PRs", rendered)
+        self.assertIn("Merged upstream PRs", rendered)
         self.assertIn("is%3Aopen", rendered)
+        self.assertIn("is%3Amerged", rendered)
 
-    def test_recent_api_results_containing_only_closed_prs_render_empty(self):
+    def test_closed_unmerged_prs_are_excluded_but_merged_prs_remain(self):
         value = bundle()
         value["recent"] = payload([
-            pr(3, state="closed"),
-            pr(4, state="closed", pull_request={
-                "merged_at": "2026-10-27T12:00:00Z"
-            }),
+            pr(3, state="closed", updated_at="2026-10-27T14:00:00Z"),
+            pr(4, state="closed", updated_at="2026-10-27T13:00:00Z",
+               pull_request={"merged_at": "2026-10-27T12:00:00Z"}),
         ])
         data = activity.summarize(value, "OKAN-SOFTWARE", TODAY)
-        self.assertEqual([], data["recent"])
+        self.assertEqual([4], [item["number"] for item in data["recent"]])
         rendered = activity.markdown_section(data, "OKAN-SOFTWARE")
-        self.assertIn("No public upstream pull requests yet", rendered)
+        self.assertNotIn("/pull/3", rendered)
+        self.assertIn("/pull/4", rendered)
+        self.assertIn("Merged", rendered)
+
+        value["recent"] = payload([pr(3, state="closed")])
+        empty = activity.summarize(value, "OKAN-SOFTWARE", TODAY)
+        self.assertEqual([], empty["recent"])
+        self.assertIn(
+            "No public upstream pull requests yet",
+            activity.markdown_section(empty, "OKAN-SOFTWARE"),
+        )
 
     def test_latest_upstream_work_shows_ten_prs(self):
         value = bundle()
