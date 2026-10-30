@@ -13,8 +13,8 @@ package installation, or personal access token is needed.
 - Distinct repositories with an opening or merge during the same 30-day window.
 - Ten most recently updated upstream PRs that are **open, draft, or merged**. Closed PRs that were not merged are excluded from the latest-work table. Historical chart and counts remain unchanged.
 - A “Last profile update” timestamp from the latest successful refresh, shown in New York time.
-- Text-based Code DNA: authored commit timing and weekday rhythm from default branches of current public original repositories, plus GitHub-reported language bytes.
-- A curated, categorized Development Stack; daily public activity, achievements, and a 365-day JSON-backed Phoenix Chronicles archive.
+- Text-based Code DNA: authored commit timing on default branches of current public original repositories, plus GitHub-reported language bytes and counted source lines (LOC).
+- A curated, categorized Development Stack, daily public activity, and achievements. No weekday chart or visible Phoenix Chronicles section.
 
 The text table counts PR openings and merges separately. It is **not** a commit count,
 a count of working days, GitHub’s contribution calendar, or a count of forks.
@@ -88,8 +88,12 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
   not automatically inferred expertise scores.
 - Daily PR and issue events use GitHub's most recent public event feed (maximum 300
   recent events). Some events may appear late or fall outside the feed window.
-- The README shows the latest 14 daily entries, while `data/chronicles.json`
-  retains up to 365 days of daily snapshots. The refresh runs every four hours.
+- The history archive remains in `data/chronicles.json` (up to 365 days), but no
+  longer appears in the README. The refresh runs every four hours.
+- LOC is a real count of nonblank lines in recognized source extensions from a
+  shallow checkout of each public original repository. Comments count; generated,
+  dependency, and minified files are excluded. LOC differs from GitHub source bytes
+  because the two metrics use different inclusion rules.
 - API errors fail the job, preserving the previous committed snapshot.
 
 ## References
