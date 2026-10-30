@@ -55,11 +55,16 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PROFILE_USER: ${{ github.repository_owner }}
         run: python scripts/update_activity.py
+      - name: Refresh text-based Code DNA and daily adventures
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROFILE_USER: ${{ github.repository_owner }}
+        run: python scripts/update_developer_journey.py
       - name: Commit changed snapshot
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md assets/activity.svg
+          git add README.md data/chronicles.json
           if git diff --cached --quiet; then
             echo 'Activity snapshot already current.'
             exit 0
