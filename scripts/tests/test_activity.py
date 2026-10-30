@@ -389,176 +389,62 @@ class ActivityTests(unittest.TestCase):
                     "new",
                 )
 
-    def test_unchanged_activity_refreshes_timestamp_in_both_outputs(self):
+    def test_text_only_snapshot_refreshes_and_preserves_other_sections(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            (root / "assets").mkdir()
-
             readme = root / "README.md"
-            svg = root / "assets" / "activity.svg"
-
             readme.write_text(
-                f"{activity.START}\nold\n{activity.END}\n",
+                f"intro\n{activity.START}\nold\n{activity.END}\nfooter",
                 encoding="utf-8",
             )
-
-            data = bundle()
-
-            first = datetime(
-                2026,
-                10,
-                27,
-                14,
-                tzinfo=timezone.utc,
-            )
-
-            second = datetime(
-                2026,
-                10,
-                27,
-                15,
-                tzinfo=timezone.utc,
-            )
-
-            # First refresh creates the snapshot.
+            first = datetime(2026, 10, 27, 14, tzinfo=timezone.utc)
+            second = datetime(2026, 10, 27, 15, tzinfo=timezone.utc)
+            value = bundle()
             activity.write_outputs(
-                data,
-                "OKAN-SOFTWARE",
-                TODAY,
-                root,
-                synced_at=first,
+                value, "OKAN-SOFTWARE", TODAY, root, synced_at=first
             )
-
-            original_readme = readme.read_text(
-                encoding="utf-8"
-            )
-
-            original_svg = svg.read_text(
-                encoding="utf-8"
-            )
-
-            self.assertIn(
-                "ACTIVITY:SNAPSHOT:",
-                original_readme,
-            )
-
-            # A successful refresh must advance the time even when PRs are unchanged.
+            original = readme.read_text(encoding="utf-8")
+            self.assertIn("ACTIVITY:SNAPSHOT:", original)
+            self.assertIn("View the daily upstream history", original)
+            self.assertIn("intro", original)
+            self.assertIn("footer", original)
+            self.assertNotIn("![", original)
             activity.write_outputs(
-                data,
-                "OKAN-SOFTWARE",
-                TODAY,
-                root,
-                synced_at=second,
+                value, "OKAN-SOFTWARE", TODAY, root, synced_at=second
             )
-
-            updated_readme = readme.read_text(encoding="utf-8")
-            updated_svg = svg.read_text(encoding="utf-8")
-
-            self.assertNotEqual(
-                original_readme,
-                updated_readme,
-            )
-
-            self.assertNotEqual(
-                original_svg,
-                updated_svg,
-            )
-
-            self.assertIn(
-                f"Last profile update: {activity.format_sync_time(second)}",
-                updated_readme,
-            )
-            self.assertIn(
-                f"UPDATED · {activity.format_sync_time(second, compact=True)}",
-                updated_svg,
-            )
+            updated = readme.read_text(encoding="utf-8")
+            self.assertNotEqual(original, updated)
             self.assertEqual(
-                original_readme.replace(
+                original.replace(
                     activity.format_sync_time(first),
                     activity.format_sync_time(second),
                 ),
-                updated_readme,
+                updated,
             )
-            self.assertEqual(
-                original_svg.replace(
-                    activity.format_sync_time(first, compact=True),
-                    activity.format_sync_time(second, compact=True),
-                ),
-                updated_svg,
-            )
-
-            # An identical timestamp and data remain deterministic.
             activity.write_outputs(
-                data, "OKAN-SOFTWARE", TODAY, root, synced_at=second,
+                value, "OKAN-SOFTWARE", TODAY, root, synced_at=second
             )
-            self.assertEqual(updated_readme, readme.read_text(encoding="utf-8"))
-            self.assertEqual(updated_svg, svg.read_text(encoding="utf-8"))
-
-            # A visible PR change must update the snapshot.
-            data["recent"]["items"][0]["title"] = (
-                "Updated bug fix"
-            )
-
+            self.assertEqual(updated, readme.read_text(encoding="utf-8"))
+            value["recent"]["items"][0]["title"] = "Updated bug fix"
             activity.write_outputs(
-                data,
-                "OKAN-SOFTWARE",
-                TODAY,
-                root,
-                synced_at=second,
+                value, "OKAN-SOFTWARE", TODAY, root, synced_at=second
             )
+            self.assertIn("Updated bug fix", readme.read_text(encoding="utf-8"))
 
-            updated_readme = readme.read_text(
-                encoding="utf-8"
-            )
-
-            self.assertNotEqual(
-                original_readme,
-                updated_readme,
-            )
-
-            self.assertIn(
-                "Updated bug fix",
-                updated_readme,
-            )
-
-    def test_failed_data_keeps_both_outputs_unchanged(self):
+    def test_failed_data_keeps_readme_unchanged(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            (root / "assets").mkdir()
-
             readme = root / "README.md"
-            svg = root / "assets" / "activity.svg"
-
             readme.write_text(
-                f"{activity.START}\nold\n{activity.END}",
-                encoding="utf-8",
+                f"{activity.START}\nold\n{activity.END}", encoding="utf-8"
             )
-
-            svg.write_text(
-                "old svg",
-                encoding="utf-8",
-            )
-
             invalid = bundle()
             invalid["merged"]["incomplete_results"] = True
-
             with self.assertRaises(ValueError):
                 activity.write_outputs(
-                    invalid,
-                    "OKAN-SOFTWARE",
-                    TODAY,
-                    root,
+                    invalid, "OKAN-SOFTWARE", TODAY, root
                 )
-
-            self.assertIn(
-                "old",
-                readme.read_text(encoding="utf-8"),
-            )
-
-            self.assertEqual(
-                "old svg",
-                svg.read_text(encoding="utf-8"),
-            )
+            self.assertIn("old", readme.read_text(encoding="utf-8"))
 
     def test_api_paginates_and_rejects_partial_results(self):
         class Response:
