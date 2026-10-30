@@ -71,7 +71,7 @@ class JourneyTests(unittest.TestCase):
         for phrase in (
             "Code DNA", "When I Commit", "Programming Languages",
             "My Development Stack", "Today's Coding Adventure",
-            "2026-10-30", "| Language | LOC | Source bytes | Activity |",
+            "October 30, 2026", "| Language | LOC | Source bytes | Activity |",
             "| Python | 120 | 800 |", "Upstream Pathfinder",
         ):
             self.assertIn(phrase, rendered)
