@@ -1,6 +1,6 @@
 <p align="center">
   <a name="phoenix-artwork">
-  <img src="./assets/phoenix-workbench.png" width="100%" alt="Okan Tiktas’s workspace: a golden phoenix and ember trail framing a green Matrix banner and glowing badges for languages, frameworks, data tools, and AWS exploration." />
+  <img src="./assets/phoenix-hero-animated.gif" width="100%" alt="Animated cyberpunk Phoenix and Matrix developer banner with glowing OKAN TIKTAS lettering" />
   </a>
 </p>
 
@@ -135,3 +135,7 @@ Tools used across personal projects and contribution work; AWS topics include on
 </p>
 
 <sub>The animated snake follows my public GitHub contribution calendar and refreshes daily. Coding statistics above remain selectable text.</sub>
+
+<p align="center">
+  <img src="./assets/phoenix-footer-animated.gif" width="100%" alt="Animated Matrix-themed footer: build, test, contribute, repeat" />
+</p>
