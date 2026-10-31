@@ -61,7 +61,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Oct 31, 2026 at 5:18 PM EDT**
+**Last profile update: Oct 31, 2026 at 5:24 PM EDT**
 
 **66 opened · 28 merged · 34 open now · 46 upstream repositories**
 
@@ -139,14 +139,24 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- UPSTREAM_CODE:START -->
 ### 🟢 UPSTREAM CONTRIBUTIONS // MERGED PRS
 
-*Waiting for the first successful refresh of merged upstream PR diff statistics.*
+**28 merged PRs** · **+2,898 lines added** · **−272 lines removed**
+
+| Upstream repository | Merged pull request | Added | Removed |
+| :--- | :--- | ---: | ---: |
+| [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#203](https://github.com/PicadoLabs/build-with-ai/pull/203) | +16 | −1 |
+| [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) | [#11](https://github.com/manojkken/testcontainers-aws/pull/11) | +135 | −18 |
+| [mne-tools/mne-connectivity](https://github.com/mne-tools/mne-connectivity) | [#520](https://github.com/mne-tools/mne-connectivity/pull/520) | +23 | −14 |
+| [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [#1193](https://github.com/nodejs/doc-kit/pull/1193) | +174 | −41 |
+| [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#202](https://github.com/PicadoLabs/build-with-ai/pull/202) | +13 | −1 |
+
+<sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->
 
 <details>
 <summary><strong>Explore public GitHub history and development stack</strong></summary>
 
 <!-- JOURNEY:START -->
-**Developer stats refreshed:** Oct 31, 2026 at 05:18 PM EDT
+**Developer stats refreshed:** Oct 31, 2026 at 05:24 PM EDT
 
 ### Public GitHub History
 
