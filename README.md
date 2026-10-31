@@ -135,17 +135,23 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | 🌃 Evening | 5 | 6.2% | █░░░░░░░░░░░░░░░ |
 | 🌙 Night | 0 | 0.0% | ░░░░░░░░░░░░░░░░ |
 
-#### 💬 I Mostly Code in JavaScript
+<!-- CODE_MATRIX:START -->
+#### 🟢 CODE MATRIX · Language Distribution
 
-| Language | Line of Codes | Source bytes | Activity |
+**278,303 source lines** · **9 public original repositories** · **7 languages**
+
+<sub>Nonblank lines on default branches · Highest percentage first · Green cells approximate share (tiny nonzero shares show one cell)</sub>
+
+| Language | Lines of code | % of total code | Matrix share |
 | :--- | ---: | ---: | :--- |
-| JavaScript | 273,411 | 16,944,094 | ████████████████ |
-| Java | 1,603 | 81,259 | ░░░░░░░░░░░░░░░░ |
-| Python | 1,377 | 68,902 | ░░░░░░░░░░░░░░░░ |
-| HTML | 731 | 51,076 | ░░░░░░░░░░░░░░░░ |
-| TypeScript | 1,128 | 12,729 | ░░░░░░░░░░░░░░░░ |
-| Rust | 44 | 2,148 | ░░░░░░░░░░░░░░░░ |
-| Dockerfile | 9 | 351 | ░░░░░░░░░░░░░░░░ |
+| **JavaScript** | 273,411 | **98.24%** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
+| **Java** | 1,603 | **0.58%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| **Python** | 1,377 | **0.49%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| **TypeScript** | 1,128 | **0.41%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| **HTML** | 731 | **0.26%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| **Rust** | 44 | **0.02%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| **Dockerfile** | 9 | **0.003%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+<!-- CODE_MATRIX:END -->
 
 ### 🧩 My Development Stack
 
