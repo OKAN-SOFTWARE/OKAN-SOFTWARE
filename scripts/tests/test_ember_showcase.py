@@ -9,6 +9,28 @@ import update_ember_showcase as s
 
 
 class MatrixShowcaseTests(unittest.TestCase):
+    def test_about_terminal_types_code_without_whoami(self):
+        svg = s.terminal_svg()
+        self.assertIn('about.ts', svg)
+        self.assertIn('animation-name:type7', svg)
+        self.assertIn('prefers-reduced-motion:reduce', svg)
+        self.assertIn('clip-path="url(#r1)"', svg)
+        self.assertIn('regression tests', svg)
+        self.assertNotIn('whoami', svg)
+        self.assertNotIn('profile.sh', svg)
+        self.assertNotIn('<script', svg)
+        from xml.etree import ElementTree
+        ElementTree.fromstring(svg)
+
+    def test_readme_about_matches_animated_intro(self):
+        readme = (Path(__file__).resolve().parents[2] / "README.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("Build → Test → Improve → Contribute.", readme)
+        self.assertIn("assets/ember/terminal.svg", readme)
+        self.assertNotIn("whoami", readme)
+        self.assertIn("regression tests", readme)
+
     def test_only_recent_original_repositories(self):
         def item(name, pushed, fork=False, archived=False):
             return {'name':name, 'full_name':'OKAN-SOFTWARE/'+name,

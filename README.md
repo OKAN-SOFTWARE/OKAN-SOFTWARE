@@ -28,12 +28,12 @@
 <tr>
 <td width="60%" valign="middle">
   <h2>Building software that <em>solves real problems.</em></h2>
-  <p>I'm <strong>Okan Tiktas</strong>, a software engineer working across backend services, web applications, automation, developer tools, and open source.</p>
-  <p>I like turning recurring problems into dependable tools, reproducing difficult bugs, and adding tests that keep them fixed.</p>
-  <p><strong>Build → Test → Contribute.</strong></p>
+  <p>I develop practical backend systems, web applications, automation, and developer tools—turning everyday challenges into software people can rely on.</p>
+  <p>I enjoy tracking down stubborn bugs, simplifying repetitive work, and writing regression tests that make improvements stick. I bring that same approach to my own projects and open-source contributions.</p>
+  <p><strong>Build → Test → Improve → Contribute.</strong></p>
 </td>
 <td width="40%" valign="middle">
-  <img src="./assets/ember/terminal.svg" width="100%" alt="Terminal card showing software engineer, backend, tools, automation, build, test and contribute" />
+  <img src="./assets/ember/terminal.svg" width="100%" alt="Animated code typing a short developer introduction: backend, web, tools, automation, regression tests and open source" />
 </td>
 </tr>
 </table>
