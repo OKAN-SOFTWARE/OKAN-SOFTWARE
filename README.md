@@ -61,30 +61,30 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Oct 31, 2026 at 12:53 AM EDT**
+**Last profile update: Oct 31, 2026 at 4:52 AM EDT**
 
-**61 opened · 28 merged · 30 open now · 44 upstream repositories**
+**64 opened · 28 merged · 33 open now · 45 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix(cli): normalize autonomous decisions under decisions namespace · #226](https://github.com/PicadoLabs/build-with-ai/pull/226) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
+| 🟢 Open | [fix(hooks): ignore writing requests inside quoted examples · #183](https://github.com/littlebearapps/plainspoken/pull/183) | [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) |
+| 🟢 Open | [fix(parser): support numbered lists and markdown tables · #224](https://github.com/PicadoLabs/build-with-ai/pull/224) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
+| 🟢 Open | [fix(builder): close source stream after decoding error (#3404) · #3459](https://github.com/pylint-dev/astroid/pull/3459) | [pylint-dev/astroid](https://github.com/pylint-dev/astroid) |
 | 🟣 Merged | [fix(prompt-engine): prevent duplicate nested architectural decisions · #203](https://github.com/PicadoLabs/build-with-ai/pull/203) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator · #11944](https://github.com/microsoft/pyright/pull/11944) | [microsoft/pyright](https://github.com/microsoft/pyright) |
-| 🟢 Open | [fix(builder): close source stream after decoding error (#3404) · #3459](https://github.com/pylint-dev/astroid/pull/3459) | [pylint-dev/astroid](https://github.com/pylint-dev/astroid) |
 | 🟢 Open | [fix(win32): correct SetCursorPos argument types (#1745) · #1750](https://github.com/java-native-access/jna/pull/1750) | [java-native-access/jna](https://github.com/java-native-access/jna) |
 | 🟢 Open | [fix(mysql): reset popped state when re-pushing queue messages (#1777) · #1784](https://github.com/conductor-oss/conductor/pull/1784) | [conductor-oss/conductor](https://github.com/conductor-oss/conductor) |
 | 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 | 🟢 Open | [fix(client): support accountId in assignable project searches · #2449](https://github.com/pycontribs/jira/pull/2449) | [pycontribs/jira](https://github.com/pycontribs/jira) |
-| 🟢 Open | [test: isolate Django cache settings between xdist worker groups · #852](https://github.com/jazzband/django-redis/pull/852) | [jazzband/django-redis](https://github.com/jazzband/django-redis) |
-| 🟢 Open | [fix: avoid stale dependency comparisons during snapshot retries · #1179](https://github.com/actions/dependency-review-action/pull/1179) | [actions/dependency-review-action](https://github.com/actions/dependency-review-action) |
-| 🟢 Open | [fix: improve diagnostics for missing Linux libraries · #1656](https://github.com/actions/setup-node/pull/1656) | [actions/setup-node](https://github.com/actions/setup-node) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:db18a16b5e67fbbe751b4fd38beb132b99539ba13d167225db67c5fdc62dd1a0 -->
+<!-- ACTIVITY:SNAPSHOT:4b8a9e2d1c02d2b93d7888691b2b0c96806066a023f2778fae1b07c740df6d57 -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
@@ -120,7 +120,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <summary><strong>Explore Code DNA, commit patterns, and more development statistics</strong></summary>
 
 <!-- JOURNEY:START -->
-**Developer stats refreshed:** Oct 31, 2026 at 12:53 AM EDT
+**Developer stats refreshed:** Oct 31, 2026 at 04:52 AM EDT
 
 ### 🧬 Code DNA · Public GitHub History
 
