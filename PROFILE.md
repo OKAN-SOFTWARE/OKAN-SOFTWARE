@@ -14,12 +14,13 @@ package installation, or personal access token is needed.
 - Ten most recently updated upstream PRs that are **open, draft, or merged**. Closed PRs that were not merged are excluded from the latest-work table. Historical chart and counts remain unchanged.
 - A “Last profile update” timestamp from the latest successful refresh, shown in New York time.
 - **OKAN'S CODE STATS // LIVE UPDATES** appears directly under Languages & Toolkit as a native Markdown table, showing nonblank source lines, percentages of total LOC, and languages ranked by line count. Small Devicon language logos are decorative; the statistics themselves are selectable text, not an SVG or image. GitHub language bytes are not displayed.
+- Separate **UPSTREAM CONTRIBUTIONS // MERGED PRS** shows all-time merged PR diff additions/deletions in other owners' repositories. These are whole-PR diff statistics, not unique personally authored lines; they are deliberately excluded from Code Stats language percentages. A cached per-PR snapshot avoids repeated detail fetches for unchanged merged PRs. This section refreshes with the four-hour profile activity workflow.
 - Public authored-commit counts remain available in the optional GitHub History details. The time-of-day activity table has been removed.
 - A curated, categorized Development Stack. The separate daily and weekly adventure sections have been removed at the owner's request.
 - A separate selectable-text **Recent Activity** table, with one latest public event per repository (up to eight), updated by an hourly workflow.
 - A Matrix-green **contribution-grid snake** (light and dark SVG variants), generated from GitHub's contribution calendar daily. The animation is decoration, not a substitute for text statistics.
 
-The text table counts PR openings and merges separately. It is **not** a commit count,
+The upstream PR diff table counts additions and deletions in merged PRs separately from source lines currently in original repositories. The text table counts PR openings and merges separately. It is **not** a commit count,
 a count of working days, GitHub’s contribution calendar, or a count of forks.
 An old PR merged this month contributes to merges even if it was opened earlier.
 Fork creation and automated profile-refresh commits do not increase these counts.
