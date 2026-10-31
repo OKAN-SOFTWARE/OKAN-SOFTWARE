@@ -44,6 +44,16 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 <!-- ACTIVITY:SNAPSHOT:b78a13700b6fd402bb622a6ee4b980c5d06addedb36a86546d0d0c5927edacf9 -->
 <!-- ACTIVITY:END -->
 
+## 📰 Recent Activity
+
+*Auto-checked every hour with GitHub Actions · most recent public action per repository · Eastern Time.*
+
+<!-- RECENT:START -->
+| Recent activity | Details | Time (Eastern) |
+| :--- | :--- | :--- |
+| Waiting for the first hourly refresh | — | — |
+<!-- RECENT:END -->
+
 <!-- JOURNEY:START -->
 **Developer stats refreshed:** Oct 30, 2026 at 08:01 PM EDT
 
@@ -125,3 +135,14 @@ Our daily development journey is here — a timeline of today's public coding an
 
 Tools used across personal projects and contribution work; AWS topics include ongoing learning.
 
+## 🐍 The Phoenix Contribution Snake
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/contribution-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/contribution-snake.svg" />
+    <img src="./assets/contribution-snake.svg" alt="Animated snake winding through Okan's GitHub contribution grid" width="100%" />
+  </picture>
+</p>
+
+<sub>The animated snake follows my public GitHub contribution calendar and refreshes daily. Coding statistics above remain selectable text.</sub>
