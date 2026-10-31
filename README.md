@@ -61,18 +61,18 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Oct 31, 2026 at 8:57 AM EDT**
+**Last profile update: Oct 31, 2026 at 12:45 PM EDT**
 
-**64 opened · 28 merged · 33 open now · 45 upstream repositories**
+**65 opened · 28 merged · 33 open now · 46 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [Fix unexpected tokens in bean deserialization (#6357) · #6362](https://github.com/FasterXML/jackson-databind/pull/6362) | [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) |
 | 🟢 Open | [fix(cli): normalize autonomous decisions under decisions namespace · #226](https://github.com/PicadoLabs/build-with-ai/pull/226) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [fix(hooks): ignore writing requests inside quoted examples · #183](https://github.com/littlebearapps/plainspoken/pull/183) | [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) |
 | 🟢 Open | [fix(parser): support numbered lists and markdown tables · #224](https://github.com/PicadoLabs/build-with-ai/pull/224) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
-| 🟢 Open | [fix(builder): close source stream after decoding error (#3404) · #3459](https://github.com/pylint-dev/astroid/pull/3459) | [pylint-dev/astroid](https://github.com/pylint-dev/astroid) |
 | 🟣 Merged | [fix(prompt-engine): prevent duplicate nested architectural decisions · #203](https://github.com/PicadoLabs/build-with-ai/pull/203) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator · #11944](https://github.com/microsoft/pyright/pull/11944) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 | 🟢 Open | [fix(win32): correct SetCursorPos argument types (#1745) · #1750](https://github.com/java-native-access/jna/pull/1750) | [java-native-access/jna](https://github.com/java-native-access/jna) |
@@ -84,7 +84,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:4b8a9e2d1c02d2b93d7888691b2b0c96806066a023f2778fae1b07c740df6d57 -->
+<!-- ACTIVITY:SNAPSHOT:8044a3ba227519e09803d336d966c1dfa4835090b0610c27e1047aed6bf7698b -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
@@ -120,7 +120,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <summary><strong>Explore Code DNA, commit patterns, and more development statistics</strong></summary>
 
 <!-- JOURNEY:START -->
-**Developer stats refreshed:** Oct 31, 2026 at 08:57 AM EDT
+**Developer stats refreshed:** Oct 31, 2026 at 12:45 PM EDT
 
 ### 🧬 Code DNA · Public GitHub History
 
