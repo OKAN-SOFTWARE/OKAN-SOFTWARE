@@ -4,195 +4,322 @@
     "number": 1620,
     "merged_at": "2026-10-26T10:05:57Z",
     "additions": 55,
-    "deletions": 9
+    "deletions": 9,
+    "languages": [
+      "Go"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/PicadoLabs/build-with-ai/pulls/202": {
     "repo": "PicadoLabs/build-with-ai",
     "number": 202,
     "merged_at": "2026-10-29T05:36:03Z",
     "additions": 13,
-    "deletions": 1
+    "deletions": 1,
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/PicadoLabs/build-with-ai/pulls/203": {
     "repo": "PicadoLabs/build-with-ai",
     "number": 203,
     "merged_at": "2026-10-31T04:52:27Z",
     "additions": 16,
-    "deletions": 1
+    "deletions": 1,
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/PowerShell/PowerShell/pulls/28275": {
     "repo": "PowerShell/PowerShell",
     "number": 28275,
     "merged_at": "2026-10-28T22:42:16Z",
     "additions": 3,
-    "deletions": 1
+    "deletions": 1,
+    "languages": [],
+    "frameworks": []
   },
   "https://api.github.com/repos/TanbirRamim/open-source-radar/pulls/333": {
     "repo": "TanbirRamim/open-source-radar",
     "number": 333,
     "merged_at": "2026-10-27T01:48:07Z",
     "additions": 126,
-    "deletions": 1
+    "deletions": 1,
+    "languages": [
+      "HTML",
+      "JavaScript"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/Tencent/teamai-cli/pulls/1438": {
     "repo": "Tencent/teamai-cli",
     "number": 1438,
     "merged_at": "2026-10-26T22:24:35Z",
     "additions": 85,
-    "deletions": 3
+    "deletions": 3,
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": [
+      "Vitest"
+    ]
   },
   "https://api.github.com/repos/Tencent/teamai-cli/pulls/1460": {
     "repo": "Tencent/teamai-cli",
     "number": 1460,
     "merged_at": "2026-10-27T13:18:16Z",
     "additions": 2,
-    "deletions": 2
+    "deletions": 2,
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/ftery0/ai-profile-switch/pulls/28": {
     "repo": "ftery0/ai-profile-switch",
     "number": 28,
     "merged_at": "2026-10-29T01:24:31Z",
     "additions": 1,
-    "deletions": 0
+    "deletions": 0,
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/jannskiee/floe/pulls/797": {
     "repo": "jannskiee/floe",
     "number": 797,
     "merged_at": "2026-10-28T14:47:14Z",
     "additions": 31,
-    "deletions": 1
+    "deletions": 1,
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/jarrodwatts/claude-hud/pulls/833": {
     "repo": "jarrodwatts/claude-hud",
     "number": 833,
     "merged_at": "2026-10-26T07:14:44Z",
     "additions": 4,
-    "deletions": 0
+    "deletions": 0,
+    "languages": [],
+    "frameworks": []
   },
   "https://api.github.com/repos/javvadivijayprasad/sel2pw/pulls/27": {
     "repo": "javvadivijayprasad/sel2pw",
     "number": 27,
     "merged_at": "2026-10-29T01:44:46Z",
     "additions": 172,
-    "deletions": 8
+    "deletions": 8,
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": [
+      "Vitest"
+    ]
   },
   "https://api.github.com/repos/lostlight530/auto-doc-engine/pulls/178": {
     "repo": "lostlight530/auto-doc-engine",
     "number": 178,
     "merged_at": "2026-10-27T17:27:29Z",
     "additions": 175,
-    "deletions": 9
+    "deletions": 9,
+    "languages": [
+      "Python"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/manojkken/testcontainers-aws/pulls/11": {
     "repo": "manojkken/testcontainers-aws",
     "number": 11,
     "merged_at": "2026-10-29T19:40:52Z",
     "additions": 135,
-    "deletions": 18
+    "deletions": 18,
+    "languages": [
+      "Python"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/manojkken/testcontainers-aws/pulls/8": {
     "repo": "manojkken/testcontainers-aws",
     "number": 8,
     "merged_at": "2026-10-27T12:14:04Z",
     "additions": 24,
-    "deletions": 11
+    "deletions": 11,
+    "languages": [
+      "Python"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/manojkken/testcontainers-aws/pulls/9": {
     "repo": "manojkken/testcontainers-aws",
     "number": 9,
     "merged_at": "2026-10-28T17:23:59Z",
     "additions": 144,
-    "deletions": 13
+    "deletions": 13,
+    "languages": [
+      "Python"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/mne-tools/mne-connectivity/pulls/520": {
     "repo": "mne-tools/mne-connectivity",
     "number": 520,
     "merged_at": "2026-10-29T15:45:48Z",
     "additions": 23,
-    "deletions": 14
+    "deletions": 14,
+    "languages": [
+      "Python"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/mvanhorn/last30days-skill/pulls/1338": {
     "repo": "mvanhorn/last30days-skill",
     "number": 1338,
     "merged_at": "2026-10-27T00:50:03Z",
     "additions": 195,
-    "deletions": 42
+    "deletions": 42,
+    "languages": [
+      "Python"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/nikhilb2/simple_invoicing/pulls/454": {
     "repo": "nikhilb2/simple_invoicing",
     "number": 454,
     "merged_at": "2026-10-27T12:18:17Z",
     "additions": 219,
-    "deletions": 0
+    "deletions": 0,
+    "languages": [
+      "Python"
+    ],
+    "frameworks": [
+      "FastAPI",
+      "pytest"
+    ]
   },
   "https://api.github.com/repos/nikhilb2/simple_invoicing/pulls/455": {
     "repo": "nikhilb2/simple_invoicing",
     "number": 455,
     "merged_at": "2026-10-27T12:45:12Z",
     "additions": 364,
-    "deletions": 0
+    "deletions": 0,
+    "languages": [
+      "Python"
+    ],
+    "frameworks": [
+      "pytest"
+    ]
   },
   "https://api.github.com/repos/nikhilb2/simple_invoicing/pulls/456": {
     "repo": "nikhilb2/simple_invoicing",
     "number": 456,
     "merged_at": "2026-10-27T13:16:34Z",
     "additions": 89,
-    "deletions": 3
+    "deletions": 3,
+    "languages": [
+      "Python",
+      "TypeScript"
+    ],
+    "frameworks": [
+      "pytest"
+    ]
   },
   "https://api.github.com/repos/nikhilb2/simple_invoicing/pulls/458": {
     "repo": "nikhilb2/simple_invoicing",
     "number": 458,
     "merged_at": "2026-10-27T14:38:04Z",
     "additions": 150,
-    "deletions": 0
+    "deletions": 0,
+    "languages": [
+      "Python"
+    ],
+    "frameworks": [
+      "pytest"
+    ]
   },
   "https://api.github.com/repos/nikhilb2/simple_invoicing/pulls/459": {
     "repo": "nikhilb2/simple_invoicing",
     "number": 459,
     "merged_at": "2026-10-27T14:38:11Z",
     "additions": 75,
-    "deletions": 3
+    "deletions": 3,
+    "languages": [
+      "Python"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/nikhilb2/simple_invoicing/pulls/466": {
     "repo": "nikhilb2/simple_invoicing",
     "number": 466,
     "merged_at": "2026-10-27T15:17:33Z",
     "additions": 178,
-    "deletions": 3
+    "deletions": 3,
+    "languages": [
+      "CSS",
+      "TypeScript"
+    ],
+    "frameworks": [
+      "Vitest"
+    ]
   },
   "https://api.github.com/repos/nikhilb2/simple_invoicing/pulls/467": {
     "repo": "nikhilb2/simple_invoicing",
     "number": 467,
     "merged_at": "2026-10-27T16:01:29Z",
     "additions": 104,
-    "deletions": 45
+    "deletions": 45,
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/nikhilb2/simple_invoicing/pulls/468": {
     "repo": "nikhilb2/simple_invoicing",
     "number": 468,
     "merged_at": "2026-10-27T16:01:38Z",
     "additions": 110,
-    "deletions": 3
+    "deletions": 3,
+    "languages": [
+      "CSS",
+      "TypeScript"
+    ],
+    "frameworks": [
+      "Vitest"
+    ]
   },
   "https://api.github.com/repos/nodejs/doc-kit/pulls/1193": {
     "repo": "nodejs/doc-kit",
     "number": 1193,
     "merged_at": "2026-10-29T15:43:53Z",
     "additions": 174,
-    "deletions": 41
+    "deletions": 41,
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/oras-project/oras-www/pulls/659": {
     "repo": "oras-project/oras-www",
     "number": 659,
     "merged_at": "2026-10-27T11:25:00Z",
     "additions": 7,
-    "deletions": 36
+    "deletions": 36,
+    "languages": [],
+    "frameworks": []
   },
   "https://api.github.com/repos/theluckystrike/tab-suspender-chrome-extension/pulls/21": {
     "repo": "theluckystrike/tab-suspender-chrome-extension",
     "number": 21,
     "merged_at": "2026-10-28T02:17:36Z",
     "additions": 224,
-    "deletions": 4
+    "deletions": 4,
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": []
   }
 }
