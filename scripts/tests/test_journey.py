@@ -193,7 +193,7 @@ class JourneyTests(unittest.TestCase):
         self.assertIn("## Contribution Snake", readme)
         self.assertIn("## Languages & Toolkit", readme)
         self.assertIn("assets/ember/stack.svg", readme)
-        self.assertIn("<!-- EMBER_PROJECTS:START -->", readme)
+        self.assertIn("<!-- MATRIX_PROJECTS:START -->", readme)
         self.assertIn("Tools built around real needs", readme)
         self.assertIn("assets/phoenix-hero-animated.gif", readme)
 
