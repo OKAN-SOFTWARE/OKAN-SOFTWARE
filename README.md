@@ -94,14 +94,14 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
-| Forked repository in [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) | Public fork |
+| Opened PR in [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [Pull request](https://github.com/PicadoLabs/build-with-ai/pull/226) |
+| Opened PR in [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) | [Pull request](https://github.com/littlebearapps/plainspoken/pull/183) |
 | Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/22) |
 | Forked repository in [ancaferro/myPhotos](https://github.com/ancaferro/myPhotos) | Public fork |
 | Commented in [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) | [fix\(E1011\): report bad Fn::FindInMap keys in unconstrained positions](https://github.com/aws-cloudformation/cfn-lint/issues/4919) |
 | Opened PR in [pylint-dev/astroid](https://github.com/pylint-dev/astroid) | [Pull request](https://github.com/pylint-dev/astroid/pull/3459) |
 | Opened PR in [java-native-access/jna](https://github.com/java-native-access/jna) | [Pull request](https://github.com/java-native-access/jna/pull/1750) |
 | Opened PR in [conductor-oss/conductor](https://github.com/conductor-oss/conductor) | [Pull request](https://github.com/conductor-oss/conductor/pull/1784) |
-| Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
