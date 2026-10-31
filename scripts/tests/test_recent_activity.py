@@ -35,7 +35,7 @@ class RecentActivityTests(unittest.TestCase):
         self.assertEqual(2, len(rows))
         self.assertIn("Opened PR", rows[0])
         self.assertNotIn("Oct 30", rows[0])
-        self.assertEqual(3, len(rows[0].split("|")))
+        self.assertEqual(4, len(rows[0].split("|")))
         self.assertIn("/upstream/project/pull/17", rows[0])
         self.assertNotIn("Pushed code", "\n".join(rows))
         self.assertIn("Opened issue", rows[1])
