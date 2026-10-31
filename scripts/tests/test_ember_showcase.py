@@ -8,7 +8,7 @@ sys.path.insert(0, str(ROOT/'scripts'))
 import update_ember_showcase as s
 
 
-class EmberShowcaseTests(unittest.TestCase):
+class MatrixShowcaseTests(unittest.TestCase):
     def test_only_recent_original_repositories(self):
         def item(name, pushed, fork=False, archived=False):
             return {'name':name, 'full_name':'OKAN-SOFTWARE/'+name,
@@ -62,7 +62,7 @@ class EmberShowcaseTests(unittest.TestCase):
 
     def test_markers_assets_and_timestamp_free_activity(self):
         readme=(ROOT/'README.md').read_text(encoding='utf-8')
-        for name in ['ACTIVITY','RECENT','JOURNEY','EMBER_PROJECTS']:
+        for name in ['ACTIVITY','RECENT','JOURNEY','MATRIX_PROJECTS']:
             self.assertEqual(1,readme.count(f'<!-- {name}:START -->'))
             self.assertEqual(1,readme.count(f'<!-- {name}:END -->'))
         for path in ['assets/phoenix-hero-animated.gif','assets/contribution-snake-dark.svg',
@@ -73,6 +73,34 @@ class EmberShowcaseTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             s.replace_section('missing markers','content')
 
+
+    def test_matrix_palette_and_layout(self):
+        import re
+        readme=(ROOT/'README.md').read_text(encoding='utf-8')
+        self.assertLess(readme.index('phoenix-hero-animated.gif'),
+                        readme.index('## Contribution Snake'))
+        self.assertLess(readme.index('## Contribution Snake'),
+                        readme.index('## About'))
+        self.assertGreater(readme.index('phoenix-footer-animated.gif'),
+                           readme.index('## Languages & Toolkit'))
+        self.assertEqual(1,readme.count('## Contribution Snake'))
+        self.assertNotIn('GITHUB-COMPATIBLE EMBER DESIGN',readme)
+        for asset in ('phoenix-hero-animated.gif', 'assets/ember/terminal.svg',
+                      'assets/ember/stats.svg', 'assets/ember/stack.svg',
+                      'phoenix-footer-animated.gif'):
+            self.assertIn(asset,readme)
+            self.assertNotRegex(readme,r'<a[^>]*>\s*<img[^>]*src="[^"]*'+re.escape(asset)+'"')
+        for svg in (s.project_svg({'name':'Doc2FAQ','pushed_at':'2026-10-29T19:12:48Z',
+                                   'description':'FAQ tool'},['Java']),
+                    s.ticker_svg([{'repo':'OKAN-SOFTWARE/Doc2FAQ','sha':'abcdef0','message':'fix tests'}]),
+                    s.stats_svg(readme),s.terminal_svg(),s.stack_svg()):
+            self.assertNotIn('#ffc17e',svg)
+            self.assertNotIn('#ffad72',svg)
+            self.assertIn('#',svg)
+        self.assertIn('#39ff14',s.terminal_svg())
+        self.assertIn('#39ff14',s.stats_svg(readme))
+        self.assertIn('#39ff14',s.ticker_svg([{'repo':'OKAN-SOFTWARE/Doc2FAQ',
+                                             'sha':'abcdef0','message':'fix tests'}]))
 
 if __name__=='__main__':
     unittest.main()

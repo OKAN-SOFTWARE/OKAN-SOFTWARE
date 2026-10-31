@@ -62,7 +62,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PROFILE_USER: ${{ github.repository_owner }}
         run: python scripts/update_developer_journey.py
-      - name: Refresh Ember project cards, stats and latest commits
+      - name: Refresh Matrix project cards, stats and latest commits
         env:
           GH_TOKEN: ${{ github.token }}
           PROFILE_USER: ${{ github.repository_owner }}
