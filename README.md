@@ -1,7 +1,11 @@
 <p align="center">
-  <a name="phoenix-artwork">
-  <img src="./assets/phoenix-hero-animated.gif" width="100%" alt="Animated cyberpunk Phoenix and Matrix developer banner with glowing OKAN TIKTAS lettering" />
-  </a>
+  <img src="./assets/latest-commits.svg" width="100%" alt="Animated latest GitHub commits from my projects and upstream contributions" />
+</p>
+<p align="center"><sub>Public authored commits, refreshed automatically · <a href="https://github.com/search?q=author%3AOKAN-SOFTWARE&type=commits">Browse commits on GitHub</a></sub></p>
+
+<p align="center">
+  <a name="phoenix-artwork"></a>
+  <img src="./assets/phoenix-hero-animated.gif" width="100%" alt="Animated cyberpunk Phoenix and Matrix banner with glowing OKAN TIKTAS lettering" />
 </p>
 
 <p align="center">
@@ -9,14 +13,23 @@
   <a href="https://github.com/pulls?q=is%3Apr+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE"><img src="./assets/button-contributions.gif" width="250" height="66" alt="Upstream contributions" /></a>
 </p>
 
+<h2 align="center">Building software that solves real problems.</h2>
 
-I’m **Okan Tiktas**, a software engineer who enjoys turning **“there has to be an easier way”** into useful, dependable software. I work across backend services, web interfaces, data workflows, and automation—with an emphasis on maintainable code, practical problem-solving, and testing.
+<p align="center">I'm <strong>Okan Tiktas</strong>, a software engineer focused on backend services, web applications, automation, developer tooling, and open-source contributions. I enjoy turning a recurring problem into a dependable tool, reproducing difficult bugs, and adding tests that keep them fixed.</p>
 
-My technical toolkit includes **Java, Python, JavaScript/TypeScript, C#**, **Node.js/Express**, **React**, and **SQL/NoSQL** databases. I’m also exploring **AWS serverless architecture, cloud optimization, and AI token efficiency**. I like connecting the right technology to a real need, whether that's improving an API, simplifying a workflow, or making a developer tool more reliable.
+<p align="center">
+  <img src="./assets/ember-stack.svg" width="100%" alt="Engineering languages and technologies: Java, Python, JavaScript, TypeScript, C sharp, SQL, HTML, CSS, Rust, and AWS" />
+</p>
 
-That mindset drives projects such as **VeilDrop** for private log redaction and encrypted handoffs, **Doc2FAQ** for turning documents into editable FAQs, and **LaunchNotes** for translating commit history into readable releases. In open source, I reproduce issues, trace root causes, make focused changes, and add regression tests. My contributions touch **CLI tools, CI workflows, testing, documentation, and application bugs**; the upstream PRs below show the work and review process.
+## Tools built around real needs
+
+<!-- SHOWCASE:START -->
+_The six most recently updated original public repositories will appear here automatically._
+<!-- SHOWCASE:END -->
 
 ## Open Source Field Notes
+
+I contribute focused fixes, regression tests, CI improvements, and documentation updates to upstream repositories. These are real public pull requests, with separate counts for opened and merged work.
 
 <!-- ACTIVITY:START -->
 **Last profile update: Oct 30, 2026 at 9:08 PM EDT**
@@ -45,22 +58,32 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 <!-- ACTIVITY:SNAPSHOT:1b051f95db01950162de2e9eced2a16823d528352a7007461903da4f0166bfb6 -->
 <!-- ACTIVITY:END -->
 
-## 📰 Recent Activity
+<details>
+<summary><strong>How these contribution statistics are counted</strong></summary>
 
-*Auto-checked every hour with GitHub Actions · most recent public action per repository · Eastern Time.*
+The counters track upstream PR openings and merges, not commits or forks. The open count includes drafts. Private work and my own repositories are excluded. A submitted PR does not imply approval or passing CI. [How this updates](./PROFILE.md).
+
+</details>
+
+## Recent Activity
+
+*Auto-checked every hour with GitHub Actions · latest public action per repository · timestamps hidden for a cleaner view.*
 
 <!-- RECENT:START -->
-| Recent activity | Details | Time (Eastern) |
-| :--- | :--- | :--- |
-| Opened PR in [pylint-dev/astroid](https://github.com/pylint-dev/astroid) | [Pull request](https://github.com/pylint-dev/astroid/pull/3459) | Oct 30, 08:58 PM |
-| Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/17) | Oct 30, 08:58 PM |
-| Opened PR in [java-native-access/jna](https://github.com/java-native-access/jna) | [Pull request](https://github.com/java-native-access/jna/pull/1750) | Oct 30, 08:37 PM |
-| Opened PR in [conductor-oss/conductor](https://github.com/conductor-oss/conductor) | [Pull request](https://github.com/conductor-oss/conductor/pull/1784) | Oct 30, 08:22 PM |
-| Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) | Oct 30, 03:55 PM |
-| Commented in [vitest-dev/vitest](https://github.com/vitest-dev/vitest) | [fix\(vitest\): resolve dependencies from project root](https://github.com/vitest-dev/vitest/issues/11805) | Oct 30, 11:14 AM |
-| Forked repository in [celery/kombu](https://github.com/celery/kombu) | Public fork | Oct 30, 09:43 AM |
-| Opened PR in [pycontribs/jira](https://github.com/pycontribs/jira) | [Pull request](https://github.com/pycontribs/jira/pull/2449) | Oct 30, 08:45 AM |
+| Recent activity | Details |
+| :--- | :--- |
+| Opened PR in [pylint-dev/astroid](https://github.com/pylint-dev/astroid) | [Pull request](https://github.com/pylint-dev/astroid/pull/3459) |
+| Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/17) |
+| Opened PR in [java-native-access/jna](https://github.com/java-native-access/jna) | [Pull request](https://github.com/java-native-access/jna/pull/1750) |
+| Opened PR in [conductor-oss/conductor](https://github.com/conductor-oss/conductor) | [Pull request](https://github.com/conductor-oss/conductor/pull/1784) |
+| Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) |
+| Commented in [vitest-dev/vitest](https://github.com/vitest-dev/vitest) | [fix\(vitest\): resolve dependencies from project root](https://github.com/vitest-dev/vitest/issues/11805) |
+| Forked repository in [celery/kombu](https://github.com/celery/kombu) | Public fork |
+| Opened PR in [pycontribs/jira](https://github.com/pycontribs/jira) | [Pull request](https://github.com/pycontribs/jira/pull/2449) |
 <!-- RECENT:END -->
+
+<details>
+<summary><strong>Code DNA, commit patterns &amp; full development stack</strong></summary>
 
 <!-- JOURNEY:START -->
 **Developer stats refreshed:** Oct 30, 2026 at 09:08 PM EDT
@@ -101,28 +124,7 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 | **Cloud** | AWS Lambda · SQS · SNS · EventBridge · EC2 |
 <!-- JOURNEY:END -->
 
-## Built from an everyday problem
-
-| Project | The moment it helps |
-| :--- | :--- |
-| **[VeilDrop](https://github.com/OKAN-SOFTWARE/veildrop)** | “I need to share this log without sharing its secrets.” Local text redaction and encrypted handoffs. |
-| **[LaunchNotes](https://github.com/OKAN-SOFTWARE/LaunchNotes)** | “These commits need a better story than ‘fixed stuff.’” Turn commit messages into readable release notes. |
-| **[Doc2FAQ](https://github.com/OKAN-SOFTWARE/Doc2FAQ)** | “The answers are in this document somewhere.” Turn documents into editable FAQ drafts, with local processing and exports. |
-
-## Extra tools & interests
-
-### Explore the stack
-
-| Area | Technologies |
-| :--- | :--- |
-| **Languages** | Python · Java · JavaScript · C# · HTML · CSS · SQL |
-| **Frameworks** | Spring Boot · Node.js · Express · React · Three.js |
-| **Data & tools** | SQLite · Redis · JSON Schema · REST APIs · Git · GitHub Actions · Docker |
-| **Testing & libraries** | pytest · JUnit · Vitest · Boto3 · PDFBox · Apache POI |
-| **AWS exploration** | Lambda · SQS · SNS · EventBridge · Bedrock · DynamoDB |
-| **Learning path** | Cloud optimization · Serverless development · AI token efficiency |
-
-Tools used across personal projects and contribution work; AWS topics include ongoing learning.
+</details>
 
 ## 🐍 Contribution Snake
 
@@ -139,3 +141,4 @@ Tools used across personal projects and contribution work; AWS topics include on
 <p align="center">
   <img src="./assets/phoenix-footer-animated.gif" width="100%" alt="Animated Matrix-themed footer: build, test, contribute, repeat" />
 </p>
+
