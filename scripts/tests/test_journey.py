@@ -288,7 +288,7 @@ class JourneyTests(unittest.TestCase):
         self.assertEqual("b" * 40, refreshed[repo["full_name"]]["sha"])
         cloned.assert_called_once()
 
-    def test_readme_omits_daily_and_exposes_stack(self):
+    def test_readme_omits_daily_and_static_stack(self):
         readme = (SCRIPT.parents[1] / "README.md").read_text(encoding="utf-8")
         self.assertNotIn("Today's Coding Adventure", readme)
         self.assertNotIn("<!-- WEEKLY:START -->", readme)
@@ -302,7 +302,8 @@ class JourneyTests(unittest.TestCase):
         self.assertNotIn("When I Commit", readme)
         self.assertIn("OKAN\'S CODE STATS // LIVE UPDATES", readme)
         self.assertIn("javascript/javascript-original.svg", readme)
-        self.assertLess(readme.index(journey.MATRIX_START), readme.index("### 🧩 My Development Stack"))
+        self.assertNotIn("### 🧩 My Development Stack", readme)
+        self.assertLess(readme.index(journey.MATRIX_START), readme.index("<!-- UPSTREAM_CODE:START -->"))
         self.assertIn("<!-- MATRIX_PROJECTS:START -->", readme)
         self.assertIn("Tools built around real needs", readme)
         self.assertIn("assets/phoenix-hero-animated.gif", readme)
