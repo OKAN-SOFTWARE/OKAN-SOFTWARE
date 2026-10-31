@@ -51,9 +51,9 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 
 | | |
 | :--- | :--- |
-| <a href="https://github.com/OKAN-SOFTWARE/Doc2FAQ"><img src="./assets/ember/projects/Doc2FAQ.svg" width="100%" alt="Doc2FAQ project summary and Java, JavaScript, HTML source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/mole-meadow"><img src="./assets/ember/projects/mole-meadow.svg" width="100%" alt="mole-meadow project summary and JavaScript, HTML, CSS source languages" /></a> |
-| <a href="https://github.com/OKAN-SOFTWARE/TokenWise"><img src="./assets/ember/projects/TokenWise.svg" width="100%" alt="TokenWise project summary and Python, JavaScript, HTML source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/LaunchNotes"><img src="./assets/ember/projects/LaunchNotes.svg" width="100%" alt="LaunchNotes project summary and JavaScript, HTML, CSS source languages" /></a> |
-| <a href="https://github.com/OKAN-SOFTWARE/Python-CLI-App"><img src="./assets/ember/projects/Python-CLI-App.svg" width="100%" alt="Python-CLI-App project summary and Python, HTML, CSS source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/QueueFlight"><img src="./assets/ember/projects/QueueFlight.svg" width="100%" alt="QueueFlight project summary and TypeScript, Rust, JavaScript source languages" /></a> |
+| <a href="https://github.com/OKAN-SOFTWARE/Doc2FAQ"><img src="./assets/ember/projects/Doc2FAQ.svg" width="100%" alt="Doc2FAQ project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/mole-meadow"><img src="./assets/ember/projects/mole-meadow.svg" width="100%" alt="mole-meadow project summary with up to three source languages" /></a> |
+| <a href="https://github.com/OKAN-SOFTWARE/TokenWise"><img src="./assets/ember/projects/TokenWise.svg" width="100%" alt="TokenWise project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/LaunchNotes"><img src="./assets/ember/projects/LaunchNotes.svg" width="100%" alt="LaunchNotes project summary with up to three source languages" /></a> |
+| <a href="https://github.com/OKAN-SOFTWARE/Python-CLI-App"><img src="./assets/ember/projects/Python-CLI-App.svg" width="100%" alt="Python-CLI-App project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/QueueFlight"><img src="./assets/ember/projects/QueueFlight.svg" width="100%" alt="QueueFlight project summary with up to three source languages" /></a> |
 
 <p align="center"><a href="https://github.com/OKAN-SOFTWARE?tab=repositories"><strong>Browse all original projects ↗</strong></a></p>
 <!-- EMBER_PROJECTS:END -->
@@ -63,7 +63,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Oct 30, 2026 at 9:35 PM EDT**
+**Last profile update: Oct 30, 2026 at 9:55 PM EDT**
 
 **61 opened · 27 merged · 31 open now · 44 upstream repositories**
 
@@ -122,7 +122,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <summary><strong>Explore Code DNA, commit patterns, and more development statistics</strong></summary>
 
 <!-- JOURNEY:START -->
-**Developer stats refreshed:** Oct 30, 2026 at 09:35 PM EDT
+**Developer stats refreshed:** Oct 30, 2026 at 09:55 PM EDT
 
 ### 🧬 Code DNA · Public GitHub History
 
