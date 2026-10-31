@@ -1,6 +1,6 @@
 # Profile activity
 
-This profile uses text-based Markdown statistics and four Python standard-library scripts
+This profile uses text-based Markdown statistics and three Python standard-library scripts
 to keep its public GitHub sections current. Decorative artwork remains separate;
 statistics are real text, not static SVG cards. No external stats-card service,
 package installation, or personal access token is needed.
@@ -15,9 +15,7 @@ package installation, or personal access token is needed.
 - A “Last profile update” timestamp from the latest successful refresh, shown in New York time.
 - Text-based Code DNA: authored commit timing on default branches of current public original repositories, plus GitHub-reported language bytes and counted source lines (displayed as Line of Codes).
 - A curated, categorized Development Stack. The separate daily and weekly adventure sections have been removed at the owner's request.
-- A separate selectable-text **Recent Activity** table, with one latest public event per repository (up to eight), updated by an hourly workflow; timestamps are intentionally omitted.
-- An animated Ember SVG ticker showing recent public authored commits across original projects and upstream contributions.
-- Six automatically selected, most recently pushed original public projects (not forks), with SVG cards and up to three GitHub-reported source languages each.
+- A separate selectable-text **Recent Activity** table, with one latest public event per repository (up to eight), updated by an hourly workflow.
 - An orange **contribution-grid snake** (light and dark SVG variants), generated from GitHub's contribution calendar daily. The animation is decoration, not a substitute for text statistics.
 
 The text table counts PR openings and merges separately. It is **not** a commit count,
@@ -36,7 +34,7 @@ scheduled run. To refresh sooner, use **Actions → Refresh profile activity →
 
 **Refresh recent activity and contribution snake** runs every hour at minute 43
 (Eastern Time), and the snake is regenerated daily at 04:29 Eastern Time.
-The workflow also refreshes the animated latest-commits ticker and original-project cards. It runs once when its files land on `main`; a manual run
+The workflow also runs once when its files land on `main`; a manual run
 can refresh both on demand. It commits only when the recent event table or
 generated SVGs actually change. README writes from the two workflows share
 a concurrency group to prevent simultaneous pushes.
@@ -66,7 +64,6 @@ then run:
 python scripts/update_activity.py
 python scripts/update_developer_journey.py
 python scripts/update_recent_activity.py
-python scripts/update_showcase.py
 ```
 
 `PROFILE_USER` defaults to `OKAN-SOFTWARE`. `--fixture FILE` accepts a saved bundle
@@ -76,19 +73,17 @@ validation. `--today YYYY-MM-DD` fixes the local calendar date when testing;
 Do not commit raw API bundles. Generated Markdown and the public `data/chronicles.json` snapshots are the outputs.
 
 Keep the single `ACTIVITY:START` / `ACTIVITY:END` marker pair in `README.md`.
-The Ember showcase updater owns only `SHOWCASE:START` / `SHOWCASE:END` and generated files in `assets/showcase/` and `assets/latest-commits.svg`.
 The hourly updater owns only the `RECENT:START` / `RECENT:END` section.
 The animated SVGs live in `assets/` and are referenced through a theme-sensitive picture element.
 The journey updater uses a `JOURNEY:START` / `JOURNEY:END` marker pair; the former weekly journal markers were removed.
-Everything outside the activity and journey marker pairs stays under manual control. The approved animated Phoenix banner (`assets/phoenix-hero-animated.gif`) remains at the top,
-with the live commit ticker immediately above it. The original static Phoenix image
-is retained in `assets/phoenix-workbench.png` as a backup. The navigation links below
-wrap animated GIF buttons. Ember colors are used for the ticker, stack strip, and project cards. Contribution data
+Everything outside the activity and journey marker pairs stays under manual control. The approved phoenix
+and workbench illustration (`assets/phoenix-workbench.png`) appears at the top.
+It is static artwork without illustrated navigation buttons. The image sits inside
+a named anchor with no destination, so it is not an image-viewer or navigation link.
+The real navigation links immediately below wrap animated GIF buttons. Contribution data
 remains in the generated section, and stack details remain available as text.
-The README needs no JavaScript. The Ember ticker and project cards are GitHub-compatible
-SVGs, refreshed by GitHub Actions; the commit ticker animates using SVG CSS and respects
-reduced-motion preferences. GitHub READMEs cannot use the demo's interactive tabs or
-hover-to-pause controls. The generated activity and Code DNA statistics remain selectable text.
+The README needs no custom CSS or JavaScript. All statistics are selectable text;
+only decorative Phoenix artwork, navigation buttons, and the contribution snake are images.
 
 To regenerate the four decorative assets locally, install Pillow and run
 `python scripts/render_profile_assets.py`. Pillow is only needed when rebuilding
@@ -103,7 +98,7 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
 - Language shares use the bytes returned by GitHub's repository languages endpoint.
   Frameworks, OS names, and cloud tools in Development Stack are curated descriptions,
   not automatically inferred expertise scores.
-- The hourly Recent Activity table has two columns, without timestamps, and uses public GitHub events (up to 300), keeping the
+- The hourly Recent Activity table uses public GitHub events (up to 300), keeps the
   most recent eligible event per repository, and includes PRs, pushes, issues,
   reviews, comments, and other supported actions. Closed-unmerged PRs are excluded.
   It is a snapshot of observable public events, not complete contribution history.
@@ -124,4 +119,4 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
 - [GITHUB_TOKEN](https://docs.github.com/en/actions/concepts/security/github_token)
 - [Scheduled workflow events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
 
-The expanded-language Ember strip is curated; GitHub-reported language tags on the six project cards are generated. The Code DNA table is inside a collapsible section, and the top-language heading updates dynamically. Recent Activity never displays a timestamp column.
+The Extra tools & interests stack table is always expanded. The top-language heading is generated dynamically above the language table. Recent Activity intentionally omits timestamps.

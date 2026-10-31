@@ -1,11 +1,7 @@
 <p align="center">
-  <img src="./assets/latest-commits.svg" width="100%" alt="Animated latest GitHub commits from my projects and upstream contributions" />
-</p>
-<p align="center"><sub>Public authored commits, refreshed automatically · <a href="https://github.com/search?q=author%3AOKAN-SOFTWARE&type=commits">Browse commits on GitHub</a></sub></p>
-
-<p align="center">
-  <a name="phoenix-artwork"></a>
-  <img src="./assets/phoenix-hero-animated.gif" width="100%" alt="Animated cyberpunk Phoenix and Matrix banner with glowing OKAN TIKTAS lettering" />
+  <a name="phoenix-artwork">
+  <img src="./assets/phoenix-hero-animated.gif" width="100%" alt="Animated cyberpunk Phoenix and Matrix developer banner with glowing OKAN TIKTAS lettering" />
+  </a>
 </p>
 
 <p align="center">
@@ -13,31 +9,14 @@
   <a href="https://github.com/pulls?q=is%3Apr+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE"><img src="./assets/button-contributions.gif" width="250" height="66" alt="Upstream contributions" /></a>
 </p>
 
-<h2 align="center">Building software that solves real problems.</h2>
 
-<p align="center">I'm <strong>Okan Tiktas</strong>, a software engineer focused on backend services, web applications, automation, developer tooling, and open-source contributions. I enjoy turning a recurring problem into a dependable tool, reproducing difficult bugs, and adding tests that keep them fixed.</p>
+I’m **Okan Tiktas**, a software engineer who enjoys turning **“there has to be an easier way”** into useful, dependable software. I work across backend services, web interfaces, data workflows, and automation—with an emphasis on maintainable code, practical problem-solving, and testing.
 
-<p align="center">
-  <img src="./assets/ember-stack.svg" width="100%" alt="Engineering languages and technologies: Java, Python, JavaScript, TypeScript, C sharp, SQL, HTML, CSS, Rust, and AWS" />
-</p>
+My technical toolkit includes **Java, Python, JavaScript/TypeScript, C#**, **Node.js/Express**, **React**, and **SQL/NoSQL** databases. I’m also exploring **AWS serverless architecture, cloud optimization, and AI token efficiency**. I like connecting the right technology to a real need, whether that's improving an API, simplifying a workflow, or making a developer tool more reliable.
 
-## Tools built around real needs
-
-<!-- SHOWCASE:START -->
-_Automatically sorted by latest push · Original public projects only · Up to 3 source languages per card._
-
-| | |
-| :--- | :--- |
-| <a href="https://github.com/OKAN-SOFTWARE/Doc2FAQ"><img src="./assets/showcase/Doc2FAQ.svg" width="100%" alt="Doc2FAQ: project summary and source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/mole-meadow"><img src="./assets/showcase/mole-meadow.svg" width="100%" alt="mole-meadow: project summary and source languages" /></a> |
-| <a href="https://github.com/OKAN-SOFTWARE/TokenWise"><img src="./assets/showcase/TokenWise.svg" width="100%" alt="TokenWise: project summary and source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/LaunchNotes"><img src="./assets/showcase/LaunchNotes.svg" width="100%" alt="LaunchNotes: project summary and source languages" /></a> |
-| <a href="https://github.com/OKAN-SOFTWARE/Python-CLI-App"><img src="./assets/showcase/Python-CLI-App.svg" width="100%" alt="Python-CLI-App: project summary and source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/QueueFlight"><img src="./assets/showcase/QueueFlight.svg" width="100%" alt="QueueFlight: project summary and source languages" /></a> |
-
-[Browse all repositories](https://github.com/OKAN-SOFTWARE?tab=repositories)
-<!-- SHOWCASE:END -->
+That mindset drives projects such as **VeilDrop** for private log redaction and encrypted handoffs, **Doc2FAQ** for turning documents into editable FAQs, and **LaunchNotes** for translating commit history into readable releases. In open source, I reproduce issues, trace root causes, make focused changes, and add regression tests. My contributions touch **CLI tools, CI workflows, testing, documentation, and application bugs**; the upstream PRs below show the work and review process.
 
 ## Open Source Field Notes
-
-I contribute focused fixes, regression tests, CI improvements, and documentation updates to upstream repositories. These are real public pull requests, with separate counts for opened and merged work.
 
 <!-- ACTIVITY:START -->
 **Last profile update: Oct 30, 2026 at 9:31 PM EDT**
@@ -66,16 +45,9 @@ I contribute focused fixes, regression tests, CI improvements, and documentation
 <!-- ACTIVITY:SNAPSHOT:1b051f95db01950162de2e9eced2a16823d528352a7007461903da4f0166bfb6 -->
 <!-- ACTIVITY:END -->
 
-<details>
-<summary><strong>How these contribution statistics are counted</strong></summary>
+## 📰 Recent Activity
 
-The counters track upstream PR openings and merges, not commits or forks. The open count includes drafts. Private work and my own repositories are excluded. A submitted PR does not imply approval or passing CI. [How this updates](./PROFILE.md).
-
-</details>
-
-## Recent Activity
-
-*Auto-checked every hour with GitHub Actions · latest public action per repository · timestamps hidden for a cleaner view.*
+*Auto-checked every hour with GitHub Actions · most recent public action per repository · Eastern Time.*
 
 <!-- RECENT:START -->
 | Recent activity | Details |
@@ -89,9 +61,6 @@ The counters track upstream PR openings and merges, not commits or forks. The op
 | Forked repository in [celery/kombu](https://github.com/celery/kombu) | Public fork |
 | Opened PR in [pycontribs/jira](https://github.com/pycontribs/jira) | [Pull request](https://github.com/pycontribs/jira/pull/2449) |
 <!-- RECENT:END -->
-
-<details>
-<summary><strong>Code DNA, commit patterns &amp; full development stack</strong></summary>
 
 <!-- JOURNEY:START -->
 **Developer stats refreshed:** Oct 30, 2026 at 09:31 PM EDT
@@ -132,7 +101,28 @@ The counters track upstream PR openings and merges, not commits or forks. The op
 | **Cloud** | AWS Lambda · SQS · SNS · EventBridge · EC2 |
 <!-- JOURNEY:END -->
 
-</details>
+## Built from an everyday problem
+
+| Project | The moment it helps |
+| :--- | :--- |
+| **[VeilDrop](https://github.com/OKAN-SOFTWARE/veildrop)** | “I need to share this log without sharing its secrets.” Local text redaction and encrypted handoffs. |
+| **[LaunchNotes](https://github.com/OKAN-SOFTWARE/LaunchNotes)** | “These commits need a better story than ‘fixed stuff.’” Turn commit messages into readable release notes. |
+| **[Doc2FAQ](https://github.com/OKAN-SOFTWARE/Doc2FAQ)** | “The answers are in this document somewhere.” Turn documents into editable FAQ drafts, with local processing and exports. |
+
+## Extra tools & interests
+
+### Explore the stack
+
+| Area | Technologies |
+| :--- | :--- |
+| **Languages** | Python · Java · JavaScript · C# · HTML · CSS · SQL |
+| **Frameworks** | Spring Boot · Node.js · Express · React · Three.js |
+| **Data & tools** | SQLite · Redis · JSON Schema · REST APIs · Git · GitHub Actions · Docker |
+| **Testing & libraries** | pytest · JUnit · Vitest · Boto3 · PDFBox · Apache POI |
+| **AWS exploration** | Lambda · SQS · SNS · EventBridge · Bedrock · DynamoDB |
+| **Learning path** | Cloud optimization · Serverless development · AI token efficiency |
+
+Tools used across personal projects and contribution work; AWS topics include ongoing learning.
 
 ## 🐍 Contribution Snake
 
@@ -149,4 +139,3 @@ The counters track upstream PR openings and merges, not commits or forks. The op
 <p align="center">
   <img src="./assets/phoenix-footer-animated.gif" width="100%" alt="Animated Matrix-themed footer: build, test, contribute, repeat" />
 </p>
-
