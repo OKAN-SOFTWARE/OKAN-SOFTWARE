@@ -116,44 +116,35 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | **Cloud & delivery** | AWS Lambda · SQS · SNS · EventBridge · EC2 · GitHub Actions · Docker |
 | **Testing** | pytest · JUnit · Vitest · automated regression testing |
 
+<!-- CODE_MATRIX:START -->
+### 🟢 OKAN'S CODE STATS // LIVE UPDATES
+
+**TOTAL LINES OF CODE: 7,171**
+
+| Language | Lines | Share | Distribution |
+| :--- | ---: | ---: | :--- |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="18" height="18" alt="" /> **JavaScript** | 3,063 | **42.71%** | 🟩🟩🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="18" height="18" alt="" /> **Java** | 1,603 | **22.35%** | 🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="18" height="18" alt="" /> **Python** | 1,377 | **19.20%** | 🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="18" height="18" alt="" /> **HTML** | 731 | **10.19%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="18" height="18" alt="" /> **TypeScript** | 160 | **2.23%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="18" height="18" alt="" /> **CSS** | 104 | **1.45%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/xml/xml-original.svg" width="18" height="18" alt="" /> **XML** | 80 | **1.12%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg" width="18" height="18" alt="" /> **Rust** | 44 | **0.61%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="18" height="18" alt="" /> **Dockerfile** | 9 | **0.13%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+
+<sub>Automatically checked every 15 minutes · Public original repositories · Nonblank source lines (including comments) · Dependencies, generated files, and binaries excluded · Tiny nonzero shares show one green cell</sub>
+<!-- CODE_MATRIX:END -->
+
 <details>
-<summary><strong>Explore Code DNA, commit patterns, and more development statistics</strong></summary>
+<summary><strong>Explore public GitHub history and development stack</strong></summary>
 
 <!-- JOURNEY:START -->
 **Developer stats refreshed:** Oct 31, 2026 at 05:02 PM EDT
 
-### 🧬 Code DNA · Public GitHub History
+### Public GitHub History
 
 **80 authored commits · 9 public original repositories**
-
-#### 🕒 When I Commit
-
-| Time of day (Eastern) | Commits | Share | Activity |
-| :--- | ---: | ---: | :--- |
-| 🌞 Morning | 38 | 47.5% | ████████░░░░░░░░ |
-| 🌆 Daytime | 37 | 46.2% | ███████░░░░░░░░░ |
-| 🌃 Evening | 5 | 6.2% | █░░░░░░░░░░░░░░░ |
-| 🌙 Night | 0 | 0.0% | ░░░░░░░░░░░░░░░░ |
-
-<!-- CODE_MATRIX:START -->
-#### 🟢 CODE MATRIX · Language Distribution
-
-**7,171 source lines** · **9 public original repositories** · **9 languages**
-
-<sub>Nonblank lines on default branches · Highest percentage first · Green cells approximate share (tiny nonzero shares show one cell)</sub>
-
-| Language | Lines of code | % of total code | Matrix share |
-| :--- | ---: | ---: | :--- |
-| **JavaScript** | 3,063 | **42.71%** | 🟩🟩🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛ |
-| **Java** | 1,603 | **22.35%** | 🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **Python** | 1,377 | **19.20%** | 🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **HTML** | 731 | **10.19%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **TypeScript** | 160 | **2.23%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **CSS** | 104 | **1.45%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **XML** | 80 | **1.12%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **Rust** | 44 | **0.61%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **Dockerfile** | 9 | **0.13%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-<!-- CODE_MATRIX:END -->
 
 ### 🧩 My Development Stack
 
