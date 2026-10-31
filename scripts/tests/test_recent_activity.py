@@ -75,7 +75,7 @@ class RecentActivityTests(unittest.TestCase):
         readme = (SCRIPT.parents[1] / "README.md").read_text(encoding="utf-8")
         self.assertEqual(1, readme.count(recent.START))
         self.assertEqual(1, readme.count(recent.END))
-        self.assertIn("Auto-checked every hour", readme)
+        self.assertIn("Automatically refreshed", readme)
         self.assertIn("assets/contribution-snake.svg", readme)
         self.assertIn("assets/contribution-snake-dark.svg", readme)
         self.assertIn("I Mostly Code in", readme)
