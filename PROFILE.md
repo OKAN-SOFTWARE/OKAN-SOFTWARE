@@ -16,6 +16,8 @@ package installation, or personal access token is needed.
 - Text-based Code DNA: authored commit timing on default branches of current public original repositories, plus GitHub-reported language bytes and counted source lines (displayed as Line of Codes).
 - A curated, categorized Development Stack, daily public activity, and achievements. The daily activity trail shows only the latest event from each repository (up to six repositories).
 - Primary programming languages of repositories active today, including upstream repositories; up to 40 most recently active repositories are checked. No separate weekly journal is displayed.
+- A separate selectable-text **Recent Activity** table, with one latest public event per repository (up to eight), updated by an hourly workflow.
+- An orange **contribution-grid snake** (light and dark SVG variants), generated from GitHub's contribution calendar daily. The animation is decoration, not a substitute for text statistics.
 
 The text table counts PR openings and merges separately. It is **not** a commit count,
 a count of working days, GitHub’s contribution calendar, or a count of forks.
@@ -30,6 +32,13 @@ Merge the profile PR into `main`. The merge triggers the first refresh.
 After that, **Refresh profile activity** runs every four hours at minute 17 in
 `America/New_York` (00:17, 04:17, 08:17, 12:17, 16:17, and 20:17). GitHub may delay a
 scheduled run. To refresh sooner, use **Actions → Refresh profile activity → Run workflow**.
+
+**Refresh recent activity and contribution snake** runs every hour at minute 43
+(Eastern Time), and the snake is regenerated daily at 04:29 Eastern Time.
+The workflow also runs once when its files land on `main`; a manual run
+can refresh both on demand. It commits only when the recent event table or
+generated SVGs actually change. README writes from the two workflows share
+a concurrency group to prevent simultaneous pushes.
 
 The workflow uses the repository’s built-in `GITHUB_TOKEN`. Only the refresh job
 gets `contents: write`; pull-request runs execute the tests with read permission.
@@ -64,6 +73,8 @@ validation. `--today YYYY-MM-DD` fixes the local calendar date when testing;
 Do not commit raw API bundles. Generated Markdown and the public `data/chronicles.json` snapshots are the outputs.
 
 Keep the single `ACTIVITY:START` / `ACTIVITY:END` marker pair in `README.md`.
+The hourly updater owns only the `RECENT:START` / `RECENT:END` section.
+The animated SVGs live in `assets/` and are referenced through a theme-sensitive picture element.
 The journey updater uses a `JOURNEY:START` / `JOURNEY:END` marker pair; the former weekly journal markers were removed.
 Everything outside the activity and journey marker pairs stays under manual control. The approved phoenix
 and workbench illustration (`assets/phoenix-workbench.png`) appears at the top.
@@ -87,6 +98,10 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
 - Language shares use the bytes returned by GitHub's repository languages endpoint.
   Frameworks, OS names, and cloud tools in Development Stack are curated descriptions,
   not automatically inferred expertise scores.
+- The hourly Recent Activity table uses public GitHub events (up to 300), keeps the
+  most recent eligible event per repository, and includes PRs, pushes, issues,
+  reviews, comments, and other supported actions. Closed-unmerged PRs are excluded.
+  It is a snapshot of observable public events, not complete contribution history.
 - Daily PR and issue events use GitHub's most recent public event feed (maximum 300
   recent events). Some events may appear late or fall outside the feed window.
   The activity trail displays at most one latest event per repository.
