@@ -52,6 +52,7 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
+| Forked repository in [ancaferro/myPhotos](https://github.com/ancaferro/myPhotos) | Public fork |
 | Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/18) |
 | Opened PR in [pylint-dev/astroid](https://github.com/pylint-dev/astroid) | [Pull request](https://github.com/pylint-dev/astroid/pull/3459) |
 | Opened PR in [java-native-access/jna](https://github.com/java-native-access/jna) | [Pull request](https://github.com/java-native-access/jna/pull/1750) |
@@ -59,7 +60,6 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 | Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) |
 | Commented in [vitest-dev/vitest](https://github.com/vitest-dev/vitest) | [fix\(vitest\): resolve dependencies from project root](https://github.com/vitest-dev/vitest/issues/11805) |
 | Forked repository in [celery/kombu](https://github.com/celery/kombu) | Public fork |
-| Opened PR in [pycontribs/jira](https://github.com/pycontribs/jira) | [Pull request](https://github.com/pycontribs/jira/pull/2449) |
 <!-- RECENT:END -->
 
 <!-- JOURNEY:START -->
