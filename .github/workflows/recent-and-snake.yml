@@ -12,13 +12,17 @@ on:
     paths:
       - 'README.md'
       - 'scripts/update_recent_activity.py'
+      - 'scripts/update_ember_showcase.py'
       - 'scripts/tests/test_recent_activity.py'
+      - 'scripts/tests/test_ember_showcase.py'
       - '.github/workflows/recent-and-snake.yml'
   pull_request:
     paths:
       - 'README.md'
       - 'scripts/update_recent_activity.py'
+      - 'scripts/update_ember_showcase.py'
       - 'scripts/tests/test_recent_activity.py'
+      - 'scripts/tests/test_ember_showcase.py'
       - '.github/workflows/recent-and-snake.yml'
 
 permissions:
@@ -61,6 +65,11 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PROFILE_USER: ${{ github.repository_owner }}
         run: python scripts/update_recent_activity.py
+      - name: Refresh Ember project cards, stats and latest commits
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROFILE_USER: ${{ github.repository_owner }}
+        run: python scripts/update_ember_showcase.py
       - name: Draw daily Phoenix-colored contribution snake
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.schedule == '29 4 * * *'
         uses: Platane/snk/svg-only@v3
@@ -73,7 +82,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md
+          git add README.md assets/ember
           if test -f assets/contribution-snake.svg; then git add assets/contribution-snake.svg; fi
           if test -f assets/contribution-snake-dark.svg; then git add assets/contribution-snake-dark.svg; fi
           if git diff --cached --quiet; then

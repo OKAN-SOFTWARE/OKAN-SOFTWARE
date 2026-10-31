@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="280" viewBox="0 0 490 280" role="img" aria-label="Terminal introduction">
+<defs><linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#231d19"/><stop offset="1" stop-color="#0b1619"/></linearGradient></defs>
+<style>.head{fill:#b9a59b;font:13px ui-monospace,Consolas,monospace}.cmd{fill:#ffbd83;font:16px ui-monospace,Consolas,monospace}.ans{fill:#d4d9d1;font:15px ui-monospace,Consolas,monospace}@keyframes blink{50%{opacity:0}}.cursor{animation:blink 1.2s steps(1) infinite}@media(prefers-reduced-motion:reduce){.cursor{animation:none}}</style>
+<rect x="1" y="1" width="488" height="278" rx="15" fill="url(#panel)" stroke="#78513b" stroke-width="2"/>
+<circle cx="25" cy="27" r="6" fill="#ff6b64"/><circle cx="46" cy="27" r="6" fill="#f3b85b"/><circle cx="67" cy="27" r="6" fill="#5bd39a"/><text x="365" y="32" class="head">profile.sh</text><path d="M20 49h450" stroke="#614536"/>
+<text x="25" y="83" class="cmd">$ whoami</text><text x="25" y="109" class="ans">software engineer</text>
+<text x="25" y="150" class="cmd">$ focus</text><text x="25" y="177" class="ans">backend · tools · automation</text>
+<text x="25" y="217" class="cmd">$ workflow</text><text x="25" y="244" class="ans">build → test → contribute</text><rect class="cursor" x="355" y="231" width="8" height="15" fill="#ffc17e"/>
+</svg>
