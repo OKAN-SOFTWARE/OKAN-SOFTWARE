@@ -13,7 +13,8 @@ package installation, or personal access token is needed.
 - Distinct repositories with an opening or merge during the same 30-day window.
 - Ten most recently updated upstream PRs that are **open, draft, or merged**. Closed PRs that were not merged are excluded from the latest-work table. Historical chart and counts remain unchanged.
 - A “Last profile update” timestamp from the latest successful refresh, shown in New York time.
-- Text-based Code DNA: authored commit timing on default branches of current public original repositories. The **Code Matrix** is a native Markdown table with counted nonblank source lines, each language's percentage of total LOC, and descending LOC order. GitHub language bytes are not displayed.
+- **OKAN'S CODE STATS // LIVE UPDATES** appears directly under Languages & Toolkit as a native Markdown table, showing nonblank source lines, percentages of total LOC, and languages ranked by line count. Small Devicon language logos are decorative; the statistics themselves are selectable text, not an SVG or image. GitHub language bytes are not displayed.
+- Public authored-commit counts remain available in the optional GitHub History details. The time-of-day activity table has been removed.
 - A curated, categorized Development Stack. The separate daily and weekly adventure sections have been removed at the owner's request.
 - A separate selectable-text **Recent Activity** table, with one latest public event per repository (up to eight), updated by an hourly workflow.
 - A Matrix-green **contribution-grid snake** (light and dark SVG variants), generated from GitHub's contribution calendar daily. The animation is decoration, not a substitute for text statistics.
@@ -93,7 +94,7 @@ Do not commit raw API bundles. Generated Markdown and the public `data/chronicle
 Keep the single `ACTIVITY:START` / `ACTIVITY:END` marker pair in `README.md`.
 The hourly updater owns only the `RECENT:START` / `RECENT:END` section.
 The animated SVGs live in `assets/` and are referenced through a theme-sensitive picture element.
-The journey updater uses a `JOURNEY:START` / `JOURNEY:END` marker pair, with nested `CODE_MATRIX:START` / `CODE_MATRIX:END` markers for frequent LOC-only updates; the former weekly journal markers were removed.
+The journey updater uses a `JOURNEY:START` / `JOURNEY:END` marker pair for optional history and stack details. The separate, visible `CODE_MATRIX:START` / `CODE_MATRIX:END` marker pair is independently refreshed every 15 minutes; the former weekly journal markers and commit-time activity table were removed.
 Everything outside the activity, recent, journey, and Matrix project marker pairs stays under manual control.
 The animated Phoenix hero is followed immediately by the Matrix-green contribution snake, before About.
 The animated Phoenix footer remains at the bottom. The terminal, stats, stack, latest-commit ticker,
@@ -102,7 +103,7 @@ and original-project SVG cards use a Matrix-green-on-black palette and are refre
 avoid breaking existing image URLs. The hero, terminal, stats, stack, and footer images are plain
 HTML images without surrounding links; GitHub's own image viewer may still offer access to
 the underlying files. Project cards and the latest-commit ticker intentionally link to GitHub.
-The README needs no custom CSS or JavaScript. All statistics remain available as selectable text.
+The README needs no custom CSS or JavaScript. All statistics remain available as selectable text; only small language logos are external images.
 
 To regenerate the four decorative assets locally, install Pillow and run
 `python scripts/render_profile_assets.py`. Pillow is only needed when rebuilding

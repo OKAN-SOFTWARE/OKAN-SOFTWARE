@@ -61,36 +61,16 @@ class JourneyTests(unittest.TestCase):
         self.assertEqual(2, data["current"]["prs"])
         self.assertEqual(1, data["current"]["issues"])
 
-    def test_markdown_is_text_only_and_has_requested_sections(self):
+    def test_markdown_keeps_history_and_stack_without_old_activity(self):
         data = journey.summarize("OKAN-SOFTWARE", *sample(), NOW)
-        data["locs"] = Counter({"Python": 120, "JavaScript": 45})
-        archive = journey.archive_updates({}, data)
-        rendered = journey.markdown(data, archive)
-        for phrase in (
-            "Code DNA", "When I Commit", "CODE MATRIX · Language Distribution",
-            "My Development Stack",
-            "| Language | Lines of code | % of total code | Matrix share |",
-            "| **Python** | 120 | **72.73%** |",
-            "| **JavaScript** | 45 | **27.27%** |",
-            "165 source lines", journey.MATRIX_START, journey.MATRIX_END,
-        ):
-            self.assertIn(phrase, rendered)
-        for excluded in (
-            "Most Productive Commit Day", "The Phoenix Chronicles",
-            "Programming Languages", "Authored commits | Repositories touched",
-            "Explore recent daily adventures", "| Language | Source bytes | Share",
-            "Today's Coding Adventure", "Today's Public Activity Trail",
-            "Languages of Repositories Active Today", "**Achievements:**",
-            "Source bytes", "I Mostly Code in",
-        ):
+        rendered = journey.markdown(data, journey.archive_updates({}, data))
+        self.assertIn("Public GitHub History", rendered)
+        self.assertIn("My Development Stack", rendered)
+        self.assertIn("2 authored commits · 1 public original repositories", rendered)
+        for excluded in ("When I Commit", "Activity |", "Source bytes",
+                         "CODE MATRIX · Language Distribution", journey.MATRIX_START):
             self.assertNotIn(excluded, rendered)
-        self.assertNotIn("![", rendered)
         self.assertNotIn("<img", rendered)
-        self.assertIn("🟩", rendered)
-        self.assertIn("⬛", rendered)
-        self.assertLess(rendered.index("| **Python**"), rendered.index("| **JavaScript**"))
-        self.assertIn("█", rendered)
-        self.assertIn("░", rendered)
 
     def test_loc_counts_nonblank_source_and_excludes_generated_dirs(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -178,7 +158,8 @@ class JourneyTests(unittest.TestCase):
 
 
     def test_generation_keeps_code_dna_and_omits_daily_section(self):
-        original = f"intro\n{journey.START}\nold\n{journey.END}\nfooter"
+        original = (f"intro\n{journey.MATRIX_START}\nold matrix\n{journey.MATRIX_END}\n"
+                    f"{journey.START}\nold\n{journey.END}\nfooter")
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             readme = root / "README.md"
@@ -189,7 +170,9 @@ class JourneyTests(unittest.TestCase):
             ):
                 journey.run("OKAN-SOFTWARE", "token", root, NOW)
             content = readme.read_text(encoding="utf-8")
-            self.assertIn("Code DNA", content)
+            self.assertIn("OKAN\'S CODE STATS // LIVE UPDATES", content)
+            self.assertIn("Public GitHub History", content)
+            self.assertNotIn("When I Commit", content)
             self.assertIn("My Development Stack", content)
             self.assertNotIn("Today's Coding Adventure", content)
             self.assertNotIn("Weekly Coding Adventure", content)
@@ -197,26 +180,34 @@ class JourneyTests(unittest.TestCase):
             self.assertIn("footer", content)
 
 
-    def test_matrix_sorts_by_actual_loc_not_source_bytes(self):
+    def test_matrix_sorts_by_actual_loc_and_uses_small_logos(self):
         counts = Counter({"Python": 480, "Java": 520, "Rust": 0})
         rendered = journey.matrix_markdown(counts, 2)
-        self.assertIn("**1,000 source lines**", rendered)
-        self.assertIn("| **Java** | 520 | **52.00%** |", rendered)
-        self.assertIn("| **Python** | 480 | **48.00%** |", rendered)
-        self.assertLess(rendered.index("| **Java**"), rendered.index("| **Python**"))
+        self.assertIn("OKAN'S CODE STATS // LIVE UPDATES", rendered)
+        self.assertIn("**TOTAL LINES OF CODE: 1,000**", rendered)
+        self.assertIn("| Language | Lines | Share | Distribution |", rendered)
+        self.assertIn("java/java-original.svg", rendered)
+        self.assertIn("python/python-original.svg", rendered)
+        self.assertIn('width="18" height="18"', rendered)
+        self.assertIn("**Java** | 520 | **52.00%** |", rendered)
+        self.assertIn("**Python** | 480 | **48.00%** |", rendered)
+        self.assertLess(rendered.index("**Java** | 520"), rendered.index("**Python** | 480"))
         self.assertNotIn("Rust", rendered)
         self.assertNotIn("Source bytes", rendered)
         self.assertNotIn("<svg", rendered)
-        self.assertNotIn("<img", rendered)
+        self.assertNotIn("LANGUAGE DISTRIBUTION", rendered)
+        self.assertNotIn("**2 languages**", rendered)
+        self.assertIn("🟩", rendered)
+        self.assertIn("⬛", rendered)
 
     def test_matrix_only_preserves_other_readme_sections(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             readme = root / "README.md"
             readme.write_text(
-                "hero\\n" + journey.START + "\\nOther statistics\\n" +
-                journey.MATRIX_START + "\\nold table\\n" + journey.MATRIX_END +
-                "\\n" + journey.END + "\\nfooter",
+                "hero\\n" + journey.MATRIX_START + "\\nold table\\n" +
+                journey.MATRIX_END + "\\n" + journey.START +
+                "\\nOther statistics\\n" + journey.END + "\\nfooter",
                 encoding="utf-8",
             )
             repo = {"full_name": "OKAN-SOFTWARE/example", "fork": False,
@@ -236,8 +227,8 @@ class JourneyTests(unittest.TestCase):
             self.assertIn("Other statistics", updated)
             self.assertIn("footer", updated)
             self.assertNotIn("old table", updated)
-            self.assertIn("| **Python** | 520 | **52.00%** |", updated)
-            self.assertIn("| **Java** | 480 | **48.00%** |", updated)
+            self.assertIn("**Python** | 520 | **52.00%** |", updated)
+            self.assertIn("**Java** | 480 | **48.00%** |", updated)
             self.assertTrue((root / "data" / "code-matrix-cache.json").exists())
 
     def test_cached_repo_reuses_exact_head_sha_without_cloning(self):
@@ -298,6 +289,10 @@ class JourneyTests(unittest.TestCase):
         self.assertIn("assets/ember/stack.svg", readme)
         self.assertIn("<!-- CODE_MATRIX:START -->", readme)
         self.assertNotIn("Source bytes", readme)
+        self.assertNotIn("When I Commit", readme)
+        self.assertIn("OKAN\'S CODE STATS // LIVE UPDATES", readme)
+        self.assertIn("javascript/javascript-original.svg", readme)
+        self.assertLess(readme.index(journey.MATRIX_START), readme.index("<details>"))
         self.assertIn("<!-- MATRIX_PROJECTS:START -->", readme)
         self.assertIn("Tools built around real needs", readme)
         self.assertIn("assets/phoenix-hero-animated.gif", readme)

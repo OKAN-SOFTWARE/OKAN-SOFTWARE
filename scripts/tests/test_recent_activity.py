@@ -78,7 +78,7 @@ class RecentActivityTests(unittest.TestCase):
         self.assertIn("Automatically refreshed", readme)
         self.assertIn("assets/contribution-snake.svg", readme)
         self.assertIn("assets/contribution-snake-dark.svg", readme)
-        self.assertIn("CODE MATRIX · Language Distribution", readme)
+        self.assertIn("OKAN\'S CODE STATS // LIVE UPDATES", readme)
 
     def test_empty_table_honest(self):
         result = recent.markdown([], "OKAN-SOFTWARE")

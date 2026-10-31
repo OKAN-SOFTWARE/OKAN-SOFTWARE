@@ -316,8 +316,19 @@ def archive_updates(existing, summary):
     }
 
 
+LANGUAGE_ICONS = {
+    "JavaScript": "javascript", "TypeScript": "typescript",
+    "Java": "java", "Python": "python", "HTML": "html5",
+    "CSS": "css3", "SCSS": "sass", "XML": "xml",
+    "Rust": "rust", "Dockerfile": "docker", "C#": "csharp",
+    "Go": "go", "Ruby": "ruby", "PHP": "php", "Shell": "bash",
+    "SQL": "azuresqldatabase", "Kotlin": "kotlin", "C": "c",
+    "C++": "cplusplus", "Swift": "swift", "Vue": "vuejs",
+}
+
+
 def matrix_bar(part, total, width=12):
-    """Text-only Matrix progress cells; numbers carry the exact percentages."""
+    """GitHub-native text cells; percentages are the accurate values."""
     filled = round(part / total * width) if total else 0
     if part > 0:
         filled = max(1, filled)
@@ -325,30 +336,46 @@ def matrix_bar(part, total, width=12):
     return "🟩" * filled + "⬛" * (width - filled)
 
 
+def language_cell(name):
+    """Keep the table selectable text, with only a tiny decorative language logo."""
+    safe = re.sub(r"([\\|*_\[\]])", r"\\\1", name)
+    icon = LANGUAGE_ICONS.get(name)
+    if not icon:
+        return f"💻 **{safe}**"
+    url = (
+        "https://raw.githubusercontent.com/devicons/devicon/master/"
+        f"icons/{icon}/{icon}-original.svg"
+    )
+    return f'<img src="{url}" width="18" height="18" alt="" /> **{safe}**'
+
+
 def matrix_markdown(locs, repo_count):
-    """Generate a GitHub-native, sortable-by-LOC language table (no SVG or image)."""
+    """Native GitHub Markdown with accurate, descending source-line shares."""
     counts = [(name, n) for name, n in locs.items() if type(n) is int and n > 0]
     counts.sort(key=lambda item: (-item[1], item[0].casefold()))
     total = sum(n for _, n in counts)
     rows = [
-        "#### 🟢 CODE MATRIX · Language Distribution",
+        "### 🟢 OKAN'S CODE STATS // LIVE UPDATES",
         "",
-        f"**{total:,} source lines** · **{repo_count} public original repositories** · "
-        f"**{len(counts)} languages**",
+        f"**TOTAL LINES OF CODE: {total:,}**",
         "",
-        "<sub>Nonblank lines on default branches · Highest percentage first · "
-        "Green cells approximate share (tiny nonzero shares show one cell)</sub>",
-        "",
-        "| Language | Lines of code | % of total code | Matrix share |",
+        "| Language | Lines | Share | Distribution |",
         "| :--- | ---: | ---: | :--- |",
     ]
     for name, n in counts:
-        safe = re.sub(r"([\\|*_\[\]])", r"\\\1", name)
         share = n / total * 100
         pct = f"{share:.3f}%" if share < 0.01 else f"{share:.2f}%"
-        rows.append(f"| **{safe}** | {n:,} | **{pct}** | {matrix_bar(n, total)} |")
+        rows.append(
+            f"| {language_cell(name)} | {n:,} | **{pct}** | {matrix_bar(n, total)} |"
+        )
     if not counts:
         rows.append("| No source code found yet | 0 | 0.00% | " + matrix_bar(0, 0) + " |")
+    rows.extend([
+        "",
+        "<sub>Automatically checked every 15 minutes · Public original repositories · "
+        "Nonblank source lines (including comments) · Dependencies, generated files, "
+        "and binaries excluded · Tiny nonzero shares show one green cell</sub>",
+    ])
     return "\n".join(rows)
 
 
@@ -358,33 +385,18 @@ def markdown(summary, archive):
     rows = [
         f"**Developer stats refreshed:** {now:%b %d, %Y at %I:%M %p %Z}",
         "",
-        "### 🧬 Code DNA · Public GitHub History",
+        "### Public GitHub History",
         "",
         f"**{total:,} authored commits · {summary['repos']} public original repositories**",
-        "",
-        "#### 🕒 When I Commit",
-        "",
-        "| Time of day (Eastern) | Commits | Share | Activity |",
-        "| :--- | ---: | ---: | :--- |",
-    ]
-    for name, count in summary["rhythm"]:
-        share = count / total * 100 if total else 0
-        rows.append(f"| {name} | {count:,} | {share:.1f}% | {bar(count, total)} |")
-    rows.extend([
-        "",
-        MATRIX_START,
-        matrix_markdown(summary["locs"], summary["repos"]),
-        MATRIX_END,
         "",
         "### 🧩 My Development Stack",
         "",
         "| Area | Technologies |",
         "| :--- | :--- |",
-    ])
+    ]
     for area, tech in STACK:
         rows.append(f"| **{area}** | {tech} |")
     return "\n".join(rows)
-
 
 def replace_section(readme, generated):
     if readme.count(START) != 1 or readme.count(END) != 1:
@@ -446,7 +458,10 @@ def run(user, token, root=ROOT, now=None):
     existing = json.loads(history_path.read_text(encoding="utf-8")) if history_path.is_file() else {}
     archive = archive_updates(existing, summary)
     summary["locs"], cache = count_source_lines(repos, token, load_matrix_cache(root))
-    updated = replace_section(original, markdown(summary, archive))
+    updated = replace_matrix_section(
+        replace_section(original, markdown(summary, archive)),
+        matrix_markdown(summary["locs"], summary["repos"]),
+    )
     archive_text = json.dumps(archive, ensure_ascii=False, indent=2) + "\n"
     history_path.parent.mkdir(parents=True, exist_ok=True)
     readme.write_text(updated, encoding="utf-8")
