@@ -13,7 +13,7 @@ package installation, or personal access token is needed.
 - Distinct repositories with an opening or merge during the same 30-day window.
 - Ten most recently updated upstream PRs that are **open, draft, or merged**. Closed PRs that were not merged are excluded from the latest-work table. Historical chart and counts remain unchanged.
 - A “Last profile update” timestamp from the latest successful refresh, shown in New York time.
-- Text-based Code DNA: authored commit timing on default branches of current public original repositories, plus GitHub-reported language bytes and counted source lines (displayed as Line of Codes).
+- Text-based Code DNA: authored commit timing on default branches of current public original repositories. The **Code Matrix** is a native Markdown table with counted nonblank source lines, each language's percentage of total LOC, and descending LOC order. GitHub language bytes are not displayed.
 - A curated, categorized Development Stack. The separate daily and weekly adventure sections have been removed at the owner's request.
 - A separate selectable-text **Recent Activity** table, with one latest public event per repository (up to eight), updated by an hourly workflow.
 - A Matrix-green **contribution-grid snake** (light and dark SVG variants), generated from GitHub's contribution calendar daily. The animation is decoration, not a substitute for text statistics.
@@ -35,7 +35,25 @@ scheduled run. To refresh sooner, use **Actions → Refresh profile activity →
 **Refresh recent activity and contribution snake** runs every hour at minute 43
 (Eastern Time), and the snake is regenerated daily at 04:29 Eastern Time.
 The workflow also runs once when its files land on `main`; a manual run
-can refresh both on demand. It commits only when the recent event table or
+can refresh both on demand.
+
+**Refresh live Code Matrix** checks every 15 minutes (minutes 07, 22, 37, 52,
+Eastern Time) and can also be started manually from Actions. It discovers new
+public original repositories automatically and checks the latest default-branch
+commit SHA of each repository. Unchanged repositories reuse their validated LOC
+cache; changed or newly created repositories are shallow-cloned and recounted.
+The result is committed as **real Markdown text**, not an image. Scheduled Actions
+may run late, so this is eventual refresh rather than a guarantee of instant
+updates on each push. Empty new repositories contribute zero lines until code
+is pushed. The separate four-hour developer-statistics workflow also refreshes
+the Code Matrix.
+
+For near-immediate cross-repository updates, the Code Matrix workflow accepts
+`repository_dispatch` with event type `source_code_changed`. That event must be
+sent by a workflow or GitHub App in each source repository, using a token
+permitted to dispatch to this profile repository. GitHub's built-in token from
+an unrelated repository cannot dispatch there by default. No cross-repository
+hooks or long-lived secrets are installed by this profile update. It commits only when the recent event table or
 generated SVGs actually change. README writes from the two workflows share
 a concurrency group to prevent simultaneous pushes.
 
@@ -75,7 +93,7 @@ Do not commit raw API bundles. Generated Markdown and the public `data/chronicle
 Keep the single `ACTIVITY:START` / `ACTIVITY:END` marker pair in `README.md`.
 The hourly updater owns only the `RECENT:START` / `RECENT:END` section.
 The animated SVGs live in `assets/` and are referenced through a theme-sensitive picture element.
-The journey updater uses a `JOURNEY:START` / `JOURNEY:END` marker pair; the former weekly journal markers were removed.
+The journey updater uses a `JOURNEY:START` / `JOURNEY:END` marker pair, with nested `CODE_MATRIX:START` / `CODE_MATRIX:END` markers for frequent LOC-only updates; the former weekly journal markers were removed.
 Everything outside the activity, recent, journey, and Matrix project marker pairs stays under manual control.
 The animated Phoenix hero is followed immediately by the Matrix-green contribution snake, before About.
 The animated Phoenix footer remains at the bottom. The terminal, stats, stack, latest-commit ticker,
@@ -96,7 +114,7 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
   of current, public, non-fork repositories owned by OKAN-SOFTWARE. It does not include
   all upstream or private history. Times are commit timestamps in America/New_York,
   not time spent coding.
-- Language shares use the bytes returned by GitHub's repository languages endpoint.
+- Language shares in Code Matrix use **counted nonblank source lines**, not GitHub language bytes.
   Frameworks, OS names, and cloud tools in Development Stack are curated descriptions,
   not automatically inferred expertise scores.
 - The hourly Recent Activity table uses public GitHub events (up to 300), keeps the
@@ -108,10 +126,14 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
   API lookups have been removed.
 - The history archive remains in `data/chronicles.json` (up to 365 days), but no
   longer appears in the README. The refresh runs every four hours.
-- LOC is a real count of nonblank lines in recognized source extensions from a
-  shallow checkout of each public original repository. Comments count; generated,
-  dependency, and minified files are excluded. LOC differs from GitHub source bytes
-  because the two metrics use different inclusion rules.
+- LOC is a real count of nonblank lines in recognized source extensions from the
+  default branch of each public original repository. Comments count; known generated,
+  dependency, and minified files are excluded. The counts are a snapshot of code
+  currently present, not a sum of lines authored in every historical commit.
+  Forks, private repositories, and this profile repository are excluded. A
+  repository's code may include third-party files outside known excluded paths.
+  Matrix bars are illustrative; the percentages are computed from the exact LOC
+  counts and sorted descending. Tiny nonzero shares receive a minimum green cell.
 - API errors fail the job, preserving the previous committed snapshot.
 
 ## References
@@ -120,4 +142,4 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
 - [GITHUB_TOKEN](https://docs.github.com/en/actions/concepts/security/github_token)
 - [Scheduled workflow events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
 
-The Extra tools & interests stack table is always expanded. The top-language heading is generated dynamically above the language table. Recent Activity intentionally omits timestamps.
+The Extra tools & interests stack table is always expanded. The Code Matrix heading and native Markdown language percentages are regenerated automatically. Recent Activity intentionally omits timestamps.
