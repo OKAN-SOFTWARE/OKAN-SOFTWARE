@@ -192,14 +192,51 @@ def stack_svg() -> str:
 
 
 def terminal_svg() -> str:
-    return '''<svg xmlns="http://www.w3.org/2000/svg" width="490" height="280" viewBox="0 0 490 280" role="img" aria-label="Terminal introduction">
-<defs><linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102a18"/><stop offset="1" stop-color="#030a06"/></linearGradient></defs>
-<style>.head{fill:#8ec9a2;font:13px ui-monospace,Consolas,monospace}.cmd{fill:#39ff14;font:16px ui-monospace,Consolas,monospace}.ans{fill:#dcffe6;font:15px ui-monospace,Consolas,monospace}@keyframes blink{50%{opacity:0}}.cursor{animation:blink 1.2s steps(1) infinite}@media(prefers-reduced-motion:reduce){.cursor{animation:none}}</style>
-<rect x="1" y="1" width="488" height="278" rx="15" fill="url(#panel)" stroke="#1e7644" stroke-width="2"/>
-<circle cx="25" cy="27" r="6" fill="#0b5d2b"/><circle cx="46" cy="27" r="6" fill="#16b85d"/><circle cx="67" cy="27" r="6" fill="#39ff14"/><text x="365" y="32" class="head">profile.sh</text><path d="M20 49h450" stroke="#1b5533"/>
-<text x="25" y="83" class="cmd">$ whoami</text><text x="25" y="109" class="ans">software engineer</text>
-<text x="25" y="150" class="cmd">$ focus</text><text x="25" y="177" class="ans">backend · tools · automation</text>
-<text x="25" y="217" class="cmd">$ workflow</text><text x="25" y="244" class="ans">build → test → contribute</text><rect class="cursor" x="355" y="231" width="8" height="15" fill="#39ff14"/>
+    """Animated, accessible code-typing intro; GitHub README embeds the SVG."""
+    return '''<svg xmlns="http://www.w3.org/2000/svg" width="490" height="300" viewBox="0 0 490 300" role="img" aria-label="Animated code editor typing an introduction: backend, web, automation, developer tools, open source, bug fixes and tests">
+<defs>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102a18"/><stop offset="1" stop-color="#030a06"/></linearGradient>
+  <clipPath id="r1"><rect class="typing t1" x="26" y="64" width="0" height="23"/></clipPath>
+  <clipPath id="r2"><rect class="typing t2" x="26" y="95" width="0" height="23"/></clipPath>
+  <clipPath id="r3"><rect class="typing t3" x="26" y="126" width="0" height="23"/></clipPath>
+  <clipPath id="r4"><rect class="typing t4" x="26" y="157" width="0" height="23"/></clipPath>
+  <clipPath id="r5"><rect class="typing t5" x="26" y="188" width="0" height="23"/></clipPath>
+  <clipPath id="r6"><rect class="typing t6" x="26" y="219" width="0" height="23"/></clipPath>
+  <clipPath id="r7"><rect class="typing t7" x="26" y="250" width="0" height="23"/></clipPath>
+</defs>
+<style>
+  .head{fill:#8ec9a2;font:13px ui-monospace,Consolas,monospace}
+  .code{font:14px ui-monospace,Consolas,monospace}
+  .kw{fill:#39ff14}.string{fill:#b9ffd0}.comment{fill:#72b889}.plain{fill:#e4fff0}.fn{fill:#80e6a0}
+  .typing{animation-duration:14s;animation-timing-function:steps(34,end);animation-iteration-count:infinite}
+  .t1{animation-name:type1}.t2{animation-name:type2}.t3{animation-name:type3}
+  .t4{animation-name:type4}.t5{animation-name:type5}.t6{animation-name:type6}.t7{animation-name:type7}
+  @keyframes type1{0%,2%{width:0} 12%,96%{width:440px} 100%{width:0}}
+  @keyframes type2{0%,13%{width:0} 24%,96%{width:440px} 100%{width:0}}
+  @keyframes type3{0%,25%{width:0} 37%,96%{width:440px} 100%{width:0}}
+  @keyframes type4{0%,38%{width:0} 50%,96%{width:440px} 100%{width:0}}
+  @keyframes type5{0%,51%{width:0} 63%,96%{width:440px} 100%{width:0}}
+  @keyframes type6{0%,64%{width:0} 75%,96%{width:440px} 100%{width:0}}
+  @keyframes type7{0%,76%{width:0} 89%,96%{width:440px} 100%{width:0}}
+  @keyframes blink{50%{opacity:0}}
+  .cursor{animation:blink .9s steps(1,end) infinite}
+  @media(prefers-reduced-motion:reduce){
+    .typing{animation:none;width:440px}
+    .cursor{animation:none}
+  }
+</style>
+<rect x="1" y="1" width="488" height="298" rx="15" fill="url(#panel)" stroke="#1e7644" stroke-width="2"/>
+<circle cx="25" cy="27" r="6" fill="#0b5d2b"/><circle cx="46" cy="27" r="6" fill="#16b85d"/><circle cx="67" cy="27" r="6" fill="#39ff14"/>
+<text x="366" y="32" class="head">about.ts</text><path d="M20 49h450" stroke="#1b5533"/>
+<g class="code">
+  <text x="26" y="81" clip-path="url(#r1)" class="comment">// software built for real needs</text>
+  <text x="26" y="112" clip-path="url(#r2)" class="kw">const craft = {</text>
+  <text x="26" y="143" clip-path="url(#r3)" class="string">  build: ["backend", "web", "tools"],</text>
+  <text x="26" y="174" clip-path="url(#r4)" class="string">  automate: "repeatable workflows",</text>
+  <text x="26" y="205" clip-path="url(#r5)" class="string">  improve: "bugs + regression tests",</text>
+  <text x="26" y="236" clip-path="url(#r6)" class="string">  contribute: "open source"</text>
+  <text x="26" y="267" clip-path="url(#r7)" class="plain">}; <tspan class="fn">ship</tspan>(craft); <tspan class="cursor kw">▋</tspan></text>
+</g>
 </svg>'''
 
 
