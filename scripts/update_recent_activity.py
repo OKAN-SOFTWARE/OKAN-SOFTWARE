@@ -144,7 +144,7 @@ def activity_rows(events, user, limit=8):
         seen_repos.add(repo.lower())
         rows.append(
             f"| {label} in [{repo}](https://github.com/{repo})"
-            f" | {detail or '—'} | {when:%b %d, %I:%M %p} |"
+            f" | {detail or '—'} |"
         )
         if len(rows) >= limit:
             break
@@ -153,14 +153,14 @@ def activity_rows(events, user, limit=8):
 
 def markdown(events, user):
     rows = [
-        "| Recent activity | Details | Time (Eastern) |",
-        "| :--- | :--- | :--- |",
+        "| Recent activity | Details |",
+        "| :--- | :--- |",
     ]
     entries = activity_rows(events, user)
     if entries:
         rows.extend(entries)
     else:
-        rows.append("| No qualifying recent public activity | — | — |")
+        rows.append("| No qualifying recent public activity | — |")
     return "\n".join(rows)
 
 
