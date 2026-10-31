@@ -1,0 +1,264 @@
+#!/usr/bin/env python3
+"""Update GitHub-compatible Ember SVGs and the recent-original-project grid.
+
+No JavaScript or custom CSS is required in README.md. SVGs are embedded as images.
+Existing ACTIVITY, RECENT, and JOURNEY generated sections remain untouched.
+"""
+from __future__ import annotations
+
+from datetime import datetime
+import html
+import json
+import os
+from pathlib import Path
+import re
+import sys
+import textwrap
+from urllib.error import HTTPError, URLError
+from urllib.parse import quote
+from urllib.request import Request, urlopen
+
+ROOT = Path(__file__).resolve().parents[1]
+START = '<!-- EMBER_PROJECTS:START -->'
+END = '<!-- EMBER_PROJECTS:END -->'
+REPO_RE = re.compile(r'^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$')
+USER_RE = re.compile(r'^[A-Za-z0-9-]{1,39}$')
+IGNORED = {'Markdown', 'JSON', 'YAML', 'TOML', 'XML', 'Text', 'Jupyter Notebook', 'Dockerfile'}
+ACCENT = '#ffc17e'
+
+
+def api(path: str, token: str):
+    request = Request('https://api.github.com' + path, headers={
+        'Accept': 'application/vnd.github+json',
+        'Authorization': 'Bearer ' + token,
+        'User-Agent': 'okan-readme-ember-showcase',
+        'X-GitHub-Api-Version': '2022-11-28',
+    })
+    try:
+        with urlopen(request, timeout=25) as response:
+            return json.load(response)
+    except (HTTPError, URLError, TimeoutError) as exc:
+        raise RuntimeError('GitHub API unavailable; leaving existing assets unchanged') from exc
+
+
+def recent_original_repos(user: str, token: str, limit: int = 6) -> list[dict]:
+    found = []
+    for page in range(1, 4):
+        batch = api('/users/' + quote(user, safe='') + '/repos?type=owner&sort=pushed&direction=desc&per_page=100&page=' + str(page), token)
+        if not isinstance(batch, list):
+            raise ValueError('Invalid repository listing')
+        for repo in batch:
+            if not isinstance(repo, dict):
+                continue
+            name, full = repo.get('name', ''), repo.get('full_name', '')
+            owner = (repo.get('owner') or {}).get('login', '')
+            if (owner.lower() != user.lower() or not REPO_RE.fullmatch(full)
+                or name.lower() == user.lower() or repo.get('fork')
+                or repo.get('private') or repo.get('archived') or not repo.get('pushed_at')):
+                continue
+            found.append(repo)
+        if len(batch) < 100:
+            break
+    found.sort(key=lambda repo: (repo['pushed_at'], repo['name']), reverse=True)
+    if not found:
+        raise ValueError('No public original repositories found')
+    return found[:limit]
+
+
+def source_languages(repo: dict, token: str) -> list[str]:
+    full = repo['full_name']
+    if not REPO_RE.fullmatch(full):
+        raise ValueError('Invalid repository path')
+    values = api('/repos/' + full + '/languages', token)
+    if not isinstance(values, dict):
+        raise ValueError('Invalid language listing')
+    langs = sorted(
+        ((name, size) for name, size in values.items()
+         if isinstance(name, str) and isinstance(size, int) and size > 0
+         and name not in IGNORED and len(name) <= 20),
+        key=lambda pair: (-pair[1], pair[0]),
+    )
+    return [name for name, _ in langs[:3]]
+
+
+def latest_commits(user: str, token: str, limit: int = 10) -> list[dict]:
+    query = quote('author:' + user, safe='')
+    data = api('/search/commits?q=' + query + '&sort=committer-date&order=desc&per_page=100', token)
+    if not isinstance(data, dict) or not isinstance(data.get('items'), list):
+        raise ValueError('Invalid commit listing')
+    result, seen = [], set()
+    for item in data['items']:
+        full = (item.get('repository') or {}).get('full_name', '')
+        sha = item.get('sha', '')
+        message = ((item.get('commit') or {}).get('message') or '').splitlines()
+        message = ' '.join(message[0].split()) if message else ''
+        if (not REPO_RE.fullmatch(full) or full.lower() == (user + '/' + user).lower()
+            or not re.fullmatch(r'[0-9a-f]{40}', sha) or sha in seen
+            or not message or message.startswith(('Merge pull request', 'Add files via upload'))):
+            continue
+        seen.add(sha)
+        result.append({'repo': full, 'sha': sha[:7], 'message': message[:90]})
+        if len(result) >= limit:
+            break
+    if not result:
+        raise ValueError('No authored public commits found')
+    return result
+
+
+def x(value) -> str:
+    return html.escape(str(value), quote=True)
+
+
+def truncate(value: str, limit: int) -> str:
+    return value if len(value) <= limit else value[:limit-1].rstrip() + '…'
+
+
+def project_svg(repo: dict, languages: list[str]) -> str:
+    name = truncate(repo['name'], 26)
+    desc = ' '.join((repo.get('description') or 'An original open-source software project.').split())
+    lines = textwrap.wrap(desc, width=56, break_long_words=False, break_on_hyphens=False)[:2]
+    pushed = datetime.fromisoformat(repo['pushed_at'].replace('Z', '+00:00')).strftime('%b %d, %Y').upper()
+    line_nodes = ''.join(f'<text x="29" y="{155 + 23*i}" class="desc">{x(line)}</text>' for i, line in enumerate(lines))
+    chips, cx = [], 29
+    for lang in languages[:3]:
+        width = min(150, max(65, len(lang)*9 + 25))
+        chips.append(f'<rect x="{cx}" y="218" width="{width}" height="29" rx="7" fill="#38271f" stroke="#875338"/>'
+                     f'<text x="{cx+12}" y="237" class="tag">{x(lang)}</text>')
+        cx += width + 8
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="560" height="266" viewBox="0 0 560 266" role="img" aria-label="{x(name)} project card">
+<defs><linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1d2524"/><stop offset="1" stop-color="#0c1519"/></linearGradient></defs>
+<style>.small{{fill:#ffad72;font:700 12px ui-monospace,Consolas,monospace;letter-spacing:1.2px}}.name{{fill:#fff0e2;font:700 29px Arial,sans-serif}}.date{{fill:#b7a39a;font:12px ui-monospace,Consolas,monospace}}.desc{{fill:#c0cbc6;font:15px Arial,sans-serif}}.tag{{fill:#ffc895;font:12px ui-monospace,Consolas,monospace}}</style>
+<rect x="1" y="1" width="558" height="264" rx="16" fill="url(#panel)" stroke="#73503c" stroke-width="2"/>
+<path d="M24 27h22 M24 27v22" stroke="{ACCENT}" stroke-width="3" stroke-linecap="round"/>
+<text x="29" y="60" class="small">ORIGINAL PROJECT</text><text x="29" y="107" class="name">{x(name)}</text>
+<text x="29" y="127" class="date">LATEST PUSH · {pushed}</text>{line_nodes}
+{''.join(chips)}<path d="M506 33h24v24 M530 33l-28 28" fill="none" stroke="{ACCENT}" stroke-width="2.5" stroke-linecap="round"/>
+</svg>'''
+
+
+def ticker_svg(commits: list[dict]) -> str:
+    step, width, period = 406, 1200, 406*len(commits)
+    items = []
+    for i, commit in enumerate(commits):
+        cx = i*step + 5
+        items.append(f'<rect x="{cx}" y="51" width="394" height="66" rx="9" fill="#211c1a" stroke="#7b4f39"/>'
+                     f'<rect x="{cx+10}" y="64" width="3" height="40" rx="1.5" fill="{ACCENT}"/>'
+                     f'<text x="{cx+22}" y="76" class="repo">{x(truncate(commit["repo"], 31))}</text>'
+                     f'<text x="{cx+22}" y="99" class="msg">{x(truncate(commit["message"], 42))}</text>'
+                     f'<text x="{cx+325}" y="76" class="hash">{x(commit["sha"])}</text>')
+    group = ''.join(items)
+    seconds = max(65, len(commits)*8)
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="143" viewBox="0 0 {width} 143" role="img" aria-label="Animated recent authored GitHub commits">
+<title>Latest commits · original projects and upstream contributions</title>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#171e1c"/><stop offset="1" stop-color="#15191b"/></linearGradient><clipPath id="clip"><rect x="10" y="47" width="1180" height="75"/></clipPath></defs>
+<style>.header{{fill:{ACCENT};font:700 16px ui-monospace,Consolas,monospace;letter-spacing:1px}}.sub{{fill:#b6a69b;font:11px ui-monospace,Consolas,monospace}}.repo{{fill:#ffc18b;font:700 13px ui-monospace,Consolas,monospace}}.msg{{fill:#e3ded8;font:12px ui-monospace,Consolas,monospace}}.hash{{fill:#c2a7dc;font:11px ui-monospace,Consolas,monospace}}@keyframes scroll{{from{{transform:translateX(0)}}to{{transform:translateX(-{period}px)}}}}.move{{animation:scroll {seconds}s linear infinite}}@media(prefers-reduced-motion:reduce){{.move{{animation:none}}}}</style>
+<rect x="1" y="1" width="1198" height="141" rx="12" fill="url(#bg)" stroke="#87593f" stroke-width="2"/>
+<circle cx="22" cy="24" r="5" fill="#ffad72"/><text x="35" y="30" class="header">LATEST COMMITS</text><text x="247" y="29" class="sub">ORIGINAL PROJECTS + UPSTREAM CONTRIBUTIONS</text>
+<path d="M15 43h1170" stroke="#5c4032"/>
+<g clip-path="url(#clip)"><g class="move"><g>{group}</g><g transform="translate({period} 0)">{group}</g></g></g>
+<text x="16" y="134" class="sub">PUBLIC COMMIT HISTORY  ·  REFRESHED BY GITHUB ACTIONS</text></svg>'''
+
+
+def stats_svg(readme: str) -> str:
+    activity = re.search(r'\*\*(\d+) opened · (\d+) merged · \d+ open now · (\d+) upstream repositories\*\*', readme)
+    journey = re.search(r'\*\*\d+ authored commits · (\d+) public original repositories\*\*', readme)
+    if not activity or not journey:
+        raise ValueError('Could not find existing generated GitHub counters')
+    values = [activity.group(1), activity.group(2), activity.group(3), journey.group(1)]
+    labels = ['UPSTREAM PRS', 'MERGED PRS', 'UPSTREAM REPOS', 'ORIGINAL PROJECTS']
+    cells = []
+    for i, (value, label) in enumerate(zip(values, labels)):
+        xx = 2 + i*301
+        cells.append(f'<rect x="{xx}" y="2" width="294" height="122" rx="13" fill="#151f20" stroke="#5b4537"/>'
+                     f'<rect x="{xx}" y="15" width="3" height="90" rx="1.5" fill="{ACCENT}"/>'
+                     f'<text x="{xx+21}" y="73" class="num">{x(value)}</text>'
+                     f'<text x="{xx+21}" y="101" class="label">{x(label)}</text>')
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="128" viewBox="0 0 1200 128" role="img" aria-label="GitHub contribution snapshot: {', '.join(values)}">
+<style>.num{{fill:{ACCENT};font:700 49px Arial,sans-serif}}.label{{fill:#b6b6af;font:12px ui-monospace,Consolas,monospace;letter-spacing:1px}}</style>{''.join(cells)}</svg>'''
+
+
+def stack_svg() -> str:
+    languages = ['JAVA', 'PYTHON', 'JAVASCRIPT', 'TYPESCRIPT', 'C#', 'SQL', 'HTML', 'CSS', 'RUST', 'POWERSHELL', 'AWS']
+    chips, xx, yy = [], 22, 42
+    for lang in languages:
+        ww = max(70, len(lang)*13 + 26)
+        if xx + ww > 1180:
+            xx, yy = 22, 94
+        chips.append(f'<rect x="{xx}" y="{yy-24}" width="{ww}" height="34" rx="7" fill="#34271f" stroke="#78513c"/>'
+                     f'<text x="{xx+13}" y="{yy-1}" class="chip">{x(lang)}</text>')
+        xx += ww + 11
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="126" viewBox="0 0 1200 126" role="img" aria-label="Java, Python, JavaScript, TypeScript, C sharp, SQL, HTML, CSS, Rust, PowerShell and AWS">
+<style>.chip{{fill:#ffc38d;font:700 15px ui-monospace,Consolas,monospace}}</style><rect x="1" y="1" width="1198" height="124" rx="12" fill="#121d1f" stroke="#7a513a" stroke-width="2"/>{''.join(chips)}</svg>'''
+
+
+def terminal_svg() -> str:
+    return '''<svg xmlns="http://www.w3.org/2000/svg" width="490" height="280" viewBox="0 0 490 280" role="img" aria-label="Terminal introduction">
+<defs><linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#231d19"/><stop offset="1" stop-color="#0b1619"/></linearGradient></defs>
+<style>.head{fill:#b9a59b;font:13px ui-monospace,Consolas,monospace}.cmd{fill:#ffbd83;font:16px ui-monospace,Consolas,monospace}.ans{fill:#d4d9d1;font:15px ui-monospace,Consolas,monospace}@keyframes blink{50%{opacity:0}}.cursor{animation:blink 1.2s steps(1) infinite}@media(prefers-reduced-motion:reduce){.cursor{animation:none}}</style>
+<rect x="1" y="1" width="488" height="278" rx="15" fill="url(#panel)" stroke="#78513b" stroke-width="2"/>
+<circle cx="25" cy="27" r="6" fill="#ff6b64"/><circle cx="46" cy="27" r="6" fill="#f3b85b"/><circle cx="67" cy="27" r="6" fill="#5bd39a"/><text x="365" y="32" class="head">profile.sh</text><path d="M20 49h450" stroke="#614536"/>
+<text x="25" y="83" class="cmd">$ whoami</text><text x="25" y="109" class="ans">software engineer</text>
+<text x="25" y="150" class="cmd">$ focus</text><text x="25" y="177" class="ans">backend · tools · automation</text>
+<text x="25" y="217" class="cmd">$ workflow</text><text x="25" y="244" class="ans">build → test → contribute</text><rect class="cursor" x="355" y="231" width="8" height="15" fill="#ffc17e"/>
+</svg>'''
+
+
+def projects_markdown(repos: list[dict]) -> str:
+    cells = []
+    for repo in repos:
+        full, name = repo['full_name'], repo['name']
+        cells.append(f'<a href="https://github.com/{full}"><img src="./assets/ember/projects/{name}.svg" width="100%" alt="{x(name)} project summary with up to three source languages" /></a>')
+    rows = [f'| {cells[i]} | {cells[i+1] if i+1 < len(cells) else ""} |' for i in range(0, len(cells), 2)]
+    return ('<sub>Automatically sorted by latest push · Original public repositories only · '
+            'Up to three source languages per card</sub>\n\n'
+            '| | |\n| :--- | :--- |\n' + '\n'.join(rows) + '\n\n'
+            '<p align="center"><a href="https://github.com/OKAN-SOFTWARE?tab=repositories"><strong>Browse all original projects ↗</strong></a></p>')
+
+
+def replace_section(readme: str, generated: str) -> str:
+    if readme.count(START) != 1 or readme.count(END) != 1:
+        raise ValueError('README must have exactly one Ember project marker pair')
+    head, rest = readme.split(START, 1)
+    _, tail = rest.split(END, 1)
+    return head + START + '\n' + generated + '\n' + END + tail
+
+
+def refresh(user: str, token: str, root: Path = ROOT) -> None:
+    if not USER_RE.fullmatch(user):
+        raise ValueError('Invalid GitHub username')
+    repos = recent_original_repos(user, token)
+    languages = {repo['name']: source_languages(repo, token) for repo in repos}
+    commits = latest_commits(user, token)
+    target = root / 'README.md'
+    current = target.read_text(encoding='utf-8')
+    updated = replace_section(current, projects_markdown(repos))
+    output = root / 'assets' / 'ember'
+    folder = output / 'projects'
+    folder.mkdir(parents=True, exist_ok=True)
+    for file in folder.glob('*.svg'):
+        if file.stem not in languages:
+            file.unlink()
+    for repo in repos:
+        (folder / (repo['name'] + '.svg')).write_text(project_svg(repo, languages[repo['name']]), encoding='utf-8')
+    (output / 'latest-commits.svg').write_text(ticker_svg(commits), encoding='utf-8')
+    (output / 'stats.svg').write_text(stats_svg(updated), encoding='utf-8')
+    (output / 'stack.svg').write_text(stack_svg(), encoding='utf-8')
+    (output / 'terminal.svg').write_text(terminal_svg(), encoding='utf-8')
+    if updated != current:
+        target.write_text(updated, encoding='utf-8')
+    print(f'Ember showcase updated: {len(repos)} original projects and {len(commits)} commits')
+
+
+def main() -> None:
+    token = os.environ.get('GH_TOKEN', '')
+    if not token:
+        raise ValueError('GH_TOKEN is required')
+    refresh(os.environ.get('PROFILE_USER', 'OKAN-SOFTWARE'), token)
+
+
+if __name__ == '__main__':
+    try:
+        main()
+    except (ValueError, OSError, RuntimeError, TypeError, KeyError) as exc:
+        print(f'Ember refresh failed: {exc}', file=sys.stderr)
+        sys.exit(1)
