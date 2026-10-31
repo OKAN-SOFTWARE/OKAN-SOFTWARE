@@ -169,8 +169,8 @@
   },
   "2026-10-29": {
     "commits": 5,
-    "repos": 6,
-    "pr_events": 2,
+    "repos": 5,
+    "pr_events": 1,
     "issues": 0
   },
   "2026-10-30": {
@@ -181,8 +181,8 @@
   },
   "2026-10-31": {
     "commits": 0,
-    "repos": 4,
-    "pr_events": 5,
+    "repos": 5,
+    "pr_events": 6,
     "issues": 0
   }
 }
