@@ -60,8 +60,6 @@ class JourneyTests(unittest.TestCase):
         self.assertEqual(1, data["rhythm"][2][1])
         self.assertEqual(2, data["current"]["prs"])
         self.assertEqual(1, data["current"]["issues"])
-        self.assertTrue(data["early_commit"])
-        self.assertEqual({"Python": 1}, dict(data["active_languages"]))
 
     def test_markdown_is_text_only_and_has_requested_sections(self):
         data = journey.summarize("OKAN-SOFTWARE", *sample(), NOW)
@@ -70,15 +68,17 @@ class JourneyTests(unittest.TestCase):
         rendered = journey.markdown(data, archive)
         for phrase in (
             "Code DNA", "When I Commit", "I Mostly Code in Python",
-            "My Development Stack", "Today's Coding Adventure",
-            "October 30, 2026", "| Language | Line of Codes | Source bytes | Activity |",
-            "| Python | 120 | 800 |", "Upstream Pathfinder",
+            "My Development Stack",
+            "| Language | Line of Codes | Source bytes | Activity |",
+            "| Python | 120 | 800 |",
         ):
             self.assertIn(phrase, rendered)
         for excluded in (
             "Most Productive Commit Day", "The Phoenix Chronicles",
             "Programming Languages", "Authored commits | Repositories touched",
             "Explore recent daily adventures", "| Language | Source bytes | Share",
+            "Today's Coding Adventure", "Today's Public Activity Trail",
+            "Languages of Repositories Active Today", "**Achievements:**",
         ):
             self.assertNotIn(excluded, rendered)
         self.assertNotIn("![", rendered)
@@ -164,46 +164,7 @@ class JourneyTests(unittest.TestCase):
             self.assertFalse((root / "data" / "chronicles.json").exists())
 
 
-    def test_daily_trail_keeps_latest_event_per_repository(self):
-        repos, languages, commits, events = sample()
-        events.append({
-            **event(6, "PullRequestEvent", "2026-10-30T22:10:00Z", action="opened"),
-            "repo": {"name": "upstream/another-project"},
-        })
-        data = journey.summarize("OKAN-SOFTWARE", repos, languages, commits, events, NOW)
-        output = journey.markdown(data, {})
-        self.assertEqual(1, output.count("in [upstream/project]"))
-        self.assertIn("06:00 PM", output)  # Newest event in upstream/project.
-        self.assertNotIn("05:30 PM", output)  # Older event in same repository.
-        self.assertIn("in [upstream/another-project]", output)
-
-    def test_today_languages_include_upstream_and_own_repositories(self):
-        repos, languages, commits, events = sample()
-        data = journey.summarize("OKAN-SOFTWARE", repos, languages, commits, events, NOW)
-        called = []
-
-        def fake_get(path, token, allow_not_found=False):
-            called.append((path, allow_not_found))
-            self.assertEqual("token", token)
-            return {"language": "TypeScript", "private": False}
-
-        with patch.object(journey, "api_get", side_effect=fake_get):
-            active, limited = journey.fetch_today_languages(data, repos, "token")
-        self.assertEqual({"Python": 1, "TypeScript": 1}, dict(active))
-        self.assertFalse(limited)
-        self.assertEqual([("/repos/upstream/project", True)], called)
-
-    def test_today_languages_skip_missing_public_repos(self):
-        repos, languages, commits, events = sample()
-        for item in events:
-            item["repo"]["name"] = "upstream/moved-away"
-        data = journey.summarize("OKAN-SOFTWARE", repos, languages, commits, events, NOW)
-        with patch.object(journey, "api_get", return_value=None):
-            active, limited = journey.fetch_today_languages(data, repos, "token")
-        self.assertEqual({"Python": 1}, dict(active))
-        self.assertFalse(limited)
-
-    def test_daily_generation_does_not_reintroduce_weekly_section(self):
+    def test_generation_keeps_code_dna_and_omits_daily_section(self):
         original = f"intro\n{journey.START}\nold\n{journey.END}\nfooter"
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -212,24 +173,25 @@ class JourneyTests(unittest.TestCase):
             with (
                 patch.object(journey, "fetch_public_data", return_value=sample()),
                 patch.object(journey, "count_source_lines", return_value=Counter({"Python": 5})),
-                patch.object(journey, "fetch_today_languages",
-                             return_value=(Counter({"TypeScript": 1}), False)),
             ):
                 journey.run("OKAN-SOFTWARE", "token", root, NOW)
             content = readme.read_text(encoding="utf-8")
             self.assertIn("Code DNA", content)
-            self.assertIn("Today's Coding Adventure", content)
-            self.assertIn("**TypeScript** (1 repo)", content)
+            self.assertIn("My Development Stack", content)
+            self.assertNotIn("Today's Coding Adventure", content)
             self.assertNotIn("Weekly Coding Adventure", content)
             self.assertIn("intro", content)
             self.assertIn("footer", content)
 
 
-    def test_readme_omits_weekly_and_exposes_stack(self):
+    def test_readme_omits_daily_and_exposes_stack(self):
         readme = (SCRIPT.parents[1] / "README.md").read_text(encoding="utf-8")
-        self.assertIn("Today's Coding Adventure", readme)
+        self.assertNotIn("Today's Coding Adventure", readme)
         self.assertNotIn("<!-- WEEKLY:START -->", readme)
         self.assertNotIn("Weekly Coding Adventure", readme)
+        self.assertNotIn("Activity sync", readme)
+        self.assertIn("## 🐍 Contribution Snake", readme)
+        self.assertIn("VeilDrop", readme)
         stack = readme[readme.index("## Extra tools & interests"):]
         self.assertIn("### Explore the stack", stack)
         self.assertNotIn("<summary>Explore the stack</summary>", stack)

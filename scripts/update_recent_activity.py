@@ -144,7 +144,7 @@ def activity_rows(events, user, limit=8):
         seen_repos.add(repo.lower())
         rows.append(
             f"| {label} in [{repo}](https://github.com/{repo})"
-            f" | {detail or '—'} | {when:%b %d, %I:%M %p %Z} |"
+            f" | {detail or '—'} | {when:%b %d, %I:%M %p} |"
         )
         if len(rows) >= limit:
             break

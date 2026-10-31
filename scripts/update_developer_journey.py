@@ -106,7 +106,7 @@ def parse_time(value):
     return moment.astimezone(TZ)
 
 
-def api_get(path, token, allow_not_found=False):
+def api_get(path, token):
     request = Request(
         "https://api.github.com" + path,
         headers={
@@ -120,8 +120,6 @@ def api_get(path, token, allow_not_found=False):
         with urlopen(request, timeout=25) as response:
             return json.load(response)
     except HTTPError as error:
-        if error.code == 404 and allow_not_found:
-            return None
         if error.code == 409 and "/commits?" in path:
             return []
         raise RuntimeError("GitHub request failed; retaining prior statistics") from error
@@ -176,10 +174,6 @@ def fetch_public_data(user, token):
 
 def summarize(user, repos, languages, commits, events, now):
     today = now.astimezone(TZ).date()
-    repo_languages = {
-        repo["full_name"]: repo.get("language")
-        for repo in repos if repo.get("full_name")
-    }
     by_day = defaultdict(lambda: {
         "commits": 0, "repos": set(), "prs": 0, "issues": 0, "events": []
     })
@@ -240,55 +234,11 @@ def summarize(user, repos, languages, commits, events, now):
         ("🌙 Night", sum(hours[h] for h in range(0, 6))),
     ]
     current = by_day[today.isoformat()]
-    active_languages = Counter(
-        repo_languages.get(repo) for repo in current["repos"]
-        if repo_languages.get(repo)
-    )
-    early_commit = any(
-        when.hour < 10 and label == "Committed code"
-        for when, label, _ in current["events"]
-    )
     return {
         "today": today, "now": now.astimezone(TZ), "repos": len(repos),
         "languages": languages, "rhythm": rhythm, "weekdays": weekdays,
         "total_commits": len(seen_shas), "by_day": by_day, "current": current,
-        "active_languages": active_languages, "early_commit": early_commit,
     }
-
-
-def fetch_today_languages(summary, repos, token):
-    """Primary languages of repositories active today, including upstream repos."""
-    owned = {
-        repo["full_name"].lower(): repo.get("language")
-        for repo in repos if SAFE_REPO.fullmatch(repo.get("full_name", ""))
-    }
-    # Events are newest first. Keep the most recently active repositories first.
-    ordered = list(dict.fromkeys(
-        repo for _, _, repo in summary["current"]["events"]
-        if SAFE_REPO.fullmatch(repo)
-    ))
-    for repo in sorted(summary["current"]["repos"]):
-        if SAFE_REPO.fullmatch(repo) and repo not in ordered:
-            ordered.append(repo)
-    languages = Counter()
-    # A bounded number of lookups protects the scheduled refresh from excess API use.
-    for full in ordered[:40]:
-        if full.lower() in owned:
-            language = owned[full.lower()]
-        else:
-            info = api_get(f"/repos/{full}", token, allow_not_found=True)
-            if info is None:  # The public repository may have been deleted or moved.
-                continue
-            if not isinstance(info, dict):
-                raise ValueError("Invalid active repository metadata")
-            if info.get("private"):
-                continue
-            language = info.get("language")
-        if language is not None and not isinstance(language, str):
-            raise ValueError("Invalid active repository language")
-        if language:
-            languages[language] += 1
-    return languages, len(ordered) > 40
 
 
 def bar(part, total, width=16):
@@ -323,7 +273,7 @@ def archive_updates(existing, summary):
 
 
 def markdown(summary, archive):
-    today, now = summary["today"], summary["now"]
+    now = summary["now"]
     total = summary["total_commits"]
     total_bytes = sum(summary["languages"].values())
     top = summary["languages"].most_common(1)
@@ -365,52 +315,6 @@ def markdown(summary, archive):
     ])
     for area, tech in STACK:
         rows.append(f"| **{area}** | {tech} |")
-    current = summary["current"]
-    rows.extend([
-        "",
-        f"### 🔥 Today's Coding Adventure · {today:%A, %B %d, %Y}",
-        "",
-        "Our daily development journey is here — a timeline of today's public coding and contribution activity.",
-        "",
-        "#### ⚡ Today's Public Activity Trail",
-        "",
-    ])
-    if current["events"]:
-        displayed = set()
-        for when, label, repo in current["events"]:
-            if repo.lower() in displayed:
-                continue
-            displayed.add(repo.lower())
-            rows.append(f"- **{when:%I:%M %p}** · {label} in [{repo}](https://github.com/{repo})")
-            if len(displayed) >= 6:
-                break
-    else:
-        rows.append("No qualifying public GitHub events recorded yet today.")
-    rows.extend(["", "#### 💻 Languages of Repositories Active Today", ""])
-    if summary["active_languages"]:
-        rows.append(" · ".join(
-            f"**{name}** ({count} repo{'s' if count != 1 else ''})"
-            for name, count in summary["active_languages"].most_common()
-        ))
-    else:
-        rows.append("No detectable primary languages among today's active public repositories.")
-    if summary.get("active_languages_limited"):
-        rows.append("\n*Language counts cover the 40 most recently active public repositories today.*")
-    badges = []
-    if current["commits"] >= 5:
-        badges.append("🔥 Commit Flame")
-    if current["prs"]:
-        badges.append("🚀 Upstream Pathfinder")
-    if len(current["repos"]) >= 3:
-        badges.append("🧭 Multi-Repo Adventurer")
-    if summary["early_commit"]:
-        badges.append("🌅 Early Commit")
-    rows.extend([
-        "",
-        "**Achievements:** " + (" · ".join(badges) if badges else "Awaiting today's first unlock"),
-        "",
-        "<sub>Statistics and bars are selectable text. Line of Codes counts nonblank lines in recognized source files on the default branches of current public original repositories; comments are included, while common generated/dependency directories and minified files are excluded. Source bytes come from GitHub's language API, so LOC and bytes have different inclusion rules. Commit timing does not measure hours spent coding or cover all upstream history. Recent event data can lag. Development Stack is a curated skills list.</sub>",
-    ])
     return "\n".join(rows)
 
 
@@ -428,9 +332,6 @@ def run(user, token, root=ROOT, now=None):
     now = now or datetime.now(timezone.utc)
     repos, languages, commits, events = fetch_public_data(user, token)
     summary = summarize(user, repos, languages, commits, events, now)
-    summary["active_languages"], summary["active_languages_limited"] = (
-        fetch_today_languages(summary, repos, token)
-    )
     readme = root / "README.md"
     history_path = root / "data" / "chronicles.json"
     original = readme.read_text(encoding="utf-8")

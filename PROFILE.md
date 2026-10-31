@@ -1,6 +1,6 @@
 # Profile activity
 
-This profile uses text-based Markdown statistics and two Python standard-library scripts
+This profile uses text-based Markdown statistics and three Python standard-library scripts
 to keep its public GitHub sections current. Decorative artwork remains separate;
 statistics are real text, not static SVG cards. No external stats-card service,
 package installation, or personal access token is needed.
@@ -14,8 +14,7 @@ package installation, or personal access token is needed.
 - Ten most recently updated upstream PRs that are **open, draft, or merged**. Closed PRs that were not merged are excluded from the latest-work table. Historical chart and counts remain unchanged.
 - A “Last profile update” timestamp from the latest successful refresh, shown in New York time.
 - Text-based Code DNA: authored commit timing on default branches of current public original repositories, plus GitHub-reported language bytes and counted source lines (displayed as Line of Codes).
-- A curated, categorized Development Stack, daily public activity, and achievements. The daily activity trail shows only the latest event from each repository (up to six repositories).
-- Primary programming languages of repositories active today, including upstream repositories; up to 40 most recently active repositories are checked. No separate weekly journal is displayed.
+- A curated, categorized Development Stack. The separate daily and weekly adventure sections have been removed at the owner's request.
 - A separate selectable-text **Recent Activity** table, with one latest public event per repository (up to eight), updated by an hourly workflow.
 - An orange **contribution-grid snake** (light and dark SVG variants), generated from GitHub's contribution calendar daily. The animation is decoration, not a substitute for text statistics.
 
@@ -64,6 +63,7 @@ then run:
 ```bash
 python scripts/update_activity.py
 python scripts/update_developer_journey.py
+python scripts/update_recent_activity.py
 ```
 
 `PROFILE_USER` defaults to `OKAN-SOFTWARE`. `--fixture FILE` accepts a saved bundle
@@ -83,7 +83,7 @@ a named anchor with no destination, so it is not an image-viewer or navigation l
 The real navigation links immediately below wrap animated GIF buttons. Contribution data
 remains in the generated section, and stack details remain available as text.
 The README needs no custom CSS or JavaScript. All statistics are selectable text;
-only decorative Phoenix artwork and navigation buttons are images.
+only decorative Phoenix artwork, navigation buttons, and the contribution snake are images.
 
 To regenerate the four decorative assets locally, install Pillow and run
 `python scripts/render_profile_assets.py`. Pillow is only needed when rebuilding
@@ -102,20 +102,16 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
   most recent eligible event per repository, and includes PRs, pushes, issues,
   reviews, comments, and other supported actions. Closed-unmerged PRs are excluded.
   It is a snapshot of observable public events, not complete contribution history.
-- Daily PR and issue events use GitHub's most recent public event feed (maximum 300
-  recent events). Some events may appear late or fall outside the feed window.
-  The activity trail displays at most one latest event per repository.
-- Daily active-language counts use the repository's primary language in GitHub metadata,
-  covering public upstream repositories as well as original repositories. This does
-  not necessarily identify the language edited in a particular PR. At most 40 recently
-  active repositories are inspected per refresh; deleted or inaccessible ones are skipped.
+- The four-hour updater still observes public GitHub events to maintain its
+  history archive. The separate daily README section and its upstream-language
+  API lookups have been removed.
 - The history archive remains in `data/chronicles.json` (up to 365 days), but no
   longer appears in the README. The refresh runs every four hours.
 - LOC is a real count of nonblank lines in recognized source extensions from a
   shallow checkout of each public original repository. Comments count; generated,
   dependency, and minified files are excluded. LOC differs from GitHub source bytes
   because the two metrics use different inclusion rules.
-- API errors other than missing/removed active repositories fail the job, preserving the previous committed snapshot.
+- API errors fail the job, preserving the previous committed snapshot.
 
 ## References
 
@@ -123,4 +119,4 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
 - [GITHUB_TOKEN](https://docs.github.com/en/actions/concepts/security/github_token)
 - [Scheduled workflow events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
 
-The Extra tools & interests stack table is always expanded. The daily section contains a narrative and activity trail without a four-column totals table; the top-language heading is generated dynamically above the language table.
+The Extra tools & interests stack table is always expanded. The top-language heading is generated dynamically above the language table. Recent Activity shows Eastern Time in its header without repeating EDT/EST on every row.
