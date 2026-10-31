@@ -158,7 +158,8 @@ class JourneyTests(unittest.TestCase):
 
 
     def test_generation_keeps_code_dna_and_omits_daily_section(self):
-        original = (f"intro\n{journey.MATRIX_START}\nold matrix\n{journey.MATRIX_END}\n"\n                    f"{journey.START}\nold\n{journey.END}\nfooter")
+        original = (f"intro\n{journey.MATRIX_START}\nold matrix\n{journey.MATRIX_END}\n"
+                    f"{journey.START}\nold\n{journey.END}\nfooter")
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             readme = root / "README.md"
