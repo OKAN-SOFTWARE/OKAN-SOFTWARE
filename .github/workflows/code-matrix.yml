@@ -25,10 +25,6 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: profile-writes-${{ github.ref }}
-  cancel-in-progress: false
-
 jobs:
   verify:
     runs-on: ubuntu-latest
@@ -46,6 +42,9 @@ jobs:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: verify
     runs-on: ubuntu-latest
+    concurrency:
+      group: profile-writes-${{ github.ref }}
+      cancel-in-progress: false
     timeout-minutes: 15
     permissions:
       contents: write
