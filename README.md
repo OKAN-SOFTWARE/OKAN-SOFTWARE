@@ -94,7 +94,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
-| Forked repository in [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) | Public fork |
+| Opened PR in [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) | [Pull request](https://github.com/FasterXML/jackson-databind/pull/6362) |
 | Opened PR in [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [Pull request](https://github.com/PicadoLabs/build-with-ai/pull/226) |
 | Opened PR in [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) | [Pull request](https://github.com/littlebearapps/plainspoken/pull/183) |
 | Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/22) |
