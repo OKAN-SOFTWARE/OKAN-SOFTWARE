@@ -94,14 +94,14 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
+| Commented in [cloudflare/workers-sdk](https://github.com/cloudflare/workers-sdk) | [vite-plugin: \`vite preview\` logs every request, \`vite dev\` logs none](https://github.com/cloudflare/workers-sdk/issues/16605) |
+| Commented in [google/adk-python](https://github.com/google/adk-python) | [ContainerCodeExecutor drops output files that are hard links](https://github.com/google/adk-python/issues/7906) |
 | Opened PR in [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) | [Pull request](https://github.com/FasterXML/jackson-databind/pull/6362) |
 | Opened PR in [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [Pull request](https://github.com/PicadoLabs/build-with-ai/pull/226) |
 | Opened PR in [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) | [Pull request](https://github.com/littlebearapps/plainspoken/pull/183) |
 | Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/22) |
 | Forked repository in [ancaferro/myPhotos](https://github.com/ancaferro/myPhotos) | Public fork |
 | Commented in [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) | [fix\(E1011\): report bad Fn::FindInMap keys in unconstrained positions](https://github.com/aws-cloudformation/cfn-lint/issues/4919) |
-| Opened PR in [pylint-dev/astroid](https://github.com/pylint-dev/astroid) | [Pull request](https://github.com/pylint-dev/astroid/pull/3459) |
-| Opened PR in [java-native-access/jna](https://github.com/java-native-access/jna) | [Pull request](https://github.com/java-native-access/jna/pull/1750) |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
