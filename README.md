@@ -24,7 +24,15 @@
 ## Tools built around real needs
 
 <!-- SHOWCASE:START -->
-_The six most recently updated original public repositories will appear here automatically._
+_Automatically sorted by latest push · Original public projects only · Up to 3 source languages per card._
+
+| | |
+| :--- | :--- |
+| <a href="https://github.com/OKAN-SOFTWARE/Doc2FAQ"><img src="./assets/showcase/Doc2FAQ.svg" width="100%" alt="Doc2FAQ: project summary and source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/mole-meadow"><img src="./assets/showcase/mole-meadow.svg" width="100%" alt="mole-meadow: project summary and source languages" /></a> |
+| <a href="https://github.com/OKAN-SOFTWARE/TokenWise"><img src="./assets/showcase/TokenWise.svg" width="100%" alt="TokenWise: project summary and source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/LaunchNotes"><img src="./assets/showcase/LaunchNotes.svg" width="100%" alt="LaunchNotes: project summary and source languages" /></a> |
+| <a href="https://github.com/OKAN-SOFTWARE/Python-CLI-App"><img src="./assets/showcase/Python-CLI-App.svg" width="100%" alt="Python-CLI-App: project summary and source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/QueueFlight"><img src="./assets/showcase/QueueFlight.svg" width="100%" alt="QueueFlight: project summary and source languages" /></a> |
+
+[Browse all repositories](https://github.com/OKAN-SOFTWARE?tab=repositories)
 <!-- SHOWCASE:END -->
 
 ## Open Source Field Notes
