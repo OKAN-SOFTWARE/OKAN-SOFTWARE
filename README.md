@@ -1,4 +1,4 @@
-<!-- GITHUB-COMPATIBLE EMBER DESIGN · No JavaScript or custom CSS in README -->
+<!-- GITHUB-COMPATIBLE MATRIX DESIGN · No JavaScript or custom CSS in README -->
 
 <p align="center">
   <a href="https://github.com/search?q=author%3AOKAN-SOFTWARE&type=commits"><img src="./assets/ember/latest-commits.svg" width="100%" alt="Animated strip of recent authored GitHub commits from original projects and upstream contributions" /></a>
@@ -7,6 +7,18 @@
 <p align="center">
   <img src="./assets/phoenix-hero-animated.gif" width="100%" alt="Original animated Phoenix cyberpunk banner with glowing OKAN TIKTAS lettering" />
 </p>
+
+## Contribution Snake
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/contribution-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="./assets/contribution-snake.svg" />
+    <img src="./assets/contribution-snake.svg" width="100%" alt="Original animated contribution snake on the GitHub contribution grid" />
+  </picture>
+</p>
+
+<sub>The snake is generated daily from public contributions and uses Matrix-green animated SVGs.</sub>
 
 ---
 
@@ -32,7 +44,7 @@
 
 Practical projects I built and maintain, ordered by **most recently updated**. These are **my original repositories**, not forks.
 
-<!-- EMBER_PROJECTS:START -->
+<!-- MATRIX_PROJECTS:START -->
 <sub>Automatically sorted by latest push · Original public repositories only · Up to three source languages per card</sub>
 
 | | |
@@ -42,7 +54,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 | <a href="https://github.com/OKAN-SOFTWARE/Python-CLI-App"><img src="./assets/ember/projects/Python-CLI-App.svg" width="100%" alt="Python-CLI-App project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/QueueFlight"><img src="./assets/ember/projects/QueueFlight.svg" width="100%" alt="QueueFlight project summary with up to three source languages" /></a> |
 
 <p align="center"><a href="https://github.com/OKAN-SOFTWARE?tab=repositories"><strong>Browse all original projects ↗</strong></a></p>
-<!-- EMBER_PROJECTS:END -->
+<!-- MATRIX_PROJECTS:END -->
 
 ## Open Source Field Notes
 
@@ -147,17 +159,5 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- JOURNEY:END -->
 
 </details>
-
-## Contribution Snake
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/contribution-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="./assets/contribution-snake.svg" />
-    <img src="./assets/contribution-snake.svg" width="100%" alt="Original animated contribution snake on the GitHub contribution grid" />
-  </picture>
-</p>
-
-<sub>The snake is generated daily from public contributions and uses the original animated SVGs.</sub>
 
 <p align="center"><img src="./assets/phoenix-footer-animated.gif" width="100%" alt="Original animated Matrix-style Phoenix footer" /></p>

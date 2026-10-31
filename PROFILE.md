@@ -1,8 +1,8 @@
 # Profile activity
 
-This profile uses text-based Markdown statistics and three Python standard-library scripts
+This profile uses text-based Markdown statistics and four Python standard-library scripts
 to keep its public GitHub sections current. Decorative artwork remains separate;
-statistics are real text, not static SVG cards. No external stats-card service,
+statistics remain available as real text alongside automatically refreshed Matrix-green SVG cards. No external stats-card service,
 package installation, or personal access token is needed.
 
 ## What updates
@@ -16,7 +16,7 @@ package installation, or personal access token is needed.
 - Text-based Code DNA: authored commit timing on default branches of current public original repositories, plus GitHub-reported language bytes and counted source lines (displayed as Line of Codes).
 - A curated, categorized Development Stack. The separate daily and weekly adventure sections have been removed at the owner's request.
 - A separate selectable-text **Recent Activity** table, with one latest public event per repository (up to eight), updated by an hourly workflow.
-- An orange **contribution-grid snake** (light and dark SVG variants), generated from GitHub's contribution calendar daily. The animation is decoration, not a substitute for text statistics.
+- A Matrix-green **contribution-grid snake** (light and dark SVG variants), generated from GitHub's contribution calendar daily. The animation is decoration, not a substitute for text statistics.
 
 The text table counts PR openings and merges separately. It is **not** a commit count,
 a count of working days, GitHub’s contribution calendar, or a count of forks.
@@ -76,14 +76,15 @@ Keep the single `ACTIVITY:START` / `ACTIVITY:END` marker pair in `README.md`.
 The hourly updater owns only the `RECENT:START` / `RECENT:END` section.
 The animated SVGs live in `assets/` and are referenced through a theme-sensitive picture element.
 The journey updater uses a `JOURNEY:START` / `JOURNEY:END` marker pair; the former weekly journal markers were removed.
-Everything outside the activity and journey marker pairs stays under manual control. The approved phoenix
-and workbench illustration (`assets/phoenix-workbench.png`) appears at the top.
-It is static artwork without illustrated navigation buttons. The image sits inside
-a named anchor with no destination, so it is not an image-viewer or navigation link.
-The real navigation links immediately below wrap animated GIF buttons. Contribution data
-remains in the generated section, and stack details remain available as text.
-The README needs no custom CSS or JavaScript. All statistics are selectable text;
-only decorative Phoenix artwork, navigation buttons, and the contribution snake are images.
+Everything outside the activity, recent, journey, and Matrix project marker pairs stays under manual control.
+The animated Phoenix hero is followed immediately by the Matrix-green contribution snake, before About.
+The animated Phoenix footer remains at the bottom. The terminal, stats, stack, latest-commit ticker,
+and original-project SVG cards use a Matrix-green-on-black palette and are refreshed by
+`scripts/update_ember_showcase.py`. The legacy `assets/ember/` directory name is retained to
+avoid breaking existing image URLs. The hero, terminal, stats, stack, and footer images are plain
+HTML images without surrounding links; GitHub's own image viewer may still offer access to
+the underlying files. Project cards and the latest-commit ticker intentionally link to GitHub.
+The README needs no custom CSS or JavaScript. All statistics remain available as selectable text.
 
 To regenerate the four decorative assets locally, install Pillow and run
 `python scripts/render_profile_assets.py`. Pillow is only needed when rebuilding

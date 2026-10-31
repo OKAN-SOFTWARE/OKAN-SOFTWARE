@@ -65,19 +65,19 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           PROFILE_USER: ${{ github.repository_owner }}
         run: python scripts/update_recent_activity.py
-      - name: Refresh Ember project cards, stats and latest commits
+      - name: Refresh Matrix project cards, stats and latest commits
         env:
           GH_TOKEN: ${{ github.token }}
           PROFILE_USER: ${{ github.repository_owner }}
         run: python scripts/update_ember_showcase.py
-      - name: Draw daily Phoenix-colored contribution snake
+      - name: Draw daily Matrix-green contribution snake
         if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.schedule == '29 4 * * *'
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            assets/contribution-snake.svg?palette=github-light&color_snake=#db7b12
-            assets/contribution-snake-dark.svg?palette=github-dark&color_snake=#ffb347
+            assets/contribution-snake.svg?palette=github-light&color_snake=#00b845
+            assets/contribution-snake-dark.svg?palette=github-dark&color_snake=#39ff14
       - name: Commit changed activity and animations
         run: |
           git config user.name 'github-actions[bot]'

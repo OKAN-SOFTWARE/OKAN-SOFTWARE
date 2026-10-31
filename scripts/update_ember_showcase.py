@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Update GitHub-compatible Ember SVGs and the recent-original-project grid.
+"""Update GitHub-compatible Matrix SVGs and the recent-original-project grid.
 
 No JavaScript or custom CSS is required in README.md. SVGs are embedded as images.
 Existing ACTIVITY, RECENT, and JOURNEY generated sections remain untouched.
@@ -19,19 +19,19 @@ from urllib.parse import quote
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-START = '<!-- EMBER_PROJECTS:START -->'
-END = '<!-- EMBER_PROJECTS:END -->'
+START = '<!-- MATRIX_PROJECTS:START -->'
+END = '<!-- MATRIX_PROJECTS:END -->'
 REPO_RE = re.compile(r'^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$')
 USER_RE = re.compile(r'^[A-Za-z0-9-]{1,39}$')
 IGNORED = {'Markdown', 'JSON', 'YAML', 'TOML', 'XML', 'Text', 'Jupyter Notebook', 'Dockerfile'}
-ACCENT = '#ffc17e'
+ACCENT = '#39ff14'
 
 
 def api(path: str, token: str):
     request = Request('https://api.github.com' + path, headers={
         'Accept': 'application/vnd.github+json',
         'Authorization': 'Bearer ' + token,
-        'User-Agent': 'okan-readme-ember-showcase',
+        'User-Agent': 'okan-readme-matrix-showcase',
         'X-GitHub-Api-Version': '2022-11-28',
     })
     try:
@@ -122,13 +122,13 @@ def project_svg(repo: dict, languages: list[str]) -> str:
     chips, cx = [], 29
     for lang in languages[:3]:
         width = min(150, max(65, len(lang)*9 + 25))
-        chips.append(f'<rect x="{cx}" y="218" width="{width}" height="29" rx="7" fill="#38271f" stroke="#875338"/>'
+        chips.append(f'<rect x="{cx}" y="218" width="{width}" height="29" rx="7" fill="#102a1b" stroke="#196c39"/>'
                      f'<text x="{cx+12}" y="237" class="tag">{x(lang)}</text>')
         cx += width + 8
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="560" height="266" viewBox="0 0 560 266" role="img" aria-label="{x(name)} project card">
-<defs><linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1d2524"/><stop offset="1" stop-color="#0c1519"/></linearGradient></defs>
-<style>.small{{fill:#ffad72;font:700 12px ui-monospace,Consolas,monospace;letter-spacing:1.2px}}.name{{fill:#fff0e2;font:700 29px Arial,sans-serif}}.date{{fill:#b7a39a;font:12px ui-monospace,Consolas,monospace}}.desc{{fill:#c0cbc6;font:15px Arial,sans-serif}}.tag{{fill:#ffc895;font:12px ui-monospace,Consolas,monospace}}</style>
-<rect x="1" y="1" width="558" height="264" rx="16" fill="url(#panel)" stroke="#73503c" stroke-width="2"/>
+<defs><linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1d12"/><stop offset="1" stop-color="#040b08"/></linearGradient></defs>
+<style>.small{{fill:#00e676;font:700 12px ui-monospace,Consolas,monospace;letter-spacing:1.2px}}.name{{fill:#e4ffe9;font:700 29px Arial,sans-serif}}.date{{fill:#83bd96;font:12px ui-monospace,Consolas,monospace}}.desc{{fill:#b8d9c3;font:15px Arial,sans-serif}}.tag{{fill:#79ff96;font:12px ui-monospace,Consolas,monospace}}</style>
+<rect x="1" y="1" width="558" height="264" rx="16" fill="url(#panel)" stroke="#1a7942" stroke-width="2"/>
 <path d="M24 27h22 M24 27v22" stroke="{ACCENT}" stroke-width="3" stroke-linecap="round"/>
 <text x="29" y="60" class="small">ORIGINAL PROJECT</text><text x="29" y="107" class="name">{x(name)}</text>
 <text x="29" y="127" class="date">LATEST PUSH · {pushed}</text>{line_nodes}
@@ -141,7 +141,7 @@ def ticker_svg(commits: list[dict]) -> str:
     items = []
     for i, commit in enumerate(commits):
         cx = i*step + 5
-        items.append(f'<rect x="{cx}" y="51" width="394" height="66" rx="9" fill="#211c1a" stroke="#7b4f39"/>'
+        items.append(f'<rect x="{cx}" y="51" width="394" height="66" rx="9" fill="#0a2112" stroke="#1b6c3a"/>'
                      f'<rect x="{cx+10}" y="64" width="3" height="40" rx="1.5" fill="{ACCENT}"/>'
                      f'<text x="{cx+22}" y="76" class="repo">{x(truncate(commit["repo"], 31))}</text>'
                      f'<text x="{cx+22}" y="99" class="msg">{x(truncate(commit["message"], 42))}</text>'
@@ -150,11 +150,11 @@ def ticker_svg(commits: list[dict]) -> str:
     seconds = max(65, len(commits)*8)
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="143" viewBox="0 0 {width} 143" role="img" aria-label="Animated recent authored GitHub commits">
 <title>Latest commits · original projects and upstream contributions</title>
-<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#171e1c"/><stop offset="1" stop-color="#15191b"/></linearGradient><clipPath id="clip"><rect x="10" y="47" width="1180" height="75"/></clipPath></defs>
-<style>.header{{fill:{ACCENT};font:700 16px ui-monospace,Consolas,monospace;letter-spacing:1px}}.sub{{fill:#b6a69b;font:11px ui-monospace,Consolas,monospace}}.repo{{fill:#ffc18b;font:700 13px ui-monospace,Consolas,monospace}}.msg{{fill:#e3ded8;font:12px ui-monospace,Consolas,monospace}}.hash{{fill:#c2a7dc;font:11px ui-monospace,Consolas,monospace}}@keyframes scroll{{from{{transform:translateX(0)}}to{{transform:translateX(-{period}px)}}}}.move{{animation:scroll {seconds}s linear infinite}}@media(prefers-reduced-motion:reduce){{.move{{animation:none}}}}</style>
-<rect x="1" y="1" width="1198" height="141" rx="12" fill="url(#bg)" stroke="#87593f" stroke-width="2"/>
-<circle cx="22" cy="24" r="5" fill="#ffad72"/><text x="35" y="30" class="header">LATEST COMMITS</text><text x="247" y="29" class="sub">ORIGINAL PROJECTS + UPSTREAM CONTRIBUTIONS</text>
-<path d="M15 43h1170" stroke="#5c4032"/>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#07150c"/><stop offset="1" stop-color="#050b08"/></linearGradient><clipPath id="clip"><rect x="10" y="47" width="1180" height="75"/></clipPath></defs>
+<style>.header{{fill:{ACCENT};font:700 16px ui-monospace,Consolas,monospace;letter-spacing:1px}}.sub{{fill:#8bbd99;font:11px ui-monospace,Consolas,monospace}}.repo{{fill:#75ff9a;font:700 13px ui-monospace,Consolas,monospace}}.msg{{fill:#d2f3d9;font:12px ui-monospace,Consolas,monospace}}.hash{{fill:#68d4a4;font:11px ui-monospace,Consolas,monospace}}@keyframes scroll{{from{{transform:translateX(0)}}to{{transform:translateX(-{period}px)}}}}.move{{animation:scroll {seconds}s linear infinite}}@media(prefers-reduced-motion:reduce){{.move{{animation:none}}}}</style>
+<rect x="1" y="1" width="1198" height="141" rx="12" fill="url(#bg)" stroke="#16723d" stroke-width="2"/>
+<circle cx="22" cy="24" r="5" fill="#00e676"/><text x="35" y="30" class="header">LATEST COMMITS</text><text x="247" y="29" class="sub">ORIGINAL PROJECTS + UPSTREAM CONTRIBUTIONS</text>
+<path d="M15 43h1170" stroke="#14592f"/>
 <g clip-path="url(#clip)"><g class="move"><g>{group}</g><g transform="translate({period} 0)">{group}</g></g></g>
 <text x="16" y="134" class="sub">PUBLIC COMMIT HISTORY  ·  REFRESHED BY GITHUB ACTIONS</text></svg>'''
 
@@ -169,12 +169,12 @@ def stats_svg(readme: str) -> str:
     cells = []
     for i, (value, label) in enumerate(zip(values, labels)):
         xx = 2 + i*301
-        cells.append(f'<rect x="{xx}" y="2" width="294" height="122" rx="13" fill="#151f20" stroke="#5b4537"/>'
+        cells.append(f'<rect x="{xx}" y="2" width="294" height="122" rx="13" fill="#0b1b12" stroke="#1b6338"/>'
                      f'<rect x="{xx}" y="15" width="3" height="90" rx="1.5" fill="{ACCENT}"/>'
                      f'<text x="{xx+21}" y="73" class="num">{x(value)}</text>'
                      f'<text x="{xx+21}" y="101" class="label">{x(label)}</text>')
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="128" viewBox="0 0 1200 128" role="img" aria-label="GitHub contribution snapshot: {', '.join(values)}">
-<style>.num{{fill:{ACCENT};font:700 49px Arial,sans-serif}}.label{{fill:#b6b6af;font:12px ui-monospace,Consolas,monospace;letter-spacing:1px}}</style>{''.join(cells)}</svg>'''
+<style>.num{{fill:{ACCENT};font:700 49px Arial,sans-serif}}.label{{fill:#9ac6a5;font:12px ui-monospace,Consolas,monospace;letter-spacing:1px}}</style>{''.join(cells)}</svg>'''
 
 
 def stack_svg() -> str:
@@ -184,22 +184,22 @@ def stack_svg() -> str:
         ww = max(70, len(lang)*13 + 26)
         if xx + ww > 1180:
             xx, yy = 22, 94
-        chips.append(f'<rect x="{xx}" y="{yy-24}" width="{ww}" height="34" rx="7" fill="#34271f" stroke="#78513c"/>'
+        chips.append(f'<rect x="{xx}" y="{yy-24}" width="{ww}" height="34" rx="7" fill="#102b1b" stroke="#1c7240"/>'
                      f'<text x="{xx+13}" y="{yy-1}" class="chip">{x(lang)}</text>')
         xx += ww + 11
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="126" viewBox="0 0 1200 126" role="img" aria-label="Java, Python, JavaScript, TypeScript, C sharp, SQL, HTML, CSS, Rust, PowerShell and AWS">
-<style>.chip{{fill:#ffc38d;font:700 15px ui-monospace,Consolas,monospace}}</style><rect x="1" y="1" width="1198" height="124" rx="12" fill="#121d1f" stroke="#7a513a" stroke-width="2"/>{''.join(chips)}</svg>'''
+<style>.chip{{fill:#a0ffb3;font:700 15px ui-monospace,Consolas,monospace}}</style><rect x="1" y="1" width="1198" height="124" rx="12" fill="#07150e" stroke="#1d7642" stroke-width="2"/>{''.join(chips)}</svg>'''
 
 
 def terminal_svg() -> str:
     return '''<svg xmlns="http://www.w3.org/2000/svg" width="490" height="280" viewBox="0 0 490 280" role="img" aria-label="Terminal introduction">
-<defs><linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#231d19"/><stop offset="1" stop-color="#0b1619"/></linearGradient></defs>
-<style>.head{fill:#b9a59b;font:13px ui-monospace,Consolas,monospace}.cmd{fill:#ffbd83;font:16px ui-monospace,Consolas,monospace}.ans{fill:#d4d9d1;font:15px ui-monospace,Consolas,monospace}@keyframes blink{50%{opacity:0}}.cursor{animation:blink 1.2s steps(1) infinite}@media(prefers-reduced-motion:reduce){.cursor{animation:none}}</style>
-<rect x="1" y="1" width="488" height="278" rx="15" fill="url(#panel)" stroke="#78513b" stroke-width="2"/>
-<circle cx="25" cy="27" r="6" fill="#ff6b64"/><circle cx="46" cy="27" r="6" fill="#f3b85b"/><circle cx="67" cy="27" r="6" fill="#5bd39a"/><text x="365" y="32" class="head">profile.sh</text><path d="M20 49h450" stroke="#614536"/>
+<defs><linearGradient id="panel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#102a18"/><stop offset="1" stop-color="#030a06"/></linearGradient></defs>
+<style>.head{fill:#8ec9a2;font:13px ui-monospace,Consolas,monospace}.cmd{fill:#39ff14;font:16px ui-monospace,Consolas,monospace}.ans{fill:#dcffe6;font:15px ui-monospace,Consolas,monospace}@keyframes blink{50%{opacity:0}}.cursor{animation:blink 1.2s steps(1) infinite}@media(prefers-reduced-motion:reduce){.cursor{animation:none}}</style>
+<rect x="1" y="1" width="488" height="278" rx="15" fill="url(#panel)" stroke="#1e7644" stroke-width="2"/>
+<circle cx="25" cy="27" r="6" fill="#0b5d2b"/><circle cx="46" cy="27" r="6" fill="#16b85d"/><circle cx="67" cy="27" r="6" fill="#39ff14"/><text x="365" y="32" class="head">profile.sh</text><path d="M20 49h450" stroke="#1b5533"/>
 <text x="25" y="83" class="cmd">$ whoami</text><text x="25" y="109" class="ans">software engineer</text>
 <text x="25" y="150" class="cmd">$ focus</text><text x="25" y="177" class="ans">backend · tools · automation</text>
-<text x="25" y="217" class="cmd">$ workflow</text><text x="25" y="244" class="ans">build → test → contribute</text><rect class="cursor" x="355" y="231" width="8" height="15" fill="#ffc17e"/>
+<text x="25" y="217" class="cmd">$ workflow</text><text x="25" y="244" class="ans">build → test → contribute</text><rect class="cursor" x="355" y="231" width="8" height="15" fill="#39ff14"/>
 </svg>'''
 
 
@@ -217,7 +217,7 @@ def projects_markdown(repos: list[dict]) -> str:
 
 def replace_section(readme: str, generated: str) -> str:
     if readme.count(START) != 1 or readme.count(END) != 1:
-        raise ValueError('README must have exactly one Ember project marker pair')
+        raise ValueError('README must have exactly one Matrix project marker pair')
     head, rest = readme.split(START, 1)
     _, tail = rest.split(END, 1)
     return head + START + '\n' + generated + '\n' + END + tail
@@ -246,7 +246,7 @@ def refresh(user: str, token: str, root: Path = ROOT) -> None:
     (output / 'terminal.svg').write_text(terminal_svg(), encoding='utf-8')
     if updated != current:
         target.write_text(updated, encoding='utf-8')
-    print(f'Ember showcase updated: {len(repos)} original projects and {len(commits)} commits')
+    print(f'Matrix showcase updated: {len(repos)} original projects and {len(commits)} commits')
 
 
 def main() -> None:
@@ -260,5 +260,5 @@ if __name__ == '__main__':
     try:
         main()
     except (ValueError, OSError, RuntimeError, TypeError, KeyError) as exc:
-        print(f'Ember refresh failed: {exc}', file=sys.stderr)
+        print(f'Matrix refresh failed: {exc}', file=sys.stderr)
         sys.exit(1)
