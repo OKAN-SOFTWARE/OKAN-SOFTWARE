@@ -79,11 +79,13 @@ class JourneyTests(unittest.TestCase):
         heading = "### 🧩 My Development Stack"
         footer = "assets/phoenix-footer-animated.gif"
         self.assertEqual(1, readme.count(heading))
-        self.assertLess(readme.index("</details>"), readme.index(heading))
+        self.assertLess(readme.index("<!-- UPSTREAM_CODE:END -->"), readme.index(heading))
         self.assertLess(readme.index(heading), readme.index(footer))
         self.assertIn("| **Backend** |", readme)
         self.assertIn("| **Cloud** |", readme)
-        self.assertIn("<summary><strong>Explore public GitHub history</strong></summary>", readme)
+        self.assertNotIn("Explore public GitHub history", readme)
+        self.assertNotIn("### Public GitHub History", readme)
+        self.assertNotIn(journey.START, readme)
 
     def test_loc_counts_nonblank_source_and_excludes_generated_dirs(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -162,7 +164,7 @@ class JourneyTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             readme = root / "README.md"
-            readme.write_text(f"{journey.START}\nold\n{journey.END}", encoding="utf-8")
+            readme.write_text("<!-- CODE_MATRIX:START -->\nold\n<!-- CODE_MATRIX:END -->", encoding="utf-8")
             with patch.object(journey, "fetch_public_data", side_effect=RuntimeError("API failure")):
                 with self.assertRaises(RuntimeError):
                     journey.run("OKAN-SOFTWARE", "token", root, NOW)
@@ -172,7 +174,7 @@ class JourneyTests(unittest.TestCase):
 
     def test_generation_keeps_code_dna_and_omits_daily_section(self):
         original = (f"intro\n{journey.MATRIX_START}\nold matrix\n{journey.MATRIX_END}\n"
-                    f"{journey.START}\nold\n{journey.END}\nfooter")
+                    "footer")
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             readme = root / "README.md"
@@ -184,7 +186,8 @@ class JourneyTests(unittest.TestCase):
                 journey.run("OKAN-SOFTWARE", "token", root, NOW)
             content = readme.read_text(encoding="utf-8")
             self.assertIn("OKAN\'S CODE STATS // LIVE UPDATES", content)
-            self.assertIn("Public GitHub History", content)
+            self.assertNotIn("Public GitHub History", content)
+            self.assertNotIn("Explore public GitHub history", content)
             self.assertNotIn("When I Commit", content)
             self.assertNotIn("My Development Stack", content)
             self.assertNotIn("Today's Coding Adventure", content)
@@ -219,8 +222,7 @@ class JourneyTests(unittest.TestCase):
             readme = root / "README.md"
             readme.write_text(
                 "hero\\n" + journey.MATRIX_START + "\\nold table\\n" +
-                journey.MATRIX_END + "\\n" + journey.START +
-                "\\nOther statistics\\n" + journey.END + "\\nfooter",
+                journey.MATRIX_END + "\\nOther statistics\\nfooter",
                 encoding="utf-8",
             )
             repo = {"full_name": "OKAN-SOFTWARE/example", "fork": False,
@@ -305,7 +307,7 @@ class JourneyTests(unittest.TestCase):
         self.assertNotIn("When I Commit", readme)
         self.assertIn("OKAN\'S CODE STATS // LIVE UPDATES", readme)
         self.assertIn("javascript/javascript-original.svg", readme)
-        self.assertLess(readme.index(journey.MATRIX_START), readme.index("<details>"))
+        self.assertLess(readme.index(journey.MATRIX_START), readme.index("### 🧩 My Development Stack"))
         self.assertIn("<!-- MATRIX_PROJECTS:START -->", readme)
         self.assertIn("Tools built around real needs", readme)
         self.assertIn("assets/phoenix-hero-animated.gif", readme)

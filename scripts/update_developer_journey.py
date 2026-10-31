@@ -367,6 +367,7 @@ def matrix_markdown(locs, repo_count):
         "<sub>Automatically checked every 15 minutes · Public original repositories · "
         "Nonblank source lines (including comments) · Dependencies, generated files, "
         "and binaries excluded · Tiny nonzero shares show one green cell</sub>",
+        f"<!-- ORIGINAL_REPOS:{repo_count} -->",
     ])
     return "\n".join(rows)
 
@@ -444,8 +445,7 @@ def run(user, token, root=ROOT, now=None):
     archive = archive_updates(existing, summary)
     summary["locs"], cache = count_source_lines(repos, token, load_matrix_cache(root))
     updated = replace_matrix_section(
-        replace_section(original, markdown(summary, archive)),
-        matrix_markdown(summary["locs"], summary["repos"]),
+        original, matrix_markdown(summary["locs"], summary["repos"])
     )
     archive_text = json.dumps(archive, ensure_ascii=False, indent=2) + "\n"
     history_path.parent.mkdir(parents=True, exist_ok=True)

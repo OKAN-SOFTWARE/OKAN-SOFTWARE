@@ -134,6 +134,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="18" height="18" alt="" /> **Dockerfile** | 9 | **0.13%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
 
 <sub>Automatically checked every 15 minutes · Public original repositories · Nonblank source lines (including comments) · Dependencies, generated files, and binaries excluded · Tiny nonzero shares show one green cell</sub>
+<!-- ORIGINAL_REPOS:9 -->
 <!-- CODE_MATRIX:END -->
 
 <!-- UPSTREAM_CODE:START -->
@@ -151,19 +152,6 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 <sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Languages from added source files; frameworks only from added imports · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->
-
-<details>
-<summary><strong>Explore public GitHub history</strong></summary>
-
-<!-- JOURNEY:START -->
-**Developer stats refreshed:** Oct 31, 2026 at 05:51 PM EDT
-
-### Public GitHub History
-
-**80 authored commits · 9 public original repositories**
-<!-- JOURNEY:END -->
-
-</details>
 
 ### 🧩 My Development Stack
 

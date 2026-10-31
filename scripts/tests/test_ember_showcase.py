@@ -76,7 +76,7 @@ class MatrixShowcaseTests(unittest.TestCase):
         svg=s.stats_svg(readme)
         import re
         activity = re.search(r'\*\*(\d+) opened · (\d+) merged · \d+ open now · (\d+) upstream repositories\*\*', readme)
-        journey = re.search(r'\*\*\d+ authored commits · (\d+) public original repositories\*\*', readme)
+        journey = re.search(r'<!-- ORIGINAL_REPOS:(\d+) -->', readme)
         self.assertIsNotNone(activity)
         self.assertIsNotNone(journey)
         for number in [*activity.groups(), journey.group(1)]:
@@ -84,7 +84,7 @@ class MatrixShowcaseTests(unittest.TestCase):
 
     def test_markers_assets_and_timestamp_free_activity(self):
         readme=(ROOT/'README.md').read_text(encoding='utf-8')
-        for name in ['ACTIVITY','RECENT','JOURNEY','MATRIX_PROJECTS']:
+        for name in ['ACTIVITY','RECENT','MATRIX_PROJECTS']:
             self.assertEqual(1,readme.count(f'<!-- {name}:START -->'))
             self.assertEqual(1,readme.count(f'<!-- {name}:END -->'))
         for path in ['assets/phoenix-hero-animated.gif','assets/contribution-snake-dark.svg',
