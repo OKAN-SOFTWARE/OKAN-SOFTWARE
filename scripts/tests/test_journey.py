@@ -191,7 +191,8 @@ class JourneyTests(unittest.TestCase):
         self.assertNotIn("Weekly Coding Adventure", readme)
         self.assertNotIn("Activity sync", readme)
         self.assertIn("## 🐍 Contribution Snake", readme)
-        self.assertIn("VeilDrop", readme)
+        self.assertIn("Tools built around real needs", readme)
+        self.assertIn("<!-- SHOWCASE:START -->", readme)
         stack = readme[readme.index("## Extra tools & interests"):]
         self.assertIn("### Explore the stack", stack)
         self.assertNotIn("<summary>Explore the stack</summary>", stack)
