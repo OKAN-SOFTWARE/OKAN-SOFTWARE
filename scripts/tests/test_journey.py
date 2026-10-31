@@ -72,20 +72,15 @@ class JourneyTests(unittest.TestCase):
             self.assertNotIn(excluded, rendered)
         self.assertNotIn("<img", rendered)
 
-    def test_development_stack_is_visible_before_footer(self):
+    def test_development_stack_is_absent_and_footer_remains(self):
         readme = (Path(__file__).resolve().parents[2] / "README.md").read_text(
             encoding="utf-8"
         )
-        heading = "### 🧩 My Development Stack"
-        footer = "assets/phoenix-footer-animated.gif"
-        self.assertEqual(1, readme.count(heading))
-        self.assertLess(readme.index("<!-- UPSTREAM_CODE:END -->"), readme.index(heading))
-        self.assertLess(readme.index(heading), readme.index(footer))
-        self.assertIn("| **Backend** |", readme)
-        self.assertIn("| **Cloud** |", readme)
-        self.assertNotIn("Explore public GitHub history", readme)
-        self.assertNotIn("### Public GitHub History", readme)
-        self.assertNotIn(journey.START, readme)
+        self.assertNotIn("### 🧩 My Development Stack", readme)
+        self.assertNotIn("| Area | Technologies |", readme)
+        self.assertIn("assets/phoenix-footer-animated.gif", readme)
+        self.assertLess(readme.index("<!-- UPSTREAM_CODE:END -->"),
+                        readme.index("assets/phoenix-footer-animated.gif"))
 
     def test_loc_counts_nonblank_source_and_excludes_generated_dirs(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -293,7 +288,7 @@ class JourneyTests(unittest.TestCase):
         self.assertEqual("b" * 40, refreshed[repo["full_name"]]["sha"])
         cloned.assert_called_once()
 
-    def test_readme_omits_daily_and_exposes_stack(self):
+    def test_readme_omits_daily_and_static_stack(self):
         readme = (SCRIPT.parents[1] / "README.md").read_text(encoding="utf-8")
         self.assertNotIn("Today's Coding Adventure", readme)
         self.assertNotIn("<!-- WEEKLY:START -->", readme)
@@ -307,7 +302,8 @@ class JourneyTests(unittest.TestCase):
         self.assertNotIn("When I Commit", readme)
         self.assertIn("OKAN\'S CODE STATS // LIVE UPDATES", readme)
         self.assertIn("javascript/javascript-original.svg", readme)
-        self.assertLess(readme.index(journey.MATRIX_START), readme.index("### 🧩 My Development Stack"))
+        self.assertNotIn("### 🧩 My Development Stack", readme)
+        self.assertLess(readme.index(journey.MATRIX_START), readme.index("<!-- UPSTREAM_CODE:START -->"))
         self.assertIn("<!-- MATRIX_PROJECTS:START -->", readme)
         self.assertIn("Tools built around real needs", readme)
         self.assertIn("assets/phoenix-hero-animated.gif", readme)
