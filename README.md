@@ -61,7 +61,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Oct 31, 2026 at 5:02 PM EDT**
+**Last profile update: Oct 31, 2026 at 5:18 PM EDT**
 
 **66 opened · 28 merged · 34 open now · 46 upstream repositories**
 
@@ -69,13 +69,13 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator · #11944](https://github.com/microsoft/pyright/pull/11944) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 | 🟢 Open | [fix(ebs): validate IOPS-to-volume-size ratios · #4974](https://github.com/aws-cloudformation/cfn-lint/pull/4974) | [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) |
 | 🟢 Open | [Fix unexpected tokens in bean deserialization (#6357) · #6362](https://github.com/FasterXML/jackson-databind/pull/6362) | [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) |
 | 🟢 Open | [fix(cli): normalize autonomous decisions under decisions namespace · #226](https://github.com/PicadoLabs/build-with-ai/pull/226) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [fix(hooks): ignore writing requests inside quoted examples · #183](https://github.com/littlebearapps/plainspoken/pull/183) | [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) |
 | 🟢 Open | [fix(parser): support numbered lists and markdown tables · #224](https://github.com/PicadoLabs/build-with-ai/pull/224) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟣 Merged | [fix(prompt-engine): prevent duplicate nested architectural decisions · #203](https://github.com/PicadoLabs/build-with-ai/pull/203) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
-| 🟢 Open | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator · #11944](https://github.com/microsoft/pyright/pull/11944) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 | 🟢 Open | [fix(win32): correct SetCursorPos argument types (#1745) · #1750](https://github.com/java-native-access/jna/pull/1750) | [java-native-access/jna](https://github.com/java-native-access/jna) |
 | 🟢 Open | [fix(mysql): reset popped state when re-pushing queue messages (#1777) · #1784](https://github.com/conductor-oss/conductor/pull/1784) | [conductor-oss/conductor](https://github.com/conductor-oss/conductor) |
 | 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
@@ -84,7 +84,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:3c1ac588631e997deee0338f7ff05497f3e7d8c7574d4183a12575f4e316971e -->
+<!-- ACTIVITY:SNAPSHOT:f91443fd49d0ddfdaa13d5dd960ee6f55cf163d94c220130f72354af61637657 -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
@@ -140,7 +140,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <summary><strong>Explore public GitHub history and development stack</strong></summary>
 
 <!-- JOURNEY:START -->
-**Developer stats refreshed:** Oct 31, 2026 at 05:02 PM EDT
+**Developer stats refreshed:** Oct 31, 2026 at 05:18 PM EDT
 
 ### Public GitHub History
 
