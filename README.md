@@ -52,14 +52,14 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 <!-- RECENT:START -->
 | Recent activity | Details | Time (Eastern) |
 | :--- | :--- | :--- |
-| Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/16) | Oct 30, 08:23 PM |
+| Opened PR in [pylint-dev/astroid](https://github.com/pylint-dev/astroid) | [Pull request](https://github.com/pylint-dev/astroid/pull/3459) | Oct 30, 08:58 PM |
+| Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/17) | Oct 30, 08:58 PM |
+| Opened PR in [java-native-access/jna](https://github.com/java-native-access/jna) | [Pull request](https://github.com/java-native-access/jna/pull/1750) | Oct 30, 08:37 PM |
 | Opened PR in [conductor-oss/conductor](https://github.com/conductor-oss/conductor) | [Pull request](https://github.com/conductor-oss/conductor/pull/1784) | Oct 30, 08:22 PM |
 | Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) | Oct 30, 03:55 PM |
 | Commented in [vitest-dev/vitest](https://github.com/vitest-dev/vitest) | [fix\(vitest\): resolve dependencies from project root](https://github.com/vitest-dev/vitest/issues/11805) | Oct 30, 11:14 AM |
 | Forked repository in [celery/kombu](https://github.com/celery/kombu) | Public fork | Oct 30, 09:43 AM |
 | Opened PR in [pycontribs/jira](https://github.com/pycontribs/jira) | [Pull request](https://github.com/pycontribs/jira/pull/2449) | Oct 30, 08:45 AM |
-| Commented in [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) | [💡 Linux: Embed AppImage update information](https://github.com/super-productivity/super-productivity/issues/9659) | Oct 30, 05:44 AM |
-| Opened PR in [actions/dependency-review-action](https://github.com/actions/dependency-review-action) | [Pull request](https://github.com/actions/dependency-review-action/pull/1179) | Oct 29, 11:07 PM |
 <!-- RECENT:END -->
 
 <!-- JOURNEY:START -->
