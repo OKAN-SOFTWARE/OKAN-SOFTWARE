@@ -52,8 +52,8 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 <!-- RECENT:START -->
 | Recent activity | Details | Time (Eastern) |
 | :--- | :--- | :--- |
-| Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/15) | Oct 30, 08:12 PM |
-| Forked repository in [conductor-oss/conductor](https://github.com/conductor-oss/conductor) | Public fork | Oct 30, 08:11 PM |
+| Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/16) | Oct 30, 08:23 PM |
+| Opened PR in [conductor-oss/conductor](https://github.com/conductor-oss/conductor) | [Pull request](https://github.com/conductor-oss/conductor/pull/1784) | Oct 30, 08:22 PM |
 | Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) | Oct 30, 03:55 PM |
 | Commented in [vitest-dev/vitest](https://github.com/vitest-dev/vitest) | [fix\(vitest\): resolve dependencies from project root](https://github.com/vitest-dev/vitest/issues/11805) | Oct 30, 11:14 AM |
 | Forked repository in [celery/kombu](https://github.com/celery/kombu) | Public fork | Oct 30, 09:43 AM |
