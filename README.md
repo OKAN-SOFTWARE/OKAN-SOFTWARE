@@ -7,13 +7,14 @@
 <p align="center">
   <a href="https://github.com/OKAN-SOFTWARE?tab=repositories"><img src="./assets/button-projects.gif" width="250" height="66" alt="My projects" /></a>
   <a href="https://github.com/pulls?q=is%3Apr+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE"><img src="./assets/button-contributions.gif" width="250" height="66" alt="Upstream contributions" /></a>
-  <a href="https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/actions/workflows/profile-activity.yml"><img src="./assets/button-sync.gif" width="250" height="66" alt="Activity sync" /></a>
 </p>
 
 
-I’m **Okan Tiktas**. I build tools for those **“there has to be an easier way”** moments—and contribute fixes to the tools other developers depend on.
+I’m **Okan Tiktas**, a software engineer who enjoys turning **“there has to be an easier way”** into useful, dependable software. I work across backend services, web interfaces, data workflows, and automation—with an emphasis on maintainable code, practical problem-solving, and testing.
 
-My open-source work usually starts with a bug I can reproduce. I trace it, make a focused change, add a regression test, and work through review. My forks are the workbench; the pull requests below show what I’ve sent upstream.
+My technical toolkit includes **Java, Python, JavaScript/TypeScript, C#**, **Node.js/Express**, **React**, and **SQL/NoSQL** databases. I’m also exploring **AWS serverless architecture, cloud optimization, and AI token efficiency**. I like connecting the right technology to a real need, whether that's improving an API, simplifying a workflow, or making a developer tool more reliable.
+
+That mindset drives projects such as **VeilDrop** for private log redaction and encrypted handoffs, **Doc2FAQ** for turning documents into editable FAQs, and **LaunchNotes** for translating commit history into readable releases. In open source, I reproduce issues, trace root causes, make focused changes, and add regression tests. My contributions touch **CLI tools, CI workflows, testing, documentation, and application bugs**; the upstream PRs below show the work and review process.
 
 ## Open Source Field Notes
 
@@ -51,14 +52,14 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 <!-- RECENT:START -->
 | Recent activity | Details | Time (Eastern) |
 | :--- | :--- | :--- |
-| Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/15) | Oct 30, 08:12 PM EDT |
-| Forked repository in [conductor-oss/conductor](https://github.com/conductor-oss/conductor) | Public fork | Oct 30, 08:11 PM EDT |
-| Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) | Oct 30, 03:55 PM EDT |
-| Commented in [vitest-dev/vitest](https://github.com/vitest-dev/vitest) | [fix\(vitest\): resolve dependencies from project root](https://github.com/vitest-dev/vitest/issues/11805) | Oct 30, 11:14 AM EDT |
-| Forked repository in [celery/kombu](https://github.com/celery/kombu) | Public fork | Oct 30, 09:43 AM EDT |
-| Opened PR in [pycontribs/jira](https://github.com/pycontribs/jira) | [Pull request](https://github.com/pycontribs/jira/pull/2449) | Oct 30, 08:45 AM EDT |
-| Commented in [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) | [💡 Linux: Embed AppImage update information](https://github.com/super-productivity/super-productivity/issues/9659) | Oct 30, 05:44 AM EDT |
-| Opened PR in [actions/dependency-review-action](https://github.com/actions/dependency-review-action) | [Pull request](https://github.com/actions/dependency-review-action/pull/1179) | Oct 29, 11:07 PM EDT |
+| Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/15) | Oct 30, 08:12 PM |
+| Forked repository in [conductor-oss/conductor](https://github.com/conductor-oss/conductor) | Public fork | Oct 30, 08:11 PM |
+| Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) | Oct 30, 03:55 PM |
+| Commented in [vitest-dev/vitest](https://github.com/vitest-dev/vitest) | [fix\(vitest\): resolve dependencies from project root](https://github.com/vitest-dev/vitest/issues/11805) | Oct 30, 11:14 AM |
+| Forked repository in [celery/kombu](https://github.com/celery/kombu) | Public fork | Oct 30, 09:43 AM |
+| Opened PR in [pycontribs/jira](https://github.com/pycontribs/jira) | [Pull request](https://github.com/pycontribs/jira/pull/2449) | Oct 30, 08:45 AM |
+| Commented in [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) | [💡 Linux: Embed AppImage update information](https://github.com/super-productivity/super-productivity/issues/9659) | Oct 30, 05:44 AM |
+| Opened PR in [actions/dependency-review-action](https://github.com/actions/dependency-review-action) | [Pull request](https://github.com/actions/dependency-review-action/pull/1179) | Oct 29, 11:07 PM |
 <!-- RECENT:END -->
 
 <!-- JOURNEY:START -->
@@ -98,25 +99,6 @@ My open-source work usually starts with a bug I can reproduce. I trace it, make 
 | **Data & SQL** | SQL · PostgreSQL · SQL Server · SQLite · MongoDB · DynamoDB |
 | **OS & DevOps** | Windows · Ubuntu/WSL · GitHub Actions · Docker |
 | **Cloud** | AWS Lambda · SQS · SNS · EventBridge · EC2 |
-
-### 🔥 Today's Coding Adventure · Friday, October 30, 2026
-
-Our daily development journey is here — a timeline of today's public coding and contribution activity.
-
-#### ⚡ Today's Public Activity Trail
-
-- **08:12 PM** · Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE)
-- **11:12 AM** · Opened PR in [vitest-dev/vitest](https://github.com/vitest-dev/vitest)
-- **09:08 AM** · Opened PR in [nodejs/doc-kit](https://github.com/nodejs/doc-kit)
-- **08:45 AM** · Opened PR in [pycontribs/jira](https://github.com/pycontribs/jira)
-
-#### 💻 Languages of Repositories Active Today
-
-**Python** (2 repos) · **TypeScript** (1 repo) · **JavaScript** (1 repo)
-
-**Achievements:** 🚀 Upstream Pathfinder · 🧭 Multi-Repo Adventurer
-
-<sub>Statistics and bars are selectable text. Line of Codes counts nonblank lines in recognized source files on the default branches of current public original repositories; comments are included, while common generated/dependency directories and minified files are excluded. Source bytes come from GitHub's language API, so LOC and bytes have different inclusion rules. Commit timing does not measure hours spent coding or cover all upstream history. Recent event data can lag. Development Stack is a curated skills list.</sub>
 <!-- JOURNEY:END -->
 
 ## Built from an everyday problem
@@ -142,7 +124,7 @@ Our daily development journey is here — a timeline of today's public coding an
 
 Tools used across personal projects and contribution work; AWS topics include ongoing learning.
 
-## 🐍 The Phoenix Contribution Snake
+## 🐍 Contribution Snake
 
 <p align="center">
   <picture>
