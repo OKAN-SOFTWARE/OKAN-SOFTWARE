@@ -13,17 +13,18 @@ on:
       - 'README.md'
       - 'scripts/update_recent_activity.py'
       - 'scripts/update_showcase.py'
-      - 'scripts/tests/test_showcase.py'
-      - 'assets/ember-stack.svg'
       - 'scripts/tests/test_recent_activity.py'
       - 'scripts/tests/test_showcase.py'
-      - 'scripts/update_showcase.py'
+      - 'assets/ember-stack.svg'
       - '.github/workflows/recent-and-snake.yml'
   pull_request:
     paths:
       - 'README.md'
       - 'scripts/update_recent_activity.py'
+      - 'scripts/update_showcase.py'
       - 'scripts/tests/test_recent_activity.py'
+      - 'scripts/tests/test_showcase.py'
+      - 'assets/ember-stack.svg'
       - '.github/workflows/recent-and-snake.yml'
 
 permissions:
@@ -90,5 +91,5 @@ jobs:
             echo 'Recent activity and snake already current.'
             exit 0
           fi
-          git commit -m 'docs(profile): refresh recent activity and contribution snake'
+          git commit -m 'docs(profile): refresh activity, Ember projects, and commit ticker'
           git push origin HEAD:main
