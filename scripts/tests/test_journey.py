@@ -193,9 +193,9 @@ class JourneyTests(unittest.TestCase):
         self.assertIn("## 🐍 Contribution Snake", readme)
         self.assertIn("Tools built around real needs", readme)
         self.assertIn("<!-- SHOWCASE:START -->", readme)
-        stack = readme[readme.index("## Extra tools & interests"):]
-        self.assertIn("### Explore the stack", stack)
-        self.assertNotIn("<summary>Explore the stack</summary>", stack)
+        self.assertIn("assets/ember-stack.svg", readme)
+        self.assertIn("Code DNA, commit patterns", readme)
+        self.assertIn("### 🧩 My Development Stack", readme)
 
 
 
