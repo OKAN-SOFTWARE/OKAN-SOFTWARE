@@ -94,7 +94,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
-| Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/26) |
+| Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/27) |
 | Commented in [microsoft/pyright](https://github.com/microsoft/pyright) | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator](https://github.com/microsoft/pyright/issues/11944) |
 | Opened PR in [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) | [Pull request](https://github.com/aws-cloudformation/cfn-lint/pull/4974) |
 | Commented in [cloudflare/workers-sdk](https://github.com/cloudflare/workers-sdk) | [vite-plugin: \`vite preview\` logs every request, \`vite dev\` logs none](https://github.com/cloudflare/workers-sdk/issues/16605) |
