@@ -19,14 +19,16 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-**Last profile update: Oct 30, 2026 at 8:24 PM EDT**
+**Last profile update: Oct 30, 2026 at 9:04 PM EDT**
 
-**59 opened · 27 merged · 29 open now · 42 upstream repositories**
+**61 opened · 27 merged · 31 open now · 44 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix(builder): close source stream after decoding error (#3404) · #3459](https://github.com/pylint-dev/astroid/pull/3459) | [pylint-dev/astroid](https://github.com/pylint-dev/astroid) |
+| 🟢 Open | [fix(win32): correct SetCursorPos argument types (#1745) · #1750](https://github.com/java-native-access/jna/pull/1750) | [java-native-access/jna](https://github.com/java-native-access/jna) |
 | 🟢 Open | [fix(mysql): reset popped state when re-pushing queue messages (#1777) · #1784](https://github.com/conductor-oss/conductor/pull/1784) | [conductor-oss/conductor](https://github.com/conductor-oss/conductor) |
 | 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 | 🟢 Open | [fix(client): support accountId in assignable project searches · #2449](https://github.com/pycontribs/jira/pull/2449) | [pycontribs/jira](https://github.com/pycontribs/jira) |
@@ -35,14 +37,12 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 | 🟢 Open | [fix: improve diagnostics for missing Linux libraries · #1656](https://github.com/actions/setup-node/pull/1656) | [actions/setup-node](https://github.com/actions/setup-node) |
 | 🟢 Open | [fix(watch): refresh remote status after terminal git push · #1044](https://github.com/JetBrains/thinkrail/pull/1044) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
 | 🟣 Merged | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
-| 🟢 Open | [fix(core): skip default validation when context is unresolved · #39560](https://github.com/aws/aws-cdk/pull/39560) | [aws/aws-cdk](https://github.com/aws/aws-cdk) |
-| 🟢 Open | [fix(templates): reject Windows reserved device names · #1042](https://github.com/JetBrains/thinkrail/pull/1042) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:ca7421fd4a8a280390d46cf88978d89c42226f511fc3128b35abdf7b0a993a89 -->
+<!-- ACTIVITY:SNAPSHOT:1b051f95db01950162de2e9eced2a16823d528352a7007461903da4f0166bfb6 -->
 <!-- ACTIVITY:END -->
 
 ## 📰 Recent Activity
@@ -63,7 +63,7 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 <!-- RECENT:END -->
 
 <!-- JOURNEY:START -->
-**Developer stats refreshed:** Oct 30, 2026 at 08:24 PM EDT
+**Developer stats refreshed:** Oct 30, 2026 at 09:04 PM EDT
 
 ### 🧬 Code DNA · Public GitHub History
 
