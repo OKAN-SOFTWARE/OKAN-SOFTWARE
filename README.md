@@ -1,22 +1,66 @@
+<!-- GITHUB-COMPATIBLE EMBER DESIGN · No JavaScript or custom CSS in README -->
+
 <p align="center">
-  <a name="phoenix-artwork">
-  <img src="./assets/phoenix-hero-animated.gif" width="100%" alt="Animated cyberpunk Phoenix and Matrix developer banner with glowing OKAN TIKTAS lettering" />
-  </a>
+  <a href="https://github.com/search?q=author%3AOKAN-SOFTWARE&type=commits"><img src="./assets/ember/latest-commits.svg" width="100%" alt="Animated strip of recent authored GitHub commits from original projects and upstream contributions" /></a>
+</p>
+
+<p align="center">
+  <img src="./assets/phoenix-hero-animated.gif" width="100%" alt="Original animated Phoenix cyberpunk banner with glowing OKAN TIKTAS lettering" />
 </p>
 
 <p align="center">
   <a href="https://github.com/OKAN-SOFTWARE?tab=repositories"><img src="./assets/button-projects.gif" width="250" height="66" alt="My projects" /></a>
-  <a href="https://github.com/pulls?q=is%3Apr+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE"><img src="./assets/button-contributions.gif" width="250" height="66" alt="Upstream contributions" /></a>
+  <a href="https://github.com/pulls?q=is%3Apr+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE"><img src="./assets/button-contributions.gif" width="250" height="66" alt="Open source contributions" /></a>
 </p>
 
+<p align="center">
+  <a href="#about">ABOUT</a> &nbsp;·&nbsp;
+  <a href="#tools-built-around-real-needs">PROJECTS</a> &nbsp;·&nbsp;
+  <a href="#open-source-field-notes">OPEN SOURCE</a> &nbsp;·&nbsp;
+  <a href="#recent-activity">ACTIVITY</a> &nbsp;·&nbsp;
+  <a href="#languages--toolkit">STACK</a> &nbsp;·&nbsp;
+  <a href="#contribution-snake">CONTRIBUTIONS</a>
+</p>
 
-I’m **Okan Tiktas**, a software engineer who enjoys turning **“there has to be an easier way”** into useful, dependable software. I work across backend services, web interfaces, data workflows, and automation—with an emphasis on maintainable code, practical problem-solving, and testing.
+---
 
-My technical toolkit includes **Java, Python, JavaScript/TypeScript, C#**, **Node.js/Express**, **React**, and **SQL/NoSQL** databases. I’m also exploring **AWS serverless architecture, cloud optimization, and AI token efficiency**. I like connecting the right technology to a real need, whether that's improving an API, simplifying a workflow, or making a developer tool more reliable.
+## About
 
-That mindset drives projects such as **VeilDrop** for private log redaction and encrypted handoffs, **Doc2FAQ** for turning documents into editable FAQs, and **LaunchNotes** for translating commit history into readable releases. In open source, I reproduce issues, trace root causes, make focused changes, and add regression tests. My contributions touch **CLI tools, CI workflows, testing, documentation, and application bugs**; the upstream PRs below show the work and review process.
+<table>
+<tr>
+<td width="60%" valign="middle">
+  <h2>Building software that <em>solves real problems.</em></h2>
+  <p>I'm <strong>Okan Tiktas</strong>, a software engineer working across backend services, web applications, automation, developer tools, and open source.</p>
+  <p>I like turning recurring problems into dependable tools, reproducing difficult bugs, and adding tests that keep them fixed.</p>
+  <p><strong>Build → Test → Contribute.</strong></p>
+</td>
+<td width="40%" valign="middle">
+  <img src="./assets/ember/terminal.svg" width="100%" alt="Terminal card showing software engineer, backend, tools, automation, build, test and contribute" />
+</td>
+</tr>
+</table>
+
+<p align="center"><img src="./assets/ember/stats.svg" width="100%" alt="Current public upstream PR, merged PR, upstream repository and original project counts" /></p>
+
+## Tools built around real needs
+
+Practical projects I built and maintain, ordered by **most recently updated**. These are **my original repositories**, not forks.
+
+<!-- EMBER_PROJECTS:START -->
+<sub>Automatically sorted by latest push · Original public repositories only · Up to three source languages per card</sub>
+
+| | |
+| :--- | :--- |
+| <a href="https://github.com/OKAN-SOFTWARE/Doc2FAQ"><img src="./assets/ember/projects/Doc2FAQ.svg" width="100%" alt="Doc2FAQ project summary and Java, JavaScript, HTML source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/mole-meadow"><img src="./assets/ember/projects/mole-meadow.svg" width="100%" alt="mole-meadow project summary and JavaScript, HTML, CSS source languages" /></a> |
+| <a href="https://github.com/OKAN-SOFTWARE/TokenWise"><img src="./assets/ember/projects/TokenWise.svg" width="100%" alt="TokenWise project summary and Python, JavaScript, HTML source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/LaunchNotes"><img src="./assets/ember/projects/LaunchNotes.svg" width="100%" alt="LaunchNotes project summary and JavaScript, HTML, CSS source languages" /></a> |
+| <a href="https://github.com/OKAN-SOFTWARE/Python-CLI-App"><img src="./assets/ember/projects/Python-CLI-App.svg" width="100%" alt="Python-CLI-App project summary and Python, HTML, CSS source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/QueueFlight"><img src="./assets/ember/projects/QueueFlight.svg" width="100%" alt="QueueFlight project summary and TypeScript, Rust, JavaScript source languages" /></a> |
+
+<p align="center"><a href="https://github.com/OKAN-SOFTWARE?tab=repositories"><strong>Browse all original projects ↗</strong></a></p>
+<!-- EMBER_PROJECTS:END -->
 
 ## Open Source Field Notes
+
+I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
 **Last profile update: Oct 30, 2026 at 9:35 PM EDT**
@@ -45,9 +89,9 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 <!-- ACTIVITY:SNAPSHOT:1b051f95db01950162de2e9eced2a16823d528352a7007461903da4f0166bfb6 -->
 <!-- ACTIVITY:END -->
 
-## 📰 Recent Activity
+## Recent Activity
 
-*Auto-checked every hour with GitHub Actions · most recent public action per repository · Eastern Time.*
+<sub>Automatically refreshed · Latest public action per repository · No timestamp column</sub>
 
 <!-- RECENT:START -->
 | Recent activity | Details |
@@ -61,6 +105,21 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 | Commented in [vitest-dev/vitest](https://github.com/vitest-dev/vitest) | [fix\(vitest\): resolve dependencies from project root](https://github.com/vitest-dev/vitest/issues/11805) |
 | Forked repository in [celery/kombu](https://github.com/celery/kombu) | Public fork |
 <!-- RECENT:END -->
+
+## Languages & Toolkit
+
+<p align="center"><img src="./assets/ember/stack.svg" width="100%" alt="Java, Python, JavaScript, TypeScript, C sharp, SQL, HTML, CSS, Rust, PowerShell and AWS" /></p>
+
+| Focus | Technologies |
+| :--- | :--- |
+| **Backend** | Java · Python · C# · JavaScript/TypeScript · Node.js · Express · Spring Boot |
+| **Frontend** | React · JavaScript · TypeScript · HTML · CSS · Three.js |
+| **Data** | SQL · PostgreSQL · SQL Server · SQLite · MongoDB · DynamoDB |
+| **Cloud & delivery** | AWS Lambda · SQS · SNS · EventBridge · EC2 · GitHub Actions · Docker |
+| **Testing** | pytest · JUnit · Vitest · automated regression testing |
+
+<details>
+<summary><strong>Explore Code DNA, commit patterns, and more development statistics</strong></summary>
 
 <!-- JOURNEY:START -->
 **Developer stats refreshed:** Oct 30, 2026 at 09:35 PM EDT
@@ -101,41 +160,18 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 | **Cloud** | AWS Lambda · SQS · SNS · EventBridge · EC2 |
 <!-- JOURNEY:END -->
 
-## Built from an everyday problem
+</details>
 
-| Project | The moment it helps |
-| :--- | :--- |
-| **[VeilDrop](https://github.com/OKAN-SOFTWARE/veildrop)** | “I need to share this log without sharing its secrets.” Local text redaction and encrypted handoffs. |
-| **[LaunchNotes](https://github.com/OKAN-SOFTWARE/LaunchNotes)** | “These commits need a better story than ‘fixed stuff.’” Turn commit messages into readable release notes. |
-| **[Doc2FAQ](https://github.com/OKAN-SOFTWARE/Doc2FAQ)** | “The answers are in this document somewhere.” Turn documents into editable FAQ drafts, with local processing and exports. |
-
-## Extra tools & interests
-
-### Explore the stack
-
-| Area | Technologies |
-| :--- | :--- |
-| **Languages** | Python · Java · JavaScript · C# · HTML · CSS · SQL |
-| **Frameworks** | Spring Boot · Node.js · Express · React · Three.js |
-| **Data & tools** | SQLite · Redis · JSON Schema · REST APIs · Git · GitHub Actions · Docker |
-| **Testing & libraries** | pytest · JUnit · Vitest · Boto3 · PDFBox · Apache POI |
-| **AWS exploration** | Lambda · SQS · SNS · EventBridge · Bedrock · DynamoDB |
-| **Learning path** | Cloud optimization · Serverless development · AI token efficiency |
-
-Tools used across personal projects and contribution work; AWS topics include ongoing learning.
-
-## 🐍 Contribution Snake
+## Contribution Snake
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/contribution-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./assets/contribution-snake.svg" />
-    <img src="./assets/contribution-snake.svg" alt="Animated snake winding through Okan's GitHub contribution grid" width="100%" />
+    <img src="./assets/contribution-snake.svg" width="100%" alt="Original animated contribution snake on the GitHub contribution grid" />
   </picture>
 </p>
 
-<sub>The animated snake follows my public GitHub contribution calendar and refreshes daily. Coding statistics above remain selectable text.</sub>
+<sub>The snake is generated daily from public contributions and uses the original animated SVGs.</sub>
 
-<p align="center">
-  <img src="./assets/phoenix-footer-animated.gif" width="100%" alt="Animated Matrix-themed footer: build, test, contribute, repeat" />
-</p>
+<p align="center"><img src="./assets/phoenix-footer-animated.gif" width="100%" alt="Original animated Matrix-style Phoenix footer" /></p>
