@@ -149,7 +149,11 @@ def collect(user, token, cached):
         if (isinstance(prior, dict)
                 and all(prior.get(key) == value for key, value in meta.items())
                 and type(prior.get("additions")) is int and prior["additions"] >= 0
-                and type(prior.get("deletions")) is int and prior["deletions"] >= 0):
+                and type(prior.get("deletions")) is int and prior["deletions"] >= 0
+                and isinstance(prior.get("languages"), list)
+                and all(isinstance(v, str) for v in prior["languages"])
+                and isinstance(prior.get("frameworks"), list)
+                and all(isinstance(v, str) for v in prior["frameworks"])):
             result[url] = prior
             continue
         detail = api_get(
@@ -161,10 +165,15 @@ def collect(user, token, cached):
                 or detail["additions"] < 0 or detail["deletions"] < 0
                 or not detail.get("merged_at")):
             raise ValueError("Invalid upstream PR diff statistics")
+        languages, frameworks = classify_changed_files(
+            fetch_pr_files(url, token, detail.get("changed_files"))
+        )
         result[url] = {
             **meta,
             "additions": detail["additions"],
             "deletions": detail["deletions"],
+            "languages": languages,
+            "frameworks": frameworks,
         }
     return result
 
@@ -184,24 +193,27 @@ def render(data):
         f"**{len(items):,} merged PRs** · **+{added:,} lines added** · "
         f"**−{removed:,} lines removed**",
         "",
-        "| Upstream repository | Merged pull request | Added | Removed |",
-        "| :--- | :--- | ---: | ---: |",
+        "| Upstream repository | Merged pull request | Added | Removed | Languages / Frameworks |",
+        "| :--- | :--- | ---: | ---: | :--- |",
     ]
     for _, item in items[:5]:
         full, number = item["repo"], item["number"]
         link = f"https://github.com/{full}"
+        technologies = item.get("languages", []) + item.get("frameworks", [])
+        labels = ", ".join(technologies) if technologies else "Documentation / other"
         rows.append(
             f"| [{full}]({link}) | [#{number}]({link}/pull/{number}) "
-            f"| +{item['additions']:,} | −{item['deletions']:,} |"
+            f"| +{item['additions']:,} | −{item['deletions']:,} | {labels} |"
         )
     if not items:
-        rows.append("| No merged upstream PRs found | — | 0 | 0 |")
+        rows.append("| No merged upstream PRs found | — | 0 | 0 | — |")
     rows.extend([
         "",
         "<sub>Automatically refreshed · Public merged PRs in other owners' "
         "repositories · Entire PR diff additions/deletions, not unique lines "
         "personally authored · May include tests, generated files, or other "
-        "contributors' changes · Excluded from Code Stats language percentages</sub>",
+        "contributors' changes · Languages from added source files; frameworks "
+        "only from added imports · Excluded from Code Stats language percentages</sub>",
     ])
     return "\n".join(rows)
 
