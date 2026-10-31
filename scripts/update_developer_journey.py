@@ -42,8 +42,20 @@ SOURCE_EXTENSIONS = {
 SKIP_DIRECTORIES = {
     ".git", "node_modules", ".next", ".turbo", ".cache", ".venv",
     "venv", "dist", "build", "target", "vendor", "coverage",
-    "__pycache__", "out",
+    "__pycache__", "out", "bower_components", ".pnpm", "third_party",
+    "third-party", "generated",
 }
+COUNTING_RULE_VERSION = 2
+
+
+def ignored_directory(name):
+    """Ignore dependency folders, including copied node_modules directories."""
+    lower = name.casefold().strip()
+    return (
+        lower in SKIP_DIRECTORIES
+        or bool(re.fullmatch(r"node_modules\s*[-_]\s*copy(?:\s*\(\d+\))?", lower))
+        or bool(re.fullmatch(r"node_modules\s*\(copy\)(?:\s*\(\d+\))?", lower))
+    )
 
 
 def lines_in_checkout(root):
@@ -52,7 +64,7 @@ def lines_in_checkout(root):
     for directory, subdirs, filenames in os.walk(root, followlinks=False):
         subdirs[:] = [
             name for name in subdirs
-            if name not in SKIP_DIRECTORIES
+            if not ignored_directory(name)
             and not (Path(directory) / name).is_symlink()
         ]
         for filename in filenames:
@@ -86,7 +98,7 @@ def count_source_lines(repos, token, previous=None):
                 raise ValueError("Only public original repositories can be counted")
             # Newly created empty repositories have no commit yet, and no source lines.
             if repo.get("pushed_at") is None and repo.get("size") == 0:
-                refreshed[full] = {"sha": None, "lines": {}}
+                refreshed[full] = {"sha": None, "rules": COUNTING_RULE_VERSION, "lines": {}}
                 continue
             branch = repo.get("default_branch")
             if not isinstance(branch, str) or not branch:
@@ -96,14 +108,15 @@ def count_source_lines(repos, token, previous=None):
             if not isinstance(sha, str) or not re.fullmatch(r"[0-9a-fA-F]{40}", sha):
                 raise ValueError("Invalid default-branch commit SHA")
             prior = previous.get(full)
-            if isinstance(prior, dict) and prior.get("sha") == sha:
+            if (isinstance(prior, dict) and prior.get("sha") == sha
+                    and prior.get("rules") == COUNTING_RULE_VERSION):
                 counts = prior.get("lines")
                 if isinstance(counts, dict) and all(
                     isinstance(lang, str) and lang and
                     type(n) is int and n >= 0 for lang, n in counts.items()
                 ):
                     totals.update(counts)
-                    refreshed[full] = {"sha": sha, "lines": counts}
+                    refreshed[full] = {"sha": sha, "rules": COUNTING_RULE_VERSION, "lines": counts}
                     continue
             checkout = Path(temporary) / f"repo-{index}"
             environment = dict(os.environ, GIT_TERMINAL_PROMPT="0", GIT_LFS_SKIP_SMUDGE="1")
@@ -122,7 +135,7 @@ def count_source_lines(repos, token, previous=None):
                 raise RuntimeError("Public source checkout failed")
             counted = lines_in_checkout(checkout)
             totals.update(counted)
-            refreshed[full] = {"sha": sha, "lines": dict(sorted(counted.items()))}
+            refreshed[full] = {"sha": sha, "rules": COUNTING_RULE_VERSION, "lines": dict(sorted(counted.items()))}
     return totals, refreshed
 
 

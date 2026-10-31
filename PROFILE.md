@@ -128,7 +128,8 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
   longer appears in the README. The refresh runs every four hours.
 - LOC is a real count of nonblank lines in recognized source extensions from the
   default branch of each public original repository. Comments count; known generated,
-  dependency, and minified files are excluded. The counts are a snapshot of code
+  dependency, and minified files are excluded, including copied folders such as
+  `node_modules - Copy`. Cache entries are invalidated when counting rules change. The counts are a snapshot of code
   currently present, not a sum of lines authored in every historical commit.
   Forks, private repositories, and this profile repository are excluded. A
   repository's code may include third-party files outside known excluded paths.

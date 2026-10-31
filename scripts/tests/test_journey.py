@@ -97,6 +97,10 @@ class JourneyTests(unittest.TestCase):
             root = Path(directory)
             (root / "src").mkdir()
             (root / "dist").mkdir()
+            (root / "node_modules - Copy" / "three").mkdir(parents=True)
+            (root / "node_modules - Copy" / "three" / "three.js").write_text(
+                "third party\n" * 100, encoding="utf-8"
+            )
             (root / "src" / "app.js").write_text(
                 "const a = 1;\n\n// a comment\nconst b = 2;\n", encoding="utf-8"
             )
@@ -112,6 +116,9 @@ class JourneyTests(unittest.TestCase):
             result = journey.lines_in_checkout(root)
             self.assertEqual(3, result["JavaScript"])
             self.assertEqual(1, result["TypeScript"])
+            self.assertTrue(journey.ignored_directory("node_modules - Copy"))
+            self.assertTrue(journey.ignored_directory("node_modules (copy)"))
+            self.assertFalse(journey.ignored_directory("src"))
 
     def test_archive_keeps_previous_days_and_caps_to_a_year(self):
         data = journey.summarize("OKAN-SOFTWARE", *sample(), NOW)
@@ -215,7 +222,8 @@ class JourneyTests(unittest.TestCase):
             repo = {"full_name": "OKAN-SOFTWARE/example", "fork": False,
                     "private": False, "default_branch": "main"}
             cached = {"OKAN-SOFTWARE/example": {
-                "sha": "a" * 40, "lines": {"Java": 480, "Python": 520}
+                "sha": "a" * 40, "rules": journey.COUNTING_RULE_VERSION,
+                "lines": {"Java": 480, "Python": 520}
             }}
             with (
                 patch.object(journey, "public_original_repos", return_value=[repo]),
@@ -236,7 +244,7 @@ class JourneyTests(unittest.TestCase):
         repo = {"full_name": "OKAN-SOFTWARE/example", "fork": False,
                 "private": False, "default_branch": "main", "pushed_at": "2026-10-31"}
         sha = "a" * 40
-        cache = {repo["full_name"]: {"sha": sha, "lines": {"Python": 480}}}
+        cache = {repo["full_name"]: {"sha": sha, "rules": journey.COUNTING_RULE_VERSION, "lines": {"Python": 480}}}
         with (
             patch.object(journey, "api_get", return_value={"sha": sha}),
             patch.object(journey.subprocess, "run",
@@ -246,10 +254,27 @@ class JourneyTests(unittest.TestCase):
         self.assertEqual(480, counts["Python"])
         self.assertEqual(cache, refreshed)
 
+    def test_cache_invalidated_when_counting_rules_change(self):
+        repo = {"full_name": "OKAN-SOFTWARE/example", "fork": False,
+                "private": False, "default_branch": "main", "pushed_at": "2026-10-31"}
+        old_cache = {repo["full_name"]: {"sha": "a" * 40, "lines": {"JavaScript": 270000}}}
+        with (
+            patch.object(journey, "api_get", return_value={"sha": "a" * 40}),
+            patch.object(journey.subprocess, "run") as cloned,
+            patch.object(journey, "lines_in_checkout",
+                         return_value=Counter({"JavaScript": 200})),
+        ):
+            cloned.return_value.returncode = 0
+            counts, refreshed = journey.count_source_lines([repo], "token", old_cache)
+        self.assertEqual(200, counts["JavaScript"])
+        self.assertEqual(journey.COUNTING_RULE_VERSION,
+                         refreshed[repo["full_name"]]["rules"])
+        cloned.assert_called_once()
+
     def test_cache_invalidated_on_new_commit_sha(self):
         repo = {"full_name": "OKAN-SOFTWARE/example", "fork": False,
                 "private": False, "default_branch": "main", "pushed_at": "2026-10-31"}
-        cache = {repo["full_name"]: {"sha": "a" * 40, "lines": {"Python": 480}}}
+        cache = {repo["full_name"]: {"sha": "a" * 40, "rules": journey.COUNTING_RULE_VERSION, "lines": {"Python": 480}}}
         with (
             patch.object(journey, "api_get", return_value={"sha": "b" * 40}),
             patch.object(journey.subprocess, "run") as cloned,
