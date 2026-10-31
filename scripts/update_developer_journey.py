@@ -17,6 +17,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 START, END = "<!-- JOURNEY:START -->", "<!-- JOURNEY:END -->"
+MATRIX_START, MATRIX_END = "<!-- CODE_MATRIX:START -->", "<!-- CODE_MATRIX:END -->"
 TZ = ZoneInfo("America/New_York")
 SAFE_REPO = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
 STACK = [
@@ -72,14 +73,38 @@ def lines_in_checkout(root):
     return results
 
 
-def count_source_lines(repos):
-    """Shallow-clone public original default branches without running repo code."""
-    lines = Counter()
+def count_source_lines(repos, token, previous=None):
+    """Count current default-branch LOC; reuse a cache only for identical HEAD SHAs."""
+    previous = previous or {}
+    if not isinstance(previous, dict):
+        raise ValueError("Invalid code matrix cache")
+    totals, refreshed = Counter(), {}
     with tempfile.TemporaryDirectory(prefix="okan-github-loc-") as temporary:
         for index, repo in enumerate(repos):
             full = repo.get("full_name", "")
             if not SAFE_REPO.fullmatch(full) or repo.get("fork") or repo.get("private"):
                 raise ValueError("Only public original repositories can be counted")
+            # Newly created empty repositories have no commit yet, and no source lines.
+            if repo.get("pushed_at") is None and repo.get("size") == 0:
+                refreshed[full] = {"sha": None, "lines": {}}
+                continue
+            branch = repo.get("default_branch")
+            if not isinstance(branch, str) or not branch:
+                raise ValueError("Repository default branch is missing")
+            head = api_get(f"/repos/{full}/commits/{quote(branch, safe='')}", token)
+            sha = head.get("sha") if isinstance(head, dict) else None
+            if not isinstance(sha, str) or not re.fullmatch(r"[0-9a-fA-F]{40}", sha):
+                raise ValueError("Invalid default-branch commit SHA")
+            prior = previous.get(full)
+            if isinstance(prior, dict) and prior.get("sha") == sha:
+                counts = prior.get("lines")
+                if isinstance(counts, dict) and all(
+                    isinstance(lang, str) and lang and
+                    type(n) is int and n >= 0 for lang, n in counts.items()
+                ):
+                    totals.update(counts)
+                    refreshed[full] = {"sha": sha, "lines": counts}
+                    continue
             checkout = Path(temporary) / f"repo-{index}"
             environment = dict(os.environ, GIT_TERMINAL_PROMPT="0", GIT_LFS_SKIP_SMUDGE="1")
             try:
@@ -95,8 +120,10 @@ def count_source_lines(repos):
                 raise RuntimeError("Public source checkout failed") from error
             if process.returncode != 0:
                 raise RuntimeError("Public source checkout failed")
-            lines.update(lines_in_checkout(checkout))
-    return lines
+            counted = lines_in_checkout(checkout)
+            totals.update(counted)
+            refreshed[full] = {"sha": sha, "lines": dict(sorted(counted.items()))}
+    return totals, refreshed
 
 
 def parse_time(value):
@@ -142,20 +169,25 @@ def paged(path, token, max_pages=30, allow_limit=False):
     raise ValueError("GitHub history exceeds the configured page limit")
 
 
-def fetch_public_data(user, token):
+def public_original_repos(user, token):
+    """List all current public non-fork repositories, excluding this profile."""
     name = quote(user, safe="")
     repos = paged(f"/users/{name}/repos?type=owner", token, max_pages=10)
-    originals, languages, commits = [], Counter(), []
-    for repo in repos:
-        full = repo.get("full_name", "")
-        if (
-            not SAFE_REPO.fullmatch(full)
-            or full.split("/")[0].lower() != user.lower()
-            or repo.get("fork") or repo.get("private")
-            or full.lower() == f"{user}/{user}".lower()
-        ):
-            continue
-        originals.append(repo)
+    return [
+        repo for repo in repos
+        if SAFE_REPO.fullmatch(repo.get("full_name", ""))
+        and repo["full_name"].split("/")[0].lower() == user.lower()
+        and not repo.get("fork") and not repo.get("private")
+        and repo["full_name"].lower() != f"{user}/{user}".lower()
+    ]
+
+
+def fetch_public_data(user, token):
+    name = quote(user, safe="")
+    originals = public_original_repos(user, token)
+    languages, commits = Counter(), []
+    for repo in originals:
+        full = repo["full_name"]
         lang = api_get(f"/repos/{full}/languages", token)
         if not isinstance(lang, dict):
             raise ValueError("Invalid repository language data")
@@ -167,7 +199,6 @@ def fetch_public_data(user, token):
         for item in authored:
             item["repository"] = {"full_name": full}
         commits.extend(authored)
-    # GitHub's public event feed exposes only recent events (maximum 300).
     events = paged(f"/users/{name}/events/public", token, max_pages=3, allow_limit=True)
     return originals, languages, commits, events
 
@@ -272,12 +303,45 @@ def archive_updates(existing, summary):
     }
 
 
+def matrix_bar(part, total, width=12):
+    """Text-only Matrix progress cells; numbers carry the exact percentages."""
+    filled = round(part / total * width) if total else 0
+    if part > 0:
+        filled = max(1, filled)
+    filled = min(width, filled)
+    return "🟩" * filled + "⬛" * (width - filled)
+
+
+def matrix_markdown(locs, repo_count):
+    """Generate a GitHub-native, sortable-by-LOC language table (no SVG or image)."""
+    counts = [(name, n) for name, n in locs.items() if type(n) is int and n > 0]
+    counts.sort(key=lambda item: (-item[1], item[0].casefold()))
+    total = sum(n for _, n in counts)
+    rows = [
+        "#### 🟢 CODE MATRIX · Language Distribution",
+        "",
+        f"**{total:,} source lines** · **{repo_count} public original repositories** · "
+        f"**{len(counts)} languages**",
+        "",
+        "<sub>Nonblank lines on default branches · Highest percentage first · "
+        "Green cells approximate share (tiny nonzero shares show one cell)</sub>",
+        "",
+        "| Language | Lines of code | % of total code | Matrix share |",
+        "| :--- | ---: | ---: | :--- |",
+    ]
+    for name, n in counts:
+        safe = re.sub(r"([\\|*_\[\]])", r"\\\1", name)
+        share = n / total * 100
+        pct = f"{share:.3f}%" if share < 0.01 else f"{share:.2f}%"
+        rows.append(f"| **{safe}** | {n:,} | **{pct}** | {matrix_bar(n, total)} |")
+    if not counts:
+        rows.append("| No source code found yet | 0 | 0.00% | " + matrix_bar(0, 0) + " |")
+    return "\n".join(rows)
+
+
 def markdown(summary, archive):
     now = summary["now"]
     total = summary["total_commits"]
-    total_bytes = sum(summary["languages"].values())
-    top = summary["languages"].most_common(1)
-    dominant = top[0][0] if top else "a mix of technologies"
     rows = [
         f"**Developer stats refreshed:** {now:%b %d, %Y at %I:%M %p %Z}",
         "",
@@ -295,18 +359,9 @@ def markdown(summary, archive):
         rows.append(f"| {name} | {count:,} | {share:.1f}% | {bar(count, total)} |")
     rows.extend([
         "",
-        f"#### 💬 I Mostly Code in {dominant}",
-        "",
-        "| Language | Line of Codes | Source bytes | Activity |",
-        "| :--- | ---: | ---: | :--- |",
-    ])
-    for name, count in summary["languages"].most_common(8):
-        safe = re.sub(r"([\\|*_\[\]])", r"\\\1", name)
-        loc = f'{summary["locs"][name]:,}' if name in summary.get("locs", {}) else "—"
-        rows.append(f"| {safe} | {loc} | {count:,} | {bar(count, total_bytes)} |")
-    if not summary["languages"]:
-        rows.append("| — | — | 0 | No language data available |")
-    rows.extend([
+        MATRIX_START,
+        matrix_markdown(summary["locs"], summary["repos"]),
+        MATRIX_END,
         "",
         "### 🧩 My Development Stack",
         "",
@@ -326,6 +381,46 @@ def replace_section(readme, generated):
     return before + START + "\n" + generated + "\n" + END + after
 
 
+def load_matrix_cache(root):
+    path = root / "data" / "code-matrix-cache.json"
+    if not path.is_file():
+        return {}
+    loaded = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(loaded, dict):
+        raise ValueError("Code matrix cache must be a JSON object")
+    return loaded
+
+
+def replace_matrix_section(readme, generated):
+    if readme.count(MATRIX_START) != 1 or readme.count(MATRIX_END) != 1:
+        raise ValueError("README must contain exactly one Code Matrix marker pair")
+    before, rest = readme.split(MATRIX_START, 1)
+    _, after = rest.split(MATRIX_END, 1)
+    return before + MATRIX_START + "\n" + generated + "\n" + MATRIX_END + after
+
+
+def write_matrix_cache(root, cache):
+    path = root / "data" / "code-matrix-cache.json"
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(cache, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+
+
+def run_matrix_only(user, token, root=ROOT):
+    """Fast polling path: update only native Markdown LOC table and per-repo cache."""
+    if not re.fullmatch(r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})", user):
+        raise ValueError("Invalid GitHub username")
+    repos = public_original_repos(user, token)
+    locs, cache = count_source_lines(repos, token, load_matrix_cache(root))
+    readme_path = root / "README.md"
+    original = readme_path.read_text(encoding="utf-8")
+    updated = replace_matrix_section(original, matrix_markdown(locs, len(repos)))
+    # All remote reads, clones and validation complete before writing files.
+    if updated != original:
+        readme_path.write_text(updated, encoding="utf-8")
+    write_matrix_cache(root, cache)
+    print(f"Code Matrix refreshed: {sum(locs.values()):,} lines in {len(repos)} repositories.")
+
+
 def run(user, token, root=ROOT, now=None):
     if not re.fullmatch(r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,38})", user):
         raise ValueError("Invalid GitHub username")
@@ -337,13 +432,13 @@ def run(user, token, root=ROOT, now=None):
     original = readme.read_text(encoding="utf-8")
     existing = json.loads(history_path.read_text(encoding="utf-8")) if history_path.is_file() else {}
     archive = archive_updates(existing, summary)
-    summary["locs"] = count_source_lines(repos)
+    summary["locs"], cache = count_source_lines(repos, token, load_matrix_cache(root))
     updated = replace_section(original, markdown(summary, archive))
     archive_text = json.dumps(archive, ensure_ascii=False, indent=2) + "\n"
     history_path.parent.mkdir(parents=True, exist_ok=True)
-    # Validate all remote data and the complete outputs before writing either file.
     readme.write_text(updated, encoding="utf-8")
     history_path.write_text(archive_text, encoding="utf-8")
+    write_matrix_cache(root, cache)
     print(f"Developer journey refreshed: {summary['total_commits']} public attributed commits.")
 
 
@@ -351,7 +446,11 @@ def main():
     token = os.environ.get("GH_TOKEN")
     if not token:
         raise ValueError("GH_TOKEN is required")
-    run(os.environ.get("PROFILE_USER", "OKAN-SOFTWARE"), token)
+    user = os.environ.get("PROFILE_USER", "OKAN-SOFTWARE")
+    if "--matrix-only" in sys.argv:
+        run_matrix_only(user, token)
+    else:
+        run(user, token)
 
 
 if __name__ == "__main__":
