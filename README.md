@@ -153,14 +153,4 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Languages from added source files; frameworks only from added imports · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->
 
-### 🧩 My Development Stack
-
-| Area | Technologies |
-| :--- | :--- |
-| **Backend** | Java · Python · C# · JavaScript/TypeScript (Node.js) · Express · Spring Boot |
-| **Frontend** | JavaScript · TypeScript · React · HTML · CSS · Three.js |
-| **Data & SQL** | SQL · PostgreSQL · SQL Server · SQLite · MongoDB · DynamoDB |
-| **OS & DevOps** | Windows · Ubuntu/WSL · GitHub Actions · Docker |
-| **Cloud** | AWS Lambda · SQS · SNS · EventBridge · EC2 |
-
 <p align="center"><img src="./assets/phoenix-footer-animated.gif" width="100%" alt="Original animated Matrix-style Phoenix footer" /></p>
