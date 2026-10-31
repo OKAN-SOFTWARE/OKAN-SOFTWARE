@@ -190,11 +190,12 @@ class JourneyTests(unittest.TestCase):
         self.assertNotIn("<!-- WEEKLY:START -->", readme)
         self.assertNotIn("Weekly Coding Adventure", readme)
         self.assertNotIn("Activity sync", readme)
-        self.assertIn("## 🐍 Contribution Snake", readme)
-        self.assertIn("VeilDrop", readme)
-        stack = readme[readme.index("## Extra tools & interests"):]
-        self.assertIn("### Explore the stack", stack)
-        self.assertNotIn("<summary>Explore the stack</summary>", stack)
+        self.assertIn("## Contribution Snake", readme)
+        self.assertIn("## Languages & Toolkit", readme)
+        self.assertIn("assets/ember/stack.svg", readme)
+        self.assertIn("<!-- EMBER_PROJECTS:START -->", readme)
+        self.assertIn("Tools built around real needs", readme)
+        self.assertIn("assets/phoenix-hero-animated.gif", readme)
 
 
 
