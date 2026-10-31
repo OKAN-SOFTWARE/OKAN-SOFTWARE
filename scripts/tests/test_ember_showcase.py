@@ -52,8 +52,13 @@ class EmberShowcaseTests(unittest.TestCase):
     def test_stats_use_existing_generated_counts(self):
         readme=(ROOT/'README.md').read_text(encoding='utf-8')
         svg=s.stats_svg(readme)
-        for number in ['61','27','44','9']:
-            self.assertIn('>'+number+'</text>',svg)
+        import re
+        activity = re.search(r'\*\*(\d+) opened · (\d+) merged · \d+ open now · (\d+) upstream repositories\*\*', readme)
+        journey = re.search(r'\*\*\d+ authored commits · (\d+) public original repositories\*\*', readme)
+        self.assertIsNotNone(activity)
+        self.assertIsNotNone(journey)
+        for number in [*activity.groups(), journey.group(1)]:
+            self.assertIn('>'+number+'</text>', svg)
 
     def test_markers_assets_and_timestamp_free_activity(self):
         readme=(ROOT/'README.md').read_text(encoding='utf-8')
