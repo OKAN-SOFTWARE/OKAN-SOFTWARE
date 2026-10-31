@@ -153,7 +153,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- UPSTREAM_CODE:END -->
 
 <details>
-<summary><strong>Explore public GitHub history and development stack</strong></summary>
+<summary><strong>Explore public GitHub history</strong></summary>
 
 <!-- JOURNEY:START -->
 **Developer stats refreshed:** Oct 31, 2026 at 05:31 PM EDT
@@ -161,6 +161,10 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 ### Public GitHub History
 
 **80 authored commits · 9 public original repositories**
+
+<!-- JOURNEY:END -->
+
+</details>
 
 ### 🧩 My Development Stack
 
@@ -171,8 +175,5 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | **Data & SQL** | SQL · PostgreSQL · SQL Server · SQLite · MongoDB · DynamoDB |
 | **OS & DevOps** | Windows · Ubuntu/WSL · GitHub Actions · Docker |
 | **Cloud** | AWS Lambda · SQS · SNS · EventBridge · EC2 |
-<!-- JOURNEY:END -->
-
-</details>
 
 <p align="center"><img src="./assets/phoenix-footer-animated.gif" width="100%" alt="Original animated Matrix-style Phoenix footer" /></p>

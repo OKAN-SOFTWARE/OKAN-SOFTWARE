@@ -146,3 +146,5 @@ the decorative GIFs, not for the scheduled activity updater or its tests.
 - [Scheduled workflow events](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)
 
 The Extra tools & interests stack table is always expanded. The Code Matrix heading and native Markdown language percentages are regenerated automatically. Recent Activity intentionally omits timestamps.
+
+- The **My Development Stack** table is permanently visible immediately before the Phoenix footer; the automated journey generator refreshes only the collapsed public GitHub history and does not overwrite the visible stack.
