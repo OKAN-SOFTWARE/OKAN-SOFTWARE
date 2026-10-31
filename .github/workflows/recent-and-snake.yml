@@ -1,0 +1,82 @@
+name: Refresh recent activity and contribution snake
+
+on:
+  schedule:
+    - cron: '43 * * * *'
+      timezone: 'America/New_York'
+    - cron: '29 4 * * *'
+      timezone: 'America/New_York'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'README.md'
+      - 'scripts/update_recent_activity.py'
+      - 'scripts/tests/test_recent_activity.py'
+      - '.github/workflows/recent-and-snake.yml'
+  pull_request:
+    paths:
+      - 'README.md'
+      - 'scripts/update_recent_activity.py'
+      - 'scripts/tests/test_recent_activity.py'
+      - '.github/workflows/recent-and-snake.yml'
+
+permissions:
+  contents: read
+
+# Serialize README/asset pushes with the four-hour profile statistics refresh.
+concurrency:
+  group: profile-writes-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Test generated profile text
+        run: python -m unittest discover -s scripts/tests -v
+
+  refresh:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Refresh recent public events as text
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROFILE_USER: ${{ github.repository_owner }}
+        run: python scripts/update_recent_activity.py
+      - name: Draw daily Phoenix-colored contribution snake
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.schedule == '29 4 * * *'
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/contribution-snake.svg?palette=github-light&color_snake=#db7b12
+            assets/contribution-snake-dark.svg?palette=github-dark&color_snake=#ffb347
+      - name: Commit changed activity and animations
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          if test -f assets/contribution-snake.svg; then git add assets/contribution-snake.svg; fi
+          if test -f assets/contribution-snake-dark.svg; then git add assets/contribution-snake-dark.svg; fi
+          if git diff --cached --quiet; then
+            echo 'Recent activity and snake already current.'
+            exit 0
+          fi
+          git commit -m 'docs(profile): refresh recent activity and contribution snake'
+          git push origin HEAD:main
