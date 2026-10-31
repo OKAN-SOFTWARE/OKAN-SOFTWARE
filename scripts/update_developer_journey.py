@@ -53,8 +53,8 @@ def ignored_directory(name):
     lower = name.casefold().strip()
     return (
         lower in SKIP_DIRECTORIES
-        or bool(re.fullmatch(r"node_modules\\s*[-_]\\s*copy(?:\\s*\\(\\d+\\))?", lower))
-        or bool(re.fullmatch(r"node_modules\\s*\\(copy\\)(?:\\s*\\(\\d+\\))?", lower))
+        or bool(re.fullmatch(r"node_modules\s*[-_]\s*copy(?:\s*\(\d+\))?", lower))
+        or bool(re.fullmatch(r"node_modules\s*\(copy\)(?:\s*\(\d+\))?", lower))
     )
 
 
