@@ -19,7 +19,7 @@ def event(number, kind, repo, at, payload=None, actor="OKAN-SOFTWARE"):
 
 
 class RecentActivityTests(unittest.TestCase):
-    def test_latest_action_per_repo_and_eastern_times(self):
+    def test_latest_action_per_repo_without_time_column(self):
         events = [
             event(1, "PushEvent", "upstream/project", "2026-10-30T18:00:00Z",
                   {"ref": "refs/heads/main"}),
@@ -34,8 +34,8 @@ class RecentActivityTests(unittest.TestCase):
         rows = recent.activity_rows(events, "OKAN-SOFTWARE")
         self.assertEqual(2, len(rows))
         self.assertIn("Opened PR", rows[0])
-        self.assertIn("Oct 30, 05:00 PM", rows[0])
-        self.assertNotIn("EDT", rows[0])
+        self.assertNotIn("Oct 30", rows[0])
+        self.assertEqual(3, len(rows[0].split("|")))
         self.assertIn("/upstream/project/pull/17", rows[0])
         self.assertNotIn("Pushed code", "\n".join(rows))
         self.assertIn("Opened issue", rows[1])
@@ -83,6 +83,7 @@ class RecentActivityTests(unittest.TestCase):
     def test_empty_table_honest(self):
         result = recent.markdown([], "OKAN-SOFTWARE")
         self.assertIn("No qualifying recent public activity", result)
+        self.assertNotIn("Time (Eastern)", result)
 
     def test_marker_safety_and_integrated_refresh(self):
         original = f"intro\n{recent.START}\nold\n{recent.END}\nfooter"
