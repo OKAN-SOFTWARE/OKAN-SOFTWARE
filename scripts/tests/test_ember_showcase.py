@@ -10,7 +10,7 @@ import update_ember_showcase as s
 
 class MatrixShowcaseTests(unittest.TestCase):
     def test_about_terminal_types_code_without_whoami(self):
-        svg = showcase.terminal_svg()
+        svg = s.terminal_svg()
         self.assertIn('about.ts', svg)
         self.assertIn('animation-name:type7', svg)
         self.assertIn('prefers-reduced-motion:reduce', svg)
