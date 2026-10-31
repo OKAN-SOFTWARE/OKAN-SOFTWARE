@@ -152,19 +152,6 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Languages from added source files; frameworks only from added imports · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->
 
-<details>
-<summary><strong>Explore public GitHub history</strong></summary>
-
-<!-- JOURNEY:START -->
-**Developer stats refreshed:** Oct 31, 2026 at 05:51 PM EDT
-
-### Public GitHub History
-
-**80 authored commits · 9 public original repositories**
-<!-- JOURNEY:END -->
-
-</details>
-
 ### 🧩 My Development Stack
 
 | Area | Technologies |

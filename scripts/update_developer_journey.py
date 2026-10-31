@@ -444,8 +444,7 @@ def run(user, token, root=ROOT, now=None):
     archive = archive_updates(existing, summary)
     summary["locs"], cache = count_source_lines(repos, token, load_matrix_cache(root))
     updated = replace_matrix_section(
-        replace_section(original, markdown(summary, archive)),
-        matrix_markdown(summary["locs"], summary["repos"]),
+        original, matrix_markdown(summary["locs"], summary["repos"])
     )
     archive_text = json.dumps(archive, ensure_ascii=False, indent=2) + "\n"
     history_path.parent.mkdir(parents=True, exist_ok=True)
