@@ -22,7 +22,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: profile-activity-${{ github.ref }}
+  group: profile-writes-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
