@@ -61,16 +61,29 @@ class JourneyTests(unittest.TestCase):
         self.assertEqual(2, data["current"]["prs"])
         self.assertEqual(1, data["current"]["issues"])
 
-    def test_markdown_keeps_history_and_stack_without_old_activity(self):
+    def test_markdown_keeps_history_without_hidden_stack(self):
         data = journey.summarize("OKAN-SOFTWARE", *sample(), NOW)
         rendered = journey.markdown(data, journey.archive_updates({}, data))
         self.assertIn("Public GitHub History", rendered)
-        self.assertIn("My Development Stack", rendered)
+        self.assertNotIn("My Development Stack", rendered)
         self.assertIn("2 authored commits · 1 public original repositories", rendered)
         for excluded in ("When I Commit", "Activity |", "Source bytes",
                          "CODE MATRIX · Language Distribution", journey.MATRIX_START):
             self.assertNotIn(excluded, rendered)
         self.assertNotIn("<img", rendered)
+
+    def test_development_stack_is_visible_before_footer(self):
+        readme = (Path(__file__).resolve().parents[2] / "README.md").read_text(
+            encoding="utf-8"
+        )
+        heading = "### 🧩 My Development Stack"
+        footer = "assets/phoenix-footer-animated.gif"
+        self.assertEqual(1, readme.count(heading))
+        self.assertLess(readme.index("</details>"), readme.index(heading))
+        self.assertLess(readme.index(heading), readme.index(footer))
+        self.assertIn("| **Backend** |", readme)
+        self.assertIn("| **Cloud** |", readme)
+        self.assertIn("<summary><strong>Explore public GitHub history</strong></summary>", readme)
 
     def test_loc_counts_nonblank_source_and_excludes_generated_dirs(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -173,7 +186,7 @@ class JourneyTests(unittest.TestCase):
             self.assertIn("OKAN\'S CODE STATS // LIVE UPDATES", content)
             self.assertIn("Public GitHub History", content)
             self.assertNotIn("When I Commit", content)
-            self.assertIn("My Development Stack", content)
+            self.assertNotIn("My Development Stack", content)
             self.assertNotIn("Today's Coding Adventure", content)
             self.assertNotIn("Weekly Coding Adventure", content)
             self.assertIn("intro", content)

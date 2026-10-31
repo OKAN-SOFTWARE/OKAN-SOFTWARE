@@ -20,14 +20,6 @@ START, END = "<!-- JOURNEY:START -->", "<!-- JOURNEY:END -->"
 MATRIX_START, MATRIX_END = "<!-- CODE_MATRIX:START -->", "<!-- CODE_MATRIX:END -->"
 TZ = ZoneInfo("America/New_York")
 SAFE_REPO = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
-STACK = [
-    ("Backend", "Java · Python · C# · JavaScript/TypeScript (Node.js) · Express · Spring Boot"),
-    ("Frontend", "JavaScript · TypeScript · React · HTML · CSS · Three.js"),
-    ("Data & SQL", "SQL · PostgreSQL · SQL Server · SQLite · MongoDB · DynamoDB"),
-    ("OS & DevOps", "Windows · Ubuntu/WSL · GitHub Actions · Docker"),
-    ("Cloud", "AWS Lambda · SQS · SNS · EventBridge · EC2"),
-]
-
 
 SOURCE_EXTENSIONS = {
     ".js": "JavaScript", ".jsx": "JavaScript", ".mjs": "JavaScript",
@@ -388,14 +380,7 @@ def markdown(summary, archive):
         "### Public GitHub History",
         "",
         f"**{total:,} authored commits · {summary['repos']} public original repositories**",
-        "",
-        "### 🧩 My Development Stack",
-        "",
-        "| Area | Technologies |",
-        "| :--- | :--- |",
     ]
-    for area, tech in STACK:
-        rows.append(f"| **{area}** | {tech} |")
     return "\n".join(rows)
 
 def replace_section(readme, generated):
