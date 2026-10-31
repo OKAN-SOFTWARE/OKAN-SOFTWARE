@@ -19,14 +19,15 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 ## Open Source Field Notes
 
 <!-- ACTIVITY:START -->
-**Last profile update: Oct 30, 2026 at 8:14 PM EDT**
+**Last profile update: Oct 30, 2026 at 8:24 PM EDT**
 
-**58 opened · 27 merged · 28 open now · 41 upstream repositories**
+**59 opened · 27 merged · 29 open now · 42 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix(mysql): reset popped state when re-pushing queue messages (#1777) · #1784](https://github.com/conductor-oss/conductor/pull/1784) | [conductor-oss/conductor](https://github.com/conductor-oss/conductor) |
 | 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 | 🟢 Open | [fix(client): support accountId in assignable project searches · #2449](https://github.com/pycontribs/jira/pull/2449) | [pycontribs/jira](https://github.com/pycontribs/jira) |
 | 🟢 Open | [test: isolate Django cache settings between xdist worker groups · #852](https://github.com/jazzband/django-redis/pull/852) | [jazzband/django-redis](https://github.com/jazzband/django-redis) |
@@ -36,13 +37,12 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 | 🟣 Merged | [feat(cli): add machine-readable JSON dry-run output (#17) · #27](https://github.com/javvadivijayprasad/sel2pw/pull/27) | [javvadivijayprasad/sel2pw](https://github.com/javvadivijayprasad/sel2pw) |
 | 🟢 Open | [fix(core): skip default validation when context is unresolved · #39560](https://github.com/aws/aws-cdk/pull/39560) | [aws/aws-cdk](https://github.com/aws/aws-cdk) |
 | 🟢 Open | [fix(templates): reject Windows reserved device names · #1042](https://github.com/JetBrains/thinkrail/pull/1042) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
-| 🟣 Merged | [fix(kinesis): resolve mypy errors with boto3 stub types · #11](https://github.com/manojkken/testcontainers-aws/pull/11) | [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:b78a13700b6fd402bb622a6ee4b980c5d06addedb36a86546d0d0c5927edacf9 -->
+<!-- ACTIVITY:SNAPSHOT:ca7421fd4a8a280390d46cf88978d89c42226f511fc3128b35abdf7b0a993a89 -->
 <!-- ACTIVITY:END -->
 
 ## 📰 Recent Activity
@@ -63,7 +63,7 @@ That mindset drives projects such as **VeilDrop** for private log redaction and 
 <!-- RECENT:END -->
 
 <!-- JOURNEY:START -->
-**Developer stats refreshed:** Oct 30, 2026 at 08:14 PM EDT
+**Developer stats refreshed:** Oct 30, 2026 at 08:24 PM EDT
 
 ### 🧬 Code DNA · Public GitHub History
 
