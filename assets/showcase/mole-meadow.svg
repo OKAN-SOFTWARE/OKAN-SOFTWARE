@@ -1,5 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="580" height="265" viewBox="0 0 580 265" role="img" aria-label="mole-meadow project">
-<style>.name{fill:#fff1e2;font:700 28px ui-sans-serif,system-ui,Arial,sans-serif}.kicker{fill:#ffad68;font:700 12px ui-monospace,Consolas,monospace;letter-spacing:1.5px}.date{fill:#d4b69e;font:12px ui-monospace,Consolas,monospace}.desc{fill:#c8cbc2;font:15px ui-sans-serif,system-ui,Arial,sans-serif}.tag{fill:#ffcb9d;font:12px ui-monospace,Consolas,monospace}</style>
-<rect width="580" height="265" rx="16" fill="#131f20" stroke="#87583c" stroke-width="2"/><path d="M18 18 V48 M18 18 H48" stroke="#ffad68" stroke-width="3" stroke-linecap="round"/>
-<text x="28" y="53" class="kicker">ORIGINAL PROJECT</text><text x="28" y="104" class="name">mole-meadow</text><text x="28" y="126" class="date">LAST PUSH  OCT 26, 2026</text>
-<text x="28" y="155" class="desc">A 3D whack-a-mole game with live scoring and a top-10</text><text x="28" y="176" class="desc">leaderboard.</text><rect x="28" y="216" width="114" height="29" rx="7" fill="#38291e" stroke="#8e603f"/><text x="40" y="235" class="tag">JavaScript</text><rect x="151" y="216" width="73" height="29" rx="7" fill="#38291e" stroke="#8e603f"/><text x="163" y="235" class="tag">HTML</text><rect x="233" y="216" width="73" height="29" rx="7" fill="#38291e" stroke="#8e603f"/><text x="245" y="235" class="tag">CSS</text><path d="M534 34 h17 m-17 0 v17 m0 0 17-17" stroke="#ffad68" stroke-width="2" fill="none"/></svg>
+<style>
+.name{fill:#fff1e2;font:700 28px ui-sans-serif,system-ui,Arial,sans-serif}
+.kicker{fill:#ffad68;font:700 12px ui-monospace,Consolas,monospace;letter-spacing:1.5px}
+.date{fill:#d4b69e;font:12px ui-monospace,Consolas,monospace}
+.desc{fill:#c8cbc2;font:15px ui-sans-serif,system-ui,Arial,sans-serif}
+.tag{fill:#ffcb9d;font:12px ui-monospace,Consolas,monospace}
+</style>
+<rect width="580" height="265" rx="16" fill="#131f20" stroke="#87583c" stroke-width="2"/>
+<path d="M18 18 V48 M18 18 H48" stroke="#ffad68" stroke-width="3" stroke-linecap="round"/>
+<text x="28" y="53" class="kicker">ORIGINAL PROJECT</text>
+<text x="28" y="104" class="name">mole-meadow</text>
+<text x="28" y="126" class="date">LAST PUSH  OCT 26, 2026</text>
+<text x="28" y="155" class="desc">A fun 3D whack-a-mole game built with Three.js and</text><text x="28" y="176" class="desc">Node.js/Express, featuring live scoring, a top-10 leaderboard,</text>
+<rect x="28" y="216" width="114" height="29" rx="7" fill="#38291e" stroke="#8e603f"/><text x="40" y="235" class="tag">JavaScript</text><rect x="151" y="216" width="73" height="29" rx="7" fill="#38291e" stroke="#8e603f"/><text x="163" y="235" class="tag">HTML</text>
+<path d="M534 34 h17 m-17 0 v17 m0 0 17-17" stroke="#ffad68" stroke-width="2" fill="none"/>
+</svg>
