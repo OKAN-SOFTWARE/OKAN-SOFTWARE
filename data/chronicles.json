@@ -175,14 +175,14 @@
   },
   "2026-10-30": {
     "commits": 0,
-    "repos": 7,
-    "pr_events": 22,
+    "repos": 5,
+    "pr_events": 20,
     "issues": 0
   },
   "2026-10-31": {
     "commits": 0,
     "repos": 5,
-    "pr_events": 12,
+    "pr_events": 14,
     "issues": 0
   }
 }
