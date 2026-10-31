@@ -1,0 +1,73 @@
+name: Refresh live Code Matrix
+
+on:
+  schedule:
+    # GitHub's minimum schedule interval is five minutes; scheduled runs can be delayed.
+    - cron: '7,22,37,52 * * * *'
+      timezone: 'America/New_York'
+  workflow_dispatch:
+  # Optional near-immediate refresh when other repositories dispatch this event.
+  repository_dispatch:
+    types: [source_code_changed]
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/update_developer_journey.py'
+      - 'scripts/tests/test_journey.py'
+      - '.github/workflows/code-matrix.yml'
+  pull_request:
+    paths:
+      - 'scripts/update_developer_journey.py'
+      - 'scripts/tests/test_journey.py'
+      - '.github/workflows/code-matrix.yml'
+      - 'README.md'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Test GitHub-native language matrix
+        run: python -m unittest discover -s scripts/tests -v
+
+  refresh:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: verify
+    runs-on: ubuntu-latest
+    concurrency:
+      group: profile-writes-${{ github.ref }}
+      cancel-in-progress: false
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Refresh text-only Matrix language percentages
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROFILE_USER: ${{ github.repository_owner }}
+        run: python scripts/update_developer_journey.py --matrix-only
+      - name: Publish changed Markdown and incremental cache
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md data/code-matrix-cache.json
+          if git diff --cached --quiet; then
+            echo 'Code Matrix already current.'
+            exit 0
+          fi
+          git commit -m 'docs(profile): refresh live Matrix language distribution'
+          git push origin HEAD:main
