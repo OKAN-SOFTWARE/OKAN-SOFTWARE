@@ -161,7 +161,7 @@ def ticker_svg(commits: list[dict]) -> str:
 
 def stats_svg(readme: str) -> str:
     activity = re.search(r'\*\*(\d+) opened · (\d+) merged · \d+ open now · (\d+) upstream repositories\*\*', readme)
-    journey = re.search(r'\*\*\d+ authored commits · (\d+) public original repositories\*\*', readme)
+    journey = re.search(r'<!-- ORIGINAL_REPOS:(\d+) -->', readme)
     if not activity or not journey:
         raise ValueError('Could not find existing generated GitHub counters')
     values = [activity.group(1), activity.group(2), activity.group(3), journey.group(1)]

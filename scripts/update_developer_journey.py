@@ -367,6 +367,7 @@ def matrix_markdown(locs, repo_count):
         "<sub>Automatically checked every 15 minutes · Public original repositories · "
         "Nonblank source lines (including comments) · Dependencies, generated files, "
         "and binaries excluded · Tiny nonzero shares show one green cell</sub>",
+        f"<!-- ORIGINAL_REPOS:{repo_count} -->",
     ])
     return "\n".join(rows)
 

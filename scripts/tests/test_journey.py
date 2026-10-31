@@ -307,7 +307,7 @@ class JourneyTests(unittest.TestCase):
         self.assertNotIn("When I Commit", readme)
         self.assertIn("OKAN\'S CODE STATS // LIVE UPDATES", readme)
         self.assertIn("javascript/javascript-original.svg", readme)
-        self.assertLess(readme.index(journey.MATRIX_START), readme.index("<details>"))
+        self.assertLess(readme.index(journey.MATRIX_START), readme.index("### 🧩 My Development Stack"))
         self.assertIn("<!-- MATRIX_PROJECTS:START -->", readme)
         self.assertIn("Tools built around real needs", readme)
         self.assertIn("assets/phoenix-hero-animated.gif", readme)
