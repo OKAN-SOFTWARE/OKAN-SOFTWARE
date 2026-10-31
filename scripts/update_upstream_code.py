@@ -58,6 +58,86 @@ def upstream_items(user, token):
     return results
 
 
+
+LANGUAGE_SUFFIXES = {
+    ".py": "Python", ".pyi": "Python", ".js": "JavaScript",
+    ".jsx": "JavaScript", ".mjs": "JavaScript", ".cjs": "JavaScript",
+    ".ts": "TypeScript", ".tsx": "TypeScript", ".java": "Java",
+    ".kt": "Kotlin", ".cs": "C#", ".rs": "Rust", ".go": "Go",
+    ".rb": "Ruby", ".php": "PHP", ".swift": "Swift",
+    ".c": "C", ".cpp": "C++", ".cc": "C++", ".h": "C",
+    ".hpp": "C++", ".html": "HTML", ".css": "CSS",
+    ".scss": "SCSS", ".vue": "Vue", ".sql": "SQL",
+    ".sh": "Shell", ".ps1": "PowerShell", ".r": "R",
+}
+FRAMEWORK_PATTERNS = {
+    "React": r"\bfrom\s+['\"]react(?:/[^'\"]*)?['\"]",
+    "Next.js": r"\bfrom\s+['\"]next(?:/[^'\"]*)?['\"]",
+    "Express": r"\bfrom\s+['\"]express['\"]",
+    "Vitest": r"\bfrom\s+['\"]vitest['\"]",
+    "Playwright": r"\bfrom\s+['\"]@playwright/test['\"]",
+    "pytest": r"^\s*(?:import\s+pytest\b|from\s+pytest\b)",
+    "Django": r"^\s*(?:import\s+django\b|from\s+django\b)",
+    "FastAPI": r"^\s*from\s+fastapi\b",
+    "Flask": r"^\s*(?:import\s+flask\b|from\s+flask\b)",
+    "NumPy": r"^\s*(?:import\s+numpy\b|from\s+numpy\b)",
+    "Pandas": r"^\s*(?:import\s+pandas\b|from\s+pandas\b)",
+    "JUnit": r"^\s*import\s+org\.junit\b",
+    "Spring Boot": r"^\s*import\s+org\.springframework\b",
+}
+
+
+def classify_changed_files(files):
+    """Detect source languages and newly imported frameworks, not PR authorship."""
+    if not isinstance(files, list):
+        raise ValueError("Invalid PR files")
+    languages, frameworks = set(), set()
+    for item in files:
+        if not isinstance(item, dict):
+            raise ValueError("Invalid PR file")
+        filename, added = item.get("filename"), item.get("additions")
+        if not isinstance(filename, str) or type(added) is not int or added < 0:
+            raise ValueError("Invalid PR file metadata")
+        if added == 0 or item.get("status") == "removed":
+            continue
+        lower = filename.casefold()
+        lang = ("Dockerfile" if Path(lower).name == "dockerfile"
+                else LANGUAGE_SUFFIXES.get(Path(lower).suffix))
+        if not lang:
+            continue
+        languages.add(lang)
+        patch = item.get("patch")
+        if isinstance(patch, str):
+            for line in patch.splitlines():
+                if line.startswith("+") and not line.startswith("+++"):
+                    for framework, pattern in FRAMEWORK_PATTERNS.items():
+                        if re.search(pattern, line[1:]):
+                            frameworks.add(framework)
+    return sorted(languages), sorted(frameworks)
+
+
+def fetch_pr_files(url, token, expected_count=None):
+    """Fetch every page, rejecting truncated results."""
+    if not API_PR.fullmatch(url):
+        raise ValueError("Invalid PR URL")
+    if expected_count is not None and (
+        type(expected_count) is not int or not 0 <= expected_count <= 3000
+    ):
+        raise ValueError("Invalid changed-files count")
+    files = []
+    for page in range(1, 31):
+        path = url.removeprefix("https://api.github.com")
+        batch = api_get(f"{path}/files?per_page=100&page={page}", token)
+        if not isinstance(batch, list):
+            raise ValueError("Invalid PR files response")
+        files.extend(batch)
+        if len(batch) < 100:
+            if expected_count is not None and len(files) != expected_count:
+                raise ValueError("Incomplete PR files")
+            return files
+    raise ValueError("PR exceeds file listing limit")
+
+
 def collect(user, token, cached):
     """Reuse immutable merged PR diffs and fetch new merged PRs only."""
     if not isinstance(cached, dict):
