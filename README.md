@@ -141,15 +141,15 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 **28 merged PRs** · **+2,898 lines added** · **−272 lines removed**
 
-| Upstream repository | Merged pull request | Added | Removed |
-| :--- | :--- | ---: | ---: |
-| [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#203](https://github.com/PicadoLabs/build-with-ai/pull/203) | +16 | −1 |
-| [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) | [#11](https://github.com/manojkken/testcontainers-aws/pull/11) | +135 | −18 |
-| [mne-tools/mne-connectivity](https://github.com/mne-tools/mne-connectivity) | [#520](https://github.com/mne-tools/mne-connectivity/pull/520) | +23 | −14 |
-| [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [#1193](https://github.com/nodejs/doc-kit/pull/1193) | +174 | −41 |
-| [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#202](https://github.com/PicadoLabs/build-with-ai/pull/202) | +13 | −1 |
+| Upstream repository | Merged pull request | Added | Removed | Languages / Frameworks |
+| :--- | :--- | ---: | ---: | :--- |
+| [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#203](https://github.com/PicadoLabs/build-with-ai/pull/203) | +16 | −1 | JavaScript |
+| [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) | [#11](https://github.com/manojkken/testcontainers-aws/pull/11) | +135 | −18 | Python |
+| [mne-tools/mne-connectivity](https://github.com/mne-tools/mne-connectivity) | [#520](https://github.com/mne-tools/mne-connectivity/pull/520) | +23 | −14 | Python |
+| [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [#1193](https://github.com/nodejs/doc-kit/pull/1193) | +174 | −41 | JavaScript |
+| [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#202](https://github.com/PicadoLabs/build-with-ai/pull/202) | +13 | −1 | JavaScript |
 
-<sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Excluded from Code Stats language percentages</sub>
+<sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Languages from added source files; frameworks only from added imports · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->
 
 <details>

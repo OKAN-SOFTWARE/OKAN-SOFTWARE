@@ -58,6 +58,86 @@ def upstream_items(user, token):
     return results
 
 
+
+LANGUAGE_SUFFIXES = {
+    ".py": "Python", ".pyi": "Python", ".js": "JavaScript",
+    ".jsx": "JavaScript", ".mjs": "JavaScript", ".cjs": "JavaScript",
+    ".ts": "TypeScript", ".tsx": "TypeScript", ".java": "Java",
+    ".kt": "Kotlin", ".cs": "C#", ".rs": "Rust", ".go": "Go",
+    ".rb": "Ruby", ".php": "PHP", ".swift": "Swift",
+    ".c": "C", ".cpp": "C++", ".cc": "C++", ".h": "C",
+    ".hpp": "C++", ".html": "HTML", ".css": "CSS",
+    ".scss": "SCSS", ".vue": "Vue", ".sql": "SQL",
+    ".sh": "Shell", ".ps1": "PowerShell", ".r": "R",
+}
+FRAMEWORK_PATTERNS = {
+    "React": r"\bfrom\s+['\"]react(?:/[^'\"]*)?['\"]",
+    "Next.js": r"\bfrom\s+['\"]next(?:/[^'\"]*)?['\"]",
+    "Express": r"\bfrom\s+['\"]express['\"]",
+    "Vitest": r"\bfrom\s+['\"]vitest['\"]",
+    "Playwright": r"\bfrom\s+['\"]@playwright/test['\"]",
+    "pytest": r"^\s*(?:import\s+pytest\b|from\s+pytest\b)",
+    "Django": r"^\s*(?:import\s+django\b|from\s+django\b)",
+    "FastAPI": r"^\s*from\s+fastapi\b",
+    "Flask": r"^\s*(?:import\s+flask\b|from\s+flask\b)",
+    "NumPy": r"^\s*(?:import\s+numpy\b|from\s+numpy\b)",
+    "Pandas": r"^\s*(?:import\s+pandas\b|from\s+pandas\b)",
+    "JUnit": r"^\s*import\s+org\.junit\b",
+    "Spring Boot": r"^\s*import\s+org\.springframework\b",
+}
+
+
+def classify_changed_files(files):
+    """Detect source languages and newly imported frameworks, not PR authorship."""
+    if not isinstance(files, list):
+        raise ValueError("Invalid PR files")
+    languages, frameworks = set(), set()
+    for item in files:
+        if not isinstance(item, dict):
+            raise ValueError("Invalid PR file")
+        filename, added = item.get("filename"), item.get("additions")
+        if not isinstance(filename, str) or type(added) is not int or added < 0:
+            raise ValueError("Invalid PR file metadata")
+        if added == 0 or item.get("status") == "removed":
+            continue
+        lower = filename.casefold()
+        lang = ("Dockerfile" if Path(lower).name == "dockerfile"
+                else LANGUAGE_SUFFIXES.get(Path(lower).suffix))
+        if not lang:
+            continue
+        languages.add(lang)
+        patch = item.get("patch")
+        if isinstance(patch, str):
+            for line in patch.splitlines():
+                if line.startswith("+") and not line.startswith("+++"):
+                    for framework, pattern in FRAMEWORK_PATTERNS.items():
+                        if re.search(pattern, line[1:]):
+                            frameworks.add(framework)
+    return sorted(languages), sorted(frameworks)
+
+
+def fetch_pr_files(url, token, expected_count=None):
+    """Fetch every page, rejecting truncated results."""
+    if not API_PR.fullmatch(url):
+        raise ValueError("Invalid PR URL")
+    if expected_count is not None and (
+        type(expected_count) is not int or not 0 <= expected_count <= 3000
+    ):
+        raise ValueError("Invalid changed-files count")
+    files = []
+    for page in range(1, 31):
+        path = url.removeprefix("https://api.github.com")
+        batch = api_get(f"{path}/files?per_page=100&page={page}", token)
+        if not isinstance(batch, list):
+            raise ValueError("Invalid PR files response")
+        files.extend(batch)
+        if len(batch) < 100:
+            if expected_count is not None and len(files) != expected_count:
+                raise ValueError("Incomplete PR files")
+            return files
+    raise ValueError("PR exceeds file listing limit")
+
+
 def collect(user, token, cached):
     """Reuse immutable merged PR diffs and fetch new merged PRs only."""
     if not isinstance(cached, dict):
@@ -69,7 +149,11 @@ def collect(user, token, cached):
         if (isinstance(prior, dict)
                 and all(prior.get(key) == value for key, value in meta.items())
                 and type(prior.get("additions")) is int and prior["additions"] >= 0
-                and type(prior.get("deletions")) is int and prior["deletions"] >= 0):
+                and type(prior.get("deletions")) is int and prior["deletions"] >= 0
+                and isinstance(prior.get("languages"), list)
+                and all(isinstance(v, str) for v in prior["languages"])
+                and isinstance(prior.get("frameworks"), list)
+                and all(isinstance(v, str) for v in prior["frameworks"])):
             result[url] = prior
             continue
         detail = api_get(
@@ -81,10 +165,15 @@ def collect(user, token, cached):
                 or detail["additions"] < 0 or detail["deletions"] < 0
                 or not detail.get("merged_at")):
             raise ValueError("Invalid upstream PR diff statistics")
+        languages, frameworks = classify_changed_files(
+            fetch_pr_files(url, token, detail.get("changed_files"))
+        )
         result[url] = {
             **meta,
             "additions": detail["additions"],
             "deletions": detail["deletions"],
+            "languages": languages,
+            "frameworks": frameworks,
         }
     return result
 
@@ -104,24 +193,27 @@ def render(data):
         f"**{len(items):,} merged PRs** · **+{added:,} lines added** · "
         f"**−{removed:,} lines removed**",
         "",
-        "| Upstream repository | Merged pull request | Added | Removed |",
-        "| :--- | :--- | ---: | ---: |",
+        "| Upstream repository | Merged pull request | Added | Removed | Languages / Frameworks |",
+        "| :--- | :--- | ---: | ---: | :--- |",
     ]
     for _, item in items[:5]:
         full, number = item["repo"], item["number"]
         link = f"https://github.com/{full}"
+        technologies = item.get("languages", []) + item.get("frameworks", [])
+        labels = ", ".join(technologies) if technologies else "Documentation / other"
         rows.append(
             f"| [{full}]({link}) | [#{number}]({link}/pull/{number}) "
-            f"| +{item['additions']:,} | −{item['deletions']:,} |"
+            f"| +{item['additions']:,} | −{item['deletions']:,} | {labels} |"
         )
     if not items:
-        rows.append("| No merged upstream PRs found | — | 0 | 0 |")
+        rows.append("| No merged upstream PRs found | — | 0 | 0 | — |")
     rows.extend([
         "",
         "<sub>Automatically refreshed · Public merged PRs in other owners' "
         "repositories · Entire PR diff additions/deletions, not unique lines "
         "personally authored · May include tests, generated files, or other "
-        "contributors' changes · Excluded from Code Stats language percentages</sub>",
+        "contributors' changes · Languages from added source files; frameworks "
+        "only from added imports · Excluded from Code Stats language percentages</sub>",
     ])
     return "\n".join(rows)
 
