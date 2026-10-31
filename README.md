@@ -13,14 +13,17 @@
   <a href="https://github.com/pulls?q=is%3Apr+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE"><img src="./assets/button-contributions.gif" width="250" height="66" alt="Open source contributions" /></a>
 </p>
 
+<!-- EMBER NAVIGATION · GitHub-compatible linked SVG tabs -->
+<p align="center"><img src="./assets/ember/nav/heading.svg" width="300" height="26" alt="Quick navigation, six sections" /></p>
 <p align="center">
-  <a href="#about">ABOUT</a> &nbsp;·&nbsp;
-  <a href="#tools-built-around-real-needs">PROJECTS</a> &nbsp;·&nbsp;
-  <a href="#open-source-field-notes">OPEN SOURCE</a> &nbsp;·&nbsp;
-  <a href="#recent-activity">ACTIVITY</a> &nbsp;·&nbsp;
-  <a href="#languages--toolkit">STACK</a> &nbsp;·&nbsp;
-  <a href="#contribution-snake">CONTRIBUTIONS</a>
+  <a href="#about"><img src="./assets/ember/nav/about.svg" width="124" height="53" alt="About" /></a>
+  <a href="#tools-built-around-real-needs"><img src="./assets/ember/nav/projects.svg" width="139" height="53" alt="Projects" /></a>
+  <a href="#open-source-field-notes"><img src="./assets/ember/nav/open-source.svg" width="154" height="53" alt="Open Source" /></a>
+  <a href="#recent-activity"><img src="./assets/ember/nav/activity.svg" width="132" height="53" alt="Activity" /></a>
+  <a href="#languages--toolkit"><img src="./assets/ember/nav/stack.svg" width="143" height="53" alt="Tech Stack" /></a>
+  <a href="#contribution-snake"><img src="./assets/ember/nav/contributions.svg" width="166" height="53" alt="Contributions" /></a>
 </p>
+<!-- END EMBER NAVIGATION -->
 
 ---
 
