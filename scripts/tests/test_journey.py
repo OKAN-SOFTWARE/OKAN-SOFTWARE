@@ -67,10 +67,12 @@ class JourneyTests(unittest.TestCase):
         archive = journey.archive_updates({}, data)
         rendered = journey.markdown(data, archive)
         for phrase in (
-            "Code DNA", "When I Commit", "I Mostly Code in Python",
+            "Code DNA", "When I Commit", "CODE MATRIX · Language Distribution",
             "My Development Stack",
-            "| Language | Line of Codes | Source bytes | Activity |",
-            "| Python | 120 | 800 |",
+            "| Language | Lines of code | % of total code | Matrix share |",
+            "| **Python** | 120 | **72.73%** |",
+            "| **JavaScript** | 45 | **27.27%** |",
+            "165 source lines", journey.MATRIX_START, journey.MATRIX_END,
         ):
             self.assertIn(phrase, rendered)
         for excluded in (
@@ -79,10 +81,14 @@ class JourneyTests(unittest.TestCase):
             "Explore recent daily adventures", "| Language | Source bytes | Share",
             "Today's Coding Adventure", "Today's Public Activity Trail",
             "Languages of Repositories Active Today", "**Achievements:**",
+            "Source bytes", "I Mostly Code in",
         ):
             self.assertNotIn(excluded, rendered)
         self.assertNotIn("![", rendered)
         self.assertNotIn("<img", rendered)
+        self.assertIn("🟩", rendered)
+        self.assertIn("⬛", rendered)
+        self.assertLess(rendered.index("| **Python**"), rendered.index("| **JavaScript**"))
         self.assertIn("█", rendered)
         self.assertIn("░", rendered)
 
@@ -172,7 +178,7 @@ class JourneyTests(unittest.TestCase):
             readme.write_text(original, encoding="utf-8")
             with (
                 patch.object(journey, "fetch_public_data", return_value=sample()),
-                patch.object(journey, "count_source_lines", return_value=Counter({"Python": 5})),
+                patch.object(journey, "count_source_lines", return_value=(Counter({"Python": 5}), {})),
             ):
                 journey.run("OKAN-SOFTWARE", "token", root, NOW)
             content = readme.read_text(encoding="utf-8")
@@ -184,6 +190,78 @@ class JourneyTests(unittest.TestCase):
             self.assertIn("footer", content)
 
 
+    def test_matrix_sorts_by_actual_loc_not_source_bytes(self):
+        counts = Counter({"Python": 480, "Java": 520, "Rust": 0})
+        rendered = journey.matrix_markdown(counts, 2)
+        self.assertIn("**1,000 source lines**", rendered)
+        self.assertIn("| **Java** | 520 | **52.00%** |", rendered)
+        self.assertIn("| **Python** | 480 | **48.00%** |", rendered)
+        self.assertLess(rendered.index("| **Java**"), rendered.index("| **Python**"))
+        self.assertNotIn("Rust", rendered)
+        self.assertNotIn("Source bytes", rendered)
+        self.assertNotIn("<svg", rendered)
+        self.assertNotIn("<img", rendered)
+
+    def test_matrix_only_preserves_other_readme_sections(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            readme = root / "README.md"
+            readme.write_text(
+                "hero\\n" + journey.START + "\\nOther statistics\\n" +
+                journey.MATRIX_START + "\\nold table\\n" + journey.MATRIX_END +
+                "\\n" + journey.END + "\\nfooter",
+                encoding="utf-8",
+            )
+            repo = {"full_name": "OKAN-SOFTWARE/example", "fork": False,
+                    "private": False, "default_branch": "main"}
+            cached = {"OKAN-SOFTWARE/example": {
+                "sha": "a" * 40, "lines": {"Java": 480, "Python": 520}
+            }}
+            with (
+                patch.object(journey, "public_original_repos", return_value=[repo]),
+                patch.object(journey, "count_source_lines",
+                             return_value=(Counter({"Java": 480, "Python": 520}), cached)),
+            ):
+                journey.run_matrix_only("OKAN-SOFTWARE", "token", root)
+            updated = readme.read_text(encoding="utf-8")
+            self.assertIn("hero", updated)
+            self.assertIn("Other statistics", updated)
+            self.assertIn("footer", updated)
+            self.assertNotIn("old table", updated)
+            self.assertIn("| **Python** | 520 | **52.00%** |", updated)
+            self.assertIn("| **Java** | 480 | **48.00%** |", updated)
+            self.assertTrue((root / "data" / "code-matrix-cache.json").exists())
+
+    def test_cached_repo_reuses_exact_head_sha_without_cloning(self):
+        repo = {"full_name": "OKAN-SOFTWARE/example", "fork": False,
+                "private": False, "default_branch": "main", "pushed_at": "2026-10-31"}
+        sha = "a" * 40
+        cache = {repo["full_name"]: {"sha": sha, "lines": {"Python": 480}}}
+        with (
+            patch.object(journey, "api_get", return_value={"sha": sha}),
+            patch.object(journey.subprocess, "run",
+                         side_effect=AssertionError("cache hit must not clone")),
+        ):
+            counts, refreshed = journey.count_source_lines([repo], "token", cache)
+        self.assertEqual(480, counts["Python"])
+        self.assertEqual(cache, refreshed)
+
+    def test_cache_invalidated_on_new_commit_sha(self):
+        repo = {"full_name": "OKAN-SOFTWARE/example", "fork": False,
+                "private": False, "default_branch": "main", "pushed_at": "2026-10-31"}
+        cache = {repo["full_name"]: {"sha": "a" * 40, "lines": {"Python": 480}}}
+        with (
+            patch.object(journey, "api_get", return_value={"sha": "b" * 40}),
+            patch.object(journey.subprocess, "run") as cloned,
+            patch.object(journey, "lines_in_checkout",
+                         return_value=Counter({"Python": 510})),
+        ):
+            cloned.return_value.returncode = 0
+            counts, refreshed = journey.count_source_lines([repo], "token", cache)
+        self.assertEqual(510, counts["Python"])
+        self.assertEqual("b" * 40, refreshed[repo["full_name"]]["sha"])
+        cloned.assert_called_once()
+
     def test_readme_omits_daily_and_exposes_stack(self):
         readme = (SCRIPT.parents[1] / "README.md").read_text(encoding="utf-8")
         self.assertNotIn("Today's Coding Adventure", readme)
@@ -193,6 +271,8 @@ class JourneyTests(unittest.TestCase):
         self.assertIn("## Contribution Snake", readme)
         self.assertIn("## Languages & Toolkit", readme)
         self.assertIn("assets/ember/stack.svg", readme)
+        self.assertIn("<!-- CODE_MATRIX:START -->", readme)
+        self.assertNotIn("Source bytes", readme)
         self.assertIn("<!-- MATRIX_PROJECTS:START -->", readme)
         self.assertIn("Tools built around real needs", readme)
         self.assertIn("assets/phoenix-hero-animated.gif", readme)
