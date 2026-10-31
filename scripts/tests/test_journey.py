@@ -99,7 +99,7 @@ class JourneyTests(unittest.TestCase):
             (root / "dist").mkdir()
             (root / "node_modules - Copy" / "three").mkdir(parents=True)
             (root / "node_modules - Copy" / "three" / "three.js").write_text(
-                "third party\\n" * 100, encoding="utf-8"
+                "third party\n" * 100, encoding="utf-8"
             )
             (root / "src" / "app.js").write_text(
                 "const a = 1;\n\n// a comment\nconst b = 2;\n", encoding="utf-8"
