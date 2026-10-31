@@ -7,6 +7,7 @@
       "JavaScript": 1346,
       "XML": 80
     },
+    "rules": 2,
     "sha": "b42aef48396c62c8e66b5c42e57abadb99980323"
   },
   "OKAN-SOFTWARE/LaunchNotes": {
@@ -15,6 +16,7 @@
       "HTML": 79,
       "JavaScript": 241
     },
+    "rules": 2,
     "sha": "0395d1def286dfab1482460ec02663abb609a391"
   },
   "OKAN-SOFTWARE/Python-CLI-App": {
@@ -23,6 +25,7 @@
       "HTML": 71,
       "Python": 300
     },
+    "rules": 2,
     "sha": "be7d665d3ba4404e7ec00c8064bcbf615afc9c46"
   },
   "OKAN-SOFTWARE/QueueFlight": {
@@ -33,6 +36,7 @@
       "Rust": 44,
       "TypeScript": 160
     },
+    "rules": 2,
     "sha": "ae32085003d285c03f30579407c5c49780dc4b2e"
   },
   "OKAN-SOFTWARE/TokenWise": {
@@ -43,27 +47,30 @@
       "JavaScript": 192,
       "Python": 586
     },
+    "rules": 2,
     "sha": "bb8257a94c8f458e29c101bcc01efe46c243a0fb"
   },
   "OKAN-SOFTWARE/mole-meadow": {
     "lines": {
       "CSS": 1,
       "HTML": 28,
-      "JavaScript": 270789,
-      "TypeScript": 968
+      "JavaScript": 441
     },
+    "rules": 2,
     "sha": "365e0557a6b9048cb08084da5cc2e1c62d3ee7f9"
   },
   "OKAN-SOFTWARE/python-fizzbuzz": {
     "lines": {
       "Python": 29
     },
+    "rules": 2,
     "sha": "8ece8211f6236df7afc76cf8d3bc3b049cc6bf47"
   },
   "OKAN-SOFTWARE/total-revenue-workflow": {
     "lines": {
       "Python": 462
     },
+    "rules": 2,
     "sha": "234d90555bc3e9686bcd2cd86e30df9f67983e2e"
   },
   "OKAN-SOFTWARE/veildrop": {
@@ -72,6 +79,7 @@
       "HTML": 263,
       "JavaScript": 545
     },
+    "rules": 2,
     "sha": "54d2f156bec7b310a1251c3cc354a191afc0165b"
   }
 }

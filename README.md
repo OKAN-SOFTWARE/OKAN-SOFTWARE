@@ -138,21 +138,21 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- CODE_MATRIX:START -->
 #### 🟢 CODE MATRIX · Language Distribution
 
-**278,487 source lines** · **9 public original repositories** · **9 languages**
+**7,171 source lines** · **9 public original repositories** · **9 languages**
 
 <sub>Nonblank lines on default branches · Highest percentage first · Green cells approximate share (tiny nonzero shares show one cell)</sub>
 
 | Language | Lines of code | % of total code | Matrix share |
 | :--- | ---: | ---: | :--- |
-| **JavaScript** | 273,411 | **98.18%** | 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 |
-| **Java** | 1,603 | **0.58%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **Python** | 1,377 | **0.49%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **TypeScript** | 1,128 | **0.41%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **HTML** | 731 | **0.26%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **CSS** | 104 | **0.04%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **XML** | 80 | **0.03%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **Rust** | 44 | **0.02%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| **Dockerfile** | 9 | **0.003%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| **JavaScript** | 3,063 | **42.71%** | 🟩🟩🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛ |
+| **Java** | 1,603 | **22.35%** | 🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| **Python** | 1,377 | **19.20%** | 🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| **HTML** | 731 | **10.19%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| **TypeScript** | 160 | **2.23%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| **CSS** | 104 | **1.45%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| **XML** | 80 | **1.12%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| **Rust** | 44 | **0.61%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| **Dockerfile** | 9 | **0.13%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
 <!-- CODE_MATRIX:END -->
 
 ### 🧩 My Development Stack
