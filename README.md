@@ -94,14 +94,14 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
-| Commented in [actions/dependency-review-action](https://github.com/actions/dependency-review-action) | [base-ref accepts an abbreviated commit SHA and silently returns an empty comparison](https://github.com/actions/dependency-review-action/issues/1142) |
+| Opened PR in [beetbox/beets](https://github.com/beetbox/beets) | [Pull request](https://github.com/beetbox/beets/pull/7140) |
 | Commented in [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) | [Property-based creator loop \(and vanilla loop after unknown property\) silently stop on unexpected token within](https://github.com/FasterXML/jackson-databind/issues/6357) |
+| Commented in [actions/dependency-review-action](https://github.com/actions/dependency-review-action) | [base-ref accepts an abbreviated commit SHA and silently returns an empty comparison](https://github.com/actions/dependency-review-action/issues/1142) |
 | Opened PR in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | [Pull request](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE/pull/31) |
 | Commented in [microsoft/pyright](https://github.com/microsoft/pyright) | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator](https://github.com/microsoft/pyright/issues/11944) |
 | Opened PR in [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) | [Pull request](https://github.com/aws-cloudformation/cfn-lint/pull/4974) |
 | Commented in [cloudflare/workers-sdk](https://github.com/cloudflare/workers-sdk) | [vite-plugin: \`vite preview\` logs every request, \`vite dev\` logs none](https://github.com/cloudflare/workers-sdk/issues/16605) |
 | Commented in [google/adk-python](https://github.com/google/adk-python) | [ContainerCodeExecutor drops output files that are hard links](https://github.com/google/adk-python/issues/7906) |
-| Opened PR in [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [Pull request](https://github.com/PicadoLabs/build-with-ai/pull/226) |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
