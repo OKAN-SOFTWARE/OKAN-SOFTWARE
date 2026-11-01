@@ -32,6 +32,17 @@
     ],
     "frameworks": []
   },
+  "https://api.github.com/repos/PicadoLabs/build-with-ai/pulls/224": {
+    "repo": "PicadoLabs/build-with-ai",
+    "number": 224,
+    "merged_at": "2026-11-01T06:23:03Z",
+    "additions": 46,
+    "deletions": 4,
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": []
+  },
   "https://api.github.com/repos/PowerShell/PowerShell/pulls/28275": {
     "repo": "PowerShell/PowerShell",
     "number": 28275,
@@ -120,6 +131,17 @@
     "frameworks": [
       "Vitest"
     ]
+  },
+  "https://api.github.com/repos/littlebearapps/plainspoken/pulls/183": {
+    "repo": "littlebearapps/plainspoken",
+    "number": 183,
+    "merged_at": "2026-11-01T07:54:48Z",
+    "additions": 15,
+    "deletions": 0,
+    "languages": [
+      "Python"
+    ],
+    "frameworks": []
   },
   "https://api.github.com/repos/lostlight530/auto-doc-engine/pulls/178": {
     "repo": "lostlight530/auto-doc-engine",
