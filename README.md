@@ -94,9 +94,9 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
+| Commented in [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) | [Add Perl to the radar](https://github.com/TanbirRamim/open-source-radar/issues/379) |
 | Opened PR in [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [Pull request](https://github.com/PicadoLabs/build-with-ai/pull/240) |
 | Opened PR in [docker/mcp-registry](https://github.com/docker/mcp-registry) | [Pull request](https://github.com/docker/mcp-registry/pull/6426) |
-| Opened PR in [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) | [Pull request](https://github.com/TanbirRamim/open-source-radar/pull/393) |
 | Commented in [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) | [fix\(hooks\): ignore writing requests inside quoted examples](https://github.com/littlebearapps/plainspoken/issues/183) |
 | Opened PR in [beetbox/beets](https://github.com/beetbox/beets) | [Pull request](https://github.com/beetbox/beets/pull/7140) |
 | Commented in [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) | [Property-based creator loop \(and vanilla loop after unknown property\) silently stop on unexpected token within](https://github.com/FasterXML/jackson-databind/issues/6357) |
