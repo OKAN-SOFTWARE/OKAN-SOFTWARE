@@ -94,8 +94,8 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
+| Opened PR in [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [Pull request](https://github.com/PicadoLabs/build-with-ai/pull/240) |
 | Opened PR in [docker/mcp-registry](https://github.com/docker/mcp-registry) | [Pull request](https://github.com/docker/mcp-registry/pull/6426) |
-| Commented in [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [feat\(cli\): add validate command to verify project state and template integrity](https://github.com/PicadoLabs/build-with-ai/issues/212) |
 | Opened PR in [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) | [Pull request](https://github.com/TanbirRamim/open-source-radar/pull/393) |
 | Commented in [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) | [fix\(hooks\): ignore writing requests inside quoted examples](https://github.com/littlebearapps/plainspoken/issues/183) |
 | Opened PR in [beetbox/beets](https://github.com/beetbox/beets) | [Pull request](https://github.com/beetbox/beets/pull/7140) |
