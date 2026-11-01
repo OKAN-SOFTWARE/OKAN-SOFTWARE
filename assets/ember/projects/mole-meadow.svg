@@ -4,6 +4,6 @@
 <rect x="1" y="1" width="558" height="264" rx="16" fill="url(#panel)" stroke="#1a7942" stroke-width="2"/>
 <path d="M24 27h22 M24 27v22" stroke="#39ff14" stroke-width="3" stroke-linecap="round"/>
 <text x="29" y="60" class="small">ORIGINAL PROJECT</text><text x="29" y="107" class="name">mole-meadow</text>
-<text x="29" y="127" class="date">LATEST PUSH · OCT 26, 2026</text><text x="29" y="155" class="desc">A fun 3D whack-a-mole game built with Three.js and</text><text x="29" y="178" class="desc">Node.js/Express, featuring live scoring, a top-10</text>
+<text x="29" y="127" class="date">LATEST PUSH · OCT 26, 2026 EDT</text><text x="29" y="155" class="desc">A fun 3D whack-a-mole game built with Three.js and</text><text x="29" y="178" class="desc">Node.js/Express, featuring live scoring, a top-10</text>
 <rect x="29" y="218" width="115" height="29" rx="7" fill="#102a1b" stroke="#196c39"/><text x="41" y="237" class="tag">JavaScript</text><rect x="152" y="218" width="65" height="29" rx="7" fill="#102a1b" stroke="#196c39"/><text x="164" y="237" class="tag">HTML</text><path d="M506 33h24v24 M530 33l-28 28" fill="none" stroke="#39ff14" stroke-width="2.5" stroke-linecap="round"/>
 </svg>

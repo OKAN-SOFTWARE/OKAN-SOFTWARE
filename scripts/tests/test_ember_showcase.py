@@ -9,6 +9,20 @@ import update_ember_showcase as s
 
 
 class MatrixShowcaseTests(unittest.TestCase):
+    def test_project_push_dates_use_eastern_calendar_and_daylight_saving(self):
+        cases = [
+            ('2026-11-01T01:05:26Z', 'OCT 31, 2026 EDT'),
+            ('2026-11-01T03:59:59Z', 'OCT 31, 2026 EDT'),
+            ('2026-11-01T04:00:00Z', 'NOV 01, 2026 EDT'),
+            ('2026-11-01T06:00:00Z', 'NOV 01, 2026 EST'),
+            ('2026-12-01T04:59:59Z', 'NOV 30, 2026 EST'),
+            ('2026-12-01T05:00:00Z', 'DEC 01, 2026 EST'),
+        ]
+        for pushed_at, expected in cases:
+            with self.subTest(pushed_at=pushed_at):
+                card = s.project_svg({'name':'DriveBench', 'pushed_at':pushed_at}, ['Java'])
+                self.assertIn('LATEST PUSH · ' + expected + '</text>', card)
+
     def test_about_terminal_types_code_without_whoami(self):
         svg = s.terminal_svg()
         self.assertIn('about.ts', svg)

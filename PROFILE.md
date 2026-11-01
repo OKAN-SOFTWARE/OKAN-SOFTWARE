@@ -104,6 +104,8 @@ and original-project SVG cards use a Matrix-green-on-black palette and are refre
 avoid breaking existing image URLs. The hero, terminal, stats, stack, and footer images are plain
 HTML images without surrounding links; GitHub's own image viewer may still offer access to
 the underlying files. Project cards and the latest-commit ticker intentionally link to GitHub.
+Project-card latest-push dates use `America/New_York`, with an EDT or EST label
+selected automatically for each timestamp. Repository ordering still uses the original push timestamps.
 The README needs no custom CSS or JavaScript. All statistics remain available as selectable text; only small language logos are external images.
 
 To regenerate the four decorative assets locally, install Pillow and run

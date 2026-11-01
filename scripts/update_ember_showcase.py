@@ -17,6 +17,7 @@ import textwrap
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- MATRIX_PROJECTS:START -->'
@@ -25,6 +26,7 @@ REPO_RE = re.compile(r'^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$')
 USER_RE = re.compile(r'^[A-Za-z0-9-]{1,39}$')
 IGNORED = {'Markdown', 'JSON', 'YAML', 'TOML', 'XML', 'Text', 'Jupyter Notebook', 'Dockerfile'}
 ACCENT = '#39ff14'
+TZ = ZoneInfo('America/New_York')
 
 
 def api(path: str, token: str):
@@ -117,7 +119,8 @@ def project_svg(repo: dict, languages: list[str]) -> str:
     name = truncate(repo['name'], 26)
     desc = ' '.join((repo.get('description') or 'An original open-source software project.').split())
     lines = textwrap.wrap(desc, width=56, break_long_words=False, break_on_hyphens=False)[:2]
-    pushed = datetime.fromisoformat(repo['pushed_at'].replace('Z', '+00:00')).strftime('%b %d, %Y').upper()
+    pushed = (datetime.fromisoformat(repo['pushed_at'].replace('Z', '+00:00'))
+              .astimezone(TZ).strftime('%b %d, %Y %Z').upper())
     line_nodes = ''.join(f'<text x="29" y="{155 + 23*i}" class="desc">{x(line)}</text>' for i, line in enumerate(lines))
     chips, cx = [], 29
     for lang in languages[:3]:
