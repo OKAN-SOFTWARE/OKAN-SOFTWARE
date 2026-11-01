@@ -49,9 +49,9 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 
 | | |
 | :--- | :--- |
-| <a href="https://github.com/OKAN-SOFTWARE/Doc2FAQ"><img src="./assets/ember/projects/Doc2FAQ.svg" width="100%" alt="Doc2FAQ project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/mole-meadow"><img src="./assets/ember/projects/mole-meadow.svg" width="100%" alt="mole-meadow project summary with up to three source languages" /></a> |
-| <a href="https://github.com/OKAN-SOFTWARE/TokenWise"><img src="./assets/ember/projects/TokenWise.svg" width="100%" alt="TokenWise project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/LaunchNotes"><img src="./assets/ember/projects/LaunchNotes.svg" width="100%" alt="LaunchNotes project summary with up to three source languages" /></a> |
-| <a href="https://github.com/OKAN-SOFTWARE/Python-CLI-App"><img src="./assets/ember/projects/Python-CLI-App.svg" width="100%" alt="Python-CLI-App project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/QueueFlight"><img src="./assets/ember/projects/QueueFlight.svg" width="100%" alt="QueueFlight project summary with up to three source languages" /></a> |
+| <a href="https://github.com/OKAN-SOFTWARE/DriveBench"><img src="./assets/ember/projects/DriveBench.svg" width="100%" alt="DriveBench project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/Doc2FAQ"><img src="./assets/ember/projects/Doc2FAQ.svg" width="100%" alt="Doc2FAQ project summary with up to three source languages" /></a> |
+| <a href="https://github.com/OKAN-SOFTWARE/mole-meadow"><img src="./assets/ember/projects/mole-meadow.svg" width="100%" alt="mole-meadow project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/TokenWise"><img src="./assets/ember/projects/TokenWise.svg" width="100%" alt="TokenWise project summary with up to three source languages" /></a> |
+| <a href="https://github.com/OKAN-SOFTWARE/LaunchNotes"><img src="./assets/ember/projects/LaunchNotes.svg" width="100%" alt="LaunchNotes project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/Python-CLI-App"><img src="./assets/ember/projects/Python-CLI-App.svg" width="100%" alt="Python-CLI-App project summary with up to three source languages" /></a> |
 
 <p align="center"><a href="https://github.com/OKAN-SOFTWARE?tab=repositories"><strong>Browse all original projects ↗</strong></a></p>
 <!-- MATRIX_PROJECTS:END -->
@@ -61,7 +61,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Oct 31, 2026 at 6:01 PM EDT**
+**Last profile update: Oct 31, 2026 at 9:12 PM EDT**
 
 **66 opened · 28 merged · 34 open now · 46 upstream repositories**
 
@@ -69,9 +69,9 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [Fix unexpected tokens in bean deserialization (#6357) · #6362](https://github.com/FasterXML/jackson-databind/pull/6362) | [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) |
 | 🟢 Open | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator · #11944](https://github.com/microsoft/pyright/pull/11944) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 | 🟢 Open | [fix(ebs): validate IOPS-to-volume-size ratios · #4974](https://github.com/aws-cloudformation/cfn-lint/pull/4974) | [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) |
-| 🟢 Open | [Fix unexpected tokens in bean deserialization (#6357) · #6362](https://github.com/FasterXML/jackson-databind/pull/6362) | [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) |
 | 🟢 Open | [fix(cli): normalize autonomous decisions under decisions namespace · #226](https://github.com/PicadoLabs/build-with-ai/pull/226) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [fix(hooks): ignore writing requests inside quoted examples · #183](https://github.com/littlebearapps/plainspoken/pull/183) | [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) |
 | 🟢 Open | [fix(parser): support numbered lists and markdown tables · #224](https://github.com/PicadoLabs/build-with-ai/pull/224) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
@@ -84,7 +84,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:f91443fd49d0ddfdaa13d5dd960ee6f55cf163d94c220130f72354af61637657 -->
+<!-- ACTIVITY:SNAPSHOT:c28dedadb6d1c7c4805642f4a958dde2221e9d2e162ffe3bdd68f595c1e6d20c -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
@@ -119,22 +119,22 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- CODE_MATRIX:START -->
 ### 🟢 OKAN'S CODE STATS // LIVE UPDATES
 
-**TOTAL LINES OF CODE: 7,171**
+**TOTAL LINES OF CODE: 8,444**
 
 | Language | Lines | Share | Distribution |
 | :--- | ---: | ---: | :--- |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="18" height="18" alt="" /> **JavaScript** | 3,063 | **42.71%** | 🟩🟩🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="18" height="18" alt="" /> **Java** | 1,603 | **22.35%** | 🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="18" height="18" alt="" /> **Python** | 1,377 | **19.20%** | 🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="18" height="18" alt="" /> **HTML** | 731 | **10.19%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="18" height="18" alt="" /> **TypeScript** | 160 | **2.23%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="18" height="18" alt="" /> **CSS** | 104 | **1.45%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/xml/xml-original.svg" width="18" height="18" alt="" /> **XML** | 80 | **1.12%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg" width="18" height="18" alt="" /> **Rust** | 44 | **0.61%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="18" height="18" alt="" /> **Dockerfile** | 9 | **0.13%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="18" height="18" alt="" /> **JavaScript** | 3,156 | **37.38%** | 🟩🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="18" height="18" alt="" /> **Python** | 2,172 | **25.72%** | 🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="18" height="18" alt="" /> **Java** | 1,958 | **23.19%** | 🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="18" height="18" alt="" /> **HTML** | 746 | **8.83%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="18" height="18" alt="" /> **TypeScript** | 160 | **1.89%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="18" height="18" alt="" /> **CSS** | 105 | **1.24%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/xml/xml-original.svg" width="18" height="18" alt="" /> **XML** | 94 | **1.11%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg" width="18" height="18" alt="" /> **Rust** | 44 | **0.52%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="18" height="18" alt="" /> **Dockerfile** | 9 | **0.11%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
 
 <sub>Automatically checked every 15 minutes · Public original repositories · Nonblank source lines (including comments) · Dependencies, generated files, and binaries excluded · Tiny nonzero shares show one green cell</sub>
-<!-- ORIGINAL_REPOS:9 -->
+<!-- ORIGINAL_REPOS:10 -->
 <!-- CODE_MATRIX:END -->
 
 <!-- UPSTREAM_CODE:START -->
