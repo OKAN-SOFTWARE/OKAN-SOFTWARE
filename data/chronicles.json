@@ -163,25 +163,25 @@
   },
   "2026-10-28": {
     "commits": 0,
-    "repos": 5,
+    "repos": 2,
     "pr_events": 0,
     "issues": 0
   },
   "2026-10-29": {
     "commits": 5,
-    "repos": 4,
+    "repos": 3,
     "pr_events": 0,
     "issues": 0
   },
   "2026-10-30": {
     "commits": 0,
-    "repos": 15,
-    "pr_events": 22,
+    "repos": 12,
+    "pr_events": 10,
     "issues": 0
   },
   "2026-10-31": {
     "commits": 3,
-    "repos": 8,
+    "repos": 9,
     "pr_events": 15,
     "issues": 0
   },

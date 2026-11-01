@@ -1,4 +1,17 @@
 {
+  "https://api.github.com/repos/FasterXML/jackson-databind/pulls/6362": {
+    "repo": "FasterXML/jackson-databind",
+    "number": 6362,
+    "merged_at": "2026-11-01T20:02:19Z",
+    "additions": 294,
+    "deletions": 9,
+    "languages": [
+      "Java"
+    ],
+    "frameworks": [
+      "JUnit"
+    ]
+  },
   "https://api.github.com/repos/GopeedLab/gopeed/pulls/1620": {
     "repo": "GopeedLab/gopeed",
     "number": 1620,
@@ -195,6 +208,17 @@
     "deletions": 13,
     "languages": [
       "Python"
+    ],
+    "frameworks": []
+  },
+  "https://api.github.com/repos/microsoft/TypeChat/pulls/487": {
+    "repo": "microsoft/TypeChat",
+    "number": 487,
+    "merged_at": "2026-11-01T18:33:25Z",
+    "additions": 59,
+    "deletions": 29,
+    "languages": [
+      "JavaScript"
     ],
     "frameworks": []
   },

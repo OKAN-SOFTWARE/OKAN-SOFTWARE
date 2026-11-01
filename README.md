@@ -61,30 +61,30 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 01, 2026 at 12:42 PM EST**
+**Last profile update: Nov 01, 2026 at 4:44 PM EST**
 
-**71 opened · 31 merged · 36 open now · 48 upstream repositories**
+**71 opened · 33 merged · 34 open now · 48 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix(win32): correct SetCursorPos argument types (#1745) · #1750](https://github.com/java-native-access/jna/pull/1750) | [java-native-access/jna](https://github.com/java-native-access/jna) |
+| 🟣 Merged | [Fix unexpected tokens in bean deserialization (#6357) · #6362](https://github.com/FasterXML/jackson-databind/pull/6362) | [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) |
+| 🟣 Merged | [docs(site): add Python installation command to homepage · #487](https://github.com/microsoft/TypeChat/pull/487) | [microsoft/TypeChat](https://github.com/microsoft/TypeChat) |
 | 🟣 Merged | [fix(render): omit legend from empty language pages · #393](https://github.com/TanbirRamim/open-source-radar/pull/393) | [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) |
 | 🟢 Open | [feat(cli): add project and template validation command · #240](https://github.com/PicadoLabs/build-with-ai/pull/240) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
-| 🟢 Open | [Fix unexpected tokens in bean deserialization (#6357) · #6362](https://github.com/FasterXML/jackson-databind/pull/6362) | [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) |
 | 🟢 Open | [fix(mcp): resolve parameter defaults in startup commands · #6426](https://github.com/docker/mcp-registry/pull/6426) | [docker/mcp-registry](https://github.com/docker/mcp-registry) |
 | 🟢 Open | [fix(aiclient): update default anthropic and gemini models · #236](https://github.com/PicadoLabs/build-with-ai/pull/236) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟣 Merged | [fix(hooks): ignore writing requests inside quoted examples · #183](https://github.com/littlebearapps/plainspoken/pull/183) | [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) |
 | 🟣 Merged | [fix(parser): support numbered lists and markdown tables · #224](https://github.com/PicadoLabs/build-with-ai/pull/224) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [fix(mbpseudo): resolve artist aliases per track · #7140](https://github.com/beetbox/beets/pull/7140) | [beetbox/beets](https://github.com/beetbox/beets) |
-| 🟢 Open | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator · #11944](https://github.com/microsoft/pyright/pull/11944) | [microsoft/pyright](https://github.com/microsoft/pyright) |
-| 🟢 Open | [fix(ebs): validate IOPS-to-volume-size ratios · #4974](https://github.com/aws-cloudformation/cfn-lint/pull/4974) | [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:37ebd7042696a8fa35aa9157ce5d6beb5d32d7b058e9a0d6c787bd2ca5f8d60c -->
+<!-- ACTIVITY:SNAPSHOT:09d884dac0a233c6988d7a8d6466a23c406fe345f37634df12a115dd1699451c -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
@@ -140,15 +140,15 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- UPSTREAM_CODE:START -->
 ### 🟢 UPSTREAM CONTRIBUTIONS // MERGED PRS
 
-**31 merged PRs** · **+2,973 lines added** · **−280 lines removed**
+**33 merged PRs** · **+3,326 lines added** · **−318 lines removed**
 
 | Upstream repository | Merged pull request | Added | Removed | Languages / Frameworks |
 | :--- | :--- | ---: | ---: | :--- |
+| [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) | [#6362](https://github.com/FasterXML/jackson-databind/pull/6362) | +294 | −9 | Java, JUnit |
+| [microsoft/TypeChat](https://github.com/microsoft/TypeChat) | [#487](https://github.com/microsoft/TypeChat/pull/487) | +59 | −29 | JavaScript |
 | [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) | [#393](https://github.com/TanbirRamim/open-source-radar/pull/393) | +14 | −4 | Python |
 | [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) | [#183](https://github.com/littlebearapps/plainspoken/pull/183) | +15 | −0 | Python |
 | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#224](https://github.com/PicadoLabs/build-with-ai/pull/224) | +46 | −4 | JavaScript |
-| [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#203](https://github.com/PicadoLabs/build-with-ai/pull/203) | +16 | −1 | JavaScript |
-| [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) | [#11](https://github.com/manojkken/testcontainers-aws/pull/11) | +135 | −18 | Python |
 
 <sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Languages from added source files; frameworks only from added imports · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->
