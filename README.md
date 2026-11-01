@@ -61,14 +61,15 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Oct 31, 2026 at 9:18 PM EDT**
+**Last profile update: Nov 01, 2026 at 12:57 AM EDT**
 
-**66 opened · 28 merged · 34 open now · 46 upstream repositories**
+**67 opened · 28 merged · 35 open now · 47 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix(mbpseudo): resolve artist aliases per track · #7140](https://github.com/beetbox/beets/pull/7140) | [beetbox/beets](https://github.com/beetbox/beets) |
 | 🟢 Open | [Fix unexpected tokens in bean deserialization (#6357) · #6362](https://github.com/FasterXML/jackson-databind/pull/6362) | [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) |
 | 🟢 Open | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator · #11944](https://github.com/microsoft/pyright/pull/11944) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 | 🟢 Open | [fix(ebs): validate IOPS-to-volume-size ratios · #4974](https://github.com/aws-cloudformation/cfn-lint/pull/4974) | [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) |
@@ -78,13 +79,12 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | 🟣 Merged | [fix(prompt-engine): prevent duplicate nested architectural decisions · #203](https://github.com/PicadoLabs/build-with-ai/pull/203) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [fix(win32): correct SetCursorPos argument types (#1745) · #1750](https://github.com/java-native-access/jna/pull/1750) | [java-native-access/jna](https://github.com/java-native-access/jna) |
 | 🟢 Open | [fix(mysql): reset popped state when re-pushing queue messages (#1777) · #1784](https://github.com/conductor-oss/conductor/pull/1784) | [conductor-oss/conductor](https://github.com/conductor-oss/conductor) |
-| 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:c28dedadb6d1c7c4805642f4a958dde2221e9d2e162ffe3bdd68f595c1e6d20c -->
+<!-- ACTIVITY:SNAPSHOT:96afb7a7e522b0369f982e9e38c28e5082cc2be03211b864c7d9bf1d0c2b7d06 -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
