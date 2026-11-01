@@ -64,6 +64,17 @@
     ],
     "frameworks": []
   },
+  "https://api.github.com/repos/TanbirRamim/open-source-radar/pulls/393": {
+    "repo": "TanbirRamim/open-source-radar",
+    "number": 393,
+    "merged_at": "2026-11-01T16:26:43Z",
+    "additions": 14,
+    "deletions": 4,
+    "languages": [
+      "Python"
+    ],
+    "frameworks": []
+  },
   "https://api.github.com/repos/Tencent/teamai-cli/pulls/1438": {
     "repo": "Tencent/teamai-cli",
     "number": 1438,

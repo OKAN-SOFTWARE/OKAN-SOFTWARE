@@ -61,30 +61,30 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 01, 2026 at 8:53 AM EST**
+**Last profile update: Nov 01, 2026 at 12:42 PM EST**
 
-**70 opened · 30 merged · 36 open now · 48 upstream repositories**
+**71 opened · 31 merged · 36 open now · 48 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟣 Merged | [fix(render): omit legend from empty language pages · #393](https://github.com/TanbirRamim/open-source-radar/pull/393) | [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) |
+| 🟢 Open | [feat(cli): add project and template validation command · #240](https://github.com/PicadoLabs/build-with-ai/pull/240) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [Fix unexpected tokens in bean deserialization (#6357) · #6362](https://github.com/FasterXML/jackson-databind/pull/6362) | [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) |
 | 🟢 Open | [fix(mcp): resolve parameter defaults in startup commands · #6426](https://github.com/docker/mcp-registry/pull/6426) | [docker/mcp-registry](https://github.com/docker/mcp-registry) |
-| 🟢 Open | [fix(render): omit legend from empty language pages · #393](https://github.com/TanbirRamim/open-source-radar/pull/393) | [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) |
 | 🟢 Open | [fix(aiclient): update default anthropic and gemini models · #236](https://github.com/PicadoLabs/build-with-ai/pull/236) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟣 Merged | [fix(hooks): ignore writing requests inside quoted examples · #183](https://github.com/littlebearapps/plainspoken/pull/183) | [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) |
 | 🟣 Merged | [fix(parser): support numbered lists and markdown tables · #224](https://github.com/PicadoLabs/build-with-ai/pull/224) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [fix(mbpseudo): resolve artist aliases per track · #7140](https://github.com/beetbox/beets/pull/7140) | [beetbox/beets](https://github.com/beetbox/beets) |
 | 🟢 Open | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator · #11944](https://github.com/microsoft/pyright/pull/11944) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 | 🟢 Open | [fix(ebs): validate IOPS-to-volume-size ratios · #4974](https://github.com/aws-cloudformation/cfn-lint/pull/4974) | [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) |
-| 🟢 Open | [fix(cli): normalize autonomous decisions under decisions namespace · #226](https://github.com/PicadoLabs/build-with-ai/pull/226) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:53c27e9634d36b276352ed61899686373f72c37ca087006cc7c2bc24cc6f9554 -->
+<!-- ACTIVITY:SNAPSHOT:37ebd7042696a8fa35aa9157ce5d6beb5d32d7b058e9a0d6c787bd2ca5f8d60c -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
@@ -140,15 +140,15 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- UPSTREAM_CODE:START -->
 ### 🟢 UPSTREAM CONTRIBUTIONS // MERGED PRS
 
-**30 merged PRs** · **+2,959 lines added** · **−276 lines removed**
+**31 merged PRs** · **+2,973 lines added** · **−280 lines removed**
 
 | Upstream repository | Merged pull request | Added | Removed | Languages / Frameworks |
 | :--- | :--- | ---: | ---: | :--- |
+| [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) | [#393](https://github.com/TanbirRamim/open-source-radar/pull/393) | +14 | −4 | Python |
 | [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) | [#183](https://github.com/littlebearapps/plainspoken/pull/183) | +15 | −0 | Python |
 | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#224](https://github.com/PicadoLabs/build-with-ai/pull/224) | +46 | −4 | JavaScript |
 | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#203](https://github.com/PicadoLabs/build-with-ai/pull/203) | +16 | −1 | JavaScript |
 | [manojkken/testcontainers-aws](https://github.com/manojkken/testcontainers-aws) | [#11](https://github.com/manojkken/testcontainers-aws/pull/11) | +135 | −18 | Python |
-| [mne-tools/mne-connectivity](https://github.com/mne-tools/mne-connectivity) | [#520](https://github.com/mne-tools/mne-connectivity/pull/520) | +23 | −14 | Python |
 
 <sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Languages from added source files; frameworks only from added imports · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->
