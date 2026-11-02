@@ -61,30 +61,30 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 02, 2026 at 5:16 AM EST**
+**Last profile update: Nov 02, 2026 at 9:25 AM EST**
 
-**74 opened · 34 merged · 36 open now · 49 upstream repositories**
+**75 opened · 34 merged · 35 open now · 50 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
-| 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
+| 🟢 Open | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
 | 🟢 Open | [fix(code-executors): preserve hard-linked output files (#7906) · #7932](https://github.com/google/adk-python/pull/7932) | [google/adk-python](https://github.com/google/adk-python) |
+| 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 | 🟣 Merged | [fix(cli): normalize autonomous decisions under decisions namespace · #226](https://github.com/PicadoLabs/build-with-ai/pull/226) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [docs: use portable sql fields in canonical examples · #640](https://github.com/apache/ossie/pull/640) | [apache/ossie](https://github.com/apache/ossie) |
-| 🟢 Open | [feat(data): add Solidity tracking and quickstart · #397](https://github.com/TanbirRamim/open-source-radar/pull/397) | [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) |
 | 🟢 Open | [fix(mbpseudo): resolve artist aliases per track · #7140](https://github.com/beetbox/beets/pull/7140) | [beetbox/beets](https://github.com/beetbox/beets) |
 | 🟢 Open | [fix(win32): correct SetCursorPos argument types (#1745) · #1750](https://github.com/java-native-access/jna/pull/1750) | [java-native-access/jna](https://github.com/java-native-access/jna) |
-| 🟢 Open | [feat: add Perl discovery and language quickstart · #396](https://github.com/TanbirRamim/open-source-radar/pull/396) | [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) |
 | 🟣 Merged | [Fix unexpected tokens in bean deserialization (#6357) · #6362](https://github.com/FasterXML/jackson-databind/pull/6362) | [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) |
 | 🟣 Merged | [docs(site): add Python installation command to homepage · #487](https://github.com/microsoft/TypeChat/pull/487) | [microsoft/TypeChat](https://github.com/microsoft/TypeChat) |
+| 🟣 Merged | [fix(render): omit legend from empty language pages · #393](https://github.com/TanbirRamim/open-source-radar/pull/393) | [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:7a4abe922e0c5fc88621386ca746c41596ccdea40529eaa1e87a2c480e5446b6 -->
+<!-- ACTIVITY:SNAPSHOT:5111e7d516958b1f577029c69b80821e45c03196d852ec22bb3f94660e046f40 -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
