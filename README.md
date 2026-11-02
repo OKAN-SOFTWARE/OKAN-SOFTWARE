@@ -101,7 +101,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Opened PR in [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [Pull request](https://github.com/PicadoLabs/build-with-ai/pull/240) |
 | Opened PR in [docker/mcp-registry](https://github.com/docker/mcp-registry) | [Pull request](https://github.com/docker/mcp-registry/pull/6426) |
 | Commented in [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) | [fix\(hooks\): ignore writing requests inside quoted examples](https://github.com/littlebearapps/plainspoken/issues/183) |
-| Opened PR in [beetbox/beets](https://github.com/beetbox/beets) | [Pull request](https://github.com/beetbox/beets/pull/7140) |
+| Pushed code in [OKAN-SOFTWARE/beets](https://github.com/OKAN-SOFTWARE/beets) | Branch fix/mbpseudo-per-track-aliases-7125 |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
