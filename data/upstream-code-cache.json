@@ -23,6 +23,15 @@
     ],
     "frameworks": []
   },
+  "https://api.github.com/repos/MicrosoftDocs/PowerShell-Docs/pulls/13359": {
+    "repo": "MicrosoftDocs/PowerShell-Docs",
+    "number": 13359,
+    "merged_at": "2026-11-02T17:53:32Z",
+    "additions": 12,
+    "deletions": 12,
+    "languages": [],
+    "frameworks": []
+  },
   "https://api.github.com/repos/PicadoLabs/build-with-ai/pulls/202": {
     "repo": "PicadoLabs/build-with-ai",
     "number": 202,
