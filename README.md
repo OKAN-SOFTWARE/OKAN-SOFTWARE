@@ -101,7 +101,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) |
 | Commented in [java-native-access/jna](https://github.com/java-native-access/jna) | [fix\(win32\): correct SetCursorPos argument types \(#1745\)](https://github.com/java-native-access/jna/issues/1750) |
 | Opened PR in [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) | [Pull request](https://github.com/TanbirRamim/open-source-radar/pull/397) |
-| Pushed code in [OKAN-SOFTWARE/beets](https://github.com/OKAN-SOFTWARE/beets) | Branch fix/mbpseudo-per-track-aliases-7125 |
+| Created branch in [OKAN-SOFTWARE/build-with-ai](https://github.com/OKAN-SOFTWARE/build-with-ai) | fix/185-active-ai-model-defaults |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
