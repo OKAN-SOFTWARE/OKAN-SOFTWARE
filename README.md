@@ -61,30 +61,30 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 02, 2026 at 1:11 AM EST**
+**Last profile update: Nov 02, 2026 at 5:16 AM EST**
 
-**74 opened · 33 merged · 37 open now · 49 upstream repositories**
+**74 opened · 34 merged · 36 open now · 49 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
+| 🟢 Open | [fix(code-executors): preserve hard-linked output files (#7906) · #7932](https://github.com/google/adk-python/pull/7932) | [google/adk-python](https://github.com/google/adk-python) |
+| 🟣 Merged | [fix(cli): normalize autonomous decisions under decisions namespace · #226](https://github.com/PicadoLabs/build-with-ai/pull/226) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
+| 🟢 Open | [docs: use portable sql fields in canonical examples · #640](https://github.com/apache/ossie/pull/640) | [apache/ossie](https://github.com/apache/ossie) |
 | 🟢 Open | [feat(data): add Solidity tracking and quickstart · #397](https://github.com/TanbirRamim/open-source-radar/pull/397) | [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) |
 | 🟢 Open | [fix(mbpseudo): resolve artist aliases per track · #7140](https://github.com/beetbox/beets/pull/7140) | [beetbox/beets](https://github.com/beetbox/beets) |
-| 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 | 🟢 Open | [fix(win32): correct SetCursorPos argument types (#1745) · #1750](https://github.com/java-native-access/jna/pull/1750) | [java-native-access/jna](https://github.com/java-native-access/jna) |
-| 🟢 Open | [fix(code-executors): preserve hard-linked output files (#7906) · #7932](https://github.com/google/adk-python/pull/7932) | [google/adk-python](https://github.com/google/adk-python) |
 | 🟢 Open | [feat: add Perl discovery and language quickstart · #396](https://github.com/TanbirRamim/open-source-radar/pull/396) | [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) |
 | 🟣 Merged | [Fix unexpected tokens in bean deserialization (#6357) · #6362](https://github.com/FasterXML/jackson-databind/pull/6362) | [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) |
 | 🟣 Merged | [docs(site): add Python installation command to homepage · #487](https://github.com/microsoft/TypeChat/pull/487) | [microsoft/TypeChat](https://github.com/microsoft/TypeChat) |
-| 🟣 Merged | [fix(render): omit legend from empty language pages · #393](https://github.com/TanbirRamim/open-source-radar/pull/393) | [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) |
-| 🟢 Open | [feat(cli): add project and template validation command · #240](https://github.com/PicadoLabs/build-with-ai/pull/240) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:eef9dba434732799234c4ccaac39a0fc79b037177258fe46b0e893a493f08cc5 -->
+<!-- ACTIVITY:SNAPSHOT:7a4abe922e0c5fc88621386ca746c41596ccdea40529eaa1e87a2c480e5446b6 -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
@@ -140,15 +140,15 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- UPSTREAM_CODE:START -->
 ### 🟢 UPSTREAM CONTRIBUTIONS // MERGED PRS
 
-**33 merged PRs** · **+3,326 lines added** · **−318 lines removed**
+**34 merged PRs** · **+3,376 lines added** · **−320 lines removed**
 
 | Upstream repository | Merged pull request | Added | Removed | Languages / Frameworks |
 | :--- | :--- | ---: | ---: | :--- |
+| [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#226](https://github.com/PicadoLabs/build-with-ai/pull/226) | +50 | −2 | JavaScript |
 | [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) | [#6362](https://github.com/FasterXML/jackson-databind/pull/6362) | +294 | −9 | Java, JUnit |
 | [microsoft/TypeChat](https://github.com/microsoft/TypeChat) | [#487](https://github.com/microsoft/TypeChat/pull/487) | +59 | −29 | JavaScript |
 | [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) | [#393](https://github.com/TanbirRamim/open-source-radar/pull/393) | +14 | −4 | Python |
 | [littlebearapps/plainspoken](https://github.com/littlebearapps/plainspoken) | [#183](https://github.com/littlebearapps/plainspoken/pull/183) | +15 | −0 | Python |
-| [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#224](https://github.com/PicadoLabs/build-with-ai/pull/224) | +46 | −4 | JavaScript |
 
 <sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Languages from added source files; frameworks only from added imports · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->
