@@ -61,30 +61,30 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 02, 2026 at 1:04 PM EST**
+**Last profile update: Nov 02, 2026 at 4:51 PM EST**
 
-**76 opened · 35 merged · 35 open now · 50 upstream repositories**
+**78 opened · 35 merged · 37 open now · 50 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix(mysql): reset popped state when re-pushing queue messages (#1777) · #1784](https://github.com/conductor-oss/conductor/pull/1784) | [conductor-oss/conductor](https://github.com/conductor-oss/conductor) |
+| 🟢 Open | [Clarify ScriptBlock support in ConstrainedLanguage mode · #13370](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13370) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
+| 🟢 Open | [fix(hover): resolve XML comment nodes at the cursor · #82](https://github.com/harshanacz/xml-language-service/pull/82) | [harshanacz/xml-language-service](https://github.com/harshanacz/xml-language-service) |
+| 🟢 Open | [Document invoking a PowerShell script file from C# · #13369](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13369) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
 | 🟣 Merged | [Fix incorrect containment operator examples · #13359](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13359) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
 | 🟢 Open | [docs: add reference assembly prerequisites for C# cmdlets · #13368](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13368) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
 | 🟢 Open | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
 | 🟢 Open | [fix(code-executors): preserve hard-linked output files (#7906) · #7932](https://github.com/google/adk-python/pull/7932) | [google/adk-python](https://github.com/google/adk-python) |
 | 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 | 🟣 Merged | [fix(cli): normalize autonomous decisions under decisions namespace · #226](https://github.com/PicadoLabs/build-with-ai/pull/226) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
-| 🟢 Open | [docs: use portable sql fields in canonical examples · #640](https://github.com/apache/ossie/pull/640) | [apache/ossie](https://github.com/apache/ossie) |
-| 🟢 Open | [fix(mbpseudo): resolve artist aliases per track · #7140](https://github.com/beetbox/beets/pull/7140) | [beetbox/beets](https://github.com/beetbox/beets) |
-| 🟢 Open | [fix(win32): correct SetCursorPos argument types (#1745) · #1750](https://github.com/java-native-access/jna/pull/1750) | [java-native-access/jna](https://github.com/java-native-access/jna) |
-| 🟣 Merged | [Fix unexpected tokens in bean deserialization (#6357) · #6362](https://github.com/FasterXML/jackson-databind/pull/6362) | [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:0e96c478b41d73c4b2184933ed9871bcb52d33a6c4e63b677aef789afbb41d49 -->
+<!-- ACTIVITY:SNAPSHOT:cd0242ab88e4ce6d3910cb40420e993db09d733339322b5473ad4cc23f22ea1c -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
