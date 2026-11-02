@@ -94,14 +94,14 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
-| Forked repository in [scikit-learn-contrib/imbalanced-learn](https://github.com/scikit-learn-contrib/imbalanced-learn) | Public fork |
 | Opened PR in [apache/maven-surefire](https://github.com/apache/maven-surefire) | [Pull request](https://github.com/apache/maven-surefire/pull/3567) |
 | Commented in [google/adk-python](https://github.com/google/adk-python) | [fix\(code-executors\): preserve hard-linked output files \(#7906\)](https://github.com/google/adk-python/issues/7932) |
 | Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) |
 | Commented in [java-native-access/jna](https://github.com/java-native-access/jna) | [fix\(win32\): correct SetCursorPos argument types \(#1745\)](https://github.com/java-native-access/jna/issues/1750) |
 | Opened PR in [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) | [Pull request](https://github.com/TanbirRamim/open-source-radar/pull/397) |
-| Opened PR in [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [Pull request](https://github.com/PicadoLabs/build-with-ai/pull/240) |
-| Opened PR in [docker/mcp-registry](https://github.com/docker/mcp-registry) | [Pull request](https://github.com/docker/mcp-registry/pull/6426) |
+| Pushed code in [OKAN-SOFTWARE/beets](https://github.com/OKAN-SOFTWARE/beets) | Branch fix/mbpseudo-per-track-aliases-7125 |
+| Pushed code in [OKAN-SOFTWARE/OKAN-SOFTWARE](https://github.com/OKAN-SOFTWARE/OKAN-SOFTWARE) | Branch main |
+| Created branch in [OKAN-SOFTWARE/cfn-lint](https://github.com/OKAN-SOFTWARE/cfn-lint) | fix/ebs-iops-ratio-4897 |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
