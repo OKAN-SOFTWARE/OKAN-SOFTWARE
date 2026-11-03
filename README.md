@@ -94,6 +94,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
+| Commented in [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) | [fix\(E2002\): report lists of SSM parameter types as errors](https://github.com/aws-cloudformation/cfn-lint/issues/4928) |
 | Commented in [fabric8io/kubernetes-client](https://github.com/fabric8io/kubernetes-client) | [Add a global default bind address for port-forward listeners](https://github.com/fabric8io/kubernetes-client/issues/7968) |
 | Commented in [psf/requests](https://github.com/psf/requests) | [Fix: Respect no\_proxy in proxies dictionary and NO\_PROXY env var](https://github.com/psf/requests/issues/7068) |
 | Opened PR in [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) | [Pull request](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13370) |
@@ -101,7 +102,6 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Commented in [google/adk-python](https://github.com/google/adk-python) | [fix\(code-executors\): preserve hard-linked output files \(#7906\)](https://github.com/google/adk-python/issues/7932) |
 | Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) |
 | Commented in [java-native-access/jna](https://github.com/java-native-access/jna) | [fix\(win32\): correct SetCursorPos argument types \(#1745\)](https://github.com/java-native-access/jna/issues/1750) |
-| Opened PR in [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) | [Pull request](https://github.com/TanbirRamim/open-source-radar/pull/397) |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
