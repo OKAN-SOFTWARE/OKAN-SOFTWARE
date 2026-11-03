@@ -61,14 +61,15 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 03, 2026 at 1:02 AM EST**
+**Last profile update: Nov 03, 2026 at 5:02 AM EST**
 
-**78 opened · 35 merged · 37 open now · 50 upstream repositories**
+**78 opened · 36 merged · 36 open now · 50 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟣 Merged | [docs: use portable sql fields in canonical examples · #640](https://github.com/apache/ossie/pull/640) | [apache/ossie](https://github.com/apache/ossie) |
 | 🟢 Open | [fix(E2002): reject misspelled parameter types in wrappers · #4935](https://github.com/aws-cloudformation/cfn-lint/pull/4935) | [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) |
 | 🟢 Open | [fix(mysql): reset popped state when re-pushing queue messages (#1777) · #1784](https://github.com/conductor-oss/conductor/pull/1784) | [conductor-oss/conductor](https://github.com/conductor-oss/conductor) |
 | 🟢 Open | [Clarify ScriptBlock support in ConstrainedLanguage mode · #13370](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13370) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
@@ -78,13 +79,12 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | 🟢 Open | [docs: add reference assembly prerequisites for C# cmdlets · #13368](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13368) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
 | 🟢 Open | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
 | 🟢 Open | [fix(code-executors): preserve hard-linked output files (#7906) · #7932](https://github.com/google/adk-python/pull/7932) | [google/adk-python](https://github.com/google/adk-python) |
-| 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:67b31e7c119687a5e12db9afffe2ba2c6b287597dbc8bbed0c256494d1b4d1e8 -->
+<!-- ACTIVITY:SNAPSHOT:8327737b2532d3983b4b3dee65712781d9acd6e6a100fdbcd131ee4dfdde366b -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
@@ -140,15 +140,15 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- UPSTREAM_CODE:START -->
 ### 🟢 UPSTREAM CONTRIBUTIONS // MERGED PRS
 
-**35 merged PRs** · **+3,388 lines added** · **−332 lines removed**
+**36 merged PRs** · **+3,569 lines added** · **−854 lines removed**
 
 | Upstream repository | Merged pull request | Added | Removed | Languages / Frameworks |
 | :--- | :--- | ---: | ---: | :--- |
+| [apache/ossie](https://github.com/apache/ossie) | [#640](https://github.com/apache/ossie/pull/640) | +181 | −522 | Documentation / other |
 | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) | [#13359](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13359) | +12 | −12 | Documentation / other |
 | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#226](https://github.com/PicadoLabs/build-with-ai/pull/226) | +50 | −2 | JavaScript |
 | [FasterXML/jackson-databind](https://github.com/FasterXML/jackson-databind) | [#6362](https://github.com/FasterXML/jackson-databind/pull/6362) | +294 | −9 | Java, JUnit |
 | [microsoft/TypeChat](https://github.com/microsoft/TypeChat) | [#487](https://github.com/microsoft/TypeChat/pull/487) | +59 | −29 | JavaScript |
-| [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) | [#393](https://github.com/TanbirRamim/open-source-radar/pull/393) | +14 | −4 | Python |
 
 <sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Languages from added source files; frameworks only from added imports · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->

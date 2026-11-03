@@ -132,6 +132,15 @@
     ],
     "frameworks": []
   },
+  "https://api.github.com/repos/apache/ossie/pulls/640": {
+    "repo": "apache/ossie",
+    "number": 640,
+    "merged_at": "2026-11-03T06:44:05Z",
+    "additions": 181,
+    "deletions": 522,
+    "languages": [],
+    "frameworks": []
+  },
   "https://api.github.com/repos/ftery0/ai-profile-switch/pulls/28": {
     "repo": "ftery0/ai-profile-switch",
     "number": 28,
