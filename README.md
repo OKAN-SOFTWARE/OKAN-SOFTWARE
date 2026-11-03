@@ -94,6 +94,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
+| Commented in [fabric8io/kubernetes-client](https://github.com/fabric8io/kubernetes-client) | [Add a global default bind address for port-forward listeners](https://github.com/fabric8io/kubernetes-client/issues/7968) |
 | Commented in [psf/requests](https://github.com/psf/requests) | [Fix: Respect no\_proxy in proxies dictionary and NO\_PROXY env var](https://github.com/psf/requests/issues/7068) |
 | Opened PR in [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) | [Pull request](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13370) |
 | Opened PR in [apache/maven-surefire](https://github.com/apache/maven-surefire) | [Pull request](https://github.com/apache/maven-surefire/pull/3567) |
@@ -101,7 +102,6 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) |
 | Commented in [java-native-access/jna](https://github.com/java-native-access/jna) | [fix\(win32\): correct SetCursorPos argument types \(#1745\)](https://github.com/java-native-access/jna/issues/1750) |
 | Opened PR in [TanbirRamim/open-source-radar](https://github.com/TanbirRamim/open-source-radar) | [Pull request](https://github.com/TanbirRamim/open-source-radar/pull/397) |
-| Created branch in [OKAN-SOFTWARE/build-with-ai](https://github.com/OKAN-SOFTWARE/build-with-ai) | fix/185-active-ai-model-defaults |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
