@@ -61,7 +61,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 03, 2026 at 12:57 PM EST**
+**Last profile update: Nov 03, 2026 at 4:55 PM EST**
 
 **78 opened · 36 merged · 36 open now · 50 upstream repositories**
 
@@ -69,6 +69,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟣 Merged | [fix(msix): defer PowerShell updates while in use · #28275](https://github.com/PowerShell/PowerShell/pull/28275) | [PowerShell/PowerShell](https://github.com/PowerShell/PowerShell) |
 | 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 | 🟣 Merged | [docs: use portable sql fields in canonical examples · #640](https://github.com/apache/ossie/pull/640) | [apache/ossie](https://github.com/apache/ossie) |
 | 🟢 Open | [fix(E2002): reject misspelled parameter types in wrappers · #4935](https://github.com/aws-cloudformation/cfn-lint/pull/4935) | [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) |
@@ -78,13 +79,12 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | 🟢 Open | [Document invoking a PowerShell script file from C# · #13369](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13369) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
 | 🟣 Merged | [Fix incorrect containment operator examples · #13359](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13359) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
 | 🟢 Open | [docs: add reference assembly prerequisites for C# cmdlets · #13368](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13368) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
-| 🟢 Open | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:526c813fdb3c9d37f1c7cc74739587a230fb572c9496c5ef6c13caa5c8b53a65 -->
+<!-- ACTIVITY:SNAPSHOT:17bdf23bd1883fac4315364bcbe4a4728f95471555871d1c2e19062a3876bcb7 -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
