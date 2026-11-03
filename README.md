@@ -94,14 +94,14 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
+| Commented in [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) | [ARM: VQNEG decodes as VQABS](https://github.com/NationalSecurityAgency/ghidra/issues/10111) |
+| Commented in [kubernetes-client/python](https://github.com/kubernetes-client/python) | [InClusterConfigLoader token refresh uses timezone-naive datetime.now\(\), stalls on backward clock jumps \(DST\)](https://github.com/kubernetes-client/python/issues/2768) |
 | Commented in [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) | [fix\(E2002\): report lists of SSM parameter types as errors](https://github.com/aws-cloudformation/cfn-lint/issues/4928) |
 | Commented in [fabric8io/kubernetes-client](https://github.com/fabric8io/kubernetes-client) | [Add a global default bind address for port-forward listeners](https://github.com/fabric8io/kubernetes-client/issues/7968) |
 | Commented in [psf/requests](https://github.com/psf/requests) | [Fix: Respect no\_proxy in proxies dictionary and NO\_PROXY env var](https://github.com/psf/requests/issues/7068) |
 | Opened PR in [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) | [Pull request](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13370) |
 | Opened PR in [apache/maven-surefire](https://github.com/apache/maven-surefire) | [Pull request](https://github.com/apache/maven-surefire/pull/3567) |
 | Commented in [google/adk-python](https://github.com/google/adk-python) | [fix\(code-executors\): preserve hard-linked output files \(#7906\)](https://github.com/google/adk-python/issues/7932) |
-| Pushed code in [OKAN-SOFTWARE/beets](https://github.com/OKAN-SOFTWARE/beets) | Branch fix/mbpseudo-per-track-aliases-7125 |
-| Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
