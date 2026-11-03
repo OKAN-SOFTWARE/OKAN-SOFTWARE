@@ -100,8 +100,8 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Opened PR in [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) | [Pull request](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13370) |
 | Opened PR in [apache/maven-surefire](https://github.com/apache/maven-surefire) | [Pull request](https://github.com/apache/maven-surefire/pull/3567) |
 | Commented in [google/adk-python](https://github.com/google/adk-python) | [fix\(code-executors\): preserve hard-linked output files \(#7906\)](https://github.com/google/adk-python/issues/7932) |
+| Pushed code in [OKAN-SOFTWARE/beets](https://github.com/OKAN-SOFTWARE/beets) | Branch fix/mbpseudo-per-track-aliases-7125 |
 | Commented in [nodejs/doc-kit](https://github.com/nodejs/doc-kit) | [fix\(html\): exclude custom bundler from worker configuration](https://github.com/nodejs/doc-kit/issues/1204) |
-| Commented in [java-native-access/jna](https://github.com/java-native-access/jna) | [fix\(win32\): correct SetCursorPos argument types \(#1745\)](https://github.com/java-native-access/jna/issues/1750) |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
