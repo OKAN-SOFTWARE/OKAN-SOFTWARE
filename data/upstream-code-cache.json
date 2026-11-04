@@ -397,6 +397,17 @@
     "languages": [],
     "frameworks": []
   },
+  "https://api.github.com/repos/pycontribs/jira/pulls/2449": {
+    "repo": "pycontribs/jira",
+    "number": 2449,
+    "merged_at": "2026-11-04T11:49:35Z",
+    "additions": 78,
+    "deletions": 4,
+    "languages": [
+      "Python"
+    ],
+    "frameworks": []
+  },
   "https://api.github.com/repos/theluckystrike/tab-suspender-chrome-extension/pulls/21": {
     "repo": "theluckystrike/tab-suspender-chrome-extension",
     "number": 21,
