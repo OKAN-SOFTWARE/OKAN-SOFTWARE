@@ -101,7 +101,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Commented in [fabric8io/kubernetes-client](https://github.com/fabric8io/kubernetes-client) | [Add a global default bind address for port-forward listeners](https://github.com/fabric8io/kubernetes-client/issues/7968) |
 | Commented in [psf/requests](https://github.com/psf/requests) | [Fix: Respect no\_proxy in proxies dictionary and NO\_PROXY env var](https://github.com/psf/requests/issues/7068) |
 | Opened PR in [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) | [Pull request](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13370) |
-| Created branch in [OKAN-SOFTWARE/PowerShell-Docs](https://github.com/OKAN-SOFTWARE/PowerShell-Docs) | docs/8594-external-script-from-csharp |
+| Created branch in [OKAN-SOFTWARE/PowerShell-Docs](https://github.com/OKAN-SOFTWARE/PowerShell-Docs) | docs/13337-scriptblock-language-modes |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
