@@ -61,14 +61,15 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 03, 2026 at 4:55 PM EST**
+**Last profile update: Nov 03, 2026 at 9:08 PM EST**
 
-**78 opened · 36 merged · 36 open now · 50 upstream repositories**
+**79 opened · 36 merged · 37 open now · 51 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [Fix ARM NEON VQABS and VQNEG instruction decoding · #10114](https://github.com/NationalSecurityAgency/ghidra/pull/10114) | [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) |
 | 🟣 Merged | [fix(msix): defer PowerShell updates while in use · #28275](https://github.com/PowerShell/PowerShell/pull/28275) | [PowerShell/PowerShell](https://github.com/PowerShell/PowerShell) |
 | 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 | 🟣 Merged | [docs: use portable sql fields in canonical examples · #640](https://github.com/apache/ossie/pull/640) | [apache/ossie](https://github.com/apache/ossie) |
@@ -78,13 +79,12 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | 🟢 Open | [fix(hover): resolve XML comment nodes at the cursor · #82](https://github.com/harshanacz/xml-language-service/pull/82) | [harshanacz/xml-language-service](https://github.com/harshanacz/xml-language-service) |
 | 🟢 Open | [Document invoking a PowerShell script file from C# · #13369](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13369) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
 | 🟣 Merged | [Fix incorrect containment operator examples · #13359](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13359) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
-| 🟢 Open | [docs: add reference assembly prerequisites for C# cmdlets · #13368](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13368) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:17bdf23bd1883fac4315364bcbe4a4728f95471555871d1c2e19062a3876bcb7 -->
+<!-- ACTIVITY:SNAPSHOT:7a7c467a2c6baaafd6e61ef57d80a522e850d8a99788a6d87eef9487a585e595 -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
