@@ -94,6 +94,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
+| Commented in [google/adk-python](https://github.com/google/adk-python) | [fix\(code-executors\): preserve hard-linked output files \(#7906\)](https://github.com/google/adk-python/issues/7932) |
 | Commented in [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) | [Fix ARM NEON VQABS and VQNEG instruction decoding](https://github.com/NationalSecurityAgency/ghidra/issues/10114) |
 | Opened PR in [microsoft/TypeScript](https://github.com/microsoft/TypeScript) | [Pull request](https://github.com/microsoft/TypeScript/pull/65317) |
 | Commented in [kubernetes-client/python](https://github.com/kubernetes-client/python) | [InClusterConfigLoader token refresh uses timezone-naive datetime.now\(\), stalls on backward clock jumps \(DST\)](https://github.com/kubernetes-client/python/issues/2768) |
@@ -101,7 +102,6 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Commented in [fabric8io/kubernetes-client](https://github.com/fabric8io/kubernetes-client) | [Add a global default bind address for port-forward listeners](https://github.com/fabric8io/kubernetes-client/issues/7968) |
 | Commented in [psf/requests](https://github.com/psf/requests) | [Fix: Respect no\_proxy in proxies dictionary and NO\_PROXY env var](https://github.com/psf/requests/issues/7068) |
 | Pushed code in [OKAN-SOFTWARE/PowerShell-Docs](https://github.com/OKAN-SOFTWARE/PowerShell-Docs) | Branch docs/13337-scriptblock-language-modes |
-| Opened PR in [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) | [Pull request](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13370) |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
