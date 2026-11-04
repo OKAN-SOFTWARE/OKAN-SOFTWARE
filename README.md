@@ -94,6 +94,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
+| Opened PR in [microsoft/TypeScript](https://github.com/microsoft/TypeScript) | [Pull request](https://github.com/microsoft/TypeScript/pull/65317) |
 | Opened PR in [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) | [Pull request](https://github.com/NationalSecurityAgency/ghidra/pull/10114) |
 | Commented in [kubernetes-client/python](https://github.com/kubernetes-client/python) | [InClusterConfigLoader token refresh uses timezone-naive datetime.now\(\), stalls on backward clock jumps \(DST\)](https://github.com/kubernetes-client/python/issues/2768) |
 | Commented in [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) | [fix\(E2002\): report lists of SSM parameter types as errors](https://github.com/aws-cloudformation/cfn-lint/issues/4928) |
@@ -101,7 +102,6 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Commented in [psf/requests](https://github.com/psf/requests) | [Fix: Respect no\_proxy in proxies dictionary and NO\_PROXY env var](https://github.com/psf/requests/issues/7068) |
 | Opened PR in [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) | [Pull request](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13370) |
 | Created branch in [OKAN-SOFTWARE/PowerShell-Docs](https://github.com/OKAN-SOFTWARE/PowerShell-Docs) | docs/8594-external-script-from-csharp |
-| Opened PR in [apache/maven-surefire](https://github.com/apache/maven-surefire) | [Pull request](https://github.com/apache/maven-surefire/pull/3567) |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
