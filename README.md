@@ -61,7 +61,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 04, 2026 at 1:08 AM EST**
+**Last profile update: Nov 04, 2026 at 5:13 AM EST**
 
 **79 opened · 36 merged · 37 open now · 51 upstream repositories**
 
@@ -69,6 +69,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix(client): support accountId in assignable project searches · #2449](https://github.com/pycontribs/jira/pull/2449) | [pycontribs/jira](https://github.com/pycontribs/jira) |
 | 🟢 Open | [Fix ARM NEON VQABS and VQNEG instruction decoding · #10114](https://github.com/NationalSecurityAgency/ghidra/pull/10114) | [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) |
 | 🟣 Merged | [fix(msix): defer PowerShell updates while in use · #28275](https://github.com/PowerShell/PowerShell/pull/28275) | [PowerShell/PowerShell](https://github.com/PowerShell/PowerShell) |
 | 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
@@ -78,13 +79,12 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | 🟢 Open | [Clarify ScriptBlock support in ConstrainedLanguage mode · #13370](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13370) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
 | 🟢 Open | [fix(hover): resolve XML comment nodes at the cursor · #82](https://github.com/harshanacz/xml-language-service/pull/82) | [harshanacz/xml-language-service](https://github.com/harshanacz/xml-language-service) |
 | 🟢 Open | [Document invoking a PowerShell script file from C# · #13369](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13369) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
-| 🟣 Merged | [Fix incorrect containment operator examples · #13359](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13359) | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:7a7c467a2c6baaafd6e61ef57d80a522e850d8a99788a6d87eef9487a585e595 -->
+<!-- ACTIVITY:SNAPSHOT:00b9df2a4a0969c0b029d86f2b93803ddb0615566a20903f3f2b8b329f98a18f -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
