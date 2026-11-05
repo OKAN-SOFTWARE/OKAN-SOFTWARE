@@ -76,6 +76,17 @@
     ],
     "frameworks": []
   },
+  "https://api.github.com/repos/PicadoLabs/build-with-ai/pulls/236": {
+    "repo": "PicadoLabs/build-with-ai",
+    "number": 236,
+    "merged_at": "2026-11-05T09:08:20Z",
+    "additions": 21,
+    "deletions": 8,
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": []
+  },
   "https://api.github.com/repos/PowerShell/PowerShell/pulls/28275": {
     "repo": "PowerShell/PowerShell",
     "number": 28275,
