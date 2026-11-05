@@ -98,10 +98,10 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Commented in [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) | [Fix ARM NEON VQABS and VQNEG instruction decoding](https://github.com/NationalSecurityAgency/ghidra/issues/10114) |
 | Opened PR in [microsoft/TypeScript](https://github.com/microsoft/TypeScript) | [Pull request](https://github.com/microsoft/TypeScript/pull/65317) |
 | Commented in [kubernetes-client/python](https://github.com/kubernetes-client/python) | [InClusterConfigLoader token refresh uses timezone-naive datetime.now\(\), stalls on backward clock jumps \(DST\)](https://github.com/kubernetes-client/python/issues/2768) |
+| Pushed code in [OKAN-SOFTWARE/cfn-lint](https://github.com/OKAN-SOFTWARE/cfn-lint) | Branch fix/e2002-invalid-base-types |
 | Commented in [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) | [fix\(E2002\): report lists of SSM parameter types as errors](https://github.com/aws-cloudformation/cfn-lint/issues/4928) |
 | Commented in [fabric8io/kubernetes-client](https://github.com/fabric8io/kubernetes-client) | [Add a global default bind address for port-forward listeners](https://github.com/fabric8io/kubernetes-client/issues/7968) |
 | Commented in [psf/requests](https://github.com/psf/requests) | [Fix: Respect no\_proxy in proxies dictionary and NO\_PROXY env var](https://github.com/psf/requests/issues/7068) |
-| Pushed code in [OKAN-SOFTWARE/PowerShell-Docs](https://github.com/OKAN-SOFTWARE/PowerShell-Docs) | Branch docs/13337-scriptblock-language-modes |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
