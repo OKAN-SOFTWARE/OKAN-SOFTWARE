@@ -61,21 +61,21 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 05, 2026 at 12:57 PM EST**
+**Last profile update: Nov 05, 2026 at 4:55 PM EST**
 
-**80 opened · 38 merged · 36 open now · 52 upstream repositories**
+**80 opened · 39 merged · 35 open now · 52 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟣 Merged | [Fix TS1450 diagnostic severity for invalid dynamic imports · #65317](https://github.com/microsoft/TypeScript/pull/65317) | [microsoft/TypeScript](https://github.com/microsoft/TypeScript) |
 | 🟣 Merged | [Update Appx manifest to not allow updates while PS7 is running · #28275](https://github.com/PowerShell/PowerShell/pull/28275) | [PowerShell/PowerShell](https://github.com/PowerShell/PowerShell) |
 | 🟢 Open | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator · #11944](https://github.com/microsoft/pyright/pull/11944) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 | 🟢 Open | [Fix ARM NEON VQABS and VQNEG instruction decoding · #10114](https://github.com/NationalSecurityAgency/ghidra/pull/10114) | [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) |
 | 🟢 Open | [feat(cli): add project and template validation command · #240](https://github.com/PicadoLabs/build-with-ai/pull/240) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟣 Merged | [fix(aiclient): update default anthropic and gemini models · #236](https://github.com/PicadoLabs/build-with-ai/pull/236) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [fix(code-executors): preserve hard-linked output files (#7906) · #7932](https://github.com/google/adk-python/pull/7932) | [google/adk-python](https://github.com/google/adk-python) |
-| 🟢 Open | [Fix TS1450 diagnostic severity for invalid dynamic imports · #65317](https://github.com/microsoft/TypeScript/pull/65317) | [microsoft/TypeScript](https://github.com/microsoft/TypeScript) |
 | 🟣 Merged | [fix(client): support accountId in assignable project searches · #2449](https://github.com/pycontribs/jira/pull/2449) | [pycontribs/jira](https://github.com/pycontribs/jira) |
 | 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
 | 🟣 Merged | [docs: use portable sql fields in canonical examples · #640](https://github.com/apache/ossie/pull/640) | [apache/ossie](https://github.com/apache/ossie) |
@@ -84,7 +84,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:d20d4e4281044e97f09d3cbc996ca09e7d86fe53455691b09afa70918487fa17 -->
+<!-- ACTIVITY:SNAPSHOT:b96bf1114aefd7aa494b6aeeb71d058a53b74b2f7ff9c03f9a446292f1e583b3 -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
@@ -140,15 +140,15 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- UPSTREAM_CODE:START -->
 ### 🟢 UPSTREAM CONTRIBUTIONS // MERGED PRS
 
-**38 merged PRs** · **+3,668 lines added** · **−866 lines removed**
+**39 merged PRs** · **+3,696 lines added** · **−894 lines removed**
 
 | Upstream repository | Merged pull request | Added | Removed | Languages / Frameworks |
 | :--- | :--- | ---: | ---: | :--- |
+| [microsoft/TypeScript](https://github.com/microsoft/TypeScript) | [#65317](https://github.com/microsoft/TypeScript/pull/65317) | +28 | −28 | Go |
 | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#236](https://github.com/PicadoLabs/build-with-ai/pull/236) | +21 | −8 | JavaScript |
 | [pycontribs/jira](https://github.com/pycontribs/jira) | [#2449](https://github.com/pycontribs/jira/pull/2449) | +78 | −4 | Python |
 | [apache/ossie](https://github.com/apache/ossie) | [#640](https://github.com/apache/ossie/pull/640) | +181 | −522 | Documentation / other |
 | [MicrosoftDocs/PowerShell-Docs](https://github.com/MicrosoftDocs/PowerShell-Docs) | [#13359](https://github.com/MicrosoftDocs/PowerShell-Docs/pull/13359) | +12 | −12 | Documentation / other |
-| [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#226](https://github.com/PicadoLabs/build-with-ai/pull/226) | +50 | −2 | JavaScript |
 
 <sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Languages from added source files; frameworks only from added imports · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->

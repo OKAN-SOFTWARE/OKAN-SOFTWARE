@@ -262,6 +262,17 @@
     ],
     "frameworks": []
   },
+  "https://api.github.com/repos/microsoft/TypeScript/pulls/65317": {
+    "repo": "microsoft/TypeScript",
+    "number": 65317,
+    "merged_at": "2026-11-05T20:42:01Z",
+    "additions": 28,
+    "deletions": 28,
+    "languages": [
+      "Go"
+    ],
+    "frameworks": []
+  },
   "https://api.github.com/repos/mne-tools/mne-connectivity/pulls/520": {
     "repo": "mne-tools/mne-connectivity",
     "number": 520,
