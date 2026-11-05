@@ -61,7 +61,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 04, 2026 at 4:56 PM EST**
+**Last profile update: Nov 04, 2026 at 9:19 PM EST**
 
 **80 opened · 37 merged · 37 open now · 52 upstream repositories**
 
@@ -69,9 +69,9 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟣 Merged | [Update Appx manifest to not allow updates while PS7 is running · #28275](https://github.com/PowerShell/PowerShell/pull/28275) | [PowerShell/PowerShell](https://github.com/PowerShell/PowerShell) |
 | 🟢 Open | [fix(code-executors): preserve hard-linked output files (#7906) · #7932](https://github.com/google/adk-python/pull/7932) | [google/adk-python](https://github.com/google/adk-python) |
 | 🟢 Open | [Fix TS1450 diagnostic severity for invalid dynamic imports · #65317](https://github.com/microsoft/TypeScript/pull/65317) | [microsoft/TypeScript](https://github.com/microsoft/TypeScript) |
-| 🟣 Merged | [fix(msix): defer PowerShell updates while in use · #28275](https://github.com/PowerShell/PowerShell/pull/28275) | [PowerShell/PowerShell](https://github.com/PowerShell/PowerShell) |
 | 🟢 Open | [Fix ARM NEON VQABS and VQNEG instruction decoding · #10114](https://github.com/NationalSecurityAgency/ghidra/pull/10114) | [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) |
 | 🟣 Merged | [fix(client): support accountId in assignable project searches · #2449](https://github.com/pycontribs/jira/pull/2449) | [pycontribs/jira](https://github.com/pycontribs/jira) |
 | 🟢 Open | [fix(html): exclude custom bundler from worker configuration · #1204](https://github.com/nodejs/doc-kit/pull/1204) | [nodejs/doc-kit](https://github.com/nodejs/doc-kit) |
@@ -84,7 +84,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:6b8f641cc93e2abf53de8f16bc401a42c96d88199bff24edf3b45c842cd9d342 -->
+<!-- ACTIVITY:SNAPSHOT:b359c67576abcdc8ace2fe8a53ab7eb627cc5a6c2f4f62ba7e79880806f5bb9b -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
