@@ -49,7 +49,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 
 | | |
 | :--- | :--- |
-| <a href="https://github.com/OKAN-SOFTWARE/DriveBench"><img src="./assets/ember/projects/DriveBench.svg" width="100%" alt="DriveBench project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/Doc2FAQ"><img src="./assets/ember/projects/Doc2FAQ.svg" width="100%" alt="Doc2FAQ project summary with up to three source languages" /></a> |
+| <a href="https://github.com/OKAN-SOFTWARE/Doc2FAQ"><img src="./assets/ember/projects/Doc2FAQ.svg" width="100%" alt="Doc2FAQ project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/DriveBench"><img src="./assets/ember/projects/DriveBench.svg" width="100%" alt="DriveBench project summary with up to three source languages" /></a> |
 | <a href="https://github.com/OKAN-SOFTWARE/mole-meadow"><img src="./assets/ember/projects/mole-meadow.svg" width="100%" alt="mole-meadow project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/TokenWise"><img src="./assets/ember/projects/TokenWise.svg" width="100%" alt="TokenWise project summary with up to three source languages" /></a> |
 | <a href="https://github.com/OKAN-SOFTWARE/LaunchNotes"><img src="./assets/ember/projects/LaunchNotes.svg" width="100%" alt="LaunchNotes project summary with up to three source languages" /></a> | <a href="https://github.com/OKAN-SOFTWARE/Python-CLI-App"><img src="./assets/ember/projects/Python-CLI-App.svg" width="100%" alt="Python-CLI-App project summary with up to three source languages" /></a> |
 
@@ -94,6 +94,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
+| Opened PR in [OKAN-SOFTWARE/Doc2FAQ](https://github.com/OKAN-SOFTWARE/Doc2FAQ) | [Pull request](https://github.com/OKAN-SOFTWARE/Doc2FAQ/pull/14) |
 | Commented in [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) | [feat\(linux\): enable AppImage delta updates \(#9659\)](https://github.com/super-productivity/super-productivity/issues/11226) |
 | Commented in [calcom/cal.diy](https://github.com/calcom/cal.diy) | [fix\(weeklyview\): clip multi-day layout bounds and restore ID-zero hover](https://github.com/calcom/cal.diy/issues/30411) |
 | Pushed code in [OKAN-SOFTWARE/super-productivity](https://github.com/OKAN-SOFTWARE/super-productivity) | Branch feat/9659-appimage-delta-updates |
@@ -101,7 +102,6 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Commented in [google/adk-python](https://github.com/google/adk-python) | [fix\(code-executors\): preserve hard-linked output files \(#7906\)](https://github.com/google/adk-python/issues/7932) |
 | Commented in [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) | [Fix ARM NEON VQABS and VQNEG instruction decoding](https://github.com/NationalSecurityAgency/ghidra/issues/10114) |
 | Opened PR in [microsoft/TypeScript](https://github.com/microsoft/TypeScript) | [Pull request](https://github.com/microsoft/TypeScript/pull/65317) |
-| Commented in [kubernetes-client/python](https://github.com/kubernetes-client/python) | [InClusterConfigLoader token refresh uses timezone-naive datetime.now\(\), stalls on backward clock jumps \(DST\)](https://github.com/kubernetes-client/python/issues/2768) |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
