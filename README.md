@@ -119,19 +119,19 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- CODE_MATRIX:START -->
 ### 🟢 OKAN'S CODE STATS // LIVE UPDATES
 
-**TOTAL LINES OF CODE: 9,431**
+**TOTAL LINES OF CODE: 9,747**
 
 | Language | Lines | Share | Distribution |
 | :--- | ---: | ---: | :--- |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="18" height="18" alt="" /> **JavaScript** | 3,659 | **38.80%** | 🟩🟩🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="18" height="18" alt="" /> **Python** | 2,607 | **27.64%** | 🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="18" height="18" alt="" /> **Java** | 1,958 | **20.76%** | 🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="18" height="18" alt="" /> **HTML** | 777 | **8.24%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="18" height="18" alt="" /> **TypeScript** | 160 | **1.70%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="18" height="18" alt="" /> **CSS** | 123 | **1.30%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/xml/xml-original.svg" width="18" height="18" alt="" /> **XML** | 94 | **1.00%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg" width="18" height="18" alt="" /> **Rust** | 44 | **0.47%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="18" height="18" alt="" /> **Dockerfile** | 9 | **0.10%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="18" height="18" alt="" /> **JavaScript** | 3,975 | **40.78%** | 🟩🟩🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="18" height="18" alt="" /> **Python** | 2,607 | **26.75%** | 🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="18" height="18" alt="" /> **Java** | 1,958 | **20.09%** | 🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="18" height="18" alt="" /> **HTML** | 777 | **7.97%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="18" height="18" alt="" /> **TypeScript** | 160 | **1.64%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="18" height="18" alt="" /> **CSS** | 123 | **1.26%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/xml/xml-original.svg" width="18" height="18" alt="" /> **XML** | 94 | **0.96%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg" width="18" height="18" alt="" /> **Rust** | 44 | **0.45%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="18" height="18" alt="" /> **Dockerfile** | 9 | **0.09%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
 
 <sub>Automatically checked every 15 minutes · Public original repositories · Nonblank source lines (including comments) · Dependencies, generated files, and binaries excluded · Tiny nonzero shares show one green cell</sub>
 <!-- ORIGINAL_REPOS:10 -->

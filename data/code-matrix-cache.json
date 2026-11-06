@@ -4,11 +4,11 @@
       "CSS": 99,
       "HTML": 154,
       "Java": 1603,
-      "JavaScript": 1730,
+      "JavaScript": 2046,
       "XML": 80
     },
     "rules": 2,
-    "sha": "20121f7b5698d2ac08833faef25325b1d839729c"
+    "sha": "65c700c3e08bb1691af17f537d599448b550f2cf"
   },
   "OKAN-SOFTWARE/DriveBench": {
     "lines": {
