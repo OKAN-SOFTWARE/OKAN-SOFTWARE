@@ -94,6 +94,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
+| Commented in [calcom/cal.diy](https://github.com/calcom/cal.diy) | [fix\(weeklyview\): clip multi-day layout bounds and restore ID-zero hover](https://github.com/calcom/cal.diy/issues/30411) |
 | Pushed code in [OKAN-SOFTWARE/build-with-ai](https://github.com/OKAN-SOFTWARE/build-with-ai) | Branch feat/212-validate-command |
 | Commented in [google/adk-python](https://github.com/google/adk-python) | [fix\(code-executors\): preserve hard-linked output files \(#7906\)](https://github.com/google/adk-python/issues/7932) |
 | Commented in [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) | [Fix ARM NEON VQABS and VQNEG instruction decoding](https://github.com/NationalSecurityAgency/ghidra/issues/10114) |
@@ -101,7 +102,6 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Commented in [kubernetes-client/python](https://github.com/kubernetes-client/python) | [InClusterConfigLoader token refresh uses timezone-naive datetime.now\(\), stalls on backward clock jumps \(DST\)](https://github.com/kubernetes-client/python/issues/2768) |
 | Pushed code in [OKAN-SOFTWARE/cfn-lint](https://github.com/OKAN-SOFTWARE/cfn-lint) | Branch fix/e2002-invalid-base-types |
 | Commented in [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) | [fix\(E2002\): report lists of SSM parameter types as errors](https://github.com/aws-cloudformation/cfn-lint/issues/4928) |
-| Commented in [fabric8io/kubernetes-client](https://github.com/fabric8io/kubernetes-client) | [Add a global default bind address for port-forward listeners](https://github.com/fabric8io/kubernetes-client/issues/7968) |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
