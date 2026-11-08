@@ -175,20 +175,20 @@
   },
   "2026-10-30": {
     "commits": 0,
-    "repos": 1,
+    "repos": 5,
     "pr_events": 0,
     "issues": 0
   },
   "2026-10-31": {
     "commits": 3,
-    "repos": 4,
+    "repos": 6,
     "pr_events": 0,
     "issues": 0
   },
   "2026-11-01": {
     "commits": 0,
-    "repos": 5,
-    "pr_events": 0,
+    "repos": 7,
+    "pr_events": 3,
     "issues": 0
   },
   "2026-11-02": {
@@ -228,9 +228,9 @@
     "issues": 0
   },
   "2026-11-08": {
-    "commits": 1,
+    "commits": 3,
     "repos": 1,
-    "pr_events": 2,
+    "pr_events": 3,
     "issues": 0
   }
 }
