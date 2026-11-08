@@ -119,11 +119,11 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- CODE_MATRIX:START -->
 ### 🟢 OKAN'S CODE STATS // LIVE UPDATES
 
-**TOTAL LINES OF CODE: 10,222**
+**TOTAL LINES OF CODE: 10,223**
 
 | Language | Lines | Share | Distribution |
 | :--- | ---: | ---: | :--- |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="18" height="18" alt="" /> **JavaScript** | 4,140 | **40.50%** | 🟩🟩🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="18" height="18" alt="" /> **JavaScript** | 4,141 | **40.51%** | 🟩🟩🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛ |
 | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="18" height="18" alt="" /> **Python** | 2,607 | **25.50%** | 🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
 | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="18" height="18" alt="" /> **Java** | 1,958 | **19.15%** | 🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
 | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="18" height="18" alt="" /> **HTML** | 883 | **8.64%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
