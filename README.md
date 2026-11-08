@@ -94,7 +94,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
-| Opened PR in [OKAN-SOFTWARE/Doc2FAQ](https://github.com/OKAN-SOFTWARE/Doc2FAQ) | [Pull request](https://github.com/OKAN-SOFTWARE/Doc2FAQ/pull/18) |
+| Opened PR in [OKAN-SOFTWARE/Doc2FAQ](https://github.com/OKAN-SOFTWARE/Doc2FAQ) | [Pull request](https://github.com/OKAN-SOFTWARE/Doc2FAQ/pull/20) |
 | Commented in [pytest-dev/pytest](https://github.com/pytest-dev/pytest) | [Show correct extra item in sequence comparison diffs](https://github.com/pytest-dev/pytest/issues/14906) |
 | Commented in [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) | [feat\(linux\): enable AppImage delta updates \(#9659\)](https://github.com/super-productivity/super-productivity/issues/11226) |
 | Pushed code in [OKAN-SOFTWARE/super-productivity](https://github.com/OKAN-SOFTWARE/super-productivity) | Branch feat/9659-appimage-delta-updates |
