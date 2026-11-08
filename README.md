@@ -61,7 +61,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 08, 2026 at 4:55 AM EST**
+**Last profile update: Nov 08, 2026 at 8:56 AM EST**
 
 **80 opened · 39 merged · 35 open now · 52 upstream repositories**
 
@@ -119,18 +119,19 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- CODE_MATRIX:START -->
 ### 🟢 OKAN'S CODE STATS // LIVE UPDATES
 
-**TOTAL LINES OF CODE: 9,747**
+**TOTAL LINES OF CODE: 10,222**
 
 | Language | Lines | Share | Distribution |
 | :--- | ---: | ---: | :--- |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="18" height="18" alt="" /> **JavaScript** | 3,975 | **40.78%** | 🟩🟩🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="18" height="18" alt="" /> **Python** | 2,607 | **26.75%** | 🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="18" height="18" alt="" /> **Java** | 1,958 | **20.09%** | 🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="18" height="18" alt="" /> **HTML** | 777 | **7.97%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="18" height="18" alt="" /> **TypeScript** | 160 | **1.64%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="18" height="18" alt="" /> **CSS** | 123 | **1.26%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/xml/xml-original.svg" width="18" height="18" alt="" /> **XML** | 94 | **0.96%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
-| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg" width="18" height="18" alt="" /> **Rust** | 44 | **0.45%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="18" height="18" alt="" /> **JavaScript** | 4,140 | **40.50%** | 🟩🟩🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" width="18" height="18" alt="" /> **Python** | 2,607 | **25.50%** | 🟩🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" width="18" height="18" alt="" /> **Java** | 1,958 | **19.15%** | 🟩🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="18" height="18" alt="" /> **HTML** | 883 | **8.64%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="18" height="18" alt="" /> **CSS** | 262 | **2.56%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" width="18" height="18" alt="" /> **TypeScript** | 160 | **1.57%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/xml/xml-original.svg" width="18" height="18" alt="" /> **XML** | 95 | **0.93%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bash/bash-original.svg" width="18" height="18" alt="" /> **Shell** | 64 | **0.63%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
+| <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-original.svg" width="18" height="18" alt="" /> **Rust** | 44 | **0.43%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
 | <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg" width="18" height="18" alt="" /> **Dockerfile** | 9 | **0.09%** | 🟩⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛ |
 
 <sub>Automatically checked every 15 minutes · Public original repositories · Nonblank source lines (including comments) · Dependencies, generated files, and binaries excluded · Tiny nonzero shares show one green cell</sub>

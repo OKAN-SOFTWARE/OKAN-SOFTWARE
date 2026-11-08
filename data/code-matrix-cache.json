@@ -1,14 +1,15 @@
 {
   "OKAN-SOFTWARE/Doc2FAQ": {
     "lines": {
-      "CSS": 99,
-      "HTML": 154,
+      "CSS": 238,
+      "HTML": 260,
       "Java": 1603,
-      "JavaScript": 2046,
-      "XML": 80
+      "JavaScript": 2211,
+      "Shell": 64,
+      "XML": 81
     },
     "rules": 2,
-    "sha": "65c700c3e08bb1691af17f537d599448b550f2cf"
+    "sha": "7e4e94a0ccd9908c2c123661c98587dfe804fdff"
   },
   "OKAN-SOFTWARE/DriveBench": {
     "lines": {
