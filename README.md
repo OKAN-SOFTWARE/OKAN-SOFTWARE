@@ -95,13 +95,13 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Recent activity | Details |
 | :--- | :--- |
 | Opened PR in [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [Pull request](https://github.com/PicadoLabs/build-with-ai/pull/247) |
+| Created branch in [OKAN-SOFTWARE/build-with-ai](https://github.com/OKAN-SOFTWARE/build-with-ai) | feat/218-export-agent-architecture-docs |
 | Commented in [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) | [chore\(deps-dev\): update coverage requirement from &gt;=7.16.2 to &gt;=7.17.2 in /requirements](https://github.com/aws-cloudformation/cfn-lint/issues/5005) |
 | Pushed code in [OKAN-SOFTWARE/Doc2FAQ](https://github.com/OKAN-SOFTWARE/Doc2FAQ) | Branch main |
 | Commented in [pytest-dev/pytest](https://github.com/pytest-dev/pytest) | [Show correct extra item in sequence comparison diffs](https://github.com/pytest-dev/pytest/issues/14906) |
 | Commented in [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) | [feat\(linux\): enable AppImage delta updates \(#9659\)](https://github.com/super-productivity/super-productivity/issues/11226) |
 | Pushed code in [OKAN-SOFTWARE/super-productivity](https://github.com/OKAN-SOFTWARE/super-productivity) | Branch feat/9659-appimage-delta-updates |
 | Commented in [calcom/cal.diy](https://github.com/calcom/cal.diy) | [fix\(weeklyview\): clip multi-day layout bounds and restore ID-zero hover](https://github.com/calcom/cal.diy/issues/30411) |
-| Pushed code in [OKAN-SOFTWARE/build-with-ai](https://github.com/OKAN-SOFTWARE/build-with-ai) | Branch feat/212-validate-command |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
