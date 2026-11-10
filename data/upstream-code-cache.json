@@ -98,6 +98,17 @@
     ],
     "frameworks": []
   },
+  "https://api.github.com/repos/PicadoLabs/build-with-ai/pulls/247": {
+    "repo": "PicadoLabs/build-with-ai",
+    "number": 247,
+    "merged_at": "2026-11-10T09:54:08Z",
+    "additions": 227,
+    "deletions": 9,
+    "languages": [
+      "JavaScript"
+    ],
+    "frameworks": []
+  },
   "https://api.github.com/repos/PowerShell/PowerShell/pulls/28275": {
     "repo": "PowerShell/PowerShell",
     "number": 28275,
@@ -171,6 +182,17 @@
     "deletions": 0,
     "languages": [
       "JavaScript"
+    ],
+    "frameworks": []
+  },
+  "https://api.github.com/repos/harshanacz/xml-language-service/pulls/82": {
+    "repo": "harshanacz/xml-language-service",
+    "number": 82,
+    "merged_at": "2026-11-10T09:55:25Z",
+    "additions": 110,
+    "deletions": 8,
+    "languages": [
+      "TypeScript"
     ],
     "frameworks": []
   },
