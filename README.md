@@ -61,7 +61,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 11, 2026 at 9:33 AM EST**
+**Last profile update: Nov 11, 2026 at 1:00 PM EST**
 
 **81 opened · 42 merged · 33 open now · 52 upstream repositories**
 
@@ -69,6 +69,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix(watch): refresh remote status after terminal git push · #1044](https://github.com/JetBrains/thinkrail/pull/1044) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
 | 🟢 Open | [test: isolate Django cache settings between xdist worker groups · #852](https://github.com/jazzband/django-redis/pull/852) | [jazzband/django-redis](https://github.com/jazzband/django-redis) |
 | 🟢 Open | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
 | 🟢 Open | [Fix ARM NEON VQABS and VQNEG instruction decoding · #10114](https://github.com/NationalSecurityAgency/ghidra/pull/10114) | [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) |
@@ -78,13 +79,12 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | 🟣 Merged | [feat(cli): add project and template validation command · #240](https://github.com/PicadoLabs/build-with-ai/pull/240) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [fix(weeklyview): clip multi-day layout bounds and restore ID-zero hover · #30411](https://github.com/calcom/cal.diy/pull/30411) | [calcom/cal.diy](https://github.com/calcom/cal.diy) |
 | 🟢 Open | [feat(linux): enable AppImage delta updates (#9659) · #11226](https://github.com/super-productivity/super-productivity/pull/11226) | [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) |
-| 🟣 Merged | [Fix TS1450 diagnostic severity for invalid dynamic imports · #65317](https://github.com/microsoft/TypeScript/pull/65317) | [microsoft/TypeScript](https://github.com/microsoft/TypeScript) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:29befa46311933a5992d9a968bf041946dcb82cf8ec97e6ca4613f981e6c547c -->
+<!-- ACTIVITY:SNAPSHOT:d78367b93ba6655ad10277943b50bd6029303cb0cc90665237d40fdde16727e5 -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
