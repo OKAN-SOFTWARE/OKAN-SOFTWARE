@@ -61,7 +61,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 10, 2026 at 4:50 PM EST**
+**Last profile update: Nov 10, 2026 at 9:11 PM EST**
 
 **81 opened · 42 merged · 33 open now · 52 upstream repositories**
 
@@ -69,11 +69,11 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
 | 🟢 Open | [Fix ARM NEON VQABS and VQNEG instruction decoding · #10114](https://github.com/NationalSecurityAgency/ghidra/pull/10114) | [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) |
 | 🟢 Open | [fix(core): skip default validation when context is unresolved · #39560](https://github.com/aws/aws-cdk/pull/39560) | [aws/aws-cdk](https://github.com/aws/aws-cdk) |
 | 🟣 Merged | [fix(hover): resolve XML comment nodes at the cursor · #82](https://github.com/harshanacz/xml-language-service/pull/82) | [harshanacz/xml-language-service](https://github.com/harshanacz/xml-language-service) |
 | 🟣 Merged | [feat(export): generate agent and architecture docs · #247](https://github.com/PicadoLabs/build-with-ai/pull/247) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
-| 🟢 Open | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
 | 🟣 Merged | [feat(cli): add project and template validation command · #240](https://github.com/PicadoLabs/build-with-ai/pull/240) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [fix(weeklyview): clip multi-day layout bounds and restore ID-zero hover · #30411](https://github.com/calcom/cal.diy/pull/30411) | [calcom/cal.diy](https://github.com/calcom/cal.diy) |
 | 🟢 Open | [feat(linux): enable AppImage delta updates (#9659) · #11226](https://github.com/super-productivity/super-productivity/pull/11226) | [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) |
@@ -84,7 +84,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:fb32f9235d63f17cfc16330e01344baece0446dff773310828e88f87d31def63 -->
+<!-- ACTIVITY:SNAPSHOT:f056cbd626502bc0611f93f0e7bb70fc5fcacce6e9576575310fece2d59e567d -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
