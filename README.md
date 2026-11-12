@@ -61,7 +61,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 12, 2026 at 5:13 AM EST**
+**Last profile update: Nov 12, 2026 at 9:25 AM EST**
 
 **81 opened · 44 merged · 31 open now · 52 upstream repositories**
 
@@ -69,10 +69,10 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
 | 🟣 Merged | [fix(templates): reject Windows reserved device names · #1042](https://github.com/JetBrains/thinkrail/pull/1042) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
 | 🟣 Merged | [fix(watch): refresh remote status after terminal git push · #1044](https://github.com/JetBrains/thinkrail/pull/1044) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
 | 🟢 Open | [test: isolate Django cache settings between xdist worker groups · #852](https://github.com/jazzband/django-redis/pull/852) | [jazzband/django-redis](https://github.com/jazzband/django-redis) |
-| 🟢 Open | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
 | 🟢 Open | [Fix ARM NEON VQABS and VQNEG instruction decoding · #10114](https://github.com/NationalSecurityAgency/ghidra/pull/10114) | [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) |
 | 🟢 Open | [fix(core): skip default validation when context is unresolved · #39560](https://github.com/aws/aws-cdk/pull/39560) | [aws/aws-cdk](https://github.com/aws/aws-cdk) |
 | 🟣 Merged | [fix(hover): resolve XML comment nodes at the cursor · #82](https://github.com/harshanacz/xml-language-service/pull/82) | [harshanacz/xml-language-service](https://github.com/harshanacz/xml-language-service) |
@@ -84,7 +84,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:45cee5ddd7d556b4e8271a866ef788edf6899da1e80fa07341f0abe85d2a386e -->
+<!-- ACTIVITY:SNAPSHOT:2e201fda32a353f6e3d2829912df5c3944efccc7607bc2f6290f7fab9e710045 -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
