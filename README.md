@@ -61,15 +61,15 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 12, 2026 at 1:13 AM EST**
+**Last profile update: Nov 12, 2026 at 5:13 AM EST**
 
-**81 opened · 43 merged · 32 open now · 52 upstream repositories**
+**81 opened · 44 merged · 31 open now · 52 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
-| 🟢 Open | [fix(templates): reject Windows reserved device names · #1042](https://github.com/JetBrains/thinkrail/pull/1042) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
+| 🟣 Merged | [fix(templates): reject Windows reserved device names · #1042](https://github.com/JetBrains/thinkrail/pull/1042) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
 | 🟣 Merged | [fix(watch): refresh remote status after terminal git push · #1044](https://github.com/JetBrains/thinkrail/pull/1044) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
 | 🟢 Open | [test: isolate Django cache settings between xdist worker groups · #852](https://github.com/jazzband/django-redis/pull/852) | [jazzband/django-redis](https://github.com/jazzband/django-redis) |
 | 🟢 Open | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
@@ -84,7 +84,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:72dbeb080f39534d101af84978830dd2683c9ec5be6509eed69dcd10988c2356 -->
+<!-- ACTIVITY:SNAPSHOT:45cee5ddd7d556b4e8271a866ef788edf6899da1e80fa07341f0abe85d2a386e -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
@@ -141,15 +141,15 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- UPSTREAM_CODE:START -->
 ### 🟢 UPSTREAM CONTRIBUTIONS // MERGED PRS
 
-**43 merged PRs** · **+4,594 lines added** · **−915 lines removed**
+**44 merged PRs** · **+4,735 lines added** · **−970 lines removed**
 
 | Upstream repository | Merged pull request | Added | Removed | Languages / Frameworks |
 | :--- | :--- | ---: | ---: | :--- |
+| [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) | [#1042](https://github.com/JetBrains/thinkrail/pull/1042) | +141 | −55 | TypeScript |
 | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) | [#1044](https://github.com/JetBrains/thinkrail/pull/1044) | +200 | −2 | TypeScript |
 | [harshanacz/xml-language-service](https://github.com/harshanacz/xml-language-service) | [#82](https://github.com/harshanacz/xml-language-service/pull/82) | +110 | −8 | TypeScript |
 | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#247](https://github.com/PicadoLabs/build-with-ai/pull/247) | +227 | −9 | JavaScript |
 | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#240](https://github.com/PicadoLabs/build-with-ai/pull/240) | +361 | −2 | JavaScript |
-| [microsoft/TypeScript](https://github.com/microsoft/TypeScript) | [#65317](https://github.com/microsoft/TypeScript/pull/65317) | +28 | −28 | Go |
 
 <sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Languages from added source files; frameworks only from added imports · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->

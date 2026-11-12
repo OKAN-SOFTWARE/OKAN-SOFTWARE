@@ -23,6 +23,17 @@
     ],
     "frameworks": []
   },
+  "https://api.github.com/repos/JetBrains/thinkrail/pulls/1042": {
+    "repo": "JetBrains/thinkrail",
+    "number": 1042,
+    "merged_at": "2026-11-12T07:29:23Z",
+    "additions": 141,
+    "deletions": 55,
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": []
+  },
   "https://api.github.com/repos/JetBrains/thinkrail/pulls/1044": {
     "repo": "JetBrains/thinkrail",
     "number": 1044,
