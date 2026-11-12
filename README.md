@@ -61,15 +61,16 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 11, 2026 at 1:00 PM EST**
+**Last profile update: Nov 11, 2026 at 9:18 PM EST**
 
-**81 opened · 42 merged · 33 open now · 52 upstream repositories**
+**81 opened · 43 merged · 32 open now · 52 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
-| 🟢 Open | [fix(watch): refresh remote status after terminal git push · #1044](https://github.com/JetBrains/thinkrail/pull/1044) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
+| 🟢 Open | [fix(templates): reject Windows reserved device names · #1042](https://github.com/JetBrains/thinkrail/pull/1042) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
+| 🟣 Merged | [fix(watch): refresh remote status after terminal git push · #1044](https://github.com/JetBrains/thinkrail/pull/1044) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
 | 🟢 Open | [test: isolate Django cache settings between xdist worker groups · #852](https://github.com/jazzband/django-redis/pull/852) | [jazzband/django-redis](https://github.com/jazzband/django-redis) |
 | 🟢 Open | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
 | 🟢 Open | [Fix ARM NEON VQABS and VQNEG instruction decoding · #10114](https://github.com/NationalSecurityAgency/ghidra/pull/10114) | [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) |
@@ -78,13 +79,12 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | 🟣 Merged | [feat(export): generate agent and architecture docs · #247](https://github.com/PicadoLabs/build-with-ai/pull/247) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟣 Merged | [feat(cli): add project and template validation command · #240](https://github.com/PicadoLabs/build-with-ai/pull/240) | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) |
 | 🟢 Open | [fix(weeklyview): clip multi-day layout bounds and restore ID-zero hover · #30411](https://github.com/calcom/cal.diy/pull/30411) | [calcom/cal.diy](https://github.com/calcom/cal.diy) |
-| 🟢 Open | [feat(linux): enable AppImage delta updates (#9659) · #11226](https://github.com/super-productivity/super-productivity/pull/11226) | [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:d78367b93ba6655ad10277943b50bd6029303cb0cc90665237d40fdde16727e5 -->
+<!-- ACTIVITY:SNAPSHOT:72dbeb080f39534d101af84978830dd2683c9ec5be6509eed69dcd10988c2356 -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
@@ -141,15 +141,15 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- UPSTREAM_CODE:START -->
 ### 🟢 UPSTREAM CONTRIBUTIONS // MERGED PRS
 
-**42 merged PRs** · **+4,394 lines added** · **−913 lines removed**
+**43 merged PRs** · **+4,594 lines added** · **−915 lines removed**
 
 | Upstream repository | Merged pull request | Added | Removed | Languages / Frameworks |
 | :--- | :--- | ---: | ---: | :--- |
+| [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) | [#1044](https://github.com/JetBrains/thinkrail/pull/1044) | +200 | −2 | TypeScript |
 | [harshanacz/xml-language-service](https://github.com/harshanacz/xml-language-service) | [#82](https://github.com/harshanacz/xml-language-service/pull/82) | +110 | −8 | TypeScript |
 | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#247](https://github.com/PicadoLabs/build-with-ai/pull/247) | +227 | −9 | JavaScript |
 | [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#240](https://github.com/PicadoLabs/build-with-ai/pull/240) | +361 | −2 | JavaScript |
 | [microsoft/TypeScript](https://github.com/microsoft/TypeScript) | [#65317](https://github.com/microsoft/TypeScript/pull/65317) | +28 | −28 | Go |
-| [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#236](https://github.com/PicadoLabs/build-with-ai/pull/236) | +21 | −8 | JavaScript |
 
 <sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Languages from added source files; frameworks only from added imports · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->
