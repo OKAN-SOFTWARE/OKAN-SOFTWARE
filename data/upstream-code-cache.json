@@ -238,6 +238,17 @@
     "languages": [],
     "frameworks": []
   },
+  "https://api.github.com/repos/java-native-access/jna/pulls/1750": {
+    "repo": "java-native-access/jna",
+    "number": 1750,
+    "merged_at": "2026-11-13T17:36:44Z",
+    "additions": 29,
+    "deletions": 1,
+    "languages": [
+      "Java"
+    ],
+    "frameworks": []
+  },
   "https://api.github.com/repos/javvadivijayprasad/sel2pw/pulls/27": {
     "repo": "javvadivijayprasad/sel2pw",
     "number": 27,
