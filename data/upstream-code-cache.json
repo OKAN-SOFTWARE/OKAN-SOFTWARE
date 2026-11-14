@@ -187,6 +187,19 @@
     ],
     "frameworks": []
   },
+  "https://api.github.com/repos/apache/maven-surefire/pulls/3567": {
+    "repo": "apache/maven-surefire",
+    "number": 3567,
+    "merged_at": "2026-11-14T09:03:11Z",
+    "additions": 104,
+    "deletions": 0,
+    "languages": [
+      "Java"
+    ],
+    "frameworks": [
+      "JUnit"
+    ]
+  },
   "https://api.github.com/repos/apache/ossie/pulls/640": {
     "repo": "apache/ossie",
     "number": 640,

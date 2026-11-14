@@ -61,15 +61,15 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 14, 2026 at 12:57 AM EST**
+**Last profile update: Nov 14, 2026 at 4:54 AM EST**
 
-**81 opened · 45 merged · 29 open now · 52 upstream repositories**
+**81 opened · 46 merged · 28 open now · 52 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
-| 🟢 Open | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
+| 🟣 Merged | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
 | 🟣 Merged | [fix(win32): correct SetCursorPos argument types (#1745) · #1750](https://github.com/java-native-access/jna/pull/1750) | [java-native-access/jna](https://github.com/java-native-access/jna) |
 | 🟢 Open | [feat(linux): enable AppImage delta updates (#9659) · #11226](https://github.com/super-productivity/super-productivity/pull/11226) | [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) |
 | 🟣 Merged | [fix(templates): reject Windows reserved device names · #1042](https://github.com/JetBrains/thinkrail/pull/1042) | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) |
@@ -84,7 +84,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:7ba77ead514da541dcb37d81c161baab41af3bf6e9dcfae42b60a11730e9238f -->
+<!-- ACTIVITY:SNAPSHOT:73a7843ab858d4a497e911be10d8e98ae89fbc3d3ef94421dd490c8fc5b8b7b4 -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
@@ -141,15 +141,15 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- UPSTREAM_CODE:START -->
 ### 🟢 UPSTREAM CONTRIBUTIONS // MERGED PRS
 
-**45 merged PRs** · **+4,764 lines added** · **−971 lines removed**
+**46 merged PRs** · **+4,868 lines added** · **−971 lines removed**
 
 | Upstream repository | Merged pull request | Added | Removed | Languages / Frameworks |
 | :--- | :--- | ---: | ---: | :--- |
+| [apache/maven-surefire](https://github.com/apache/maven-surefire) | [#3567](https://github.com/apache/maven-surefire/pull/3567) | +104 | −0 | Java, JUnit |
 | [java-native-access/jna](https://github.com/java-native-access/jna) | [#1750](https://github.com/java-native-access/jna/pull/1750) | +29 | −1 | Java |
 | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) | [#1042](https://github.com/JetBrains/thinkrail/pull/1042) | +141 | −55 | TypeScript |
 | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) | [#1044](https://github.com/JetBrains/thinkrail/pull/1044) | +200 | −2 | TypeScript |
 | [harshanacz/xml-language-service](https://github.com/harshanacz/xml-language-service) | [#82](https://github.com/harshanacz/xml-language-service/pull/82) | +110 | −8 | TypeScript |
-| [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [#247](https://github.com/PicadoLabs/build-with-ai/pull/247) | +227 | −9 | JavaScript |
 
 <sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Languages from added source files; frameworks only from added imports · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->
