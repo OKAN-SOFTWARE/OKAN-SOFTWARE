@@ -94,6 +94,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
+| Commented in [google/adk-python](https://github.com/google/adk-python) | [fix\(code-executors\): preserve hard-linked output files \(#7906\)](https://github.com/google/adk-python/issues/7932) |
 | Commented in [microsoft/pyright](https://github.com/microsoft/pyright) | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator](https://github.com/microsoft/pyright/issues/11944) |
 | Commented in [google/adk-web](https://github.com/google/adk-web) | [fix\(chat\): persist session state edits on save](https://github.com/google/adk-web/issues/556) |
 | Commented in [aws/aws-cdk](https://github.com/aws/aws-cdk) | [fix\(core\): skip default validation when context is unresolved](https://github.com/aws/aws-cdk/issues/39560) |
@@ -101,7 +102,6 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Commented in [calcom/cal.diy](https://github.com/calcom/cal.diy) | [fix\(weeklyview\): clip multi-day layout bounds and restore ID-zero hover](https://github.com/calcom/cal.diy/issues/30411) |
 | Commented in [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) | [feat\(linux\): enable AppImage delta updates \(#9659\)](https://github.com/super-productivity/super-productivity/issues/11226) |
 | Pushed code in [OKAN-SOFTWARE/super-productivity](https://github.com/OKAN-SOFTWARE/super-productivity) | Branch feat/9659-appimage-delta-updates |
-| Pushed code in [OKAN-SOFTWARE/maven-surefire](https://github.com/OKAN-SOFTWARE/maven-surefire) | Branch fix/3566-pojo-missing-provider-warning |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
