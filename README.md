@@ -94,14 +94,14 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- RECENT:START -->
 | Recent activity | Details |
 | :--- | :--- |
+| Commented in [microsoft/pyright](https://github.com/microsoft/pyright) | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator](https://github.com/microsoft/pyright/issues/11944) |
+| Commented in [google/adk-web](https://github.com/google/adk-web) | [fix\(chat\): persist session state edits on save](https://github.com/google/adk-web/issues/556) |
+| Commented in [aws/aws-cdk](https://github.com/aws/aws-cdk) | [fix\(core\): skip default validation when context is unresolved](https://github.com/aws/aws-cdk/issues/39560) |
+| Commented in [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) | [Fix ARM NEON VQABS and VQNEG instruction decoding](https://github.com/NationalSecurityAgency/ghidra/issues/10114) |
 | Commented in [calcom/cal.diy](https://github.com/calcom/cal.diy) | [fix\(weeklyview\): clip multi-day layout bounds and restore ID-zero hover](https://github.com/calcom/cal.diy/issues/30411) |
 | Commented in [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) | [feat\(linux\): enable AppImage delta updates \(#9659\)](https://github.com/super-productivity/super-productivity/issues/11226) |
 | Pushed code in [OKAN-SOFTWARE/super-productivity](https://github.com/OKAN-SOFTWARE/super-productivity) | Branch feat/9659-appimage-delta-updates |
 | Pushed code in [OKAN-SOFTWARE/maven-surefire](https://github.com/OKAN-SOFTWARE/maven-surefire) | Branch fix/3566-pojo-missing-provider-warning |
-| Commented in [kubeflow/katib](https://github.com/kubeflow/katib) | [Trial table sorts metric columns as strings in UI](https://github.com/kubeflow/katib/issues/2715) |
-| Opened PR in [PicadoLabs/build-with-ai](https://github.com/PicadoLabs/build-with-ai) | [Pull request](https://github.com/PicadoLabs/build-with-ai/pull/247) |
-| Pushed code in [OKAN-SOFTWARE/build-with-ai](https://github.com/OKAN-SOFTWARE/build-with-ai) | Branch feat/218-export-agent-architecture-docs |
-| Commented in [aws-cloudformation/cfn-lint](https://github.com/aws-cloudformation/cfn-lint) | [chore\(deps-dev\): update coverage requirement from &gt;=7.16.2 to &gt;=7.17.2 in /requirements](https://github.com/aws-cloudformation/cfn-lint/issues/5005) |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
