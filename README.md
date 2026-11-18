@@ -95,13 +95,13 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | Recent activity | Details |
 | :--- | :--- |
 | Commented in [actions/setup-node](https://github.com/actions/setup-node) | [fix: improve diagnostics for missing Linux libraries](https://github.com/actions/setup-node/issues/1656) |
+| Pushed code in [OKAN-SOFTWARE/setup-node](https://github.com/OKAN-SOFTWARE/setup-node) | Branch fix/1651-missing-library-diagnostics |
 | Commented in [microsoft/vscode](https://github.com/microsoft/vscode) | [fix\(server\): avoid null-byte warnings during Linux glibc checks](https://github.com/microsoft/vscode/issues/344845) |
 | Commented in [google/adk-python](https://github.com/google/adk-python) | [fix\(code-executors\): preserve hard-linked output files \(#7906\)](https://github.com/google/adk-python/issues/7932) |
 | Commented in [microsoft/pyright](https://github.com/microsoft/pyright) | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator](https://github.com/microsoft/pyright/issues/11944) |
 | Commented in [google/adk-web](https://github.com/google/adk-web) | [fix\(chat\): persist session state edits on save](https://github.com/google/adk-web/issues/556) |
 | Commented in [aws/aws-cdk](https://github.com/aws/aws-cdk) | [fix\(core\): skip default validation when context is unresolved](https://github.com/aws/aws-cdk/issues/39560) |
 | Commented in [NationalSecurityAgency/ghidra](https://github.com/NationalSecurityAgency/ghidra) | [Fix ARM NEON VQABS and VQNEG instruction decoding](https://github.com/NationalSecurityAgency/ghidra/issues/10114) |
-| Commented in [calcom/cal.diy](https://github.com/calcom/cal.diy) | [fix\(weeklyview\): clip multi-day layout bounds and restore ID-zero hover](https://github.com/calcom/cal.diy/issues/30411) |
 <!-- RECENT:END -->
 
 ## Languages & Toolkit
