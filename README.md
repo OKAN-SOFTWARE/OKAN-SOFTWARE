@@ -61,9 +61,9 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 23, 2026 at 4:04 AM EST**
+**Last profile update: Nov 23, 2026 at 4:24 PM EST**
 
-**81 opened · 46 merged · 27 open now · 52 upstream repositories**
+**81 opened · 46 merged · 26 open now · 52 upstream repositories**
 
 ### Latest upstream work
 
@@ -84,7 +84,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:417548f908bd71fc977fcc4af5e9ef99cf22d31aee4cafe915c034dbd1bcb5de -->
+<!-- ACTIVITY:SNAPSHOT:9165111f12f4503550f1594f65843b975973a3c0c11f169d8e24dded8e590bce -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
