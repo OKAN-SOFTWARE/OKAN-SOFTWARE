@@ -61,17 +61,17 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 24, 2026 at 6:01 PM EST**
+**Last profile update: Nov 25, 2026 at 4:51 AM EST**
 
-**78 opened · 46 merged · 26 open now · 50 upstream repositories**
+**65 opened · 41 merged · 26 open now · 44 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
-| 🟢 Open | [fix(core): skip default validation when context is unresolved · #39560](https://github.com/aws/aws-cdk/pull/39560) | [aws/aws-cdk](https://github.com/aws/aws-cdk) |
 | 🟢 Open | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator · #11944](https://github.com/microsoft/pyright/pull/11944) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 | 🟢 Open | [Fix --verifytypes inference for attributes assigned from annotated function calls · #11945](https://github.com/microsoft/pyright/pull/11945) | [microsoft/pyright](https://github.com/microsoft/pyright) |
+| 🟢 Open | [fix(core): skip default validation when context is unresolved · #39560](https://github.com/aws/aws-cdk/pull/39560) | [aws/aws-cdk](https://github.com/aws/aws-cdk) |
 | 🟢 Open | [fix: improve diagnostics for missing Linux libraries · #1656](https://github.com/actions/setup-node/pull/1656) | [actions/setup-node](https://github.com/actions/setup-node) |
 | 🟢 Open | [fix(server): avoid null-byte warnings during Linux glibc checks · #344845](https://github.com/microsoft/vscode/pull/344845) | [microsoft/vscode](https://github.com/microsoft/vscode) |
 | 🟢 Open | [fix(code-executors): preserve hard-linked output files (#7906) · #7932](https://github.com/google/adk-python/pull/7932) | [google/adk-python](https://github.com/google/adk-python) |
@@ -84,7 +84,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:a992b0e4a7c4a4c8b4468abfedc63e5eb0dde2c8e41c7fae3039a937174a9ca9 -->
+<!-- ACTIVITY:SNAPSHOT:72c0b8b5788dadc583f405d28c2964ac33bf41ad42d16ff152579fefbba9b6f1 -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
