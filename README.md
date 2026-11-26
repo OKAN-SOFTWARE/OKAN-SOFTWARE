@@ -61,7 +61,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 26, 2026 at 4:31 AM EST**
+**Last profile update: Nov 26, 2026 at 5:21 PM EST**
 
 **46 opened · 28 merged · 26 open now · 36 upstream repositories**
 
