@@ -61,14 +61,15 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 26, 2026 at 5:21 PM EST**
+**Last profile update: Nov 27, 2026 at 4:40 AM EST**
 
-**46 opened · 28 merged · 26 open now · 36 upstream repositories**
+**33 opened · 24 merged · 25 open now · 30 upstream repositories**
 
 ### Latest upstream work
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟣 Merged | [perf(vite): add static hook filters for Slidev modules · #2803](https://github.com/slidevjs/slidev/pull/2803) | [slidevjs/slidev](https://github.com/slidevjs/slidev) |
 | 🟢 Open | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator · #11944](https://github.com/microsoft/pyright/pull/11944) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 | 🟢 Open | [Fix --verifytypes inference for attributes assigned from annotated function calls · #11945](https://github.com/microsoft/pyright/pull/11945) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 | 🟢 Open | [fix(core): skip default validation when context is unresolved · #39560](https://github.com/aws/aws-cdk/pull/39560) | [aws/aws-cdk](https://github.com/aws/aws-cdk) |
@@ -78,13 +79,12 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | 🟢 Open | [fix(chat): persist session state edits on save · #556](https://github.com/google/adk-web/pull/556) | [google/adk-web](https://github.com/google/adk-web) |
 | 🟢 Open | [fix(weeklyview): clip multi-day layout bounds and restore ID-zero hover · #30411](https://github.com/calcom/cal.diy/pull/30411) | [calcom/cal.diy](https://github.com/calcom/cal.diy) |
 | 🟢 Open | [feat(linux): enable AppImage delta updates (#9659) · #11226](https://github.com/super-productivity/super-productivity/pull/11226) | [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) |
-| 🟣 Merged | [fix: warn when matching test classes have no provider · #3567](https://github.com/apache/maven-surefire/pull/3567) | [apache/maven-surefire](https://github.com/apache/maven-surefire) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:067024796bbc21fca0f88e5b4375c9cc60faf900a9a1c42902717f3e07f9fc32 -->
+<!-- ACTIVITY:SNAPSHOT:0a5b452703379436919f78ba58d7cb5d60099778ada829b283cc16472fee106f -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
@@ -141,15 +141,15 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 <!-- UPSTREAM_CODE:START -->
 ### 🟢 UPSTREAM CONTRIBUTIONS // MERGED PRS
 
-**46 merged PRs** · **+4,868 lines added** · **−971 lines removed**
+**47 merged PRs** · **+4,996 lines added** · **−1,023 lines removed**
 
 | Upstream repository | Merged pull request | Added | Removed | Languages / Frameworks |
 | :--- | :--- | ---: | ---: | :--- |
+| [slidevjs/slidev](https://github.com/slidevjs/slidev) | [#2803](https://github.com/slidevjs/slidev/pull/2803) | +128 | −52 | TypeScript, Vitest |
 | [apache/maven-surefire](https://github.com/apache/maven-surefire) | [#3567](https://github.com/apache/maven-surefire/pull/3567) | +104 | −0 | Java, JUnit |
 | [java-native-access/jna](https://github.com/java-native-access/jna) | [#1750](https://github.com/java-native-access/jna/pull/1750) | +29 | −1 | Java |
 | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) | [#1042](https://github.com/JetBrains/thinkrail/pull/1042) | +141 | −55 | TypeScript |
 | [JetBrains/thinkrail](https://github.com/JetBrains/thinkrail) | [#1044](https://github.com/JetBrains/thinkrail/pull/1044) | +200 | −2 | TypeScript |
-| [harshanacz/xml-language-service](https://github.com/harshanacz/xml-language-service) | [#82](https://github.com/harshanacz/xml-language-service/pull/82) | +110 | −8 | TypeScript |
 
 <sub>Automatically refreshed · Public merged PRs in other owners' repositories · Entire PR diff additions/deletions, not unique lines personally authored · May include tests, generated files, or other contributors' changes · Languages from added source files; frameworks only from added imports · Excluded from Code Stats language percentages</sub>
 <!-- UPSTREAM_CODE:END -->

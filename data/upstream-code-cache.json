@@ -509,6 +509,19 @@
     ],
     "frameworks": []
   },
+  "https://api.github.com/repos/slidevjs/slidev/pulls/2803": {
+    "repo": "slidevjs/slidev",
+    "number": 2803,
+    "merged_at": "2026-11-27T01:23:14Z",
+    "additions": 128,
+    "deletions": 52,
+    "languages": [
+      "TypeScript"
+    ],
+    "frameworks": [
+      "Vitest"
+    ]
+  },
   "https://api.github.com/repos/theluckystrike/tab-suspender-chrome-extension/pulls/21": {
     "repo": "theluckystrike/tab-suspender-chrome-extension",
     "number": 21,
