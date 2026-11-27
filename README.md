@@ -61,7 +61,7 @@ Practical projects I built and maintain, ordered by **most recently updated**. T
 I contribute focused bug fixes, regression tests, CI improvements, and documentation to upstream projects. The counts below distinguish PRs opened, merged, and still under review.
 
 <!-- ACTIVITY:START -->
-**Last profile update: Nov 27, 2026 at 4:40 AM EST**
+**Last profile update: Nov 27, 2026 at 4:57 PM EST**
 
 **33 opened · 24 merged · 25 open now · 30 upstream repositories**
 
@@ -69,6 +69,7 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 
 | State | Contribution | Repository |
 | :--- | :--- | :--- |
+| 🟢 Open | [fix(mysql): reset popped state when re-pushing queue messages (#1777) · #1784](https://github.com/conductor-oss/conductor/pull/1784) | [conductor-oss/conductor](https://github.com/conductor-oss/conductor) |
 | 🟣 Merged | [perf(vite): add static hook filters for Slidev modules · #2803](https://github.com/slidevjs/slidev/pull/2803) | [slidevjs/slidev](https://github.com/slidevjs/slidev) |
 | 🟢 Open | [Fix false uninitialized variable diagnostic for dataclass KW\_ONLY separator · #11944](https://github.com/microsoft/pyright/pull/11944) | [microsoft/pyright](https://github.com/microsoft/pyright) |
 | 🟢 Open | [Fix --verifytypes inference for attributes assigned from annotated function calls · #11945](https://github.com/microsoft/pyright/pull/11945) | [microsoft/pyright](https://github.com/microsoft/pyright) |
@@ -78,13 +79,12 @@ I contribute focused bug fixes, regression tests, CI improvements, and documenta
 | 🟢 Open | [fix(code-executors): preserve hard-linked output files (#7906) · #7932](https://github.com/google/adk-python/pull/7932) | [google/adk-python](https://github.com/google/adk-python) |
 | 🟢 Open | [fix(chat): persist session state edits on save · #556](https://github.com/google/adk-web/pull/556) | [google/adk-web](https://github.com/google/adk-web) |
 | 🟢 Open | [fix(weeklyview): clip multi-day layout bounds and restore ID-zero hover · #30411](https://github.com/calcom/cal.diy/pull/30411) | [calcom/cal.diy](https://github.com/calcom/cal.diy) |
-| 🟢 Open | [feat(linux): enable AppImage delta updates (#9659) · #11226](https://github.com/super-productivity/super-productivity/pull/11226) | [super-productivity/super-productivity](https://github.com/super-productivity/super-productivity) |
 
 [Explore open upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Aopen+sort%3Aupdated-desc) · [Merged upstream PRs →](https://github.com/pulls?q=is%3Apr+is%3Apublic+author%3AOKAN-SOFTWARE+-user%3AOKAN-SOFTWARE+is%3Amerged+sort%3Aupdated-desc)
 
 <sub>The upstream counters record PR openings and merges—not commits or fork creation. The open count includes drafts across all dates. Private work and my own repositories are excluded. Counts do not imply approval or passing CI. [How this updates](./PROFILE.md)</sub>
 
-<!-- ACTIVITY:SNAPSHOT:0a5b452703379436919f78ba58d7cb5d60099778ada829b283cc16472fee106f -->
+<!-- ACTIVITY:SNAPSHOT:d676b8ef33bdb06c18cf869cb3490fefed1e95275d9e02b98446a24b0a387fbc -->
 <!-- ACTIVITY:END -->
 
 ## Recent Activity
